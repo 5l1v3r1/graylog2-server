@@ -1,6 +1,341 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AggregationConditionExpression rendering conditions should render a boolean expression 1`] = `
+.c4.btn-danger {
+  background-color: #ad0707;
+  border-color: #b23939;
+  color: rgb(252,249,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-danger:hover {
+  background-color: #a00e0e;
+  border-color: #a53636;
+  color: #e9e6e6;
+}
+
+.c4.btn-danger.active {
+  background-color: #b75151;
+  border-color: #bc6363;
+  color: rgb(252,249,249);
+}
+
+.c4.btn-danger.active:hover {
+  background-color: #a94c4c;
+  border-color: #ad5c5c;
+  color: #e9e6e6;
+}
+
+.c4.btn-danger[disabled],
+.c4.btn-danger.disabled {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c4.btn-danger[disabled]:hover,
+.c4.btn-danger.disabled:hover {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c4.btn-default {
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+  color: rgb(73,73,73);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-default:hover {
+  background-color: #d4d4d4;
+  border-color: #cfcfcf;
+  color: #444444;
+}
+
+.c4.btn-default.active {
+  background-color: #dadada;
+  border-color: #d4d4d4;
+  color: rgb(49,49,49);
+}
+
+.c4.btn-default.active:hover {
+  background-color: #cacaca;
+  border-color: #c4c4c4;
+  color: #2f2f2f;
+}
+
+.c4.btn-default[disabled],
+.c4.btn-default.disabled {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c4.btn-default[disabled]:hover,
+.c4.btn-default.disabled:hover {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c4.btn-info {
+  background-color: #0063be;
+  border-color: #3970c2;
+  color: rgb(249,250,252);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-info:hover {
+  background-color: #0c5cb0;
+  border-color: #3668b3;
+  color: #e6e7e9;
+}
+
+.c4.btn-info.active {
+  background-color: #517cc5;
+  border-color: #6386c9;
+  color: rgb(249,250,252);
+}
+
+.c4.btn-info.active:hover {
+  background-color: #4b73b6;
+  border-color: #5c7dba;
+  color: #e6e7e9;
+}
+
+.c4.btn-info[disabled],
+.c4.btn-info.disabled {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c4.btn-info[disabled]:hover,
+.c4.btn-info.disabled:hover {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c4.btn-link {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-link:hover {
+  background-color: #ebebeb26;
+  border-color: #ebebeb26;
+  color: #68267b;
+}
+
+.c4.btn-link.active {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #410057;
+}
+
+.c4.btn-link.active:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: #ebebeb26;
+  color: #3d0c51;
+}
+
+.c4.btn-link[disabled],
+.c4.btn-link.disabled {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c4.btn-link[disabled]:hover,
+.c4.btn-link.disabled:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c4.btn-primary {
+  background-color: #702785;
+  border-color: #7b458e;
+  color: rgb(234,229,236);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-primary:hover {
+  background-color: #68267b;
+  border-color: #724083;
+  color: #d8d3da;
+}
+
+.c4.btn-primary.active {
+  background-color: #855996;
+  border-color: #8f699d;
+  color: rgb(250,249,251);
+}
+
+.c4.btn-primary.active:hover {
+  background-color: #7c538b;
+  border-color: #846292;
+  color: #e7e6e8;
+}
+
+.c4.btn-primary[disabled],
+.c4.btn-primary.disabled {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c4.btn-primary[disabled]:hover,
+.c4.btn-primary.disabled:hover {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c4.btn-success {
+  background-color: #00ae42;
+  border-color: #39b356;
+  color: rgb(249,252,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-success:hover {
+  background-color: #0ca13e;
+  border-color: #36a550;
+  color: #e6e9e6;
+}
+
+.c4.btn-success.active {
+  background-color: #51b866;
+  border-color: #63bc74;
+  color: rgb(249,252,250);
+}
+
+.c4.btn-success.active:hover {
+  background-color: #4baa5f;
+  border-color: #5cae6c;
+  color: #e6e9e7;
+}
+
+.c4.btn-success[disabled],
+.c4.btn-success.disabled {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c4.btn-success[disabled]:hover,
+.c4.btn-success.disabled:hover {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c4.btn-warning {
+  background-color: #ffd200;
+  border-color: #f9cd07;
+  color: rgb(57,47,0);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-warning:hover {
+  background-color: #ebc20c;
+  border-color: #e6bd0e;
+  color: #362d0c;
+}
+
+.c4.btn-warning.active {
+  background-color: #f2c70a;
+  border-color: #ebc20c;
+  color: rgb(54,45,2);
+}
+
+.c4.btn-warning.active:hover {
+  background-color: #e0b80f;
+  border-color: #d9b310;
+  color: #332b0c;
+}
+
+.c4.btn-warning[disabled],
+.c4.btn-warning.disabled {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c4.btn-warning[disabled]:hover,
+.c4.btn-warning.disabled:hover {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c2 {
+  color: #1f1f1f;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.c3 {
+  color: #1f1f1f;
+  background-color: #fff;
+  border-color: #cdcdcd;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c3::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c3::placeholder {
+  color: #9b9b9b;
+}
+
+.c3:focus {
+  border-color: #6386c9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(99,134,201,0.4);
+}
+
+.c3[disabled],
+.c3[readonly],
+fieldset[disabled] .c3 {
+  background-color: #cdcdcd;
+}
+
+.c3 ~ .form-control-feedback.glyphicon {
+  display: none;
+}
+
+.c0 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.c1 {
+  width: 100px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 <AggregationConditionExpression
   aggregationFunctions={Array []}
   eventDefinition={
@@ -78,7 +413,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                 "componentStyle": ComponentStyle {
                   "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                   "isStatic": false,
-                  "lastClassName": "iXeqOy",
+                  "lastClassName": "c0",
                   "rules": Array [
                     [Function],
                   ],
@@ -96,7 +431,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
             forwardedRef={null}
           >
             <div
-              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 iXeqOy form-inline"
+              className="c0 form-inline"
             >
               <Component
                 validationState={null}
@@ -137,11 +472,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className=""
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -170,7 +505,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                       "componentStyle": ComponentStyle {
                         "componentId": "BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1",
                         "isStatic": false,
-                        "lastClassName": "jfMmbj",
+                        "lastClassName": "c1",
                         "rules": Array [
                           "width:100px;margin-left:",
                           [Function],
@@ -191,19 +526,19 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                   isFirstElement={false}
                 >
                   <Component
-                    className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                    className="c1"
                     isFirstElement={false}
                   >
                     <Component
-                      className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                      className="c1"
                       validationState={null}
                     >
                       <FormGroup__StyledFormGroup
-                        className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                        className="c1"
                         validationState={null}
                       >
                         <StyledComponent
-                          className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                          className="c1"
                           forwardedComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -236,11 +571,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                            className="c1"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
+                              className="c1 form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -1769,11 +2104,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className=""
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -2129,12 +2464,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                             >
                               <FormGroup
                                 bsClass="form-group"
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                className=""
                                 controlId="aggregation-function"
                                 validationState={null}
                               >
                                 <div
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                  className="form-group"
                                 >
                                   <ControlLabel>
                                     <StyledComponent
@@ -2145,7 +2480,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                           "componentStyle": ComponentStyle {
                                             "componentId": "ControlLabel-sc-1edmum5-0",
                                             "isStatic": false,
-                                            "lastClassName": "hCskeX",
+                                            "lastClassName": "c2",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -2164,11 +2499,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     >
                                       <ControlLabel
                                         bsClass="control-label"
-                                        className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                        className="c2"
                                         srOnly={false}
                                       >
                                         <label
-                                          className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                          className="c2 control-label"
                                           htmlFor="aggregation-function"
                                         >
                                           If
@@ -5093,12 +5428,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className=""
                             controlId="aggregation-condition"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="form-group"
                             >
                               <ControlLabel>
                                 <StyledComponent
@@ -5109,7 +5444,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                       "componentStyle": ComponentStyle {
                                         "componentId": "ControlLabel-sc-1edmum5-0",
                                         "isStatic": false,
-                                        "lastClassName": "hCskeX",
+                                        "lastClassName": "c2",
                                         "rules": Array [
                                           [Function],
                                         ],
@@ -5128,11 +5463,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                 >
                                   <ControlLabel
                                     bsClass="control-label"
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                    className="c2"
                                     srOnly={false}
                                   >
                                     <label
-                                      className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                      className="c2 control-label"
                                       htmlFor="aggregation-condition"
                                     >
                                       Is
@@ -6955,12 +7290,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                  className=""
                                   controlId="aggregation-threshold"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                    className="form-group"
                                   >
                                     <ControlLabel>
                                       <StyledComponent
@@ -6971,7 +7306,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                             "componentStyle": ComponentStyle {
                                               "componentId": "ControlLabel-sc-1edmum5-0",
                                               "isStatic": false,
-                                              "lastClassName": "hCskeX",
+                                              "lastClassName": "c2",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -6990,11 +7325,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                       >
                                         <ControlLabel
                                           bsClass="control-label"
-                                          className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                          className="c2"
                                           srOnly={false}
                                         >
                                           <label
-                                            className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                            className="c2 control-label"
                                             htmlFor="aggregation-threshold"
                                           >
                                             Threshold
@@ -7029,7 +7364,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "FormControl-sc-1amoaox-0",
                                                   "isStatic": false,
-                                                  "lastClassName": "fdBWEX",
+                                                  "lastClassName": "c3",
                                                   "rules": Array [
                                                     [Function],
                                                   ],
@@ -7055,7 +7390,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                           >
                                             <FormControl
                                               bsClass="form-control"
-                                              className="FormControl-sc-1amoaox-0 fdBWEX"
+                                              className="c3"
                                               componentClass="input"
                                               inputRef={[Function]}
                                               label="Threshold"
@@ -7066,7 +7401,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                               value={0}
                                             >
                                               <input
-                                                className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                                className="c3 form-control"
                                                 id="aggregation-threshold"
                                                 label="Threshold"
                                                 name="threshold"
@@ -7142,11 +7477,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
               >
                 <FormGroup
                   bsClass="form-group"
-                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                  className=""
                   validationState={null}
                 >
                   <div
-                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                    className="form-group"
                   >
                     <div
                       className="formControlNoLabel"
@@ -7192,7 +7527,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -7216,12 +7551,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -7284,7 +7619,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -7308,12 +7643,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -7376,7 +7711,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -7400,12 +7735,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -7707,12 +8042,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                             >
                               <FormGroup
                                 bsClass="form-group"
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                className=""
                                 controlId="aggregation-function"
                                 validationState={null}
                               >
                                 <div
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                  className="form-group"
                                 >
                                   <Row
                                     bsClass="row"
@@ -10631,12 +10966,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className=""
                             controlId="aggregation-condition"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -12453,12 +12788,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                  className=""
                                   controlId="aggregation-threshold"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                    className="form-group"
                                   >
                                     <InputWrapper>
                                       <span>
@@ -12487,7 +12822,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "FormControl-sc-1amoaox-0",
                                                   "isStatic": false,
-                                                  "lastClassName": "fdBWEX",
+                                                  "lastClassName": "c3",
                                                   "rules": Array [
                                                     [Function],
                                                   ],
@@ -12513,7 +12848,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                           >
                                             <FormControl
                                               bsClass="form-control"
-                                              className="FormControl-sc-1amoaox-0 fdBWEX"
+                                              className="c3"
                                               componentClass="input"
                                               inputRef={[Function]}
                                               label=""
@@ -12524,7 +12859,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                               value={0}
                                             >
                                               <input
-                                                className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                                className="c3 form-control"
                                                 id="aggregation-threshold"
                                                 label=""
                                                 name="threshold"
@@ -12600,11 +12935,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
               >
                 <FormGroup
                   bsClass="form-group"
-                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                  className=""
                   validationState={null}
                 >
                   <div
-                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                    className="form-group"
                   >
                     <div>
                       <ButtonToolbar
@@ -12648,7 +12983,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -12672,12 +13007,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -12740,7 +13075,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -12764,12 +13099,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -12832,7 +13167,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -12856,12 +13191,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -12888,6 +13223,350 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
 `;
 
 exports[`AggregationConditionExpression rendering conditions should render a group expression with a boolean expression 1`] = `
+.c4.btn-danger {
+  background-color: #ad0707;
+  border-color: #b23939;
+  color: rgb(252,249,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-danger:hover {
+  background-color: #a00e0e;
+  border-color: #a53636;
+  color: #e9e6e6;
+}
+
+.c4.btn-danger.active {
+  background-color: #b75151;
+  border-color: #bc6363;
+  color: rgb(252,249,249);
+}
+
+.c4.btn-danger.active:hover {
+  background-color: #a94c4c;
+  border-color: #ad5c5c;
+  color: #e9e6e6;
+}
+
+.c4.btn-danger[disabled],
+.c4.btn-danger.disabled {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c4.btn-danger[disabled]:hover,
+.c4.btn-danger.disabled:hover {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c4.btn-default {
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+  color: rgb(73,73,73);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-default:hover {
+  background-color: #d4d4d4;
+  border-color: #cfcfcf;
+  color: #444444;
+}
+
+.c4.btn-default.active {
+  background-color: #dadada;
+  border-color: #d4d4d4;
+  color: rgb(49,49,49);
+}
+
+.c4.btn-default.active:hover {
+  background-color: #cacaca;
+  border-color: #c4c4c4;
+  color: #2f2f2f;
+}
+
+.c4.btn-default[disabled],
+.c4.btn-default.disabled {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c4.btn-default[disabled]:hover,
+.c4.btn-default.disabled:hover {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c4.btn-info {
+  background-color: #0063be;
+  border-color: #3970c2;
+  color: rgb(249,250,252);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-info:hover {
+  background-color: #0c5cb0;
+  border-color: #3668b3;
+  color: #e6e7e9;
+}
+
+.c4.btn-info.active {
+  background-color: #517cc5;
+  border-color: #6386c9;
+  color: rgb(249,250,252);
+}
+
+.c4.btn-info.active:hover {
+  background-color: #4b73b6;
+  border-color: #5c7dba;
+  color: #e6e7e9;
+}
+
+.c4.btn-info[disabled],
+.c4.btn-info.disabled {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c4.btn-info[disabled]:hover,
+.c4.btn-info.disabled:hover {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c4.btn-link {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-link:hover {
+  background-color: #ebebeb26;
+  border-color: #ebebeb26;
+  color: #68267b;
+}
+
+.c4.btn-link.active {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #410057;
+}
+
+.c4.btn-link.active:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: #ebebeb26;
+  color: #3d0c51;
+}
+
+.c4.btn-link[disabled],
+.c4.btn-link.disabled {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c4.btn-link[disabled]:hover,
+.c4.btn-link.disabled:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c4.btn-primary {
+  background-color: #702785;
+  border-color: #7b458e;
+  color: rgb(234,229,236);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-primary:hover {
+  background-color: #68267b;
+  border-color: #724083;
+  color: #d8d3da;
+}
+
+.c4.btn-primary.active {
+  background-color: #855996;
+  border-color: #8f699d;
+  color: rgb(250,249,251);
+}
+
+.c4.btn-primary.active:hover {
+  background-color: #7c538b;
+  border-color: #846292;
+  color: #e7e6e8;
+}
+
+.c4.btn-primary[disabled],
+.c4.btn-primary.disabled {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c4.btn-primary[disabled]:hover,
+.c4.btn-primary.disabled:hover {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c4.btn-success {
+  background-color: #00ae42;
+  border-color: #39b356;
+  color: rgb(249,252,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-success:hover {
+  background-color: #0ca13e;
+  border-color: #36a550;
+  color: #e6e9e6;
+}
+
+.c4.btn-success.active {
+  background-color: #51b866;
+  border-color: #63bc74;
+  color: rgb(249,252,250);
+}
+
+.c4.btn-success.active:hover {
+  background-color: #4baa5f;
+  border-color: #5cae6c;
+  color: #e6e9e7;
+}
+
+.c4.btn-success[disabled],
+.c4.btn-success.disabled {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c4.btn-success[disabled]:hover,
+.c4.btn-success.disabled:hover {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c4.btn-warning {
+  background-color: #ffd200;
+  border-color: #f9cd07;
+  color: rgb(57,47,0);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-warning:hover {
+  background-color: #ebc20c;
+  border-color: #e6bd0e;
+  color: #362d0c;
+}
+
+.c4.btn-warning.active {
+  background-color: #f2c70a;
+  border-color: #ebc20c;
+  color: rgb(54,45,2);
+}
+
+.c4.btn-warning.active:hover {
+  background-color: #e0b80f;
+  border-color: #d9b310;
+  color: #332b0c;
+}
+
+.c4.btn-warning[disabled],
+.c4.btn-warning.disabled {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c4.btn-warning[disabled]:hover,
+.c4.btn-warning.disabled:hover {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c2 {
+  color: #1f1f1f;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.c3 {
+  color: #1f1f1f;
+  background-color: #fff;
+  border-color: #cdcdcd;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c3::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c3::placeholder {
+  color: #9b9b9b;
+}
+
+.c3:focus {
+  border-color: #6386c9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(99,134,201,0.4);
+}
+
+.c3[disabled],
+.c3[readonly],
+fieldset[disabled] .c3 {
+  background-color: #cdcdcd;
+}
+
+.c3 ~ .form-control-feedback.glyphicon {
+  display: none;
+}
+
+.c0 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.c1 {
+  width: 100px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.c5 {
+  width: 100px;
+  margin-right: 1em;
+}
+
+.c6 {
+  padding-left: 40px;
+}
+
 <AggregationConditionExpression
   aggregationFunctions={Array []}
   eventDefinition={
@@ -12969,7 +13648,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                 "componentStyle": ComponentStyle {
                   "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                   "isStatic": false,
-                  "lastClassName": "iXeqOy",
+                  "lastClassName": "c0",
                   "rules": Array [
                     [Function],
                   ],
@@ -12987,7 +13666,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
             forwardedRef={null}
           >
             <div
-              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 iXeqOy form-inline"
+              className="c0 form-inline"
             >
               <Component
                 validationState={null}
@@ -13028,11 +13707,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className=""
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -13061,7 +13740,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                       "componentStyle": ComponentStyle {
                         "componentId": "BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1",
                         "isStatic": false,
-                        "lastClassName": "creHrZ",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "width:100px;margin-left:",
                           [Function],
@@ -13082,19 +13761,19 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   isFirstElement={false}
                 >
                   <Component
-                    className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                    className="c1"
                     isFirstElement={false}
                   >
                     <Component
-                      className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                      className="c1"
                       validationState={null}
                     >
                       <FormGroup__StyledFormGroup
-                        className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                        className="c1"
                         validationState={null}
                       >
                         <StyledComponent
-                          className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                          className="c1"
                           forwardedComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -13127,11 +13806,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                            className="c1"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
+                              className="c1 form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -14660,11 +15339,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className=""
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -15032,12 +15711,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                             >
                               <FormGroup
                                 bsClass="form-group"
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                className=""
                                 controlId="aggregation-function"
                                 validationState={null}
                               >
                                 <div
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                  className="form-group"
                                 >
                                   <ControlLabel>
                                     <StyledComponent
@@ -15048,7 +15727,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                           "componentStyle": ComponentStyle {
                                             "componentId": "ControlLabel-sc-1edmum5-0",
                                             "isStatic": false,
-                                            "lastClassName": "hCskeX",
+                                            "lastClassName": "c2",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -15067,11 +15746,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     >
                                       <ControlLabel
                                         bsClass="control-label"
-                                        className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                        className="c2"
                                         srOnly={false}
                                       >
                                         <label
-                                          className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                          className="c2 control-label"
                                           htmlFor="aggregation-function"
                                         >
                                           If
@@ -17996,12 +18675,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className=""
                             controlId="aggregation-condition"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="form-group"
                             >
                               <ControlLabel>
                                 <StyledComponent
@@ -18012,7 +18691,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                       "componentStyle": ComponentStyle {
                                         "componentId": "ControlLabel-sc-1edmum5-0",
                                         "isStatic": false,
-                                        "lastClassName": "hCskeX",
+                                        "lastClassName": "c2",
                                         "rules": Array [
                                           [Function],
                                         ],
@@ -18031,11 +18710,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                 >
                                   <ControlLabel
                                     bsClass="control-label"
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                    className="c2"
                                     srOnly={false}
                                   >
                                     <label
-                                      className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                      className="c2 control-label"
                                       htmlFor="aggregation-condition"
                                     >
                                       Is
@@ -19858,12 +20537,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                  className=""
                                   controlId="aggregation-threshold"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                    className="form-group"
                                   >
                                     <ControlLabel>
                                       <StyledComponent
@@ -19874,7 +20553,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                             "componentStyle": ComponentStyle {
                                               "componentId": "ControlLabel-sc-1edmum5-0",
                                               "isStatic": false,
-                                              "lastClassName": "hCskeX",
+                                              "lastClassName": "c2",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -19893,11 +20572,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                       >
                                         <ControlLabel
                                           bsClass="control-label"
-                                          className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                          className="c2"
                                           srOnly={false}
                                         >
                                           <label
-                                            className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                            className="c2 control-label"
                                             htmlFor="aggregation-threshold"
                                           >
                                             Threshold
@@ -19932,7 +20611,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "FormControl-sc-1amoaox-0",
                                                   "isStatic": false,
-                                                  "lastClassName": "fdBWEX",
+                                                  "lastClassName": "c3",
                                                   "rules": Array [
                                                     [Function],
                                                   ],
@@ -19958,7 +20637,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                           >
                                             <FormControl
                                               bsClass="form-control"
-                                              className="FormControl-sc-1amoaox-0 fdBWEX"
+                                              className="c3"
                                               componentClass="input"
                                               inputRef={[Function]}
                                               label="Threshold"
@@ -19969,7 +20648,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                               value={0}
                                             >
                                               <input
-                                                className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                                className="c3 form-control"
                                                 id="aggregation-threshold"
                                                 label="Threshold"
                                                 name="threshold"
@@ -20045,11 +20724,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
               >
                 <FormGroup
                   bsClass="form-group"
-                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                  className=""
                   validationState={null}
                 >
                   <div
-                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                    className="form-group"
                   >
                     <div
                       className="formControlNoLabel"
@@ -20095,7 +20774,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -20119,12 +20798,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -20187,7 +20866,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -20211,12 +20890,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -20279,7 +20958,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     "componentStyle": ComponentStyle {
                                       "componentId": "Button__StyledButton-c9cbmb-0",
                                       "isStatic": false,
-                                      "lastClassName": "jVYrA",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -20303,12 +20982,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   bsClass="btn"
                                   bsSize="sm"
                                   bsStyle="default"
-                                  className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                  className="c4"
                                   disabled={false}
                                   onClick={[Function]}
                                 >
                                   <button
-                                    className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                    className="c4 btn btn-sm btn-default"
                                     disabled={false}
                                     onClick={[Function]}
                                     type="button"
@@ -20503,7 +21182,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                       "componentStyle": ComponentStyle {
                         "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                         "isStatic": false,
-                        "lastClassName": "iXeqOy",
+                        "lastClassName": "c0",
                         "rules": Array [
                           [Function],
                         ],
@@ -20521,7 +21200,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   forwardedRef={null}
                 >
                   <div
-                    className="BooleanOperatorSelector__OperatorSelector-sflinp-0 iXeqOy form-inline"
+                    className="c0 form-inline"
                   >
                     <BooleanOperatorSelector__BooleanOperatorSelect
                       isFirstElement={true}
@@ -20534,7 +21213,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                             "componentStyle": ComponentStyle {
                               "componentId": "BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1",
                               "isStatic": false,
-                              "lastClassName": "creHrZ",
+                              "lastClassName": "c5",
                               "rules": Array [
                                 "width:100px;margin-left:",
                                 [Function],
@@ -20555,19 +21234,19 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         isFirstElement={true}
                       >
                         <Component
-                          className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                          className="c5"
                           isFirstElement={true}
                         >
                           <Component
-                            className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                            className="c5"
                             validationState={null}
                           >
                             <FormGroup__StyledFormGroup
-                              className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                              className="c5"
                               validationState={null}
                             >
                               <StyledComponent
-                                className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                                className="c5"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -20600,11 +21279,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                                  className="c5"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ form-group"
+                                    className="c5 form-group"
                                   >
                                     <Select
                                       allowCreate={false}
@@ -22133,11 +22812,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className=""
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="form-group"
                             >
                               <FormControlStatic
                                 bsClass="form-control-static"
@@ -22177,7 +22856,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                 "componentStyle": ComponentStyle {
                   "componentId": "GroupExpression__Group-sc-17izmkk-0",
                   "isStatic": false,
-                  "lastClassName": "edMkpk",
+                  "lastClassName": "c6",
                   "rules": Array [
                     "padding-left:40px;",
                   ],
@@ -22195,7 +22874,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
             forwardedRef={null}
           >
             <div
-              className="GroupExpression__Group-sc-17izmkk-0 edMkpk"
+              className="c6"
             >
               <AggregationConditionExpression
                 aggregationFunctions={Array []}
@@ -22449,12 +23128,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                       >
                                         <FormGroup
                                           bsClass="form-group"
-                                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                          className=""
                                           controlId="aggregation-function"
                                           validationState={null}
                                         >
                                           <div
-                                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                            className="form-group"
                                           >
                                             <Row
                                               bsClass="row"
@@ -25373,12 +26052,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   >
                                     <FormGroup
                                       bsClass="form-group"
-                                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                      className=""
                                       controlId="aggregation-condition"
                                       validationState={null}
                                     >
                                       <div
-                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                        className="form-group"
                                       >
                                         <Select
                                           allowCreate={false}
@@ -27195,12 +27874,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                         >
                                           <FormGroup
                                             bsClass="form-group"
-                                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                            className=""
                                             controlId="aggregation-threshold"
                                             validationState={null}
                                           >
                                             <div
-                                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                              className="form-group"
                                             >
                                               <InputWrapper>
                                                 <span>
@@ -27229,7 +27908,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                           "componentStyle": ComponentStyle {
                                                             "componentId": "FormControl-sc-1amoaox-0",
                                                             "isStatic": false,
-                                                            "lastClassName": "fdBWEX",
+                                                            "lastClassName": "c3",
                                                             "rules": Array [
                                                               [Function],
                                                             ],
@@ -27255,7 +27934,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                     >
                                                       <FormControl
                                                         bsClass="form-control"
-                                                        className="FormControl-sc-1amoaox-0 fdBWEX"
+                                                        className="c3"
                                                         componentClass="input"
                                                         inputRef={[Function]}
                                                         label=""
@@ -27266,7 +27945,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                         value={0}
                                                       >
                                                         <input
-                                                          className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                                          className="c3 form-control"
                                                           id="aggregation-threshold"
                                                           label=""
                                                           name="threshold"
@@ -27342,11 +28021,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className=""
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="form-group"
                             >
                               <div>
                                 <ButtonToolbar
@@ -27390,7 +28069,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Button__StyledButton-c9cbmb-0",
                                                 "isStatic": false,
-                                                "lastClassName": "jVYrA",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -27414,12 +28093,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                             bsClass="btn"
                                             bsSize="sm"
                                             bsStyle="default"
-                                            className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                            className="c4"
                                             disabled={false}
                                             onClick={[Function]}
                                           >
                                             <button
-                                              className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                              className="c4 btn btn-sm btn-default"
                                               disabled={false}
                                               onClick={[Function]}
                                               type="button"
@@ -27482,7 +28161,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Button__StyledButton-c9cbmb-0",
                                                 "isStatic": false,
-                                                "lastClassName": "jVYrA",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -27506,12 +28185,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                             bsClass="btn"
                                             bsSize="sm"
                                             bsStyle="default"
-                                            className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                            className="c4"
                                             disabled={false}
                                             onClick={[Function]}
                                           >
                                             <button
-                                              className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                              className="c4 btn btn-sm btn-default"
                                               disabled={false}
                                               onClick={[Function]}
                                               type="button"
@@ -27574,7 +28253,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Button__StyledButton-c9cbmb-0",
                                                 "isStatic": false,
-                                                "lastClassName": "jVYrA",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -27598,12 +28277,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                             bsClass="btn"
                                             bsSize="sm"
                                             bsStyle="default"
-                                            className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                            className="c4"
                                             disabled={false}
                                             onClick={[Function]}
                                           >
                                             <button
-                                              className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                              className="c4 btn btn-sm btn-default"
                                               disabled={false}
                                               onClick={[Function]}
                                               type="button"
@@ -27635,6 +28314,344 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
 `;
 
 exports[`AggregationConditionExpression rendering conditions should render a group expression with a comparison expression 1`] = `
+.c5.btn-danger {
+  background-color: #ad0707;
+  border-color: #b23939;
+  color: rgb(252,249,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c5.btn-danger:hover {
+  background-color: #a00e0e;
+  border-color: #a53636;
+  color: #e9e6e6;
+}
+
+.c5.btn-danger.active {
+  background-color: #b75151;
+  border-color: #bc6363;
+  color: rgb(252,249,249);
+}
+
+.c5.btn-danger.active:hover {
+  background-color: #a94c4c;
+  border-color: #ad5c5c;
+  color: #e9e6e6;
+}
+
+.c5.btn-danger[disabled],
+.c5.btn-danger.disabled {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c5.btn-danger[disabled]:hover,
+.c5.btn-danger.disabled:hover {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c5.btn-default {
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+  color: rgb(73,73,73);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c5.btn-default:hover {
+  background-color: #d4d4d4;
+  border-color: #cfcfcf;
+  color: #444444;
+}
+
+.c5.btn-default.active {
+  background-color: #dadada;
+  border-color: #d4d4d4;
+  color: rgb(49,49,49);
+}
+
+.c5.btn-default.active:hover {
+  background-color: #cacaca;
+  border-color: #c4c4c4;
+  color: #2f2f2f;
+}
+
+.c5.btn-default[disabled],
+.c5.btn-default.disabled {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c5.btn-default[disabled]:hover,
+.c5.btn-default.disabled:hover {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c5.btn-info {
+  background-color: #0063be;
+  border-color: #3970c2;
+  color: rgb(249,250,252);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c5.btn-info:hover {
+  background-color: #0c5cb0;
+  border-color: #3668b3;
+  color: #e6e7e9;
+}
+
+.c5.btn-info.active {
+  background-color: #517cc5;
+  border-color: #6386c9;
+  color: rgb(249,250,252);
+}
+
+.c5.btn-info.active:hover {
+  background-color: #4b73b6;
+  border-color: #5c7dba;
+  color: #e6e7e9;
+}
+
+.c5.btn-info[disabled],
+.c5.btn-info.disabled {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c5.btn-info[disabled]:hover,
+.c5.btn-info.disabled:hover {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c5.btn-link {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c5.btn-link:hover {
+  background-color: #ebebeb26;
+  border-color: #ebebeb26;
+  color: #68267b;
+}
+
+.c5.btn-link.active {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #410057;
+}
+
+.c5.btn-link.active:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: #ebebeb26;
+  color: #3d0c51;
+}
+
+.c5.btn-link[disabled],
+.c5.btn-link.disabled {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c5.btn-link[disabled]:hover,
+.c5.btn-link.disabled:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c5.btn-primary {
+  background-color: #702785;
+  border-color: #7b458e;
+  color: rgb(234,229,236);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c5.btn-primary:hover {
+  background-color: #68267b;
+  border-color: #724083;
+  color: #d8d3da;
+}
+
+.c5.btn-primary.active {
+  background-color: #855996;
+  border-color: #8f699d;
+  color: rgb(250,249,251);
+}
+
+.c5.btn-primary.active:hover {
+  background-color: #7c538b;
+  border-color: #846292;
+  color: #e7e6e8;
+}
+
+.c5.btn-primary[disabled],
+.c5.btn-primary.disabled {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c5.btn-primary[disabled]:hover,
+.c5.btn-primary.disabled:hover {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c5.btn-success {
+  background-color: #00ae42;
+  border-color: #39b356;
+  color: rgb(249,252,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c5.btn-success:hover {
+  background-color: #0ca13e;
+  border-color: #36a550;
+  color: #e6e9e6;
+}
+
+.c5.btn-success.active {
+  background-color: #51b866;
+  border-color: #63bc74;
+  color: rgb(249,252,250);
+}
+
+.c5.btn-success.active:hover {
+  background-color: #4baa5f;
+  border-color: #5cae6c;
+  color: #e6e9e7;
+}
+
+.c5.btn-success[disabled],
+.c5.btn-success.disabled {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c5.btn-success[disabled]:hover,
+.c5.btn-success.disabled:hover {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c5.btn-warning {
+  background-color: #ffd200;
+  border-color: #f9cd07;
+  color: rgb(57,47,0);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c5.btn-warning:hover {
+  background-color: #ebc20c;
+  border-color: #e6bd0e;
+  color: #362d0c;
+}
+
+.c5.btn-warning.active {
+  background-color: #f2c70a;
+  border-color: #ebc20c;
+  color: rgb(54,45,2);
+}
+
+.c5.btn-warning.active:hover {
+  background-color: #e0b80f;
+  border-color: #d9b310;
+  color: #332b0c;
+}
+
+.c5.btn-warning[disabled],
+.c5.btn-warning.disabled {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c5.btn-warning[disabled]:hover,
+.c5.btn-warning.disabled:hover {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c3 {
+  color: #1f1f1f;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.c4 {
+  color: #1f1f1f;
+  background-color: #fff;
+  border-color: #cdcdcd;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c4::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.c4:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c4::placeholder {
+  color: #9b9b9b;
+}
+
+.c4:focus {
+  border-color: #6386c9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(99,134,201,0.4);
+}
+
+.c4[disabled],
+.c4[readonly],
+fieldset[disabled] .c4 {
+  background-color: #cdcdcd;
+}
+
+.c4 ~ .form-control-feedback.glyphicon {
+  display: none;
+}
+
+.c0 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.c1 {
+  width: 100px;
+  margin-right: 1em;
+}
+
+.c2 {
+  padding-left: 40px;
+}
+
 <AggregationConditionExpression
   aggregationFunctions={Array []}
   eventDefinition={
@@ -27745,7 +28762,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   "componentStyle": ComponentStyle {
                     "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                     "isStatic": false,
-                    "lastClassName": "iXeqOy",
+                    "lastClassName": "c0",
                     "rules": Array [
                       [Function],
                     ],
@@ -27763,7 +28780,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
               forwardedRef={null}
             >
               <div
-                className="BooleanOperatorSelector__OperatorSelector-sflinp-0 iXeqOy form-inline"
+                className="c0 form-inline"
               >
                 <BooleanOperatorSelector__BooleanOperatorSelect
                   isFirstElement={true}
@@ -27776,7 +28793,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         "componentStyle": ComponentStyle {
                           "componentId": "BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1",
                           "isStatic": false,
-                          "lastClassName": "creHrZ",
+                          "lastClassName": "c1",
                           "rules": Array [
                             "width:100px;margin-left:",
                             [Function],
@@ -27797,19 +28814,19 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                     isFirstElement={true}
                   >
                     <Component
-                      className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                      className="c1"
                       isFirstElement={true}
                     >
                       <Component
-                        className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                        className="c1"
                         validationState={null}
                       >
                         <FormGroup__StyledFormGroup
-                          className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                          className="c1"
                           validationState={null}
                         >
                           <StyledComponent
-                            className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                            className="c1"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -27842,11 +28859,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                           >
                             <FormGroup
                               bsClass="form-group"
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                              className="c1"
                               validationState={null}
                             >
                               <div
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ form-group"
+                                className="c1 form-group"
                               >
                                 <Select
                                   allowCreate={false}
@@ -29375,11 +30392,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                     >
                       <FormGroup
                         bsClass="form-group"
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                        className=""
                         validationState={null}
                       >
                         <div
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                          className="form-group"
                         >
                           <FormControlStatic
                             bsClass="form-control-static"
@@ -29419,7 +30436,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
             "componentStyle": ComponentStyle {
               "componentId": "GroupExpression__Group-sc-17izmkk-0",
               "isStatic": false,
-              "lastClassName": "edMkpk",
+              "lastClassName": "c2",
               "rules": Array [
                 "padding-left:40px;",
               ],
@@ -29437,7 +30454,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
         forwardedRef={null}
       >
         <div
-          className="GroupExpression__Group-sc-17izmkk-0 edMkpk"
+          className="c2"
         >
           <AggregationConditionExpression
             aggregationFunctions={Array []}
@@ -29691,12 +30708,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   >
                                     <FormGroup
                                       bsClass="form-group"
-                                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                      className=""
                                       controlId="aggregation-function"
                                       validationState={null}
                                     >
                                       <div
-                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                        className="form-group"
                                       >
                                         <ControlLabel>
                                           <StyledComponent
@@ -29707,7 +30724,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "ControlLabel-sc-1edmum5-0",
                                                   "isStatic": false,
-                                                  "lastClassName": "hCskeX",
+                                                  "lastClassName": "c3",
                                                   "rules": Array [
                                                     [Function],
                                                   ],
@@ -29726,11 +30743,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                           >
                                             <ControlLabel
                                               bsClass="control-label"
-                                              className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                              className="c3"
                                               srOnly={false}
                                             >
                                               <label
-                                                className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                                className="c3 control-label"
                                                 htmlFor="aggregation-function"
                                               >
                                                 If
@@ -32655,12 +33672,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                  className=""
                                   controlId="aggregation-condition"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                    className="form-group"
                                   >
                                     <ControlLabel>
                                       <StyledComponent
@@ -32671,7 +33688,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                             "componentStyle": ComponentStyle {
                                               "componentId": "ControlLabel-sc-1edmum5-0",
                                               "isStatic": false,
-                                              "lastClassName": "hCskeX",
+                                              "lastClassName": "c3",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -32690,11 +33707,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                       >
                                         <ControlLabel
                                           bsClass="control-label"
-                                          className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                          className="c3"
                                           srOnly={false}
                                         >
                                           <label
-                                            className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                            className="c3 control-label"
                                             htmlFor="aggregation-condition"
                                           >
                                             Is
@@ -34517,12 +35534,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     >
                                       <FormGroup
                                         bsClass="form-group"
-                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                        className=""
                                         controlId="aggregation-threshold"
                                         validationState={null}
                                       >
                                         <div
-                                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                          className="form-group"
                                         >
                                           <ControlLabel>
                                             <StyledComponent
@@ -34533,7 +35550,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ControlLabel-sc-1edmum5-0",
                                                     "isStatic": false,
-                                                    "lastClassName": "hCskeX",
+                                                    "lastClassName": "c3",
                                                     "rules": Array [
                                                       [Function],
                                                     ],
@@ -34552,11 +35569,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                             >
                                               <ControlLabel
                                                 bsClass="control-label"
-                                                className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                                className="c3"
                                                 srOnly={false}
                                               >
                                                 <label
-                                                  className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                                  className="c3 control-label"
                                                   htmlFor="aggregation-threshold"
                                                 >
                                                   Threshold
@@ -34591,7 +35608,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "FormControl-sc-1amoaox-0",
                                                         "isStatic": false,
-                                                        "lastClassName": "fdBWEX",
+                                                        "lastClassName": "c4",
                                                         "rules": Array [
                                                           [Function],
                                                         ],
@@ -34617,7 +35634,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                 >
                                                   <FormControl
                                                     bsClass="form-control"
-                                                    className="FormControl-sc-1amoaox-0 fdBWEX"
+                                                    className="c4"
                                                     componentClass="input"
                                                     inputRef={[Function]}
                                                     label="Threshold"
@@ -34628,7 +35645,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                     value={0}
                                                   >
                                                     <input
-                                                      className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                                      className="c4 form-control"
                                                       id="aggregation-threshold"
                                                       label="Threshold"
                                                       name="threshold"
@@ -34704,11 +35721,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                     >
                       <FormGroup
                         bsClass="form-group"
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                        className=""
                         validationState={null}
                       >
                         <div
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                          className="form-group"
                         >
                           <div
                             className="formControlNoLabel"
@@ -34754,7 +35771,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                           "componentStyle": ComponentStyle {
                                             "componentId": "Button__StyledButton-c9cbmb-0",
                                             "isStatic": false,
-                                            "lastClassName": "jVYrA",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -34778,12 +35795,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                         bsClass="btn"
                                         bsSize="sm"
                                         bsStyle="default"
-                                        className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                        className="c5"
                                         disabled={false}
                                         onClick={[Function]}
                                       >
                                         <button
-                                          className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                          className="c5 btn btn-sm btn-default"
                                           disabled={false}
                                           onClick={[Function]}
                                           type="button"
@@ -34846,7 +35863,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                           "componentStyle": ComponentStyle {
                                             "componentId": "Button__StyledButton-c9cbmb-0",
                                             "isStatic": false,
-                                            "lastClassName": "jVYrA",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -34870,12 +35887,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                         bsClass="btn"
                                         bsSize="sm"
                                         bsStyle="default"
-                                        className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                        className="c5"
                                         disabled={false}
                                         onClick={[Function]}
                                       >
                                         <button
-                                          className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                          className="c5 btn btn-sm btn-default"
                                           disabled={false}
                                           onClick={[Function]}
                                           type="button"
@@ -34938,7 +35955,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                           "componentStyle": ComponentStyle {
                                             "componentId": "Button__StyledButton-c9cbmb-0",
                                             "isStatic": false,
-                                            "lastClassName": "jVYrA",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -34962,12 +35979,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                         bsClass="btn"
                                         bsSize="sm"
                                         bsStyle="default"
-                                        className="Button__StyledButton-c9cbmb-0 jVYrA"
+                                        className="c5"
                                         disabled={false}
                                         onClick={[Function]}
                                       >
                                         <button
-                                          className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                          className="c5 btn btn-sm btn-default"
                                           disabled={false}
                                           onClick={[Function]}
                                           type="button"
@@ -34997,6 +36014,341 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
 `;
 
 exports[`AggregationConditionExpression rendering conditions should render empty comparison expression 1`] = `
+.c4.btn-danger {
+  background-color: #ad0707;
+  border-color: #b23939;
+  color: rgb(252,249,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-danger:hover {
+  background-color: #a00e0e;
+  border-color: #a53636;
+  color: #e9e6e6;
+}
+
+.c4.btn-danger.active {
+  background-color: #b75151;
+  border-color: #bc6363;
+  color: rgb(252,249,249);
+}
+
+.c4.btn-danger.active:hover {
+  background-color: #a94c4c;
+  border-color: #ad5c5c;
+  color: #e9e6e6;
+}
+
+.c4.btn-danger[disabled],
+.c4.btn-danger.disabled {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c4.btn-danger[disabled]:hover,
+.c4.btn-danger.disabled:hover {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c4.btn-default {
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+  color: rgb(73,73,73);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-default:hover {
+  background-color: #d4d4d4;
+  border-color: #cfcfcf;
+  color: #444444;
+}
+
+.c4.btn-default.active {
+  background-color: #dadada;
+  border-color: #d4d4d4;
+  color: rgb(49,49,49);
+}
+
+.c4.btn-default.active:hover {
+  background-color: #cacaca;
+  border-color: #c4c4c4;
+  color: #2f2f2f;
+}
+
+.c4.btn-default[disabled],
+.c4.btn-default.disabled {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c4.btn-default[disabled]:hover,
+.c4.btn-default.disabled:hover {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c4.btn-info {
+  background-color: #0063be;
+  border-color: #3970c2;
+  color: rgb(249,250,252);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-info:hover {
+  background-color: #0c5cb0;
+  border-color: #3668b3;
+  color: #e6e7e9;
+}
+
+.c4.btn-info.active {
+  background-color: #517cc5;
+  border-color: #6386c9;
+  color: rgb(249,250,252);
+}
+
+.c4.btn-info.active:hover {
+  background-color: #4b73b6;
+  border-color: #5c7dba;
+  color: #e6e7e9;
+}
+
+.c4.btn-info[disabled],
+.c4.btn-info.disabled {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c4.btn-info[disabled]:hover,
+.c4.btn-info.disabled:hover {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c4.btn-link {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-link:hover {
+  background-color: #ebebeb26;
+  border-color: #ebebeb26;
+  color: #68267b;
+}
+
+.c4.btn-link.active {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #410057;
+}
+
+.c4.btn-link.active:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: #ebebeb26;
+  color: #3d0c51;
+}
+
+.c4.btn-link[disabled],
+.c4.btn-link.disabled {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c4.btn-link[disabled]:hover,
+.c4.btn-link.disabled:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c4.btn-primary {
+  background-color: #702785;
+  border-color: #7b458e;
+  color: rgb(234,229,236);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-primary:hover {
+  background-color: #68267b;
+  border-color: #724083;
+  color: #d8d3da;
+}
+
+.c4.btn-primary.active {
+  background-color: #855996;
+  border-color: #8f699d;
+  color: rgb(250,249,251);
+}
+
+.c4.btn-primary.active:hover {
+  background-color: #7c538b;
+  border-color: #846292;
+  color: #e7e6e8;
+}
+
+.c4.btn-primary[disabled],
+.c4.btn-primary.disabled {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c4.btn-primary[disabled]:hover,
+.c4.btn-primary.disabled:hover {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c4.btn-success {
+  background-color: #00ae42;
+  border-color: #39b356;
+  color: rgb(249,252,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-success:hover {
+  background-color: #0ca13e;
+  border-color: #36a550;
+  color: #e6e9e6;
+}
+
+.c4.btn-success.active {
+  background-color: #51b866;
+  border-color: #63bc74;
+  color: rgb(249,252,250);
+}
+
+.c4.btn-success.active:hover {
+  background-color: #4baa5f;
+  border-color: #5cae6c;
+  color: #e6e9e7;
+}
+
+.c4.btn-success[disabled],
+.c4.btn-success.disabled {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c4.btn-success[disabled]:hover,
+.c4.btn-success.disabled:hover {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c4.btn-warning {
+  background-color: #ffd200;
+  border-color: #f9cd07;
+  color: rgb(57,47,0);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-warning:hover {
+  background-color: #ebc20c;
+  border-color: #e6bd0e;
+  color: #362d0c;
+}
+
+.c4.btn-warning.active {
+  background-color: #f2c70a;
+  border-color: #ebc20c;
+  color: rgb(54,45,2);
+}
+
+.c4.btn-warning.active:hover {
+  background-color: #e0b80f;
+  border-color: #d9b310;
+  color: #332b0c;
+}
+
+.c4.btn-warning[disabled],
+.c4.btn-warning.disabled {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c4.btn-warning[disabled]:hover,
+.c4.btn-warning.disabled:hover {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c2 {
+  color: #1f1f1f;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.c3 {
+  color: #1f1f1f;
+  background-color: #fff;
+  border-color: #cdcdcd;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c3::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c3::placeholder {
+  color: #9b9b9b;
+}
+
+.c3:focus {
+  border-color: #6386c9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(99,134,201,0.4);
+}
+
+.c3[disabled],
+.c3[readonly],
+fieldset[disabled] .c3 {
+  background-color: #cdcdcd;
+}
+
+.c3 ~ .form-control-feedback.glyphicon {
+  display: none;
+}
+
+.c0 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.c1 {
+  width: 100px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 <AggregationConditionExpression
   aggregationFunctions={Array []}
   eventDefinition={
@@ -35054,7 +36406,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                 "componentStyle": ComponentStyle {
                   "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                   "isStatic": false,
-                  "lastClassName": "iXeqOy",
+                  "lastClassName": "c0",
                   "rules": Array [
                     [Function],
                   ],
@@ -35072,7 +36424,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
             forwardedRef={null}
           >
             <div
-              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 iXeqOy form-inline"
+              className="c0 form-inline"
             >
               <Component
                 validationState={null}
@@ -35113,11 +36465,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className=""
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -35146,7 +36498,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                       "componentStyle": ComponentStyle {
                         "componentId": "BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1",
                         "isStatic": false,
-                        "lastClassName": "jfMmbj",
+                        "lastClassName": "c1",
                         "rules": Array [
                           "width:100px;margin-left:",
                           [Function],
@@ -35167,19 +36519,19 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                   isFirstElement={false}
                 >
                   <Component
-                    className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                    className="c1"
                     isFirstElement={false}
                   >
                     <Component
-                      className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                      className="c1"
                       validationState={null}
                     >
                       <FormGroup__StyledFormGroup
-                        className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                        className="c1"
                         validationState={null}
                       >
                         <StyledComponent
-                          className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                          className="c1"
                           forwardedComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -35212,11 +36564,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                            className="c1"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
+                              className="c1 form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -36745,11 +38097,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className=""
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -36949,12 +38301,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className=""
                             controlId="aggregation-function"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="form-group"
                             >
                               <ControlLabel>
                                 <StyledComponent
@@ -36965,7 +38317,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                       "componentStyle": ComponentStyle {
                                         "componentId": "ControlLabel-sc-1edmum5-0",
                                         "isStatic": false,
-                                        "lastClassName": "hCskeX",
+                                        "lastClassName": "c2",
                                         "rules": Array [
                                           [Function],
                                         ],
@@ -36984,11 +38336,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                 >
                                   <ControlLabel
                                     bsClass="control-label"
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                    className="c2"
                                     srOnly={false}
                                   >
                                     <label
-                                      className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                      className="c2 control-label"
                                       htmlFor="aggregation-function"
                                     >
                                       If
@@ -39717,12 +41069,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                     >
                       <FormGroup
                         bsClass="form-group"
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                        className=""
                         controlId="aggregation-condition"
                         validationState={null}
                       >
                         <div
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                          className="form-group"
                         >
                           <ControlLabel>
                             <StyledComponent
@@ -39733,7 +41085,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                   "componentStyle": ComponentStyle {
                                     "componentId": "ControlLabel-sc-1edmum5-0",
                                     "isStatic": false,
-                                    "lastClassName": "hCskeX",
+                                    "lastClassName": "c2",
                                     "rules": Array [
                                       [Function],
                                     ],
@@ -39752,11 +41104,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                             >
                               <ControlLabel
                                 bsClass="control-label"
-                                className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                className="c2"
                                 srOnly={false}
                               >
                                 <label
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                  className="c2 control-label"
                                   htmlFor="aggregation-condition"
                                 >
                                   Is
@@ -41567,12 +42919,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                           >
                             <FormGroup
                               bsClass="form-group"
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                              className=""
                               controlId="aggregation-threshold"
                               validationState={null}
                             >
                               <div
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                className="form-group"
                               >
                                 <ControlLabel>
                                   <StyledComponent
@@ -41583,7 +42935,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                         "componentStyle": ComponentStyle {
                                           "componentId": "ControlLabel-sc-1edmum5-0",
                                           "isStatic": false,
-                                          "lastClassName": "hCskeX",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -41602,11 +42954,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                   >
                                     <ControlLabel
                                       bsClass="control-label"
-                                      className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                      className="c2"
                                       srOnly={false}
                                     >
                                       <label
-                                        className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                        className="c2 control-label"
                                         htmlFor="aggregation-threshold"
                                       >
                                         Threshold
@@ -41641,7 +42993,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                             "componentStyle": ComponentStyle {
                                               "componentId": "FormControl-sc-1amoaox-0",
                                               "isStatic": false,
-                                              "lastClassName": "fdBWEX",
+                                              "lastClassName": "c3",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -41667,7 +43019,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                       >
                                         <FormControl
                                           bsClass="form-control"
-                                          className="FormControl-sc-1amoaox-0 fdBWEX"
+                                          className="c3"
                                           componentClass="input"
                                           inputRef={[Function]}
                                           label="Threshold"
@@ -41678,7 +43030,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                           value={0}
                                         >
                                           <input
-                                            className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                            className="c3 form-control"
                                             id="aggregation-threshold"
                                             label="Threshold"
                                             name="threshold"
@@ -41754,11 +43106,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
           >
             <FormGroup
               bsClass="form-group"
-              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+              className=""
               validationState={null}
             >
               <div
-                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                className="form-group"
               >
                 <div
                   className="formControlNoLabel"
@@ -41804,7 +43156,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                 "componentStyle": ComponentStyle {
                                   "componentId": "Button__StyledButton-c9cbmb-0",
                                   "isStatic": false,
-                                  "lastClassName": "jVYrA",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -41828,12 +43180,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                               bsClass="btn"
                               bsSize="sm"
                               bsStyle="default"
-                              className="Button__StyledButton-c9cbmb-0 jVYrA"
+                              className="c4"
                               disabled={false}
                               onClick={[Function]}
                             >
                               <button
-                                className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                className="c4 btn btn-sm btn-default"
                                 disabled={false}
                                 onClick={[Function]}
                                 type="button"
@@ -41896,7 +43248,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                 "componentStyle": ComponentStyle {
                                   "componentId": "Button__StyledButton-c9cbmb-0",
                                   "isStatic": false,
-                                  "lastClassName": "jVYrA",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -41920,12 +43272,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                               bsClass="btn"
                               bsSize="sm"
                               bsStyle="default"
-                              className="Button__StyledButton-c9cbmb-0 jVYrA"
+                              className="c4"
                               disabled={false}
                               onClick={[Function]}
                             >
                               <button
-                                className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                className="c4 btn btn-sm btn-default"
                                 disabled={false}
                                 onClick={[Function]}
                                 type="button"
@@ -41988,7 +43340,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                 "componentStyle": ComponentStyle {
                                   "componentId": "Button__StyledButton-c9cbmb-0",
                                   "isStatic": false,
-                                  "lastClassName": "jVYrA",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -42012,12 +43364,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                               bsClass="btn"
                               bsSize="sm"
                               bsStyle="default"
-                              className="Button__StyledButton-c9cbmb-0 jVYrA"
+                              className="c4"
                               disabled={false}
                               onClick={[Function]}
                             >
                               <button
-                                className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                className="c4 btn btn-sm btn-default"
                                 disabled={false}
                                 onClick={[Function]}
                                 type="button"
@@ -42042,6 +43394,341 @@ exports[`AggregationConditionExpression rendering conditions should render empty
 `;
 
 exports[`AggregationConditionExpression rendering conditions should render simple comparison expression 1`] = `
+.c4.btn-danger {
+  background-color: #ad0707;
+  border-color: #b23939;
+  color: rgb(252,249,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-danger:hover {
+  background-color: #a00e0e;
+  border-color: #a53636;
+  color: #e9e6e6;
+}
+
+.c4.btn-danger.active {
+  background-color: #b75151;
+  border-color: #bc6363;
+  color: rgb(252,249,249);
+}
+
+.c4.btn-danger.active:hover {
+  background-color: #a94c4c;
+  border-color: #ad5c5c;
+  color: #e9e6e6;
+}
+
+.c4.btn-danger[disabled],
+.c4.btn-danger.disabled {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c4.btn-danger[disabled]:hover,
+.c4.btn-danger.disabled:hover {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c4.btn-default {
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+  color: rgb(73,73,73);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-default:hover {
+  background-color: #d4d4d4;
+  border-color: #cfcfcf;
+  color: #444444;
+}
+
+.c4.btn-default.active {
+  background-color: #dadada;
+  border-color: #d4d4d4;
+  color: rgb(49,49,49);
+}
+
+.c4.btn-default.active:hover {
+  background-color: #cacaca;
+  border-color: #c4c4c4;
+  color: #2f2f2f;
+}
+
+.c4.btn-default[disabled],
+.c4.btn-default.disabled {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c4.btn-default[disabled]:hover,
+.c4.btn-default.disabled:hover {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c4.btn-info {
+  background-color: #0063be;
+  border-color: #3970c2;
+  color: rgb(249,250,252);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-info:hover {
+  background-color: #0c5cb0;
+  border-color: #3668b3;
+  color: #e6e7e9;
+}
+
+.c4.btn-info.active {
+  background-color: #517cc5;
+  border-color: #6386c9;
+  color: rgb(249,250,252);
+}
+
+.c4.btn-info.active:hover {
+  background-color: #4b73b6;
+  border-color: #5c7dba;
+  color: #e6e7e9;
+}
+
+.c4.btn-info[disabled],
+.c4.btn-info.disabled {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c4.btn-info[disabled]:hover,
+.c4.btn-info.disabled:hover {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c4.btn-link {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-link:hover {
+  background-color: #ebebeb26;
+  border-color: #ebebeb26;
+  color: #68267b;
+}
+
+.c4.btn-link.active {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #410057;
+}
+
+.c4.btn-link.active:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: #ebebeb26;
+  color: #3d0c51;
+}
+
+.c4.btn-link[disabled],
+.c4.btn-link.disabled {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c4.btn-link[disabled]:hover,
+.c4.btn-link.disabled:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c4.btn-primary {
+  background-color: #702785;
+  border-color: #7b458e;
+  color: rgb(234,229,236);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-primary:hover {
+  background-color: #68267b;
+  border-color: #724083;
+  color: #d8d3da;
+}
+
+.c4.btn-primary.active {
+  background-color: #855996;
+  border-color: #8f699d;
+  color: rgb(250,249,251);
+}
+
+.c4.btn-primary.active:hover {
+  background-color: #7c538b;
+  border-color: #846292;
+  color: #e7e6e8;
+}
+
+.c4.btn-primary[disabled],
+.c4.btn-primary.disabled {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c4.btn-primary[disabled]:hover,
+.c4.btn-primary.disabled:hover {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c4.btn-success {
+  background-color: #00ae42;
+  border-color: #39b356;
+  color: rgb(249,252,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-success:hover {
+  background-color: #0ca13e;
+  border-color: #36a550;
+  color: #e6e9e6;
+}
+
+.c4.btn-success.active {
+  background-color: #51b866;
+  border-color: #63bc74;
+  color: rgb(249,252,250);
+}
+
+.c4.btn-success.active:hover {
+  background-color: #4baa5f;
+  border-color: #5cae6c;
+  color: #e6e9e7;
+}
+
+.c4.btn-success[disabled],
+.c4.btn-success.disabled {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c4.btn-success[disabled]:hover,
+.c4.btn-success.disabled:hover {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c4.btn-warning {
+  background-color: #ffd200;
+  border-color: #f9cd07;
+  color: rgb(57,47,0);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c4.btn-warning:hover {
+  background-color: #ebc20c;
+  border-color: #e6bd0e;
+  color: #362d0c;
+}
+
+.c4.btn-warning.active {
+  background-color: #f2c70a;
+  border-color: #ebc20c;
+  color: rgb(54,45,2);
+}
+
+.c4.btn-warning.active:hover {
+  background-color: #e0b80f;
+  border-color: #d9b310;
+  color: #332b0c;
+}
+
+.c4.btn-warning[disabled],
+.c4.btn-warning.disabled {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c4.btn-warning[disabled]:hover,
+.c4.btn-warning.disabled:hover {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c2 {
+  color: #1f1f1f;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.c3 {
+  color: #1f1f1f;
+  background-color: #fff;
+  border-color: #cdcdcd;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c3::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c3::placeholder {
+  color: #9b9b9b;
+}
+
+.c3:focus {
+  border-color: #6386c9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(99,134,201,0.4);
+}
+
+.c3[disabled],
+.c3[readonly],
+fieldset[disabled] .c3 {
+  background-color: #cdcdcd;
+}
+
+.c3 ~ .form-control-feedback.glyphicon {
+  display: none;
+}
+
+.c0 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.c1 {
+  width: 100px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 <AggregationConditionExpression
   aggregationFunctions={Array []}
   eventDefinition={
@@ -42105,7 +43792,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                 "componentStyle": ComponentStyle {
                   "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                   "isStatic": false,
-                  "lastClassName": "iXeqOy",
+                  "lastClassName": "c0",
                   "rules": Array [
                     [Function],
                   ],
@@ -42123,7 +43810,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
             forwardedRef={null}
           >
             <div
-              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 iXeqOy form-inline"
+              className="c0 form-inline"
             >
               <Component
                 validationState={null}
@@ -42164,11 +43851,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className=""
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -42197,7 +43884,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                       "componentStyle": ComponentStyle {
                         "componentId": "BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1",
                         "isStatic": false,
-                        "lastClassName": "jfMmbj",
+                        "lastClassName": "c1",
                         "rules": Array [
                           "width:100px;margin-left:",
                           [Function],
@@ -42218,19 +43905,19 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                   isFirstElement={false}
                 >
                   <Component
-                    className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                    className="c1"
                     isFirstElement={false}
                   >
                     <Component
-                      className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                      className="c1"
                       validationState={null}
                     >
                       <FormGroup__StyledFormGroup
-                        className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                        className="c1"
                         validationState={null}
                       >
                         <StyledComponent
-                          className="BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                          className="c1"
                           forwardedComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -42263,11 +43950,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                            className="c1"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
+                              className="c1 form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -43796,11 +45483,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className=""
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -44018,12 +45705,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className=""
                             controlId="aggregation-function"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="form-group"
                             >
                               <ControlLabel>
                                 <StyledComponent
@@ -44034,7 +45721,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                       "componentStyle": ComponentStyle {
                                         "componentId": "ControlLabel-sc-1edmum5-0",
                                         "isStatic": false,
-                                        "lastClassName": "hCskeX",
+                                        "lastClassName": "c2",
                                         "rules": Array [
                                           [Function],
                                         ],
@@ -44053,11 +45740,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                 >
                                   <ControlLabel
                                     bsClass="control-label"
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                    className="c2"
                                     srOnly={false}
                                   >
                                     <label
-                                      className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                      className="c2 control-label"
                                       htmlFor="aggregation-function"
                                     >
                                       If
@@ -46982,12 +48669,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                     >
                       <FormGroup
                         bsClass="form-group"
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                        className=""
                         controlId="aggregation-condition"
                         validationState={null}
                       >
                         <div
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                          className="form-group"
                         >
                           <ControlLabel>
                             <StyledComponent
@@ -46998,7 +48685,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                   "componentStyle": ComponentStyle {
                                     "componentId": "ControlLabel-sc-1edmum5-0",
                                     "isStatic": false,
-                                    "lastClassName": "hCskeX",
+                                    "lastClassName": "c2",
                                     "rules": Array [
                                       [Function],
                                     ],
@@ -47017,11 +48704,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                             >
                               <ControlLabel
                                 bsClass="control-label"
-                                className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                className="c2"
                                 srOnly={false}
                               >
                                 <label
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                  className="c2 control-label"
                                   htmlFor="aggregation-condition"
                                 >
                                   Is
@@ -48879,12 +50566,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                           >
                             <FormGroup
                               bsClass="form-group"
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                              className=""
                               controlId="aggregation-threshold"
                               validationState={null}
                             >
                               <div
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                className="form-group"
                               >
                                 <ControlLabel>
                                   <StyledComponent
@@ -48895,7 +50582,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                         "componentStyle": ComponentStyle {
                                           "componentId": "ControlLabel-sc-1edmum5-0",
                                           "isStatic": false,
-                                          "lastClassName": "hCskeX",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -48914,11 +50601,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                   >
                                     <ControlLabel
                                       bsClass="control-label"
-                                      className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                      className="c2"
                                       srOnly={false}
                                     >
                                       <label
-                                        className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                        className="c2 control-label"
                                         htmlFor="aggregation-threshold"
                                       >
                                         Threshold
@@ -48953,7 +50640,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                             "componentStyle": ComponentStyle {
                                               "componentId": "FormControl-sc-1amoaox-0",
                                               "isStatic": false,
-                                              "lastClassName": "fdBWEX",
+                                              "lastClassName": "c3",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -48979,7 +50666,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                       >
                                         <FormControl
                                           bsClass="form-control"
-                                          className="FormControl-sc-1amoaox-0 fdBWEX"
+                                          className="c3"
                                           componentClass="input"
                                           inputRef={[Function]}
                                           label="Threshold"
@@ -48990,7 +50677,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                           value={12}
                                         >
                                           <input
-                                            className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                            className="c3 form-control"
                                             id="aggregation-threshold"
                                             label="Threshold"
                                             name="threshold"
@@ -49066,11 +50753,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
           >
             <FormGroup
               bsClass="form-group"
-              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+              className=""
               validationState={null}
             >
               <div
-                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                className="form-group"
               >
                 <div
                   className="formControlNoLabel"
@@ -49116,7 +50803,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                 "componentStyle": ComponentStyle {
                                   "componentId": "Button__StyledButton-c9cbmb-0",
                                   "isStatic": false,
-                                  "lastClassName": "jVYrA",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -49140,12 +50827,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                               bsClass="btn"
                               bsSize="sm"
                               bsStyle="default"
-                              className="Button__StyledButton-c9cbmb-0 jVYrA"
+                              className="c4"
                               disabled={false}
                               onClick={[Function]}
                             >
                               <button
-                                className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                className="c4 btn btn-sm btn-default"
                                 disabled={false}
                                 onClick={[Function]}
                                 type="button"
@@ -49208,7 +50895,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                 "componentStyle": ComponentStyle {
                                   "componentId": "Button__StyledButton-c9cbmb-0",
                                   "isStatic": false,
-                                  "lastClassName": "jVYrA",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -49232,12 +50919,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                               bsClass="btn"
                               bsSize="sm"
                               bsStyle="default"
-                              className="Button__StyledButton-c9cbmb-0 jVYrA"
+                              className="c4"
                               disabled={false}
                               onClick={[Function]}
                             >
                               <button
-                                className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                className="c4 btn btn-sm btn-default"
                                 disabled={false}
                                 onClick={[Function]}
                                 type="button"
@@ -49300,7 +50987,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                 "componentStyle": ComponentStyle {
                                   "componentId": "Button__StyledButton-c9cbmb-0",
                                   "isStatic": false,
-                                  "lastClassName": "jVYrA",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -49324,12 +51011,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                               bsClass="btn"
                               bsSize="sm"
                               bsStyle="default"
-                              className="Button__StyledButton-c9cbmb-0 jVYrA"
+                              className="c4"
                               disabled={false}
                               onClick={[Function]}
                             >
                               <button
-                                className="Button__StyledButton-c9cbmb-0 jVYrA btn btn-sm btn-default"
+                                className="c4 btn btn-sm btn-default"
                                 disabled={false}
                                 onClick={[Function]}
                                 type="button"

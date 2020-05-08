@@ -1,6 +1,337 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
+.c3.btn-danger {
+  background-color: #ad0707;
+  border-color: #b23939;
+  color: rgb(252,249,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-danger:hover {
+  background-color: #a00e0e;
+  border-color: #a53636;
+  color: #e9e6e6;
+}
+
+.c3.btn-danger.active {
+  background-color: #b75151;
+  border-color: #bc6363;
+  color: rgb(252,249,249);
+}
+
+.c3.btn-danger.active:hover {
+  background-color: #a94c4c;
+  border-color: #ad5c5c;
+  color: #e9e6e6;
+}
+
+.c3.btn-danger[disabled],
+.c3.btn-danger.disabled {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c3.btn-danger[disabled]:hover,
+.c3.btn-danger.disabled:hover {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c3.btn-default {
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+  color: rgb(73,73,73);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-default:hover {
+  background-color: #d4d4d4;
+  border-color: #cfcfcf;
+  color: #444444;
+}
+
+.c3.btn-default.active {
+  background-color: #dadada;
+  border-color: #d4d4d4;
+  color: rgb(49,49,49);
+}
+
+.c3.btn-default.active:hover {
+  background-color: #cacaca;
+  border-color: #c4c4c4;
+  color: #2f2f2f;
+}
+
+.c3.btn-default[disabled],
+.c3.btn-default.disabled {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c3.btn-default[disabled]:hover,
+.c3.btn-default.disabled:hover {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c3.btn-info {
+  background-color: #0063be;
+  border-color: #3970c2;
+  color: rgb(249,250,252);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-info:hover {
+  background-color: #0c5cb0;
+  border-color: #3668b3;
+  color: #e6e7e9;
+}
+
+.c3.btn-info.active {
+  background-color: #517cc5;
+  border-color: #6386c9;
+  color: rgb(249,250,252);
+}
+
+.c3.btn-info.active:hover {
+  background-color: #4b73b6;
+  border-color: #5c7dba;
+  color: #e6e7e9;
+}
+
+.c3.btn-info[disabled],
+.c3.btn-info.disabled {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c3.btn-info[disabled]:hover,
+.c3.btn-info.disabled:hover {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c3.btn-link {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-link:hover {
+  background-color: #ebebeb26;
+  border-color: #ebebeb26;
+  color: #68267b;
+}
+
+.c3.btn-link.active {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #410057;
+}
+
+.c3.btn-link.active:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: #ebebeb26;
+  color: #3d0c51;
+}
+
+.c3.btn-link[disabled],
+.c3.btn-link.disabled {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c3.btn-link[disabled]:hover,
+.c3.btn-link.disabled:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c3.btn-primary {
+  background-color: #702785;
+  border-color: #7b458e;
+  color: rgb(234,229,236);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-primary:hover {
+  background-color: #68267b;
+  border-color: #724083;
+  color: #d8d3da;
+}
+
+.c3.btn-primary.active {
+  background-color: #855996;
+  border-color: #8f699d;
+  color: rgb(250,249,251);
+}
+
+.c3.btn-primary.active:hover {
+  background-color: #7c538b;
+  border-color: #846292;
+  color: #e7e6e8;
+}
+
+.c3.btn-primary[disabled],
+.c3.btn-primary.disabled {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c3.btn-primary[disabled]:hover,
+.c3.btn-primary.disabled:hover {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c3.btn-success {
+  background-color: #00ae42;
+  border-color: #39b356;
+  color: rgb(249,252,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-success:hover {
+  background-color: #0ca13e;
+  border-color: #36a550;
+  color: #e6e9e6;
+}
+
+.c3.btn-success.active {
+  background-color: #51b866;
+  border-color: #63bc74;
+  color: rgb(249,252,250);
+}
+
+.c3.btn-success.active:hover {
+  background-color: #4baa5f;
+  border-color: #5cae6c;
+  color: #e6e9e7;
+}
+
+.c3.btn-success[disabled],
+.c3.btn-success.disabled {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c3.btn-success[disabled]:hover,
+.c3.btn-success.disabled:hover {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c3.btn-warning {
+  background-color: #ffd200;
+  border-color: #f9cd07;
+  color: rgb(57,47,0);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-warning:hover {
+  background-color: #ebc20c;
+  border-color: #e6bd0e;
+  color: #362d0c;
+}
+
+.c3.btn-warning.active {
+  background-color: #f2c70a;
+  border-color: #ebc20c;
+  color: rgb(54,45,2);
+}
+
+.c3.btn-warning.active:hover {
+  background-color: #e0b80f;
+  border-color: #d9b310;
+  color: #332b0c;
+}
+
+.c3.btn-warning[disabled],
+.c3.btn-warning.disabled {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c3.btn-warning[disabled]:hover,
+.c3.btn-warning.disabled:hover {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c0 {
+  color: #1f1f1f;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.c1 {
+  color: #1f1f1f;
+  background-color: #fff;
+  border-color: #cdcdcd;
+}
+
+.c1::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c1::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.c1:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c1::placeholder {
+  color: #9b9b9b;
+}
+
+.c1:focus {
+  border-color: #6386c9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(99,134,201,0.4);
+}
+
+.c1[disabled],
+.c1[readonly],
+fieldset[disabled] .c1 {
+  background-color: #cdcdcd;
+}
+
+.c1 ~ .form-control-feedback.glyphicon {
+  display: none;
+}
+
+.c2 {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #838383;
+}
+
 <ContentPackSelection
   contentPack={
     Object {
@@ -105,12 +436,12 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="name"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -121,7 +452,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -140,11 +471,11 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="name"
                                   >
                                     Name
@@ -181,7 +512,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -209,7 +540,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="input"
                                       inputRef={[Function]}
                                       label="Name"
@@ -222,7 +553,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="name"
                                         label="Name"
                                         maxLength={250}
@@ -245,7 +576,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -264,10 +595,10 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Required. Give a descriptive name for this content pack.
                                       </span>
@@ -339,12 +670,12 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="summary"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -355,7 +686,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -374,11 +705,11 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="summary"
                                   >
                                     Summary
@@ -415,7 +746,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -443,7 +774,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="input"
                                       inputRef={[Function]}
                                       label="Summary"
@@ -456,7 +787,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="summary"
                                         label="Summary"
                                         maxLength={250}
@@ -479,7 +810,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -498,10 +829,10 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Required. Give a short summary of the content pack.
                                       </span>
@@ -572,12 +903,12 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="description"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -588,7 +919,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -607,11 +938,11 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="description"
                                   >
                                     Description
@@ -647,7 +978,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -674,7 +1005,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="textarea"
                                       inputRef={[Function]}
                                       label="Description"
@@ -686,7 +1017,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                       value=""
                                     >
                                       <textarea
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="description"
                                         label="Description"
                                         name="description"
@@ -708,7 +1039,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -727,10 +1058,10 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Give a long description of the content pack in markdown.
                                       </span>
@@ -802,12 +1133,12 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="vendor"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -818,7 +1149,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -837,11 +1168,11 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="vendor"
                                   >
                                     Vendor
@@ -878,7 +1209,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -906,7 +1237,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="input"
                                       inputRef={[Function]}
                                       label="Vendor"
@@ -919,7 +1250,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="vendor"
                                         label="Vendor"
                                         maxLength={250}
@@ -942,7 +1273,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -961,10 +1292,10 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Required. Who did this content pack and how can they be reached, e.g. Name and email.
                                       </span>
@@ -1035,12 +1366,12 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="url"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -1051,7 +1382,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -1070,11 +1401,11 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="url"
                                   >
                                     URL
@@ -1110,7 +1441,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -1137,7 +1468,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="input"
                                       inputRef={[Function]}
                                       label="URL"
@@ -1149,7 +1480,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="url"
                                         label="URL"
                                         maxLength={250}
@@ -1171,7 +1502,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -1190,10 +1521,10 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Where can I find the content pack. e.g. github url
                                       </span>
@@ -1350,7 +1681,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "Button__StyledButton-c9cbmb-0",
                                 "isStatic": false,
-                                "lastClassName": "jVYrA",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   [Function],
                                 ],
@@ -1373,12 +1704,12 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                             block={false}
                             bsClass="btn"
                             bsStyle="default"
-                            className="Button__StyledButton-c9cbmb-0 jVYrA submit-button"
+                            className="c3 submit-button"
                             disabled={false}
                             type="submit"
                           >
                             <button
-                              className="Button__StyledButton-c9cbmb-0 jVYrA submit-button btn btn-default"
+                              className="c3 submit-button btn btn-default"
                               disabled={false}
                               type="submit"
                             >
@@ -1433,7 +1764,7 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "Button__StyledButton-c9cbmb-0",
                                 "isStatic": false,
-                                "lastClassName": "jVYrA",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   [Function],
                                 ],
@@ -1457,13 +1788,13 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
                             block={false}
                             bsClass="btn"
                             bsStyle="default"
-                            className="Button__StyledButton-c9cbmb-0 jVYrA reset-button"
+                            className="c3 reset-button"
                             disabled={false}
                             onClick={[Function]}
                             type="reset"
                           >
                             <button
-                              className="Button__StyledButton-c9cbmb-0 jVYrA reset-button btn btn-default"
+                              className="c3 reset-button btn btn-default"
                               disabled={false}
                               onClick={[Function]}
                               type="reset"
@@ -1513,6 +1844,398 @@ exports[`<ContentPackSelection /> should render with empty content pack 1`] = `
 `;
 
 exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
+.c3.btn-danger {
+  background-color: #ad0707;
+  border-color: #b23939;
+  color: rgb(252,249,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-danger:hover {
+  background-color: #a00e0e;
+  border-color: #a53636;
+  color: #e9e6e6;
+}
+
+.c3.btn-danger.active {
+  background-color: #b75151;
+  border-color: #bc6363;
+  color: rgb(252,249,249);
+}
+
+.c3.btn-danger.active:hover {
+  background-color: #a94c4c;
+  border-color: #ad5c5c;
+  color: #e9e6e6;
+}
+
+.c3.btn-danger[disabled],
+.c3.btn-danger.disabled {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c3.btn-danger[disabled]:hover,
+.c3.btn-danger.disabled:hover {
+  background-color: #c07272;
+  border-color: #bc6363;
+  color: rgb(252,250,250);
+}
+
+.c3.btn-default {
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+  color: rgb(73,73,73);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-default:hover {
+  background-color: #d4d4d4;
+  border-color: #cfcfcf;
+  color: #444444;
+}
+
+.c3.btn-default.active {
+  background-color: #dadada;
+  border-color: #d4d4d4;
+  color: rgb(49,49,49);
+}
+
+.c3.btn-default.active:hover {
+  background-color: #cacaca;
+  border-color: #c4c4c4;
+  color: #2f2f2f;
+}
+
+.c3.btn-default[disabled],
+.c3.btn-default.disabled {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c3.btn-default[disabled]:hover,
+.c3.btn-default.disabled:hover {
+  background-color: #cecece;
+  border-color: #d4d4d4;
+  color: rgb(80,80,80);
+}
+
+.c3.btn-info {
+  background-color: #0063be;
+  border-color: #3970c2;
+  color: rgb(249,250,252);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-info:hover {
+  background-color: #0c5cb0;
+  border-color: #3668b3;
+  color: #e6e7e9;
+}
+
+.c3.btn-info.active {
+  background-color: #517cc5;
+  border-color: #6386c9;
+  color: rgb(249,250,252);
+}
+
+.c3.btn-info.active:hover {
+  background-color: #4b73b6;
+  border-color: #5c7dba;
+  color: #e6e7e9;
+}
+
+.c3.btn-info[disabled],
+.c3.btn-info.disabled {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c3.btn-info[disabled]:hover,
+.c3.btn-info.disabled:hover {
+  background-color: #7290cd;
+  border-color: #6386c9;
+  color: rgb(250,251,253);
+}
+
+.c3.btn-link {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-link:hover {
+  background-color: #ebebeb26;
+  border-color: #ebebeb26;
+  color: #68267b;
+}
+
+.c3.btn-link.active {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #410057;
+}
+
+.c3.btn-link.active:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: #ebebeb26;
+  color: #3d0c51;
+}
+
+.c3.btn-link[disabled],
+.c3.btn-link.disabled {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c3.btn-link[disabled]:hover,
+.c3.btn-link.disabled:hover {
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
+  color: #702785;
+}
+
+.c3.btn-primary {
+  background-color: #702785;
+  border-color: #7b458e;
+  color: rgb(234,229,236);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-primary:hover {
+  background-color: #68267b;
+  border-color: #724083;
+  color: #d8d3da;
+}
+
+.c3.btn-primary.active {
+  background-color: #855996;
+  border-color: #8f699d;
+  color: rgb(250,249,251);
+}
+
+.c3.btn-primary.active:hover {
+  background-color: #7c538b;
+  border-color: #846292;
+  color: #e7e6e8;
+}
+
+.c3.btn-primary[disabled],
+.c3.btn-primary.disabled {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c3.btn-primary[disabled]:hover,
+.c3.btn-primary.disabled:hover {
+  background-color: #9877a5;
+  border-color: #8f699d;
+  color: rgb(251,250,251);
+}
+
+.c3.btn-success {
+  background-color: #00ae42;
+  border-color: #39b356;
+  color: rgb(249,252,249);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-success:hover {
+  background-color: #0ca13e;
+  border-color: #36a550;
+  color: #e6e9e6;
+}
+
+.c3.btn-success.active {
+  background-color: #51b866;
+  border-color: #63bc74;
+  color: rgb(249,252,250);
+}
+
+.c3.btn-success.active:hover {
+  background-color: #4baa5f;
+  border-color: #5cae6c;
+  color: #e6e9e7;
+}
+
+.c3.btn-success[disabled],
+.c3.btn-success.disabled {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c3.btn-success[disabled]:hover,
+.c3.btn-success.disabled:hover {
+  background-color: #72c180;
+  border-color: #63bc74;
+  color: rgb(250,252,250);
+}
+
+.c3.btn-warning {
+  background-color: #ffd200;
+  border-color: #f9cd07;
+  color: rgb(57,47,0);
+  -webkit-transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out,border 150ms ease-in-out,color 150ms ease-in-out;
+}
+
+.c3.btn-warning:hover {
+  background-color: #ebc20c;
+  border-color: #e6bd0e;
+  color: #362d0c;
+}
+
+.c3.btn-warning.active {
+  background-color: #f2c70a;
+  border-color: #ebc20c;
+  color: rgb(54,45,2);
+}
+
+.c3.btn-warning.active:hover {
+  background-color: #e0b80f;
+  border-color: #d9b310;
+  color: #332b0c;
+}
+
+.c3.btn-warning[disabled],
+.c3.btn-warning.disabled {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c3.btn-warning[disabled]:hover,
+.c3.btn-warning.disabled:hover {
+  background-color: #e4bc0e;
+  border-color: #ebc20c;
+  color: rgb(88,73,5);
+}
+
+.c0 {
+  color: #1f1f1f;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.c1 {
+  color: #1f1f1f;
+  background-color: #fff;
+  border-color: #cdcdcd;
+}
+
+.c1::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c1::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.c1:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.c1::placeholder {
+  color: #9b9b9b;
+}
+
+.c1:focus {
+  border-color: #6386c9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(99,134,201,0.4);
+}
+
+.c1[disabled],
+.c1[readonly],
+fieldset[disabled] .c1 {
+  background-color: #cdcdcd;
+}
+
+.c1 ~ .form-control-feedback.glyphicon {
+  display: none;
+}
+
+.c2 {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #838383;
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 20px;
+}
+
+.c4 label {
+  min-height: 20px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+.c4 label * {
+  cursor: pointer;
+}
+
+.c5 {
+  display: inline-block;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.c6.fa-stack {
+  cursor: pointer;
+  font-size: 1.125rem;
+  line-height: 20px;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-top;
+}
+
+.c6.fa-stack:hover [class*="fa-"] {
+  color: #702785;
+  opacity: 1;
+}
+
+.c6 [class*="fa-"]:first-child {
+  opacity: 0;
+}
+
+.c6 [class*="fa-"]:first-child ~ [class*="fa-"]:hover {
+  color: #fff;
+}
+
+.c7 {
+  font-size: 1.125rem;
+}
+
+.c8 {
+  border: 0;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+}
+
+.c9 {
+  border-left: 1px #e6e6e6 solid;
+  margin-left: 35px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
 <ContentPackSelection
   contentPack={
     Object {
@@ -1637,12 +2360,12 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="name"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -1653,7 +2376,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -1672,11 +2395,11 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="name"
                                   >
                                     Name
@@ -1713,7 +2436,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -1741,7 +2464,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="input"
                                       inputRef={[Function]}
                                       label="Name"
@@ -1754,7 +2477,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                       value="name"
                                     >
                                       <input
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="name"
                                         label="Name"
                                         maxLength={250}
@@ -1777,7 +2500,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -1796,10 +2519,10 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Required. Give a descriptive name for this content pack.
                                       </span>
@@ -1871,12 +2594,12 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="summary"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -1887,7 +2610,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -1906,11 +2629,11 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="summary"
                                   >
                                     Summary
@@ -1947,7 +2670,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -1975,7 +2698,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="input"
                                       inputRef={[Function]}
                                       label="Summary"
@@ -1988,7 +2711,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                       value="summary"
                                     >
                                       <input
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="summary"
                                         label="Summary"
                                         maxLength={250}
@@ -2011,7 +2734,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -2030,10 +2753,10 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Required. Give a short summary of the content pack.
                                       </span>
@@ -2104,12 +2827,12 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="description"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -2120,7 +2843,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -2139,11 +2862,11 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="description"
                                   >
                                     Description
@@ -2179,7 +2902,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -2206,7 +2929,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="textarea"
                                       inputRef={[Function]}
                                       label="Description"
@@ -2218,7 +2941,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                       value="description"
                                     >
                                       <textarea
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="description"
                                         label="Description"
                                         name="description"
@@ -2240,7 +2963,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -2259,10 +2982,10 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Give a long description of the content pack in markdown.
                                       </span>
@@ -2334,12 +3057,12 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="vendor"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -2350,7 +3073,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -2369,11 +3092,11 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="vendor"
                                   >
                                     Vendor
@@ -2410,7 +3133,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -2438,7 +3161,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="input"
                                       inputRef={[Function]}
                                       label="Vendor"
@@ -2451,7 +3174,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                       value="vendor"
                                     >
                                       <input
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="vendor"
                                         label="Vendor"
                                         maxLength={250}
@@ -2474,7 +3197,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -2493,10 +3216,10 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Required. Who did this content pack and how can they be reached, e.g. Name and email.
                                       </span>
@@ -2567,12 +3290,12 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                       >
                         <FormGroup
                           bsClass="form-group"
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                          className=""
                           controlId="url"
                           validationState={null}
                         >
                           <div
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                            className="form-group"
                           >
                             <ControlLabel>
                               <StyledComponent
@@ -2583,7 +3306,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "ControlLabel-sc-1edmum5-0",
                                       "isStatic": false,
-                                      "lastClassName": "hCskeX",
+                                      "lastClassName": "c0",
                                       "rules": Array [
                                         [Function],
                                       ],
@@ -2602,11 +3325,11 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                               >
                                 <ControlLabel
                                   bsClass="control-label"
-                                  className="ControlLabel-sc-1edmum5-0 hCskeX"
+                                  className="c0"
                                   srOnly={false}
                                 >
                                   <label
-                                    className="ControlLabel-sc-1edmum5-0 hCskeX control-label"
+                                    className="c0 control-label"
                                     htmlFor="url"
                                   >
                                     URL
@@ -2642,7 +3365,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormControl-sc-1amoaox-0",
                                           "isStatic": false,
-                                          "lastClassName": "fdBWEX",
+                                          "lastClassName": "c1",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -2669,7 +3392,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <FormControl
                                       bsClass="form-control"
-                                      className="FormControl-sc-1amoaox-0 fdBWEX"
+                                      className="c1"
                                       componentClass="input"
                                       inputRef={[Function]}
                                       label="URL"
@@ -2681,7 +3404,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                       value="http://example.com"
                                     >
                                       <input
-                                        className="FormControl-sc-1amoaox-0 fdBWEX form-control"
+                                        className="c1 form-control"
                                         id="url"
                                         label="URL"
                                         maxLength={250}
@@ -2703,7 +3426,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "HelpBlock-i8is92-0",
                                           "isStatic": false,
-                                          "lastClassName": "kxWRDS",
+                                          "lastClassName": "c2",
                                           "rules": Array [
                                             [Function],
                                           ],
@@ -2722,10 +3445,10 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   >
                                     <HelpBlock
                                       bsClass="help-block"
-                                      className="HelpBlock-i8is92-0 kxWRDS"
+                                      className="c2"
                                     >
                                       <span
-                                        className="HelpBlock-i8is92-0 kxWRDS help-block"
+                                        className="c2 help-block"
                                       >
                                         Where can I find the content pack. e.g. github url
                                       </span>
@@ -2774,7 +3497,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "HelpBlock-i8is92-0",
                       "isStatic": false,
-                      "lastClassName": "kxWRDS",
+                      "lastClassName": "c2",
                       "rules": Array [
                         [Function],
                       ],
@@ -2793,10 +3516,10 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
               >
                 <HelpBlock
                   bsClass="help-block"
-                  className="HelpBlock-i8is92-0 kxWRDS"
+                  className="c2"
                 >
                   <span
-                    className="HelpBlock-i8is92-0 kxWRDS help-block"
+                    className="c2 help-block"
                   >
                     You can select between installed entities from the server (
                     <Icon
@@ -2958,7 +3681,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "Button__StyledButton-c9cbmb-0",
                                 "isStatic": false,
-                                "lastClassName": "jVYrA",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   [Function],
                                 ],
@@ -2981,12 +3704,12 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                             block={false}
                             bsClass="btn"
                             bsStyle="default"
-                            className="Button__StyledButton-c9cbmb-0 jVYrA submit-button"
+                            className="c3 submit-button"
                             disabled={false}
                             type="submit"
                           >
                             <button
-                              className="Button__StyledButton-c9cbmb-0 jVYrA submit-button btn btn-default"
+                              className="c3 submit-button btn btn-default"
                               disabled={false}
                               type="submit"
                             >
@@ -3041,7 +3764,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "Button__StyledButton-c9cbmb-0",
                                 "isStatic": false,
-                                "lastClassName": "jVYrA",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   [Function],
                                 ],
@@ -3065,13 +3788,13 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                             block={false}
                             bsClass="btn"
                             bsStyle="default"
-                            className="Button__StyledButton-c9cbmb-0 jVYrA reset-button"
+                            className="c3 reset-button"
                             disabled={false}
                             onClick={[Function]}
                             type="reset"
                           >
                             <button
-                              className="Button__StyledButton-c9cbmb-0 jVYrA reset-button btn btn-default"
+                              className="c3 reset-button btn btn-default"
                               disabled={false}
                               onClick={[Function]}
                               type="reset"
@@ -3153,7 +3876,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                       padded={false}
                     >
                       <li
-                        className="ExpandableListItem__ItemWrap-sc-10hsq3a-0 ettoSy"
+                        className=""
                       >
                         <ExpandableListItem__Container>
                           <StyledComponent
@@ -3164,7 +3887,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "ExpandableListItem__Container-sc-10hsq3a-1",
                                   "isStatic": false,
-                                  "lastClassName": "gvIcsL",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -3182,7 +3905,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                             forwardedRef={null}
                           >
                             <div
-                              className="ExpandableListItem__Container-sc-10hsq3a-1 gvIcsL"
+                              className="c4"
                             >
                               <Checkbox
                                 bsClass="checkbox"
@@ -3214,7 +3937,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "ExpandableListItem__Toggle-sc-10hsq3a-2",
                                         "isStatic": false,
-                                        "lastClassName": "hwyxtE",
+                                        "lastClassName": "c5",
                                         "rules": Array [
                                           "display:inline-block;width:20px;margin-right:5px;",
                                         ],
@@ -3232,7 +3955,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="ExpandableListItem__Toggle-sc-10hsq3a-2 hwyxtE"
+                                    className="c5"
                                   >
                                     <ExpandableListItem__IconStack
                                       className="fa-stack"
@@ -3248,7 +3971,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "ExpandableListItem__IconStack-sc-10hsq3a-3",
                                               "isStatic": false,
-                                              "lastClassName": "jXmspb",
+                                              "lastClassName": "c6",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -3268,7 +3991,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         tabIndex={0}
                                       >
                                         <div
-                                          className="ExpandableListItem__IconStack-sc-10hsq3a-3 jXmspb fa-stack"
+                                          className="c6 fa-stack"
                                           onClick={[Function]}
                                           tabIndex={0}
                                         >
@@ -3328,7 +4051,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "ExpandableListItem__HeaderWrap-sc-10hsq3a-4",
                                         "isStatic": false,
-                                        "lastClassName": "kOLPYP",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           [Function],
                                         ],
@@ -3346,7 +4069,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                   forwardedRef={null}
                                 >
                                   <span
-                                    className="ExpandableListItem__HeaderWrap-sc-10hsq3a-4 kOLPYP header"
+                                    className="c7 header"
                                   >
                                     <ExpandableListItem__Header
                                       onClick={[Function]}
@@ -3361,7 +4084,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "ExpandableListItem__Header-sc-10hsq3a-5",
                                               "isStatic": false,
-                                              "lastClassName": "clUCXq",
+                                              "lastClassName": "c8",
                                               "rules": Array [
                                                 "border:0;padding:0;text-align:left;background:transparent;",
                                               ],
@@ -3382,7 +4105,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="ExpandableListItem__Header-sc-10hsq3a-5 clUCXq"
+                                          className="c8"
                                           onClick={[Function]}
                                           tabIndex={0}
                                           type="button"
@@ -3406,7 +4129,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "ExpandableListItem__ExpandableContent-sc-10hsq3a-7",
                                   "isStatic": false,
-                                  "lastClassName": "gVrSEu",
+                                  "lastClassName": "c9",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -3424,7 +4147,7 @@ exports[`<ContentPackSelection /> should render with filled content pack 1`] = `
                             forwardedRef={null}
                           >
                             <div
-                              className="ExpandableListItem__ExpandableContent-sc-10hsq3a-7 gVrSEu"
+                              className="c9"
                             />
                           </StyledComponent>
                         </ExpandableListItem__ExpandableContent>
