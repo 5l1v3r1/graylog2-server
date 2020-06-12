@@ -478,19 +478,16 @@ exports[`<ContentPackParameters /> should render a parameter 1`] = `
                         }
                       >
                         <ForwardRef
-                          bsStyle="default"
                           className="reset-button"
                           onClick={[Function]}
                           type="reset"
                         >
                           <Button__StyledButton
-                            bsStyle="default"
                             className="reset-button"
                             onClick={[Function]}
                             type="reset"
                           >
                             <StyledComponent
-                              bsStyle="default"
                               className="reset-button"
                               forwardedComponent={
                                 Object {
@@ -1430,19 +1427,16 @@ exports[`<ContentPackParameters /> should render a parameter 1`] = `
                         }
                       >
                         <ForwardRef
-                          bsStyle="default"
                           className="reset-button"
                           onClick={[Function]}
                           type="reset"
                         >
                           <Button__StyledButton
-                            bsStyle="default"
                             className="reset-button"
                             onClick={[Function]}
                             type="reset"
                           >
                             <StyledComponent
-                              bsStyle="default"
                               className="reset-button"
                               forwardedComponent={
                                 Object {
@@ -2519,19 +2513,16 @@ exports[`<ContentPackParameters /> should render with empty parameters 1`] = `
                         }
                       >
                         <ForwardRef
-                          bsStyle="default"
                           className="reset-button"
                           onClick={[Function]}
                           type="reset"
                         >
                           <Button__StyledButton
-                            bsStyle="default"
                             className="reset-button"
                             onClick={[Function]}
                             type="reset"
                           >
                             <StyledComponent
-                              bsStyle="default"
                               className="reset-button"
                               forwardedComponent={
                                 Object {
@@ -2951,19 +2942,16 @@ exports[`<ContentPackParameters /> should render with empty parameters 1`] = `
                         }
                       >
                         <ForwardRef
-                          bsStyle="default"
                           className="reset-button"
                           onClick={[Function]}
                           type="reset"
                         >
                           <Button__StyledButton
-                            bsStyle="default"
                             className="reset-button"
                             onClick={[Function]}
                             type="reset"
                           >
                             <StyledComponent
-                              bsStyle="default"
                               className="reset-button"
                               forwardedComponent={
                                 Object {

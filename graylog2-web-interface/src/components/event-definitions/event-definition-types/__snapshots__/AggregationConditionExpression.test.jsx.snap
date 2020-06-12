@@ -116,10 +116,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         "componentStyle": ComponentStyle {
                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                           "isStatic": false,
-                          "lastClassName": "ekazNr",
+                          "lastClassName": "gcTkZc",
                           "rules": Array [
                             [Function],
-                            ";",
                           ],
                         },
                         "displayName": "FormGroup__StyledFormGroup",
@@ -137,11 +136,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -215,10 +214,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -236,11 +234,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -1747,10 +1745,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         "componentStyle": ComponentStyle {
                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                           "isStatic": false,
-                          "lastClassName": "ekazNr",
+                          "lastClassName": "gcTkZc",
                           "rules": Array [
                             [Function],
-                            ";",
                           ],
                         },
                         "displayName": "FormGroup__StyledFormGroup",
@@ -1768,11 +1765,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -2107,10 +2104,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                   "componentStyle": ComponentStyle {
                                     "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                     "isStatic": false,
-                                    "lastClassName": "ekazNr",
+                                    "lastClassName": "gcTkZc",
                                     "rules": Array [
                                       [Function],
-                                      ";",
                                     ],
                                   },
                                   "displayName": "FormGroup__StyledFormGroup",
@@ -2128,12 +2124,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                             >
                               <FormGroup
                                 bsClass="form-group"
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                 controlId="aggregation-function"
                                 validationState={null}
                               >
                                 <div
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                 >
                                   <ControlLabel>
                                     <StyledComponent
@@ -5069,10 +5065,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -5090,12 +5085,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                             controlId="aggregation-condition"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                             >
                               <ControlLabel>
                                 <StyledComponent
@@ -6930,10 +6925,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     "componentStyle": ComponentStyle {
                                       "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                       "isStatic": false,
-                                      "lastClassName": "ekazNr",
+                                      "lastClassName": "gcTkZc",
                                       "rules": Array [
                                         [Function],
-                                        ";",
                                       ],
                                     },
                                     "displayName": "FormGroup__StyledFormGroup",
@@ -6951,12 +6945,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                   controlId="aggregation-threshold"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                   >
                                     <ControlLabel>
                                       <StyledComponent
@@ -7117,10 +7111,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                     "componentStyle": ComponentStyle {
                       "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                       "isStatic": false,
-                      "lastClassName": "ekazNr",
+                      "lastClassName": "gcTkZc",
                       "rules": Array [
                         [Function],
-                        ";",
                       ],
                     },
                     "displayName": "FormGroup__StyledFormGroup",
@@ -7138,11 +7131,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
               >
                 <FormGroup
                   bsClass="form-group"
-                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                   validationState={null}
                 >
                   <div
-                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                   >
                     <div
                       className="formControlNoLabel"
@@ -7156,17 +7149,14 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         >
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -7247,17 +7237,14 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                           </ForwardRef>
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -7338,17 +7325,14 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                           </ForwardRef>
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -7680,10 +7664,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                   "componentStyle": ComponentStyle {
                                     "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                     "isStatic": false,
-                                    "lastClassName": "ekazNr",
+                                    "lastClassName": "gcTkZc",
                                     "rules": Array [
                                       [Function],
-                                      ";",
                                     ],
                                   },
                                   "displayName": "FormGroup__StyledFormGroup",
@@ -7701,12 +7684,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                             >
                               <FormGroup
                                 bsClass="form-group"
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                 controlId="aggregation-function"
                                 validationState={null}
                               >
                                 <div
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                 >
                                   <Row
                                     bsClass="row"
@@ -10602,10 +10585,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -10623,12 +10605,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                             controlId="aggregation-condition"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -12423,10 +12405,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                     "componentStyle": ComponentStyle {
                                       "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                       "isStatic": false,
-                                      "lastClassName": "ekazNr",
+                                      "lastClassName": "gcTkZc",
                                       "rules": Array [
                                         [Function],
-                                        ";",
                                       ],
                                     },
                                     "displayName": "FormGroup__StyledFormGroup",
@@ -12444,12 +12425,12 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                   controlId="aggregation-threshold"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                   >
                                     <InputWrapper>
                                       <span>
@@ -12570,10 +12551,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                     "componentStyle": ComponentStyle {
                       "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                       "isStatic": false,
-                      "lastClassName": "ekazNr",
+                      "lastClassName": "gcTkZc",
                       "rules": Array [
                         [Function],
-                        ";",
                       ],
                     },
                     "displayName": "FormGroup__StyledFormGroup",
@@ -12591,11 +12571,11 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
               >
                 <FormGroup
                   bsClass="form-group"
-                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                   validationState={null}
                 >
                   <div
-                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                   >
                     <div>
                       <ButtonToolbar
@@ -12607,17 +12587,14 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                         >
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -12698,17 +12675,14 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                           </ForwardRef>
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -12789,17 +12763,14 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                           </ForwardRef>
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -12996,10 +12967,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         "componentStyle": ComponentStyle {
                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                           "isStatic": false,
-                          "lastClassName": "ekazNr",
+                          "lastClassName": "gcTkZc",
                           "rules": Array [
                             [Function],
-                            ";",
                           ],
                         },
                         "displayName": "FormGroup__StyledFormGroup",
@@ -13017,11 +12987,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -13095,10 +13065,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -13116,11 +13085,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -14627,10 +14596,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         "componentStyle": ComponentStyle {
                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                           "isStatic": false,
-                          "lastClassName": "ekazNr",
+                          "lastClassName": "gcTkZc",
                           "rules": Array [
                             [Function],
-                            ";",
                           ],
                         },
                         "displayName": "FormGroup__StyledFormGroup",
@@ -14648,11 +14616,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -14999,10 +14967,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   "componentStyle": ComponentStyle {
                                     "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                     "isStatic": false,
-                                    "lastClassName": "ekazNr",
+                                    "lastClassName": "gcTkZc",
                                     "rules": Array [
                                       [Function],
-                                      ";",
                                     ],
                                   },
                                   "displayName": "FormGroup__StyledFormGroup",
@@ -15020,12 +14987,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                             >
                               <FormGroup
                                 bsClass="form-group"
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                 controlId="aggregation-function"
                                 validationState={null}
                               >
                                 <div
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                 >
                                   <ControlLabel>
                                     <StyledComponent
@@ -17961,10 +17928,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -17982,12 +17948,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                             controlId="aggregation-condition"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                             >
                               <ControlLabel>
                                 <StyledComponent
@@ -19822,10 +19788,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     "componentStyle": ComponentStyle {
                                       "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                       "isStatic": false,
-                                      "lastClassName": "ekazNr",
+                                      "lastClassName": "gcTkZc",
                                       "rules": Array [
                                         [Function],
-                                        ";",
                                       ],
                                     },
                                     "displayName": "FormGroup__StyledFormGroup",
@@ -19843,12 +19808,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                   controlId="aggregation-threshold"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                   >
                                     <ControlLabel>
                                       <StyledComponent
@@ -20009,10 +19974,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                     "componentStyle": ComponentStyle {
                       "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                       "isStatic": false,
-                      "lastClassName": "ekazNr",
+                      "lastClassName": "gcTkZc",
                       "rules": Array [
                         [Function],
-                        ";",
                       ],
                     },
                     "displayName": "FormGroup__StyledFormGroup",
@@ -20030,11 +19994,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
               >
                 <FormGroup
                   bsClass="form-group"
-                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                   validationState={null}
                 >
                   <div
-                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                   >
                     <div
                       className="formControlNoLabel"
@@ -20048,17 +20012,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -20139,17 +20100,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                           </ForwardRef>
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -20230,17 +20188,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                           </ForwardRef>
                           <ForwardRef
                             bsSize="sm"
-                            bsStyle="default"
                             onClick={[Function]}
                           >
                             <Button__StyledButton
                               bsSize="sm"
-                              bsStyle="default"
                               onClick={[Function]}
                             >
                               <StyledComponent
                                 bsSize="sm"
-                                bsStyle="default"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -20562,10 +20517,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     "componentStyle": ComponentStyle {
                                       "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                       "isStatic": false,
-                                      "lastClassName": "ekazNr",
+                                      "lastClassName": "gcTkZc",
                                       "rules": Array [
                                         [Function],
-                                        ";",
                                       ],
                                     },
                                     "displayName": "FormGroup__StyledFormGroup",
@@ -20583,11 +20537,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ form-group"
+                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ form-group"
                                   >
                                     <Select
                                       allowCreate={false}
@@ -22094,10 +22048,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -22115,11 +22068,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                             >
                               <FormControlStatic
                                 bsClass="form-control-static"
@@ -22410,10 +22363,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                             "componentStyle": ComponentStyle {
                                               "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                               "isStatic": false,
-                                              "lastClassName": "ekazNr",
+                                              "lastClassName": "gcTkZc",
                                               "rules": Array [
                                                 [Function],
-                                                ";",
                                               ],
                                             },
                                             "displayName": "FormGroup__StyledFormGroup",
@@ -22431,12 +22383,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                       >
                                         <FormGroup
                                           bsClass="form-group"
-                                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                           controlId="aggregation-function"
                                           validationState={null}
                                         >
                                           <div
-                                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                           >
                                             <Row
                                               bsClass="row"
@@ -25332,10 +25284,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                           "isStatic": false,
-                                          "lastClassName": "ekazNr",
+                                          "lastClassName": "gcTkZc",
                                           "rules": Array [
                                             [Function],
-                                            ";",
                                           ],
                                         },
                                         "displayName": "FormGroup__StyledFormGroup",
@@ -25353,12 +25304,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   >
                                     <FormGroup
                                       bsClass="form-group"
-                                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                       controlId="aggregation-condition"
                                       validationState={null}
                                     >
                                       <div
-                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                       >
                                         <Select
                                           allowCreate={false}
@@ -27153,10 +27104,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "ekazNr",
+                                                "lastClassName": "gcTkZc",
                                                 "rules": Array [
                                                   [Function],
-                                                  ";",
                                                 ],
                                               },
                                               "displayName": "FormGroup__StyledFormGroup",
@@ -27174,12 +27124,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                         >
                                           <FormGroup
                                             bsClass="form-group"
-                                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                             controlId="aggregation-threshold"
                                             validationState={null}
                                           >
                                             <div
-                                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                             >
                                               <InputWrapper>
                                                 <span>
@@ -27300,10 +27250,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -27321,11 +27270,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                             >
                               <div>
                                 <ButtonToolbar
@@ -27337,17 +27286,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   >
                                     <ForwardRef
                                       bsSize="sm"
-                                      bsStyle="default"
                                       onClick={[Function]}
                                     >
                                       <Button__StyledButton
                                         bsSize="sm"
-                                        bsStyle="default"
                                         onClick={[Function]}
                                       >
                                         <StyledComponent
                                           bsSize="sm"
-                                          bsStyle="default"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -27428,17 +27374,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     </ForwardRef>
                                     <ForwardRef
                                       bsSize="sm"
-                                      bsStyle="default"
                                       onClick={[Function]}
                                     >
                                       <Button__StyledButton
                                         bsSize="sm"
-                                        bsStyle="default"
                                         onClick={[Function]}
                                       >
                                         <StyledComponent
                                           bsSize="sm"
-                                          bsStyle="default"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -27519,17 +27462,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     </ForwardRef>
                                     <ForwardRef
                                       bsSize="sm"
-                                      bsStyle="default"
                                       onClick={[Function]}
                                     >
                                       <Button__StyledButton
                                         bsSize="sm"
-                                        bsStyle="default"
                                         onClick={[Function]}
                                       >
                                         <StyledComponent
                                           bsSize="sm"
-                                          bsStyle="default"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -27798,10 +27738,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                 "componentStyle": ComponentStyle {
                                   "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                   "isStatic": false,
-                                  "lastClassName": "ekazNr",
+                                  "lastClassName": "gcTkZc",
                                   "rules": Array [
                                     [Function],
-                                    ";",
                                   ],
                                 },
                                 "displayName": "FormGroup__StyledFormGroup",
@@ -27819,11 +27758,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                           >
                             <FormGroup
                               bsClass="form-group"
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ"
                               validationState={null}
                             >
                               <div
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ form-group"
+                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 creHrZ form-group"
                               >
                                 <Select
                                   allowCreate={false}
@@ -29330,10 +29269,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                           "componentStyle": ComponentStyle {
                             "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                             "isStatic": false,
-                            "lastClassName": "ekazNr",
+                            "lastClassName": "gcTkZc",
                             "rules": Array [
                               [Function],
-                              ";",
                             ],
                           },
                           "displayName": "FormGroup__StyledFormGroup",
@@ -29351,11 +29289,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                     >
                       <FormGroup
                         bsClass="form-group"
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                         validationState={null}
                       >
                         <div
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                         >
                           <FormControlStatic
                             bsClass="form-control-static"
@@ -29646,10 +29584,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                         "componentStyle": ComponentStyle {
                                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                           "isStatic": false,
-                                          "lastClassName": "ekazNr",
+                                          "lastClassName": "gcTkZc",
                                           "rules": Array [
                                             [Function],
-                                            ";",
                                           ],
                                         },
                                         "displayName": "FormGroup__StyledFormGroup",
@@ -29667,12 +29604,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                   >
                                     <FormGroup
                                       bsClass="form-group"
-                                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                       controlId="aggregation-function"
                                       validationState={null}
                                     >
                                       <div
-                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                       >
                                         <ControlLabel>
                                           <StyledComponent
@@ -32608,10 +32545,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     "componentStyle": ComponentStyle {
                                       "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                       "isStatic": false,
-                                      "lastClassName": "ekazNr",
+                                      "lastClassName": "gcTkZc",
                                       "rules": Array [
                                         [Function],
-                                        ";",
                                       ],
                                     },
                                     "displayName": "FormGroup__StyledFormGroup",
@@ -32629,12 +32565,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               >
                                 <FormGroup
                                   bsClass="form-group"
-                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                  className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                   controlId="aggregation-condition"
                                   validationState={null}
                                 >
                                   <div
-                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                    className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                   >
                                     <ControlLabel>
                                       <StyledComponent
@@ -34469,10 +34405,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                           "componentStyle": ComponentStyle {
                                             "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                             "isStatic": false,
-                                            "lastClassName": "ekazNr",
+                                            "lastClassName": "gcTkZc",
                                             "rules": Array [
                                               [Function],
-                                              ";",
                                             ],
                                           },
                                           "displayName": "FormGroup__StyledFormGroup",
@@ -34490,12 +34425,12 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                     >
                                       <FormGroup
                                         bsClass="form-group"
-                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                                         controlId="aggregation-threshold"
                                         validationState={null}
                                       >
                                         <div
-                                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                                         >
                                           <ControlLabel>
                                             <StyledComponent
@@ -34656,10 +34591,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                           "componentStyle": ComponentStyle {
                             "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                             "isStatic": false,
-                            "lastClassName": "ekazNr",
+                            "lastClassName": "gcTkZc",
                             "rules": Array [
                               [Function],
-                              ";",
                             ],
                           },
                           "displayName": "FormGroup__StyledFormGroup",
@@ -34677,11 +34611,11 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                     >
                       <FormGroup
                         bsClass="form-group"
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                         validationState={null}
                       >
                         <div
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                         >
                           <div
                             className="formControlNoLabel"
@@ -34695,17 +34629,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                               >
                                 <ForwardRef
                                   bsSize="sm"
-                                  bsStyle="default"
                                   onClick={[Function]}
                                 >
                                   <Button__StyledButton
                                     bsSize="sm"
-                                    bsStyle="default"
                                     onClick={[Function]}
                                   >
                                     <StyledComponent
                                       bsSize="sm"
-                                      bsStyle="default"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -34786,17 +34717,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                 </ForwardRef>
                                 <ForwardRef
                                   bsSize="sm"
-                                  bsStyle="default"
                                   onClick={[Function]}
                                 >
                                   <Button__StyledButton
                                     bsSize="sm"
-                                    bsStyle="default"
                                     onClick={[Function]}
                                   >
                                     <StyledComponent
                                       bsSize="sm"
-                                      bsStyle="default"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -34877,17 +34805,14 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                 </ForwardRef>
                                 <ForwardRef
                                   bsSize="sm"
-                                  bsStyle="default"
                                   onClick={[Function]}
                                 >
                                   <Button__StyledButton
                                     bsSize="sm"
-                                    bsStyle="default"
                                     onClick={[Function]}
                                   >
                                     <StyledComponent
                                       bsSize="sm"
-                                      bsStyle="default"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -35063,10 +34988,9 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                         "componentStyle": ComponentStyle {
                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                           "isStatic": false,
-                          "lastClassName": "ekazNr",
+                          "lastClassName": "gcTkZc",
                           "rules": Array [
                             [Function],
-                            ";",
                           ],
                         },
                         "displayName": "FormGroup__StyledFormGroup",
@@ -35084,11 +35008,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -35162,10 +35086,9 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -35183,11 +35106,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -36694,10 +36617,9 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                         "componentStyle": ComponentStyle {
                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                           "isStatic": false,
-                          "lastClassName": "ekazNr",
+                          "lastClassName": "gcTkZc",
                           "rules": Array [
                             [Function],
-                            ";",
                           ],
                         },
                         "displayName": "FormGroup__StyledFormGroup",
@@ -36715,11 +36637,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -36898,10 +36820,9 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -36919,12 +36840,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                             controlId="aggregation-function"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                             >
                               <ControlLabel>
                                 <StyledComponent
@@ -39664,10 +39585,9 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                           "componentStyle": ComponentStyle {
                             "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                             "isStatic": false,
-                            "lastClassName": "ekazNr",
+                            "lastClassName": "gcTkZc",
                             "rules": Array [
                               [Function],
-                              ";",
                             ],
                           },
                           "displayName": "FormGroup__StyledFormGroup",
@@ -39685,12 +39605,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                     >
                       <FormGroup
                         bsClass="form-group"
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                         controlId="aggregation-condition"
                         validationState={null}
                       >
                         <div
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                         >
                           <ControlLabel>
                             <StyledComponent
@@ -41513,10 +41433,9 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                 "componentStyle": ComponentStyle {
                                   "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                   "isStatic": false,
-                                  "lastClassName": "ekazNr",
+                                  "lastClassName": "gcTkZc",
                                   "rules": Array [
                                     [Function],
-                                    ";",
                                   ],
                                 },
                                 "displayName": "FormGroup__StyledFormGroup",
@@ -41534,12 +41453,12 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                           >
                             <FormGroup
                               bsClass="form-group"
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                               controlId="aggregation-threshold"
                               validationState={null}
                             >
                               <div
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                               >
                                 <ControlLabel>
                                   <StyledComponent
@@ -41700,10 +41619,9 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                 "componentStyle": ComponentStyle {
                   "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                   "isStatic": false,
-                  "lastClassName": "ekazNr",
+                  "lastClassName": "gcTkZc",
                   "rules": Array [
                     [Function],
-                    ";",
                   ],
                 },
                 "displayName": "FormGroup__StyledFormGroup",
@@ -41721,11 +41639,11 @@ exports[`AggregationConditionExpression rendering conditions should render empty
           >
             <FormGroup
               bsClass="form-group"
-              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
               validationState={null}
             >
               <div
-                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
               >
                 <div
                   className="formControlNoLabel"
@@ -41739,17 +41657,14 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                     >
                       <ForwardRef
                         bsSize="sm"
-                        bsStyle="default"
                         onClick={[Function]}
                       >
                         <Button__StyledButton
                           bsSize="sm"
-                          bsStyle="default"
                           onClick={[Function]}
                         >
                           <StyledComponent
                             bsSize="sm"
-                            bsStyle="default"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -41830,17 +41745,14 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                       </ForwardRef>
                       <ForwardRef
                         bsSize="sm"
-                        bsStyle="default"
                         onClick={[Function]}
                       >
                         <Button__StyledButton
                           bsSize="sm"
-                          bsStyle="default"
                           onClick={[Function]}
                         >
                           <StyledComponent
                             bsSize="sm"
-                            bsStyle="default"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -41921,17 +41833,14 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                       </ForwardRef>
                       <ForwardRef
                         bsSize="sm"
-                        bsStyle="default"
                         onClick={[Function]}
                       >
                         <Button__StyledButton
                           bsSize="sm"
-                          bsStyle="default"
                           onClick={[Function]}
                         >
                           <StyledComponent
                             bsSize="sm"
-                            bsStyle="default"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -42108,10 +42017,9 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                         "componentStyle": ComponentStyle {
                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                           "isStatic": false,
-                          "lastClassName": "ekazNr",
+                          "lastClassName": "gcTkZc",
                           "rules": Array [
                             [Function],
-                            ";",
                           ],
                         },
                         "displayName": "FormGroup__StyledFormGroup",
@@ -42129,11 +42037,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -42207,10 +42115,9 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -42228,11 +42135,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc BooleanOperatorSelector__BooleanOperatorSelect-sflinp-1 jfMmbj form-group"
                             >
                               <Select
                                 allowCreate={false}
@@ -43739,10 +43646,9 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                         "componentStyle": ComponentStyle {
                           "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                           "isStatic": false,
-                          "lastClassName": "ekazNr",
+                          "lastClassName": "gcTkZc",
                           "rules": Array [
                             [Function],
-                            ";",
                           ],
                         },
                         "displayName": "FormGroup__StyledFormGroup",
@@ -43760,11 +43666,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                   >
                     <FormGroup
                       bsClass="form-group"
-                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                      className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                       validationState={null}
                     >
                       <div
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                       >
                         <FormControlStatic
                           bsClass="form-control-static"
@@ -43961,10 +43867,9 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                               "componentStyle": ComponentStyle {
                                 "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                 "isStatic": false,
-                                "lastClassName": "ekazNr",
+                                "lastClassName": "gcTkZc",
                                 "rules": Array [
                                   [Function],
-                                  ";",
                                 ],
                               },
                               "displayName": "FormGroup__StyledFormGroup",
@@ -43982,12 +43887,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                         >
                           <FormGroup
                             bsClass="form-group"
-                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                            className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                             controlId="aggregation-function"
                             validationState={null}
                           >
                             <div
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                             >
                               <ControlLabel>
                                 <StyledComponent
@@ -46923,10 +46828,9 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                           "componentStyle": ComponentStyle {
                             "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                             "isStatic": false,
-                            "lastClassName": "ekazNr",
+                            "lastClassName": "gcTkZc",
                             "rules": Array [
                               [Function],
-                              ";",
                             ],
                           },
                           "displayName": "FormGroup__StyledFormGroup",
@@ -46944,12 +46848,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                     >
                       <FormGroup
                         bsClass="form-group"
-                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                        className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                         controlId="aggregation-condition"
                         validationState={null}
                       >
                         <div
-                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                          className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                         >
                           <ControlLabel>
                             <StyledComponent
@@ -48819,10 +48723,9 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                 "componentStyle": ComponentStyle {
                                   "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                                   "isStatic": false,
-                                  "lastClassName": "ekazNr",
+                                  "lastClassName": "gcTkZc",
                                   "rules": Array [
                                     [Function],
-                                    ";",
                                   ],
                                 },
                                 "displayName": "FormGroup__StyledFormGroup",
@@ -48840,12 +48743,12 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                           >
                             <FormGroup
                               bsClass="form-group"
-                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+                              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
                               controlId="aggregation-threshold"
                               validationState={null}
                             >
                               <div
-                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
                               >
                                 <ControlLabel>
                                   <StyledComponent
@@ -49006,10 +48909,9 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                 "componentStyle": ComponentStyle {
                   "componentId": "FormGroup__StyledFormGroup-sc-1wv4cm9-0",
                   "isStatic": false,
-                  "lastClassName": "ekazNr",
+                  "lastClassName": "gcTkZc",
                   "rules": Array [
                     [Function],
-                    ";",
                   ],
                 },
                 "displayName": "FormGroup__StyledFormGroup",
@@ -49027,11 +48929,11 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
           >
             <FormGroup
               bsClass="form-group"
-              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr"
+              className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc"
               validationState={null}
             >
               <div
-                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 ekazNr form-group"
+                className="FormGroup__StyledFormGroup-sc-1wv4cm9-0 gcTkZc form-group"
               >
                 <div
                   className="formControlNoLabel"
@@ -49045,17 +48947,14 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                     >
                       <ForwardRef
                         bsSize="sm"
-                        bsStyle="default"
                         onClick={[Function]}
                       >
                         <Button__StyledButton
                           bsSize="sm"
-                          bsStyle="default"
                           onClick={[Function]}
                         >
                           <StyledComponent
                             bsSize="sm"
-                            bsStyle="default"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -49136,17 +49035,14 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                       </ForwardRef>
                       <ForwardRef
                         bsSize="sm"
-                        bsStyle="default"
                         onClick={[Function]}
                       >
                         <Button__StyledButton
                           bsSize="sm"
-                          bsStyle="default"
                           onClick={[Function]}
                         >
                           <StyledComponent
                             bsSize="sm"
-                            bsStyle="default"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -49227,17 +49123,14 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                       </ForwardRef>
                       <ForwardRef
                         bsSize="sm"
-                        bsStyle="default"
                         onClick={[Function]}
                       >
                         <Button__StyledButton
                           bsSize="sm"
-                          bsStyle="default"
                           onClick={[Function]}
                         >
                           <StyledComponent
                             bsSize="sm"
-                            bsStyle="default"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
