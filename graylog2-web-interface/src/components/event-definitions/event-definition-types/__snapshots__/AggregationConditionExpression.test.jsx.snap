@@ -1197,7 +1197,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                     }
                                                   >
                                                     <div
-                                                      className="css-izej10-singleValue"
+                                                      className="css-1yjw8f2-singleValue"
                                                     >
                                                       all
                                                     </div>
@@ -3190,7 +3190,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                                 }
                                                               >
                                                                 <div
-                                                                  className="css-1fy77s7-placeholder"
+                                                                  className="css-1nlt8zk-placeholder"
                                                                 >
                                                                   Select Function
                                                                 </div>
@@ -4750,7 +4750,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                                   }
                                                                 >
                                                                   <div
-                                                                    className="css-izej10-singleValue"
+                                                                    className="css-1yjw8f2-singleValue"
                                                                   >
                                                                     timestamp
                                                                   </div>
@@ -6759,7 +6759,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                     }
                                                   >
                                                     <div
-                                                      className="css-1fy77s7-placeholder"
+                                                      className="css-1nlt8zk-placeholder"
                                                     >
                                                       Select Condition
                                                     </div>
@@ -9281,7 +9281,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                                 }
                                                               >
                                                                 <div
-                                                                  className="css-1fy77s7-placeholder"
+                                                                  className="css-1nlt8zk-placeholder"
                                                                 >
                                                                   Select Function
                                                                 </div>
@@ -10841,7 +10841,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                                   }
                                                                 >
                                                                   <div
-                                                                    className="css-izej10-singleValue"
+                                                                    className="css-1yjw8f2-singleValue"
                                                                   >
                                                                     timestamp
                                                                   </div>
@@ -12810,7 +12810,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                     }
                                                   >
                                                     <div
-                                                      className="css-1fy77s7-placeholder"
+                                                      className="css-1nlt8zk-placeholder"
                                                     >
                                                       Select Condition
                                                     </div>
@@ -15381,7 +15381,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                     }
                                                   >
                                                     <div
-                                                      className="css-izej10-singleValue"
+                                                      className="css-1yjw8f2-singleValue"
                                                     >
                                                       all
                                                     </div>
@@ -17386,7 +17386,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                                 }
                                                               >
                                                                 <div
-                                                                  className="css-1fy77s7-placeholder"
+                                                                  className="css-1nlt8zk-placeholder"
                                                                 >
                                                                   Select Function
                                                                 </div>
@@ -18946,7 +18946,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                                   }
                                                                 >
                                                                   <div
-                                                                    className="css-izej10-singleValue"
+                                                                    className="css-1yjw8f2-singleValue"
                                                                   >
                                                                     timestamp
                                                                   </div>
@@ -20955,7 +20955,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                     }
                                                   >
                                                     <div
-                                                      className="css-1fy77s7-placeholder"
+                                                      className="css-1nlt8zk-placeholder"
                                                     >
                                                       Select Condition
                                                     </div>
@@ -23594,7 +23594,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                           }
                                                         >
                                                           <div
-                                                            className="css-izej10-singleValue"
+                                                            className="css-1yjw8f2-singleValue"
                                                           >
                                                             all
                                                           </div>
@@ -25503,7 +25503,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                                           }
                                                                         >
                                                                           <div
-                                                                            className="css-1fy77s7-placeholder"
+                                                                            className="css-1nlt8zk-placeholder"
                                                                           >
                                                                             Select Function
                                                                           </div>
@@ -27063,7 +27063,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                                             }
                                                                           >
                                                                             <div
-                                                                              className="css-izej10-singleValue"
+                                                                              className="css-1yjw8f2-singleValue"
                                                                             >
                                                                               timestamp
                                                                             </div>
@@ -29032,7 +29032,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                               }
                                                             >
                                                               <div
-                                                                className="css-1fy77s7-placeholder"
+                                                                className="css-1nlt8zk-placeholder"
                                                               >
                                                                 Select Condition
                                                               </div>
@@ -31576,7 +31576,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                       }
                                                     >
                                                       <div
-                                                        className="css-izej10-singleValue"
+                                                        className="css-1yjw8f2-singleValue"
                                                       >
                                                         all
                                                       </div>
@@ -33525,7 +33525,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                                       }
                                                                     >
                                                                       <div
-                                                                        className="css-1fy77s7-placeholder"
+                                                                        className="css-1nlt8zk-placeholder"
                                                                       >
                                                                         Select Function
                                                                       </div>
@@ -35085,7 +35085,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="css-izej10-singleValue"
+                                                                          className="css-1yjw8f2-singleValue"
                                                                         >
                                                                           timestamp
                                                                         </div>
@@ -37094,7 +37094,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                           }
                                                         >
                                                           <div
-                                                            className="css-1fy77s7-placeholder"
+                                                            className="css-1nlt8zk-placeholder"
                                                           >
                                                             Select Condition
                                                           </div>
@@ -39686,7 +39686,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                                     }
                                                   >
                                                     <div
-                                                      className="css-izej10-singleValue"
+                                                      className="css-1yjw8f2-singleValue"
                                                     >
                                                       all
                                                     </div>
@@ -41521,7 +41521,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                                             }
                                                           >
                                                             <div
-                                                              className="css-1fy77s7-placeholder"
+                                                              className="css-1nlt8zk-placeholder"
                                                             >
                                                               Select Function
                                                             </div>
@@ -43054,7 +43054,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                                               }
                                                             >
                                                               <div
-                                                                className="css-1fy77s7-placeholder"
+                                                                className="css-1nlt8zk-placeholder"
                                                               >
                                                                 Select Field (Optional)
                                                               </div>
@@ -44893,7 +44893,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                                 }
                                               >
                                                 <div
-                                                  className="css-1fy77s7-placeholder"
+                                                  className="css-1nlt8zk-placeholder"
                                                 >
                                                   Select Condition
                                                 </div>
@@ -47474,7 +47474,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                                     }
                                                   >
                                                     <div
-                                                      className="css-izej10-singleValue"
+                                                      className="css-1yjw8f2-singleValue"
                                                     >
                                                       all
                                                     </div>
@@ -49329,7 +49329,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                                             }
                                                           >
                                                             <div
-                                                              className="css-1fy77s7-placeholder"
+                                                              className="css-1nlt8zk-placeholder"
                                                             >
                                                               Select Function
                                                             </div>
@@ -50889,7 +50889,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                                               }
                                                             >
                                                               <div
-                                                                className="css-izej10-singleValue"
+                                                                className="css-1yjw8f2-singleValue"
                                                               >
                                                                 timestamp
                                                               </div>
@@ -52922,7 +52922,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                                 }
                                               >
                                                 <div
-                                                  className="css-izej10-singleValue"
+                                                  className="css-1yjw8f2-singleValue"
                                                 >
                                                   &lt;
                                                 </div>
