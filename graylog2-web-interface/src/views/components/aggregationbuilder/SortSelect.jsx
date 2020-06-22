@@ -8,6 +8,7 @@ import Pivot from 'views/logic/aggregationbuilder/Pivot';
 import Series from 'views/logic/aggregationbuilder/Series';
 import { defaultCompare } from 'views/logic/DefaultCompare';
 import SortConfig from 'views/logic/aggregationbuilder/SortConfig';
+
 import { PivotList, SeriesList, SortList } from './AggregationBuilderPropTypes';
 
 const mapFields = (fields) => fields.sort(defaultCompare)
@@ -52,7 +53,7 @@ const SortSelect = ({ pivots, series, onChange, sort }: Props) => {
             onChange={_onChange}
             options={options}
             isClearable
-            value={currentValue(sort, fields) ?? ''} />
+            value={currentValue(sort, fields) ?? null} />
   );
 };
 
