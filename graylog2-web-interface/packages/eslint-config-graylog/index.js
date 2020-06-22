@@ -80,8 +80,8 @@ module.exports = {
         next: ['export', 'import'],
       },
       {
-        blankLine: 'never',
-        prev: ['let', 'const'],
+        blankLine: 'any',
+        prev: ['singleline-let', 'singleline-const'],
         next: ['singleline-let', 'singleline-const'],
       },
     ],
