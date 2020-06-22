@@ -6,11 +6,13 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/react',
     'plugin:flowtype/recommended',
+    'plugin:jest-formatting/strict',
   ],
   plugins: [
     'import',
     'react-hooks',
     'flowtype',
+    'jest-formatting',
   ],
   rules: {
     'arrow-body-style': 'off',
