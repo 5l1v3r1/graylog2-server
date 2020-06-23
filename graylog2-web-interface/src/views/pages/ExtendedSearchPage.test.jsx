@@ -90,6 +90,7 @@ const mockPromise = (res) => {
   const promise = Promise.resolve(res);
   // $FlowFixMe: On purpose for a promise that does not need to be resolved
   promise.then = (x) => x(res);
+
   return promise;
 };
 
@@ -129,11 +130,13 @@ describe('ExtendedSearchPage', () => {
 
     expect(wrapper.find('WindowLeaveMessage')).toHaveLength(1);
   });
+
   it('passes the given route to the WindowLeaveMessage component', () => {
     const route = { path: '/foo' };
     const wrapper = mount(<SimpleExtendedSearchPage route={route} />);
 
     const windowLeaveMessage = wrapper.find('WindowLeaveMessage');
+
     expect(windowLeaveMessage).toHaveLength(1);
     expect(windowLeaveMessage).toHaveProp('route', route);
   });
@@ -155,61 +158,75 @@ describe('ExtendedSearchPage', () => {
 
     expect(WidgetStore.listen).not.toHaveBeenCalled();
   });
+
   it('does not unregister from Widget store upon unmount', () => {
     const unsubscribe = jest.fn();
     WidgetStore.listen = jest.fn(() => unsubscribe);
     const wrapper = mount(<SimpleExtendedSearchPage />);
 
     wrapper.unmount();
+
     expect(unsubscribe).not.toHaveBeenCalled();
   });
+
   it('does not register to QueryFiltersStore upon mount', () => {
     mount(<SimpleExtendedSearchPage />);
 
     expect(QueryFiltersStore.listen).not.toHaveBeenCalled();
   });
+
   it('does not unregister from Query Filter store upon unmount', () => {
     const unsubscribe = jest.fn();
     QueryFiltersStore.listen = jest.fn(() => unsubscribe);
     const wrapper = mount(<SimpleExtendedSearchPage />);
 
     wrapper.unmount();
+
     expect(unsubscribe).not.toHaveBeenCalled();
   });
+
   it('registers to SearchActions.refresh upon mount', () => {
     mount(<SimpleExtendedSearchPage />);
 
     expect(SearchActions.refresh.listen).toHaveBeenCalled();
   });
+
   it('registers to ViewActions.search.completed upon mount', () => {
     mount(<SimpleExtendedSearchPage />);
 
     expect(ViewActions.search.completed.listen).toHaveBeenCalled();
   });
+
   it('registers to ViewActions.search.completed even if search refresh condition fails', () => {
     mount(<SimpleExtendedSearchPage searchRefreshHools={[() => false]} />);
 
     expect(ViewActions.search.completed.listen).toHaveBeenCalled();
   });
+
   it('unregisters from ViewActions.search.completed upon unmount', () => {
     const unsubscribe = jest.fn();
     ViewActions.search.completed.listen = jest.fn(() => unsubscribe);
     const wrapper = mount(<SimpleExtendedSearchPage />);
 
     expect(unsubscribe).not.toHaveBeenCalled();
+
     wrapper.unmount();
+
     expect(unsubscribe).toHaveBeenCalled();
   });
+
   it('refreshes Streams upon mount', () => {
     mount(<SimpleExtendedSearchPage />);
 
     expect(StreamsActions.refresh).toHaveBeenCalled();
   });
+
   it('updating search in view triggers search execution', () => {
     mount(<SimpleExtendedSearchPage />);
 
     const cb = asMock(ViewActions.search.completed.listen).mock.calls[0][0];
     asMock(SearchActions.execute).mockClear();
+
     expect(SearchActions.execute).not.toHaveBeenCalled();
 
     return cb({ search: {} })
@@ -217,16 +234,21 @@ describe('ExtendedSearchPage', () => {
         expect(SearchActions.execute).toHaveBeenCalled();
       });
   });
+
   it('refreshes field types store upon mount', () => {
     expect(FieldTypesActions.all).not.toHaveBeenCalled();
+
     mount(<SimpleExtendedSearchPage />);
+
     expect(FieldTypesActions.all).toHaveBeenCalled();
   });
+
   it('refreshes field types upon every search execution', () => {
     mount(<SimpleExtendedSearchPage />);
 
     asMock(FieldTypesActions.all).mockClear();
     const cb = asMock(ViewActions.search.completed.listen).mock.calls[0][0];
+
     return cb({ search: {} })
       .then(() => {
         expect(FieldTypesActions.all).toHaveBeenCalled();
@@ -246,6 +268,7 @@ describe('ExtendedSearchPage', () => {
     promise.then(() => {
       expect(SearchMetadataActions.parseSearch).toHaveBeenCalled();
       expect(SearchActions.execute).toHaveBeenCalled();
+
       done();
     });
   });
@@ -254,6 +277,7 @@ describe('ExtendedSearchPage', () => {
     mount(<SimpleExtendedSearchPage />);
 
     asMock(SearchActions.execute).mockClear();
+
     expect(SearchActions.execute).not.toHaveBeenCalled();
 
     return ViewActions.selectQuery('someQuery')

@@ -13,12 +13,14 @@ import { migrateTimeRangeToNewType } from '../TimerangeForForm';
 const TimeRangeOverrideTypeSelector = () => {
   const [{ value, onChange, name }] = useField('timerange');
   const { type } = value || {};
+
   const onSelect = useCallback((newType) => onChange({
     target: {
       value: migrateTimeRangeToNewType(value, newType),
       name,
     },
   }), [onChange, value]);
+
   return (
     <ButtonToolbar className="pull-left">
       <TimeRangeDropdownButton onSelect={onSelect}>

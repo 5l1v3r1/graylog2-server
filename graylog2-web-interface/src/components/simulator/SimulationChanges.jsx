@@ -43,6 +43,7 @@ const OriginalChanges = styled.div`
 
 const FieldResultWrap = styled.div(({ resultType, theme }) => {
   const { success, danger, info } = theme.colors.variant.light;
+
   const types = {
     added: success,
     removed: danger,
@@ -151,11 +152,13 @@ const SimulationChanges = createReactClass({
       if (processedFields.indexOf(field) === -1) {
         return;
       }
+
       const originalValue = originalMessage.fields[field];
       const processedValue = processedMessage.fields[field];
 
       if (typeof originalValue !== typeof processedValue) {
         mutatedFields.push(field);
+
         return;
       }
 

@@ -25,6 +25,7 @@ const _defaultWidgets: { [ViewType]: (?string) => Promise<Result> } = {
     const streamDecorators = decorators ? decorators.filter((decorator) => decorator.stream === streamId) : [];
     const histogram = resultHistogram();
     const messageTable = allMessagesTable(undefined, streamDecorators);
+
     const widgets = [
       histogram,
       messageTable,
@@ -56,6 +57,7 @@ const _defaultWidgets: { [ViewType]: (?string) => Promise<Result> } = {
 
 export default async (type: ViewType, streamId: ?string) => {
   const { titles, widgets, positions } = await _defaultWidgets[type](streamId);
+
   return ViewState.create()
     .toBuilder()
     .titles(titles)

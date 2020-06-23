@@ -56,6 +56,7 @@ class CacheCreate extends React.Component {
 
     const sortedCaches = Object.keys(types).map((key) => {
       const typeItem = types[key];
+
       return { value: typeItem.type, label: cachePlugins[typeItem.type].displayName };
     }).sort((a, b) => naturalSort(a.label.toLowerCase(), b.label.toLowerCase()));
 
@@ -98,6 +99,5 @@ class CacheCreate extends React.Component {
     );
   }
 }
-
 
 export default CacheCreate;

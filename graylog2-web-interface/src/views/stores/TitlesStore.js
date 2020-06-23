@@ -37,6 +37,7 @@ export const TitlesStore = singletonStore(
     },
     onViewStateStoreChange({ state }) {
       const titles = get(state, 'titles');
+
       if (!isEqual(titles, this.titles)) {
         this.titles = titles;
         this._trigger();
@@ -48,6 +49,7 @@ export const TitlesStore = singletonStore(
       const promise = CurrentViewStateActions.titles(this.titles).then(() => this.titles);
       this._trigger();
       TitlesActions.set.promise(promise);
+
       return promise;
     },
 

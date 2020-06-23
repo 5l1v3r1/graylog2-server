@@ -12,7 +12,6 @@ import * as fixtures from './HeatmapVisualization.fixtures';
 
 import HeatmapVisualization from '../HeatmapVisualization';
 
-
 jest.mock('../../GenericPlot', () => mockComponent('GenericPlot'));
 
 describe('HeatmapVisualization', () => {
@@ -20,6 +19,7 @@ describe('HeatmapVisualization', () => {
     const columnPivot = new Pivot('http_status', 'values');
     const rowPivot = new Pivot('hour', 'values');
     const series = new Series('count()');
+
     const config = AggregationWidgetConfig.builder()
       .rowPivots([rowPivot])
       .columnPivots([columnPivot]).series([series])
@@ -27,6 +27,7 @@ describe('HeatmapVisualization', () => {
       .build();
     const effectiveTimerange = { type: 'absolute', from: '2019-10-22T11:54:35.850Z', to: '2019-10-29T11:53:50.000Z' };
     const plotLayout = { yaxis: { type: 'category', fixedrange: true }, xaxis: { type: 'category', fixedrange: true }, plot_bgcolor: '#440154', margin: { b: 40 } };
+
     const plotChartData = [
       {
         type: 'heatmap',
@@ -50,6 +51,7 @@ describe('HeatmapVisualization', () => {
                                                 toggleEdit={() => {}}
                                                 width={800} />);
     const genericPlot = wrapper.find('GenericPlot');
+
     expect(genericPlot).toHaveProp('layout', plotLayout);
     expect(genericPlot).toHaveProp('chartData', plotChartData);
   });

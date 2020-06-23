@@ -47,6 +47,7 @@ const SearchResult = React.memo(({ queryId, searches, viewState }: Props) => {
   const allFields = fieldTypes.all;
   const queryFields = fieldTypes.queryFields.get(queryId, fieldTypes.all);
   const positions = viewState.state && viewState.state.widgetPositions;
+
   const content = currentResults ? (
     <QueryWithWidgets allFields={allFields}
                       fields={queryFields}

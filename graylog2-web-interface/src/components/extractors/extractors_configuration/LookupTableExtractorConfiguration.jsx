@@ -60,6 +60,7 @@ class LookupTableExtractorConfiguration extends React.Component {
     promise.then((result) => {
       if (result.error) {
         UserNotification.warning(`We were not able to run the lookup: ${result.error_message}`);
+
         return;
       }
 

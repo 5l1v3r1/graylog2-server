@@ -135,9 +135,11 @@ export default {
       editComponent: AggregationControls,
       needsControlledHeight: (widget: Widget) => {
         const widgetVisualization = get(widget, 'config.visualization');
+
         const flexibleHeightWidgets = [
           DataTable.type,
         ];
+
         return !flexibleHeightWidgets.find((visualization) => visualization === widgetVisualization);
       },
       searchResultTransformer: PivotTransformer,
@@ -146,9 +148,11 @@ export default {
         if (widget.config.rowPivots.length > 0) {
           return `Aggregating ${widget.config.series.map((s) => s.effectiveName).join(', ')} by ${widget.config.rowPivots.map(({ field }) => field).join(', ')}`;
         }
+
         if (widget.config.series.length > 0) {
           return `Aggregating ${widget.config.series.map((s) => s.effectiveName).join(', ')}`;
         }
+
         return AggregationWidget.defaultTitle;
       },
     },

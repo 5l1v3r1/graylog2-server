@@ -79,9 +79,11 @@ const ShowAlertPage = createReactClass({
 
     let statusLabel;
     let resolvedState;
+
     if (!alert.is_interval || alert.resolved_at) {
       statusLabel = <Label bsStyle="success">Resolved</Label>;
       const resolvedAtTime = alert.resolved_at || alert.triggered_at;
+
       if (resolvedAtTime) {
         resolvedState = (
           <span>

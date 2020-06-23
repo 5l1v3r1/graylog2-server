@@ -17,6 +17,7 @@ const renderWithForm = (element) => render((
 
 const _findValidationState = (container) => {
   const formGroup = container?.matches('.form-group') ? container : container?.querySelector('.form-group');
+
   return formGroup && formGroup.className.includes('has-error')
     ? 'error'
     : null;
@@ -44,6 +45,7 @@ describe('AbsoluteTimeRangeSelector', () => {
 
     await wait(() => expect(getValidationStateOfInput(fromDate)).toEqual('error'));
   });
+
   it('does not try to parse an empty date in to field', async () => {
     const { getByDisplayValue } = renderWithForm((
       <AbsoluteTimeRangeSelector />

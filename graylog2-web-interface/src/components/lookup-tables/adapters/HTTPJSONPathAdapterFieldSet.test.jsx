@@ -27,11 +27,13 @@ describe('HTTPJSONPathAdapterFieldSet', () => {
                                    validationMessage={() => {
                                    }} />,
     );
+
     expect(container).toMatchSnapshot();
   });
 
   it('should add a header', () => {
     const updateConfig = jest.fn();
+
     const { getByTestId, getByText } = render(
       <HTTPJSONPathAdapterFieldSet config={config}
                                    updateConfig={updateConfig}
@@ -57,6 +59,7 @@ describe('HTTPJSONPathAdapterFieldSet', () => {
         'new Key': 'new Value',
       },
     };
+
     expect(updateConfig).toBeCalledWith(newConfig);
   });
 });

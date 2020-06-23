@@ -57,27 +57,34 @@ describe('ShowViewPage', () => {
     owner: 'admin',
     requires: {},
   };
+
   const SimpleShowViewPage = (props) => (
     <ShowViewPage location={{ query: {} }}
                   params={{ viewId: 'foo' }}
                   route={{}}
                   {...props} />
   );
+
   beforeEach(() => {
     jest.resetAllMocks();
     jest.resetModules();
   });
+
   it('renders Spinner while loading', () => {
     const promise = () => new Promise<ViewJson>((resolve) => setTimeout(resolve, 30000, viewJson));
     ViewManagementActions.get = mockAction(jest.fn(promise));
     const wrapper = mount(<SimpleShowViewPage />);
+
     expect(wrapper.find('Spinner')).toExist();
   });
+
   it('loads view with id passed from props', () => {
     ViewManagementActions.get = mockAction(jest.fn(() => Promise.reject()));
     mount(<SimpleShowViewPage />);
+
     expect(ViewManagementActions.get).toHaveBeenCalledWith('foo');
   });
+
   it('reports NotForundError error if loading view returns 404', (done) => {
     const error = new Error('Not found');
     // $FlowFixMe: Assigning to non-existing key on purpose
@@ -92,9 +99,11 @@ describe('ShowViewPage', () => {
         error,
         type: NotFoundErrorType,
       });
+
       done();
     });
   });
+
   it('passes loaded view to ViewDeserializer', (done) => {
     ViewManagementActions.get = mockAction(jest.fn(() => Promise.resolve(viewJson)));
     SearchExecutionStateActions.setParameterValues = mockAction(jest.fn());
@@ -102,21 +111,25 @@ describe('ShowViewPage', () => {
     // $FlowFixMe: Calling mockImplementation on jest.fn()
     ViewDeserializer.mockImplementation((response: ViewJson) => {
       const view = View.fromJSON(response).toBuilder().search(search).build();
+
       return Promise.resolve(view);
     });
     mount(<SimpleShowViewPage />);
 
     setImmediate(() => {
       expect(ViewDeserializer).toHaveBeenCalledWith(viewJson);
+
       done();
     });
   });
+
   it('calls ViewLoader upon mount', () => {
     const viewLoader = jest.fn(() => Promise.resolve());
     mount(<SimpleShowViewPage viewLoader={viewLoader} />);
 
     expect(viewLoader).toHaveBeenCalled();
   });
+
   it('calls ViewLoader again if view id prop changes', () => {
     const viewLoader = jest.fn(() => Promise.resolve());
     const wrapper = mount(<SimpleShowViewPage viewLoader={viewLoader} />);
@@ -127,6 +140,7 @@ describe('ShowViewPage', () => {
 
     expect(viewLoader).toHaveBeenCalledWith('bar', [], [], {}, expect.anything(), expect.anything());
   });
+
   it('does not call ViewLoader again if view id prop does not change', () => {
     const viewLoader = jest.fn(() => Promise.resolve());
     const wrapper = mount(<SimpleShowViewPage viewLoader={viewLoader} />);

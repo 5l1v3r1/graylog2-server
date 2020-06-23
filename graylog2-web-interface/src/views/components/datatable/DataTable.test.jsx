@@ -31,6 +31,7 @@ describe('DataTable', () => {
       value: 408,
     }],
   }];
+
   const data = {
     chart: rows,
   };
@@ -66,6 +67,7 @@ describe('DataTable', () => {
       .rollup(true)
       .build();
     const wrapper = mount(<SimplifiedDataTable config={config} />);
+
     expect(wrapper.children()).toMatchSnapshot();
   });
 
@@ -78,8 +80,10 @@ describe('DataTable', () => {
       .visualization('table')
       .rollup(true)
       .build();
+
     const wrapper = mount(<SimplifiedDataTable config={config}
                                                data={data} />);
+
     expect(wrapper.children()).toMatchSnapshot();
   });
 
@@ -95,6 +99,7 @@ describe('DataTable', () => {
 
     const wrapper = mount(<SimplifiedDataTable config={config}
                                                data={{ 'd8e311db-276c-46e4-ba75-57bf1e0b4d35': rows }} />);
+
     expect(wrapper).toIncludeText('hulud.net');
   });
 
@@ -107,13 +112,16 @@ describe('DataTable', () => {
       .visualization('table')
       .rollup(false)
       .build();
+
     const wrapper = mount(<SimplifiedDataTable config={config}
                                                data={data} />);
+
     expect(wrapper.children()).toMatchSnapshot();
   });
 
   it('renders column pivot header without offset when rollup is disabled', () => {
     const protocolPivot = new Pivot('nf_proto_name', 'values', { limit: 15 });
+
     const protocolData = {
       chart:
         [{
@@ -136,8 +144,10 @@ describe('DataTable', () => {
       .visualization('table')
       .rollup(false)
       .build();
+
     const wrapper = mount(<SimplifiedDataTable config={config}
                                                data={protocolData} />);
+
     expect(wrapper.children()).toMatchSnapshot();
   });
 
@@ -191,10 +201,12 @@ describe('DataTable', () => {
       .visualization('table')
       .rollup(false)
       .build();
+
     const fields = Immutable.List([
       FieldTypeMapping.create('bytes', FieldTypes.LONG()),
       FieldTypeMapping.create('timestamp', FieldTypes.DATE()),
     ]);
+
     const wrapper = mount(<SimplifiedDataTable config={config}
                                                fields={fields}
                                                data={dataWithMoreSeries} />);
@@ -226,6 +238,7 @@ describe('DataTable', () => {
         <SimplifiedDataTable config={config} />
       </RenderCompletionCallback.Provider>
     ));
+
     expect(onRenderComplete).toHaveBeenCalled();
   });
 });

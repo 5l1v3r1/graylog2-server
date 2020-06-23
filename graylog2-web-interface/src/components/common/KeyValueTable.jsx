@@ -97,6 +97,7 @@ class KeyValueTable extends React.Component {
   _formattedRows = (pairs) => {
     return Object.keys(pairs).sort().map((key) => {
       let actionsColumn;
+
       if (this.props.editable) {
         const actions = [];
         actions.push(
@@ -124,6 +125,7 @@ class KeyValueTable extends React.Component {
     }
 
     const addRowDisabled = !this.state.newKey || !this.state.newValue;
+
     return (
       <tr>
         <td>

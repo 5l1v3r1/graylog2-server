@@ -47,6 +47,7 @@ const PipelineConnectionsForm = createReactClass({
 
   _save() {
     const streamIds = this.state.connectedStreams.map((cs) => cs.value);
+
     const newConnection = {
       pipeline: this.props.pipeline.id,
       streams: streamIds,

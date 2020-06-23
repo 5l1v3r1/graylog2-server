@@ -31,6 +31,7 @@ export function useStore<V, Store: StoreType<V>, R>(store: Store, propsMapper: P
       storeStateRef.current = newState;
     }
   }), [store]);
+
   return storeState;
 }
 
@@ -78,12 +79,16 @@ function connect<Stores: Object, Props, ComponentType: React.ComponentType<Props
       // Retrieving initial state from each configured store
       const storeStates = Object.keys(stores).map((key) => {
         const store = stores[key];
+
         if (store === undefined || !isFunction(store.getInitialState)) {
           // eslint-disable-next-line no-console
           console.error(`Error: The store passed for the \`${key}\` property is not defined or invalid. Check the connect()-call wrapping your \`${wrappedComponentName}\` component.`);
+
           return [key, undefined];
         }
+
         const state = store.getInitialState();
+
         return [key, state];
       }).reduce((prev, [key, state]) => ({ ...prev, [key]: state }), {});
 
@@ -93,11 +98,14 @@ function connect<Stores: Object, Props, ComponentType: React.ComponentType<Props
     componentDidMount() {
       this.unsubscribes = Object.keys(stores).map((key) => {
         const store = stores[key];
+
         if (store === undefined || !isFunction(store.listen)) {
           // eslint-disable-next-line no-console
           console.error(`Error: The store passed for the \`${key}\` property is not defined or invalid. Check the connect()-call wrapping your \`${wrappedComponentName}\` component.`);
+
           return () => {};
         }
+
         return store.listen((partialState) => this.setState((state) => ({ ...state, [key]: partialState })));
       });
     }
@@ -118,6 +126,7 @@ function connect<Stores: Object, Props, ComponentType: React.ComponentType<Props
       Object.keys(stores).forEach((key) => {
         storeProps[key] = state[key];
       });
+
       return mapProps(storeProps);
     };
 
@@ -128,6 +137,7 @@ function connect<Stores: Object, Props, ComponentType: React.ComponentType<Props
       return <Component {...nextProps} {...componentProps} />;
     }
   }
+
   ConnectStoresWrapper.displayName = `ConnectStoresWrapper[${wrappedComponentName}] stores=${Object.keys(stores).join(',')}`;
 
   return ConnectStoresWrapper;

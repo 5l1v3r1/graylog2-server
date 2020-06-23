@@ -28,6 +28,7 @@ describe('HighlightingRulesProvider', () => {
         </HighlightingRulesContext.Consumer>
       </HighlightingRulesProvider>,
     );
+
     return consume;
   };
 
@@ -36,7 +37,6 @@ describe('HighlightingRulesProvider', () => {
 
     expect(consume).toHaveBeenCalledWith(undefined);
   });
-
 
   it('provides highlighting rules', () => {
     const rule = HighlightingRule.builder()

@@ -17,6 +17,7 @@ const SystemJobsStore = Reflux.createStore({
   },
   list() {
     const url = URLUtils.qualifyUrl(ApiRoutes.SystemJobsApiController.list().url);
+
     const promise = fetchPeriodically('GET', url).then((response) => {
       this.jobs = response;
       this.trigger({ jobs: response });
@@ -27,6 +28,7 @@ const SystemJobsStore = Reflux.createStore({
   },
   getJob(jobId) {
     const url = URLUtils.qualifyUrl(ApiRoutes.SystemJobsApiController.getJob(jobId).url);
+
     const promise = fetch('GET', url).then((response) => {
       this.jobsById = { ...this.jobsById, [response.id]: response };
       this.trigger({ jobsById: this.jobsById });
@@ -42,6 +44,7 @@ const SystemJobsStore = Reflux.createStore({
   },
   cancelJob(jobId) {
     const url = URLUtils.qualifyUrl(ApiRoutes.SystemJobsApiController.cancelJob(jobId).url);
+
     const promise = fetch('DELETE', url).then((response) => {
       delete (this.jobsById[response.id]);
     });

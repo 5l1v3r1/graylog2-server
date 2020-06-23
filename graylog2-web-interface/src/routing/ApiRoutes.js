@@ -256,9 +256,11 @@ const ApiRoutes = {
       if (limit) {
         queryString.limit = limit;
       }
+
       if (offset) {
         queryString.offset = offset;
       }
+
       if (sortField && sortOrder) {
         queryString.sort = `${sortField}:${sortOrder}`;
       }
@@ -276,6 +278,7 @@ const ApiRoutes = {
       if (limit) {
         queryString.limit = limit;
       }
+
       if (offset) {
         queryString.offset = offset;
       }

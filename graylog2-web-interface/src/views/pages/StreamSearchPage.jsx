@@ -49,10 +49,12 @@ const StreamSearchPage = ({ params: { streamId }, route, router, loadingViewHook
         if (e instanceof Error) {
           throw e;
         }
+
         setHookComponent(e);
       },
     ).then((view) => {
       setLoaded(true);
+
       return view;
     }).then(() => {
       SearchActions.executeWithCurrentState();
@@ -99,6 +101,7 @@ const StreamSearchPage = ({ params: { streamId }, route, router, loadingViewHook
       </ViewLoaderContext.Provider>
     );
   }
+
   return <Spinner />;
 };
 

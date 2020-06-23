@@ -135,6 +135,7 @@ InputsStore.inputsAsMap = (inputsList) => {
   inputsList.forEach((input) => {
     inputsMap[input.id] = input;
   });
+
   return inputsMap;
 };
 

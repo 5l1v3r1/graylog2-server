@@ -230,6 +230,7 @@ class MessageTable extends React.Component<Props, State> {
       newSet = expandedMessages.add(id);
       RefreshActions.disable();
     }
+
     this.setState({ expandedMessages: newSet });
   };
 

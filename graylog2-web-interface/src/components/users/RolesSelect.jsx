@@ -20,9 +20,11 @@ class RolesSelect extends React.Component {
 
   render() {
     const rolesValue = this.props.userRoles.join(',');
+
     const rolesOptions = this.props.availableRoles.map((role) => {
       return { value: role.name, label: role.name };
     });
+
     return (
       <MultiSelect ref={(select) => { this.select = select; }}
                    options={rolesOptions}

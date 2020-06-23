@@ -66,17 +66,20 @@ class BootstrapModalForm extends React.Component {
     if ((typeof formDOMNode.checkValidity === 'function' && !formDOMNode.checkValidity())
       || (typeof $formDOMNode.checkValidity === 'function' && !$formDOMNode.checkValidity())) {
       event.preventDefault();
+
       return;
     }
 
     // Check custom validation for plugin fields
     if (!validate(formDOMNode)) {
       event.preventDefault();
+
       return;
     }
 
     // If function is not given, let the browser continue propagating the submit event
     const { onSubmitForm } = this.props;
+
     if (typeof onSubmitForm === 'function') {
       event.preventDefault();
       onSubmitForm(event);
@@ -85,6 +88,7 @@ class BootstrapModalForm extends React.Component {
 
   render() {
     const { backdrop, submitButtonDisabled, formProps, bsSize, onModalClose, cancelButtonText, show, submitButtonText, onModalOpen, title, children } = this.props;
+
     const body = (
       <div className="container-fluid">
         {children}

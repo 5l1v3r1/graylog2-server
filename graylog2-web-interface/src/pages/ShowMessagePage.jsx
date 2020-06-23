@@ -32,6 +32,7 @@ const ShowMessagePage = ({ params: { index, messageId }, params }: Props) => {
     MessagesActions.loadMessage(index, messageId)
       .then((_message) => {
         setMessage(_message);
+
         return _message.source_input_id ? InputsActions.get(_message.source_input_id) : Promise.resolve();
       })
       .then((input) => {
@@ -74,6 +75,7 @@ const ShowMessagePage = ({ params: { index, messageId }, params }: Props) => {
       </DocumentTitle>
     );
   }
+
   return <Spinner data-testid="spinner" />;
 };
 

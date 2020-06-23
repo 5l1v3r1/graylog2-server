@@ -26,9 +26,11 @@ const PossiblyHighlight = ({ color = DEFAULT_HIGHLIGHT_COLOR, field, value, high
   if (value === undefined || value == null) {
     return '';
   }
+
   if (!highlightRanges || !highlightRanges[field]) {
     return value;
   }
+
   const style = {
     backgroundColor: color,
   };

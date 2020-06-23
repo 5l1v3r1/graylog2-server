@@ -38,6 +38,7 @@ export default class EditableTitle extends React.Component<Props, State> {
 
   _toggleEditing = () => {
     const { disabled } = this.props;
+
     if (!disabled) {
       this.setState((state) => ({ editing: !state.editing }));
     }
@@ -56,6 +57,7 @@ export default class EditableTitle extends React.Component<Props, State> {
   _submitValue = () => {
     const { value } = this.state;
     const { onChange, value: propsValue } = this.props;
+
     if (value !== '') {
       onChange(value);
     } else {
@@ -71,6 +73,7 @@ export default class EditableTitle extends React.Component<Props, State> {
 
   render() {
     const { editing, value } = this.state;
+
     return editing ? (
       <span>
         <form onSubmit={this._onSubmit} className={styles.inlineForm}>

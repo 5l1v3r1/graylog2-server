@@ -25,6 +25,7 @@ const SessionStore = Reflux.createStore({
   login(username, password, host) {
     const builder = new Builder('POST', URLUtils.qualifyUrl(this.sourceUrl))
       .json({ username: username, password: password, host: host });
+
     const promise = builder.build()
       .then((sessionInfo) => {
         return { sessionId: sessionInfo.session_id, username: username };
@@ -58,6 +59,7 @@ const SessionStore = Reflux.createStore({
             username: username || response.username,
           });
         }
+
         if (sessionId && username) {
           this._removeSession();
         }

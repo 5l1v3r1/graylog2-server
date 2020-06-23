@@ -162,9 +162,11 @@ const CollectorForm = createReactClass({
 
     let validationParameters = '';
     let executeParameters = '';
+
     if (formData.validation_parameters) {
       validationParameters = formData.validation_parameters;
     }
+
     if (formData.execute_parameters) {
       executeParameters = formData.execute_parameters;
     }

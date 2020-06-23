@@ -37,9 +37,11 @@ const StreamOutputsPage = createReactClass({
 
   render() {
     const { stream, currentUser } = this.state;
+
     if (!stream) {
       return <Spinner />;
     }
+
     return (
       <DocumentTitle title={`Outputs for Stream ${stream.title}`}>
         <div>

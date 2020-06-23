@@ -23,6 +23,7 @@ const ViewDescription = ({ results, viewMetadata }: Props) => {
   const isAdHocSearch = !viewMetadata.id;
   const viewType = useContext(ViewTypeContext);
   const viewTypeLabel = viewType ? <ViewTypeLabel type={viewType} /> : '';
+
   const resultsSection = (
     <Section>
       <SearchResultOverview results={results} />

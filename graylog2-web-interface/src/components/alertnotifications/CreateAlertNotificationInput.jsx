@@ -42,9 +42,11 @@ const CreateAlertNotificationInput = createReactClass({
     StreamsStore.listStreams().then((streams) => {
       const nextState = { streams: streams };
       const { initialSelectedStream } = this.props;
+
       if (initialSelectedStream) {
         nextState.selectedStream = this._findStream(streams, initialSelectedStream);
       }
+
       this.setState(nextState);
     });
     AlertNotificationsActions.available();
@@ -68,6 +70,7 @@ const CreateAlertNotificationInput = createReactClass({
 
   _onSubmit(data) {
     const { selectedStream } = this.state;
+
     if (!selectedStream) {
       UserNotification.error('Please select the stream that the condition should check.', 'Could not save condition');
     }
@@ -89,6 +92,7 @@ const CreateAlertNotificationInput = createReactClass({
   _formatNotificationForm(type) {
     const { availableNotifications } = this.state;
     const typeDefinition = availableNotifications[type];
+
     return (
       <ConfigurationForm ref={(configurationForm) => { this.configurationForm = configurationForm; }}
                          key="configuration-form-output"
@@ -118,6 +122,7 @@ const CreateAlertNotificationInput = createReactClass({
     const { type, availableNotifications, streams, selectedStream } = this.state;
 
     const notificationForm = (type !== this.PLACEHOLDER ? this._formatNotificationForm(type) : null);
+
     const availableTypes = Object.keys(availableNotifications).map((value) => {
       return (
         <option key={`type-option-${value}`} value={value}>
@@ -125,6 +130,7 @@ const CreateAlertNotificationInput = createReactClass({
         </option>
       );
     });
+
     const formattedStreams = streams
       .map((stream) => this._formatOption(stream.title, stream.id))
       .sort((s1, s2) => naturalSort(s1.label.toLowerCase(), s2.label.toLowerCase()));

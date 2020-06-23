@@ -43,11 +43,13 @@ const UsersStore = Reflux.createStore({
   create(request: any): Promise<string[]> {
     const url = URLUtils.qualifyUrl(ApiRoutes.UsersApiController.create().url);
     const promise = fetch('POST', url, request);
+
     return promise;
   },
 
   loadUsers(): Promise<User[]> {
     const url = URLUtils.qualifyUrl(ApiRoutes.UsersApiController.list().url);
+
     const promise = fetch('GET', url)
       .then(
         (response) => response.users,
@@ -58,6 +60,7 @@ const UsersStore = Reflux.createStore({
           }
         },
       );
+
     return promise;
   },
 
@@ -106,6 +109,7 @@ const UsersStore = Reflux.createStore({
     const url = URLUtils.qualifyUrl(ApiRoutes.UsersApiController.create_token(encodeURIComponent(username),
       encodeURIComponent(tokenName)).url);
     const promise = fetch('POST', url);
+
     return promise;
   },
 
@@ -128,6 +132,7 @@ const UsersStore = Reflux.createStore({
 
   loadTokens(username: string): Promise<Token[]> {
     const url = URLUtils.qualifyUrl(ApiRoutes.UsersApiController.list_tokens(encodeURIComponent(username)).url);
+
     const promise = fetch('GET', url)
       .then(
         (response) => response.tokens,

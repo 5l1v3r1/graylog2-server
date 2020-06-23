@@ -28,6 +28,7 @@ describe('NewDashboardPage', () => {
   beforeAll(() => {
     jest.useFakeTimers();
   });
+
   afterEach(() => {
     cleanup();
     jest.clearAllMocks();
@@ -37,7 +38,9 @@ describe('NewDashboardPage', () => {
     const { getByText } = render(<SimpleNewDashboardPage />);
 
     act(() => jest.advanceTimersByTime(200));
+
     expect(getByText('Loading...')).not.toBeNull();
+
     await waitForElement(() => getByText('Extended search page'));
   });
 
@@ -50,6 +53,7 @@ describe('NewDashboardPage', () => {
 
   it('should render transform search view to dashboard view, if view is defined in location state', async () => {
     const loedViewMock = asMock(ViewActions.load);
+
     const view = View.create().toBuilder().type(View.Type.Search).search(Search.builder().build())
       .createdAt(new Date('2019-10-16T14:38:44.681Z'))
       .build();
@@ -59,12 +63,14 @@ describe('NewDashboardPage', () => {
     ));
 
     await waitForElement(() => getByText('Extended search page'));
+
     expect(loedViewMock).toHaveBeenCalledTimes(1);
     expect(loedViewMock.mock.calls[0][0].type).toStrictEqual(View.Type.Dashboard);
   });
 
   it('should process hooks with provided location query when transforming search view to dashboard view', async () => {
     const processHooksAction = asMock(processHooks);
+
     const view = View.create().toBuilder().type(View.Type.Search).search(Search.builder().build())
       .createdAt(new Date('2019-10-16T14:38:44.681Z'))
       .build();
@@ -81,6 +87,7 @@ describe('NewDashboardPage', () => {
     ));
 
     await waitForElement(() => getByText('Extended search page'));
+
     expect(processHooksAction).toBeCalledTimes(1);
     expect(processHooksAction.mock.calls[0][3]).toStrictEqual({ q: '', rangetype: 'relative', relative: '300' });
   });
@@ -96,6 +103,7 @@ describe('NewDashboardPage', () => {
     ));
 
     await waitForElement(() => getByText('Extended search page'));
+
     expect(ViewActions.load).toHaveBeenCalledTimes(0);
   });
 });

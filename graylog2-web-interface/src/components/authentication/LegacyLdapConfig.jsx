@@ -33,6 +33,7 @@ class LegacyLdapConfig extends React.Component {
 
   render() {
     const toggleButtonText = this.state.showSettings ? 'LDAP Group Mapping' : 'LDAP Settings';
+
     const activeComponent = (this.state.showSettings
       ? <LdapComponent onCancel={this._onCancel} onShowGroups={this._toggleButton} />
       : <LdapGroupsComponent onCancel={this._onSettingsCancel} onShowConfig={this._toggleButton} />);

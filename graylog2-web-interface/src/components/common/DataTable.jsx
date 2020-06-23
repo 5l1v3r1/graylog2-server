@@ -88,9 +88,11 @@ class DataTable extends React.Component {
   getFormattedHeaders = () => {
     let i = 0;
     const { headerCellFormatter, headers } = this.props;
+
     const formattedHeaders = headers.map((header) => {
       const el = <DataTableElement key={`header-${i}`} element={header} index={i} formatter={headerCellFormatter} />;
       i += 1;
+
       return el;
     });
 
@@ -101,6 +103,7 @@ class DataTable extends React.Component {
     let i = 0;
     const { sortByKey, sortBy, dataRowFormatter } = this.props;
     let sortedDataRows = this._getEffectiveRows();
+
     if (sortByKey) {
       sortedDataRows = sortedDataRows.sort((a, b) => {
         return a[sortByKey].localeCompare(b[sortByKey]);
@@ -110,9 +113,11 @@ class DataTable extends React.Component {
         return sortBy(a).localeCompare(sortBy(b));
       });
     }
+
     const formattedDataRows = sortedDataRows.map((row) => {
       const el = <DataTableElement key={`row-${i}`} element={row} index={i} formatter={dataRowFormatter} />;
       i += 1;
+
       return el;
     });
 
@@ -126,11 +131,13 @@ class DataTable extends React.Component {
   _getEffectiveRows = () => {
     const { filteredRows } = this.state;
     const { filterKeys, rows } = this.props;
+
     return (filterKeys.length === 0 ? rows : filteredRows.filter((row) => rows.some((r) => isEqual(r, row))));
   };
 
   render() {
     let filter;
+
     const {
       filterKeys,
       id,
@@ -146,6 +153,7 @@ class DataTable extends React.Component {
       rows,
     } = this.props;
     const effectiveRows = this._getEffectiveRows();
+
     if (filterKeys.length !== 0) {
       filter = (
         <div className="row">
@@ -167,6 +175,7 @@ class DataTable extends React.Component {
     }
 
     let data;
+
     if (rows.length === 0) {
       data = <p>{noDataText}</p>;
     } else if (effectiveRows.length === 0) {

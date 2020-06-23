@@ -33,6 +33,7 @@ class ContentPackUploadControls extends React.Component {
 
   _save(submitEvent) {
     submitEvent.preventDefault();
+
     if (!this.uploadInput.getInputDOMNode().files || !this.uploadInput.getInputDOMNode().files[0]) {
       return;
     }
@@ -52,9 +53,11 @@ class ContentPackUploadControls extends React.Component {
               + 'Graylog logs for more information.';
             const title = 'Could not import content pack';
             let smallMessage = '';
+
             if (response.additional && response.additional.body && response.additional.body.message) {
               smallMessage = `<br /><small>${response.additional.body.message}</small>`;
             }
+
             UserNotification.error(message + smallMessage, title);
           },
         );

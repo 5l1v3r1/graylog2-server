@@ -56,6 +56,7 @@ class EditUsersPage extends React.Component {
     }
 
     let resetStartpageButton;
+
     if (!user.read_only && user.startpage !== null && Object.keys(user.startpage).length > 0) {
       resetStartpageButton = <Button bsStyle="info" onClick={this._resetStartpage}>Reset custom startpage</Button>;
     }

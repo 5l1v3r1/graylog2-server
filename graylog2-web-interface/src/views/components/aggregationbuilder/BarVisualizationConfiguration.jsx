@@ -57,6 +57,7 @@ class BarVisualizationConfiguration extends React.Component<Props> {
 
   _wrapOption: (value: BarMode) => BarModeOption = (value) => {
     const option = BarVisualizationConfiguration.options[value];
+
     return { label: option.label, value: value };
   };
 

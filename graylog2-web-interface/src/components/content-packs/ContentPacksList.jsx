@@ -102,6 +102,7 @@ class ContentPacksList extends React.Component {
     return shownItems.map((item) => {
       const { openFunc, installModal } = this._installModal(item);
       let downloadRef;
+
       const downloadModal = (
         <ContentPackDownloadControl ref={(node) => { downloadRef = node; }}
                                     contentPackId={item.id}
@@ -168,6 +169,7 @@ class ContentPacksList extends React.Component {
     const { filteredContentPacks, pageSize, currentPage } = this.state;
     const { contentPacks } = this.props;
     const numberPages = Math.ceil(filteredContentPacks.length / pageSize);
+
     const pagination = (
       <Pagination bsSize="small"
                   bsStyle={`pagination ${ContentPacksListStyle.pager}`}
@@ -180,6 +182,7 @@ class ContentPacksList extends React.Component {
                   first
                   last />
     );
+
     const pageSizeSelector = (
       <span>Show:&nbsp;
         <select onChange={this._itemsShownChange} value={pageSize}>
@@ -194,6 +197,7 @@ class ContentPacksList extends React.Component {
     const noContentMessage = contentPacks.length <= 0
       ? 'No content packs found. Please create or upload one'
       : 'No matching content packs found';
+
     const content = filteredContentPacks.length <= 0
       ? (<div>{noContentMessage}</div>)
       : (

@@ -56,10 +56,12 @@ const _validateKeyword = (
 
 const KeywordTimeRangeSelector = ({ disabled }: Props) => {
   const [keywordPreview, setKeywordPreview] = useState(Immutable.Map());
+
   const _setSuccessfullPreview = useCallback(
     (response: { from: string, to: string }) => setKeywordPreview(_parseKeywordPreview(response)),
     [setKeywordPreview],
   );
+
   const _setFailedPreview = useCallback(() => {
     setKeywordPreview(Immutable.Map());
 
@@ -83,6 +85,7 @@ const KeywordTimeRangeSelector = ({ disabled }: Props) => {
   }, []);
 
   const { from, to } = keywordPreview.toObject();
+
   const keywordPreviewElement = !keywordPreview.isEmpty() && (
     <KeywordPreview bsStyle="info">
       <strong style={{ marginRight: 8 }}>Preview:</strong>

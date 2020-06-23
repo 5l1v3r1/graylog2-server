@@ -18,11 +18,13 @@ const AlarmCallbackHistoryStore = Reflux.createStore({
 
   list(streamId, alertId) {
     const url = URLUtils.qualifyUrl(ApiRoutes.AlarmCallbackHistoryApiController.list(streamId, alertId).url);
+
     const promise = fetch('GET', url)
       .then(
         (response) => {
           this.histories = response.histories;
           this.trigger({ histories: this.histories });
+
           return this.histories;
         },
         (error) => {

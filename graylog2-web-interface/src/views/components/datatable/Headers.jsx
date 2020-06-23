@@ -29,17 +29,22 @@ const _spacer = (idx, span = 1) => <th colSpan={span} key={`spacer-${idx}`} clas
 const columnPivotFieldsHeaders = (activeQuery, columnPivots, actualColumnPivotValues, series, offset = 1) => {
   return columnPivots.map((columnPivot, idx) => {
     const actualValues = actualColumnPivotValues.map((key) => ({ path: key.slice(0, idx).join('-'), key: key[idx] || '', count: 1 }));
+
     const actualValuesWithoutDuplicates = actualValues.reduce((prev, cur) => {
       const lastKey = get(last(prev), 'key');
       const lastPath = get(last(prev), 'path');
+
       if (lastKey === cur.key && isEqual(lastPath, cur.path)) {
         const lastItem = last(prev);
         const remainder = prev.slice(0, -1);
         const newLastItem = { ...lastItem, count: lastItem.count + 1 };
+
         return [].concat(remainder, [newLastItem]);
       }
+
       return [].concat(prev, [cur]);
     }, []);
+
     return (
       <tr key={`header-table-row-${columnPivot}`}>
         {offset > 0 && _spacer(1, offset)}

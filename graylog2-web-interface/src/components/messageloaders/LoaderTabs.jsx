@@ -35,6 +35,7 @@ class LoaderTabs extends React.Component {
   componentDidMount() {
     this.loadData();
     const { messageId, index } = this.props;
+
     if (messageId && index) {
       this.messageLoader.submit(messageId, index);
     }
@@ -43,6 +44,7 @@ class LoaderTabs extends React.Component {
   onMessageLoaded = (message) => {
     this.setState({ message });
     const { onMessageLoaded } = this.props;
+
     if (onMessageLoaded) {
       onMessageLoaded(message);
     }
@@ -61,16 +63,19 @@ class LoaderTabs extends React.Component {
 
   _isTabVisible = (tabKey) => {
     const { tabs } = this.props;
+
     return tabs === tabKey || tabs.indexOf(tabKey) !== -1;
   };
 
   _getActiveTab = () => {
     const { activeTab } = this.state;
+
     if (activeTab) {
       return activeTab;
     }
 
     const { messageId, index } = this.props;
+
     if (this._isTabVisible('messageId') && messageId && index) {
       return this.TAB_KEYS.messageId;
     }
@@ -78,14 +83,17 @@ class LoaderTabs extends React.Component {
     if (this._isTabVisible('recent')) {
       return this.TAB_KEYS.recent;
     }
+
     if (this._isTabVisible('messageId')) {
       return this.TAB_KEYS.messageId;
     }
+
     return this.TAB_KEYS.raw;
   };
 
   _changeActiveTab = (selectedTab) => {
     const { activeTab } = this.state;
+
     if (activeTab !== selectedTab) {
       this.setState({ activeTab: selectedTab, message: undefined });
     }
@@ -135,6 +143,7 @@ class LoaderTabs extends React.Component {
   render() {
     const { streams, message } = this.state;
     const { customFieldActions, inputs } = this.props;
+
     const displayMessage = message && inputs
       ? (
         <Col md={12}>

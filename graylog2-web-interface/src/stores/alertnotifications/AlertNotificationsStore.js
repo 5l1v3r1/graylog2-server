@@ -28,6 +28,7 @@ const AlertNotificationsStore = Reflux.createStore({
         (response) => {
           this.availableNotifications = response.types;
           this.trigger({ availableNotifications: this.availableNotifications });
+
           return this.availableNotifications;
         },
         (error) => {
@@ -46,6 +47,7 @@ const AlertNotificationsStore = Reflux.createStore({
       (response) => {
         this.allNotifications = response.alarmcallbacks;
         this.trigger({ allNotifications: this.allNotifications });
+
         return this.allNotifications;
       },
       (error) => {

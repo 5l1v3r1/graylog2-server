@@ -43,12 +43,15 @@ class ContentPackEntitiesList extends React.Component {
     const { contentPack } = this.props;
 
     const entities = entitiesArg || contentPack.entities;
+
     if (!filter || filter.length <= 0) {
       this.setState({ filteredEntities: entities, filter: undefined });
+
       return;
     }
 
     const regexp = RegExp(filter, 'i');
+
     const filteredEntities = entities.filter((entity) => {
       return regexp.test(entity.title) || regexp.test(entity.description);
     });
@@ -59,6 +62,7 @@ class ContentPackEntitiesList extends React.Component {
     if (!entity.fromServer) {
       return <span><Icon title="Content Pack" name="archive" className={ContentPackEntitiesListStyle.contentPackEntity} /></span>;
     }
+
     return <span><Icon title="Server" name="server" /></span>;
   };
 
@@ -72,6 +76,7 @@ class ContentPackEntitiesList extends React.Component {
     } = this.props;
 
     let applyModalRef;
+
     const applyParamComponent = (
       <ContentPackApplyParameter parameters={contentPack.parameters}
                                  entity={entity}
@@ -103,6 +108,7 @@ class ContentPackEntitiesList extends React.Component {
     );
 
     let showModalRef;
+
     const entityComponent = (
       <ContentPackEntityConfig appliedParameter={appliedParameter[entity.id]}
                                parameters={contentPack.parameters}
@@ -133,6 +139,7 @@ class ContentPackEntitiesList extends React.Component {
 
     const disableBtn = contentPack.parameters.length <= 0;
     const appliedParameterCount = (appliedParameter[entity.id] || []).length;
+
     return (
       <tr key={entity.id}>
         <td className={ContentPackEntitiesListStyle.bigColumns}>{entity.title}</td>

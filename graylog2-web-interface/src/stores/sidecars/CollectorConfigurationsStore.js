@@ -34,6 +34,7 @@ const CollectorConfigurationsStore = Reflux.createStore({
 
   _fetchConfigurations({ query, page, pageSize }) {
     const baseUrl = `${this.sourceUrl}/configurations`;
+
     const search = {
       query: query,
       page: page,
@@ -47,6 +48,7 @@ const CollectorConfigurationsStore = Reflux.createStore({
 
   _fetchUploads({ page }) {
     const baseUrl = `${this.sourceUrl}/configurations/uploads`;
+
     const search = {
       page: page,
     };
@@ -122,9 +124,11 @@ const CollectorConfigurationsStore = Reflux.createStore({
     const promise = fetch('GET', URLUtils.qualifyUrl(`${this.sourceUrl}/configurations/${configurationId}`));
     promise.catch((error) => {
       let errorMessage = `Fetching Configuration failed with status: ${error}`;
+
       if (error.status === 404) {
         errorMessage = `Unable to find a Configuration with ID <${configurationId}>, please ensure it was not deleted.`;
       }
+
       UserNotification.error(errorMessage, 'Could not retrieve Configuration');
     });
     CollectorConfigurationsActions.getConfiguration.promise(promise);
@@ -134,9 +138,11 @@ const CollectorConfigurationsStore = Reflux.createStore({
     const promise = fetch('GET', URLUtils.qualifyUrl(`${this.sourceUrl}/configurations/${configurationId}/sidecars`));
     promise.catch((error) => {
       let errorMessage = `Fetching Configuration failed with status: ${error}`;
+
       if (error.status === 404) {
         errorMessage = `Unable to find a Configuration with ID <${configurationId}>, please ensure it was not deleted.`;
       }
+
       UserNotification.error(errorMessage, 'Could not retrieve Configuration');
     });
     CollectorConfigurationsActions.getConfigurationSidecars.promise(promise);
@@ -170,6 +176,7 @@ const CollectorConfigurationsStore = Reflux.createStore({
     promise
       .then((response) => {
         UserNotification.success('', 'Configuration successfully created');
+
         return response;
       }, (error) => {
         UserNotification.error(error.status === 400 ? error.responseMessage : `Creating configuration failed with status: ${error.message}`,
@@ -187,6 +194,7 @@ const CollectorConfigurationsStore = Reflux.createStore({
       .then((response) => {
         UserNotification.success('', 'Configuration successfully updated');
         this.refreshList();
+
         return response;
       }, (error) => {
         UserNotification.error(`Updating Configuration failed: ${error.status === 400 ? error.responseMessage : error.message}`,
@@ -205,6 +213,7 @@ const CollectorConfigurationsStore = Reflux.createStore({
       .then((response) => {
         UserNotification.success('', `Configuration "${name}" successfully copied`);
         this.refreshList();
+
         return response;
       }, (error) => {
         UserNotification.error(`Saving configuration "${name}" failed with status: ${error.message}`,
@@ -221,6 +230,7 @@ const CollectorConfigurationsStore = Reflux.createStore({
       .then((response) => {
         UserNotification.success('', `Configuration "${configuration.name}" successfully deleted`);
         this.refreshList();
+
         return response;
       }, (error) => {
         UserNotification.error(`Deleting Configuration failed: ${error.status === 400 ? error.responseMessage : error.message}`,

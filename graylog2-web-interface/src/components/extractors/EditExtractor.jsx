@@ -38,7 +38,6 @@ class EditExtractor extends React.Component {
     };
   }
 
-
   componentWillReceiveProps(nextProps) {
     const { exampleMessage } = this.props;
 
@@ -111,6 +110,7 @@ class EditExtractor extends React.Component {
 
   _tryButtonDisabled = () => {
     const { updatedExtractor, exampleMessage } = this.state;
+
     return (updatedExtractor.condition_value === ''
       || updatedExtractor.condition_value === undefined
       || !exampleMessage);
@@ -136,6 +136,7 @@ class EditExtractor extends React.Component {
     }
 
     let inputStyle;
+
     if (conditionTestResult === true) {
       inputStyle = 'success';
       conditionInputHelp = 'Matches! Extractor would run against this example.';
@@ -199,6 +200,7 @@ class EditExtractor extends React.Component {
   render() {
     const { updatedExtractor, exampleMessage } = this.state;
     const { action } = this.props;
+
     const conditionTypeHelpMessage = 'Extracting only from messages that match a certain condition helps you '
       + 'avoiding wrong or unnecessary extractions and can also save CPU resources.';
 
@@ -216,6 +218,7 @@ class EditExtractor extends React.Component {
     );
 
     let storeAsFieldInput;
+
     // Grok and JSON extractors create their required fields, so no need to add an input for them
     if (updatedExtractor.type !== ExtractorUtils.ExtractorTypes.GROK && updatedExtractor.type !== ExtractorUtils.ExtractorTypes.JSON) {
       storeAsFieldInput = (

@@ -53,6 +53,7 @@ class EventNotificationForm extends React.Component {
     if (type === undefined) {
       return {};
     }
+
     return PluginStore.exports('eventNotificationTypes').find((n) => n.type === type) || {};
   };
 
@@ -76,6 +77,7 @@ class EventNotificationForm extends React.Component {
     const { action, embedded, formId, notification, onCancel, validation, testResult } = this.props;
 
     const notificationPlugin = this.getNotificationPlugin(notification.config.type);
+
     const notificationFormComponent = notificationPlugin.formComponent
       ? React.createElement(notificationPlugin.formComponent, {
         config: notification.config,

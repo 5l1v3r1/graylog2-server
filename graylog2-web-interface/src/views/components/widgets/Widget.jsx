@@ -153,6 +153,7 @@ class Widget extends React.Component<Props, State> {
       showCsvExport: false,
       showMoveWidgetToTab: false,
     };
+
     if (editing) {
       this.state = { ...this.state, oldWidget: props.widget };
     }
@@ -160,6 +161,7 @@ class Widget extends React.Component<Props, State> {
 
   _onDelete = (widget) => {
     const { title } = this.props;
+
     // eslint-disable-next-line no-alert
     if (window.confirm(`Are you sure you want to remove the widget "${title}"?`)) {
       WidgetActions.remove(widget.id);
@@ -197,6 +199,7 @@ class Widget extends React.Component<Props, State> {
     }
 
     const newDashboard = MoveWidgetToTab(widgetId, queryId, activeView, keepCopy);
+
     if (newDashboard) {
       SearchActions.create(newDashboard.search).then((searchResponse) => {
         const updatedDashboard = newDashboard.toBuilder().search(searchResponse.search).build();
@@ -221,6 +224,7 @@ class Widget extends React.Component<Props, State> {
     const addWidgetToDashboard = (dashboard: View) => (searchJson) => {
       const search = Search.fromJSON(searchJson);
       const newDashboard = CopyWidgetToDashboard(widgetId, activeView, dashboard.toBuilder().search(search).build());
+
       if (newDashboard && newDashboard.search) {
         SearchActions.create(newDashboard.search).then(this._updateDashboardWithNewSearch(newDashboard, dashboardId));
       }
@@ -242,7 +246,9 @@ class Widget extends React.Component<Props, State> {
           oldWidget: undefined,
         };
       }
+
       RefreshActions.disable();
+
       return {
         editing: true,
         oldWidget: widget,
@@ -259,10 +265,12 @@ class Widget extends React.Component<Props, State> {
 
   _onCancelEdit = () => {
     const { oldWidget } = this.state;
+
     if (oldWidget) {
       const { id } = this.props;
       WidgetActions.update(id, oldWidget);
     }
+
     this._onToggleEdit();
   };
 
@@ -272,14 +280,17 @@ class Widget extends React.Component<Props, State> {
 
   visualize = () => {
     const { data, errors, title } = this.props;
+
     if (errors && errors.length > 0) {
       return <ErrorWidget errors={errors} />;
     }
+
     if (data) {
       const { editing } = this.state;
       const { id, widget, height, width, fields } = this.props;
       const { config, filter } = widget;
       const VisComponent = _visualizationForType(widget.type);
+
       return (
         <VisComponent config={config}
                       data={data}
@@ -296,6 +307,7 @@ class Widget extends React.Component<Props, State> {
                       id={id} />
       );
     }
+
     return <LoadingWidget />;
   };
 
@@ -305,8 +317,10 @@ class Widget extends React.Component<Props, State> {
     const { editing, loading, showCopyToDashboard, showCsvExport, showMoveWidgetToTab } = this.state;
     const { config, type } = widget;
     const visualization = this.visualize();
+
     if (editing) {
       const EditComponent = _editComponentForType(widget.type);
+
       return (
         <WidgetColorContext id={id}>
           <EditWidgetFrame>
@@ -332,6 +346,7 @@ class Widget extends React.Component<Props, State> {
         </WidgetColorContext>
       );
     }
+
     return (
       <WidgetColorContext id={id}>
         <WidgetFrame widgetId={id} onSizeChange={onSizeChange}>

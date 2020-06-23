@@ -26,6 +26,7 @@ class CommonNotificationSummary extends React.Component {
   render() {
     const { type, notification, definitionNotification, children } = this.props;
     const { displayDetails } = this.state;
+
     return (
       <>
         <h4>{notification.title || definitionNotification.notification_id}</h4>

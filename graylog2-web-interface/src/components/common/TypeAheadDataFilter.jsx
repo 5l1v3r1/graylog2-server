@@ -91,6 +91,7 @@ class TypeAheadDataFilter extends React.Component {
 
   componentDidUpdate(prevProps) {
     const { data } = this.props;
+
     if (!isEqual(prevProps.data, data)) {
       this.filterData();
     }
@@ -120,6 +121,7 @@ class TypeAheadDataFilter extends React.Component {
   _matchFilters = (datum) => {
     const { filters, filterByKey } = this.state;
     const { filterSuggestionAccessor } = this.props;
+
     return filters.every((filter) => {
       let dataToFilter = datum[filterByKey];
 
@@ -136,6 +138,7 @@ class TypeAheadDataFilter extends React.Component {
   _matchStringSearch = (datum) => {
     const { filterText } = this.state;
     const { searchInKeys } = this.props;
+
     return searchInKeys.some((searchInKey) => {
       const key = datum[searchInKey];
       const value = filterText;
@@ -143,16 +146,19 @@ class TypeAheadDataFilter extends React.Component {
       if (key === null) {
         return false;
       }
+
       const containsFilter = (entry, thisValue) => {
         if (typeof entry === 'undefined') {
           return false;
         }
+
         return entry.toLocaleLowerCase().indexOf(thisValue.toLocaleLowerCase()) !== -1;
       };
 
       if (typeof key === 'object') {
         return key.some((arrayEntry) => containsFilter(arrayEntry, value));
       }
+
       return containsFilter(key, value);
     }, this);
   };
@@ -164,6 +170,7 @@ class TypeAheadDataFilter extends React.Component {
 
   filterData = () => {
     const { filterData, data, onDataFiltered } = this.props;
+
     if (typeof filterData === 'function') {
       return filterData(data);
     }
@@ -173,12 +180,14 @@ class TypeAheadDataFilter extends React.Component {
     }, this);
 
     onDataFiltered(filteredData);
+
     return true;
   };
 
   render() {
     const { filters, filterText } = this.state;
     const { id, label, displayKey, filterBy, filterSuggestionAccessor, filterSuggestions } = this.props;
+
     const filtersContent = filters.map((filter) => {
       return (
         <li key={`li-${filter}`}>

@@ -117,12 +117,14 @@ class EventDefinitionForm extends React.Component {
     if (type === undefined) {
       return {};
     }
+
     return PluginStore.exports('eventDefinitionTypes').find((edt) => edt.type === type) || {};
   };
 
   renderButtons = (activeStep) => {
     if (activeStep === lodash.last(STEP_KEYS)) {
       const { onCancel } = this.props;
+
       return (
         <div className="pull-right">
           <ButtonToolbar>

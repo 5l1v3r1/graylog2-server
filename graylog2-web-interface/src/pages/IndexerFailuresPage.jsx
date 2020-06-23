@@ -37,6 +37,7 @@ class IndexerFailuresPage extends React.Component {
     if (this.state.total === undefined || !this.state.failures) {
       return <Spinner />;
     }
+
     return (
       <DocumentTitle title="Indexer failures">
         <span>

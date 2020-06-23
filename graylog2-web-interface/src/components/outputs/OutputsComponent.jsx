@@ -27,10 +27,12 @@ const OutputsComponent = createReactClass({
       this.setState({
         outputs: resp.outputs,
       });
+
       if (this.props.streamId) {
         this._fetchAssignableOutputs(resp.outputs);
       }
     };
+
     if (this.props.streamId) {
       OutputsStore.loadForStreamId(this.props.streamId, callback);
     } else {
@@ -54,14 +56,17 @@ const OutputsComponent = createReactClass({
   _handleCreateOutput(data) {
     OutputsStore.save(data, (result) => {
       this.setState({ typeName: 'placeholder' });
+
       if (this.props.streamId) {
         StreamsStore.addOutput(this.props.streamId, result.id, (response) => {
           this._handleUpdate();
+
           return response;
         });
       } else {
         this._handleUpdate();
       }
+
       return result;
     });
   },
@@ -69,6 +74,7 @@ const OutputsComponent = createReactClass({
   _fetchAssignableOutputs(outputs) {
     OutputsStore.load((resp) => {
       const streamOutputIds = outputs.map((output) => { return output.id; });
+
       const assignableOutputs = resp.outputs
         .filter((output) => { return streamOutputIds.indexOf(output.id) === -1; })
         .sort((output1, output2) => { return output1.title.localeCompare(output2.title); });
@@ -79,6 +85,7 @@ const OutputsComponent = createReactClass({
   _handleAssignOutput(outputId) {
     StreamsStore.addOutput(this.props.streamId, outputId, (response) => {
       this._handleUpdate();
+
       return response;
     });
   },
@@ -88,6 +95,7 @@ const OutputsComponent = createReactClass({
       OutputsStore.remove(outputId, (response) => {
         UserNotification.success('Output was terminated.', 'Success');
         this._handleUpdate();
+
         return response;
       });
     }
@@ -98,6 +106,7 @@ const OutputsComponent = createReactClass({
       StreamsStore.removeOutput(streamId, outputId, (response) => {
         UserNotification.success('Output was removed from stream.', 'Success');
         this._handleUpdate();
+
         return response;
       });
     }
@@ -113,6 +122,7 @@ const OutputsComponent = createReactClass({
     if (this.state.outputs && this.state.types && (!this.props.streamId || this.state.assignableOutputs)) {
       const { permissions } = this.props;
       const { streamId } = this.props;
+
       const createOutputDropdown = (this.isPermitted(permissions, ['outputs:create'])
         ? (
           <CreateOutputDropdown types={this.state.types}
@@ -120,12 +130,14 @@ const OutputsComponent = createReactClass({
                                 getTypeDefinition={OutputsStore.loadAvailable}
                                 streamId={streamId} />
         ) : null);
+
       const assignOutputDropdown = (streamId
         ? (
           <AssignOutputDropdown streamId={streamId}
                                 outputs={this.state.assignableOutputs}
                                 onSubmit={this._handleAssignOutput} />
         ) : null);
+
       return (
         <div className="outputs">
           <Row className="content">
@@ -148,6 +160,7 @@ const OutputsComponent = createReactClass({
         </div>
       );
     }
+
     return <Spinner />;
   },
 });

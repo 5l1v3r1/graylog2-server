@@ -31,6 +31,7 @@ export default class PortaledPopover extends React.Component {
 
   render() {
     const { container, popover, title, ...rest } = this.props;
+
     const popoverElem = this.state.isOpen && (
       <Portal node={container}>
         <Position container={container}
@@ -42,6 +43,7 @@ export default class PortaledPopover extends React.Component {
         </Position>
       </Portal>
     );
+
     return (
       <span>
         <a role="link"

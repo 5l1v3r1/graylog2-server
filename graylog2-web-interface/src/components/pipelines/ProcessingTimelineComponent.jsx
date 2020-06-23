@@ -76,6 +76,7 @@ const ProcessingTimelineComponent = createReactClass({
 
   _headerCellFormatter(header) {
     let className;
+
     if (header === 'Actions') {
       className = 'actions';
     }
@@ -160,6 +161,7 @@ const ProcessingTimelineComponent = createReactClass({
     }
 
     const { pipelines } = this.state;
+
     const addNewPipelineButton = (
       <div className="pull-right">
         <LinkContainer to={Routes.SYSTEM.PIPELINES.PIPELINE('new')}>
@@ -183,6 +185,7 @@ const ProcessingTimelineComponent = createReactClass({
     this.usedStages = this._calculateUsedStages(pipelines);
 
     const headers = ['Pipeline', 'Connected to Streams', 'Processing Timeline', 'Actions'];
+
     return (
       <div>
         {addNewPipelineButton}

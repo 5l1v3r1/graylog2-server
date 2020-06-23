@@ -91,6 +91,7 @@ const ExtractorsStore = Reflux.createStore({
 
   _silentExtractorCreate(inputId, extractor) {
     const url = URLUtils.qualifyUrl(ApiRoutes.ExtractorsController.create(inputId).url);
+
     return fetch('POST', url, getExtractorDTO(extractor));
   },
 
@@ -99,6 +100,7 @@ const ExtractorsStore = Reflux.createStore({
     promise
       .then(() => {
         UserNotification.success(`Extractor ${extractor.title} created successfully`);
+
         if (this.extractor) {
           ExtractorsActions.get.triggerPromise(inputId, extractor.id);
         }
@@ -111,6 +113,7 @@ const ExtractorsStore = Reflux.createStore({
     if (!calledFromMethod) {
       ExtractorsActions.create.promise(promise);
     }
+
     return promise;
   },
 
@@ -121,6 +124,7 @@ const ExtractorsStore = Reflux.createStore({
     promise
       .then(() => {
         UserNotification.success(`Extractor "${extractor.title}" updated successfully`);
+
         if (this.extractor) {
           ExtractorsActions.get.triggerPromise(inputId, extractor.id);
         }
@@ -133,6 +137,7 @@ const ExtractorsStore = Reflux.createStore({
     if (!calledFromMethod) {
       ExtractorsActions.update.promise(promise);
     }
+
     return promise;
   },
 
@@ -143,6 +148,7 @@ const ExtractorsStore = Reflux.createStore({
     promise
       .then(() => {
         UserNotification.success(`Extractor "${extractor.title}" deleted successfully`);
+
         if (this.extractors) {
           ExtractorsActions.list.triggerPromise(inputId);
         }
@@ -163,6 +169,7 @@ const ExtractorsStore = Reflux.createStore({
     const promise = fetch('POST', url, { order: orderedExtractorsMap });
     promise.then(() => {
       UserNotification.success('Extractor positions updated successfully');
+
       if (this.extractors) {
         ExtractorsActions.list.triggerPromise(inputId);
       }

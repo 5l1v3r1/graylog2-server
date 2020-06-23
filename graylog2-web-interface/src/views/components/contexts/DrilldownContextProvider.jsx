@@ -26,19 +26,24 @@ const DrilldownContextProvider = ({ children, widget, globalOverride, currentQue
 
   if (viewType === View.Type.Dashboard) {
     const { streams, timerange, query } = widget;
+
     const value: Drilldown = {
       streams,
       timerange: (globalOverride && globalOverride.timerange ? globalOverride.timerange : timerange) || { type: 'relative', range: 300 },
       query: (globalOverride && globalOverride.query ? globalOverride.query : query) || createElasticsearchQueryString(''),
     };
+
     return <DrilldownContext.Provider value={value}>{children}</DrilldownContext.Provider>;
   }
+
   if (currentQuery) {
     const streams = filtersToStreamSet(currentQuery.filter).toJS();
     const { timerange, query } = currentQuery;
     const value: Drilldown = { streams, timerange, query };
+
     return <DrilldownContext.Provider value={value}>{children}</DrilldownContext.Provider>;
   }
+
   return children;
 };
 

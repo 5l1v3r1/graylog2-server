@@ -24,11 +24,13 @@ class IndexMaintenanceStrategiesConfiguration extends React.Component {
 
   _getDefaultStrategyConfig = (selectedStrategy) => {
     const result = this.props.strategies.filter((strategy) => strategy.type === selectedStrategy)[0];
+
     return result ? result.default_config : undefined;
   };
 
   _getStrategyJsonSchema = (selectedStrategy) => {
     const result = this.props.strategies.filter((strategy) => strategy.type === selectedStrategy)[0];
+
     return result ? result.json_schema : undefined;
   };
 
@@ -37,6 +39,7 @@ class IndexMaintenanceStrategiesConfiguration extends React.Component {
       // If the newly selected strategy is the current active strategy, we use the active configuration.
       return this.state.activeConfig;
     }
+
     // If the newly selected strategy is not the current active strategy, we use the selected strategy's default config.
     return this._getDefaultStrategyConfig(selectedStrategy);
   };
@@ -44,6 +47,7 @@ class IndexMaintenanceStrategiesConfiguration extends React.Component {
   _onSelect = (newStrategy) => {
     if (!newStrategy || newStrategy.length < 1) {
       this.setState({ newStrategy: undefined });
+
       return;
     }
 
@@ -90,6 +94,7 @@ class IndexMaintenanceStrategiesConfiguration extends React.Component {
     }
 
     const strategyConfig = this._getStrategyConfig(selectedStrategy);
+
     const element = React.createElement(strategy.configComponent, {
       config: strategyConfig,
       jsonSchema: this._getStrategyJsonSchema(selectedStrategy),

@@ -119,15 +119,21 @@ describe('ValueReferenceData', () => {
     const paths = valueReferenceData.getPaths();
 
     expect(paths['disabled'].getValue()).toEqual(false);
+
     paths['disabled'].setValue(true);
+
     expect(paths['disabled'].getValue()).toEqual(true);
 
     expect(paths['stream_rules.0.value'].getValue()).toEqual('598c2f4a8355e838edb19c88');
+
     paths['stream_rules.0.value'].setValue('hello');
+
     expect(paths['stream_rules.0.value'].getValue()).toEqual('hello');
 
     expect(paths['stream_rules.0.foo'].getValue()).toEqual('bar');
+
     paths['stream_rules.0.foo'].setValue('yolo');
+
     expect(paths['stream_rules.0.foo'].getValue()).toEqual('yolo');
   });
 

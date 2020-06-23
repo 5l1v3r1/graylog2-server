@@ -44,6 +44,7 @@ const AlertTimeline = createReactClass({
         const configuration = history.alarmcallbackconfiguration;
         const type = this.state.availableNotifications[configuration.type];
         let title;
+
         if (type) {
           title = <span><em>{configuration.title || 'Untitled notification'}</em> ({type.name})</span>;
         } else {
@@ -78,6 +79,7 @@ const AlertTimeline = createReactClass({
     } else {
       const conditionParameters = this.props.alert.condition_parameters || {};
       const repeatNotifications = conditionParameters.repeat_notifications || false;
+
       const notificationsText = (repeatNotifications
         ? 'Condition is configured to repeat notifications, Graylog will send notifications when evaluating the condition until it is no longer satisfied'
         : 'Condition is configured to not repeat notifications');

@@ -13,6 +13,7 @@ export class FetchError extends Error {
   constructor(message, additional) {
     super(message);
     this.message = message ?? additional?.message ?? 'Undefined error.';
+
     /* eslint-disable no-console */
     try {
       this.responseMessage = additional.body ? additional.body.message : undefined;
@@ -39,6 +40,7 @@ const defaultOnUnauthorizedError = (error) => ErrorsActions.report(createFromFet
 const onServerError = (error, onUnauthorized = defaultOnUnauthorizedError) => {
   const SessionStore = StoreProvider.getStore('Session');
   const fetchError = new FetchError(error.statusText, error);
+
   if (SessionStore.isLoggedIn() && error.status === 401) {
     const SessionActions = ActionsProvider.getActions('Session');
     SessionActions.logout(SessionStore.getSessionId());
@@ -91,10 +93,13 @@ export class Builder {
       .then((resp) => {
         if (resp.ok) {
           reportServerSuccess();
+
           return resp.body;
         }
+
         throw new FetchError(resp.statusText, resp);
       }, (error) => onServerError(error));
+
     return this;
   }
 
@@ -106,10 +111,13 @@ export class Builder {
       .then((resp) => {
         if (resp.ok) {
           reportServerSuccess();
+
           return resp.text;
         }
+
         throw new FetchError(resp.statusText, resp);
       }, (error) => onServerError(error));
+
     return this;
   }
 
@@ -122,6 +130,7 @@ export class Builder {
       .then((resp) => {
         if (resp.ok) {
           reportServerSuccess();
+
           return resp.body;
         }
 

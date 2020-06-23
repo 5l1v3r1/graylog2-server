@@ -28,7 +28,6 @@ const fields = [new FieldTypeMapping('file_name', new FieldType('string', ['full
 const config = MessagesWidgetConfig.builder().fields(['file_name']).build();
 const activeQueryId = 'some-query-id';
 
-
 describe('MessageTable', () => {
   it('lists provided field in table head', () => {
     const wrapper = mount(<MessageTable activeQueryId={activeQueryId}
@@ -39,6 +38,7 @@ describe('MessageTable', () => {
                                         selectedFields={Immutable.Set()}
                                         setLoadingState={() => {}} />);
     const th = wrapper.find('th').at(0);
+
     expect(th.text()).toContain('file_name');
   });
 
@@ -52,6 +52,7 @@ describe('MessageTable', () => {
                                         messages={messages} />);
     const messageTableEntry = wrapper.find('MessageTableEntry');
     const td = messageTableEntry.find('td').at(0);
+
     expect(td.text()).toContain('frank.txt');
   });
 
@@ -67,6 +68,7 @@ describe('MessageTable', () => {
                                           setLoadingState={() => {}}
                                           messages={messages} />);
       const messageTableEntry = wrapper.find('MessageTableEntry');
+
       expect(messageTableEntry).not.toBeEmptyRender();
     });
   });
@@ -74,6 +76,7 @@ describe('MessageTable', () => {
   it('renders config fields in table head with correct order', () => {
     const configFields = ['gl2_receive_timestamp', 'user_id', 'gl2_source_input', 'gl2_message_id', 'ingest_time', 'http_method', 'action', 'source', 'ingest_time_hour', 'ingest_time_epoch'];
     const configWithFields = MessagesWidgetConfig.builder().fields(configFields).build();
+
     const wrapper = mount(<MessageTable activeQueryId={activeQueryId}
                                         config={configWithFields}
                                         fields={Immutable.List(fields)}
@@ -83,6 +86,7 @@ describe('MessageTable', () => {
                                         messages={messages} />);
 
     const tableHeadFields = wrapper.find('Field').map((field) => field.text());
+
     expect(tableHeadFields).toEqual(configFields);
   });
 

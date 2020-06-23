@@ -32,6 +32,7 @@ const PipelineConnectionsStore = Reflux.createStore({
 
   connectToStream(connection) {
     const url = URLUtils.qualifyUrl(ApiRoutes.ConnectionsController.to_stream().url);
+
     const updatedConnection = {
       stream_id: connection.stream,
       pipeline_ids: connection.pipelines,
@@ -54,6 +55,7 @@ const PipelineConnectionsStore = Reflux.createStore({
 
   connectToPipeline(reverseConnection) {
     const url = URLUtils.qualifyUrl(ApiRoutes.ConnectionsController.to_pipeline().url);
+
     const updatedConnection = {
       pipeline_id: reverseConnection.pipeline,
       stream_ids: reverseConnection.streams,

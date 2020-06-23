@@ -52,18 +52,23 @@ export default class WidgetFormattingSettings {
 
   toJSON() {
     const { chartColors } = this._value;
+
     // $FlowFixMe flow cannot handle Object.keys
     const chartColorJson = Object.keys(chartColors)
       .map((fieldName) => ({ field_name: fieldName, chart_color: chartColors[fieldName] }));
+
     return { chart_colors: chartColorJson };
   }
 
   static fromJSON(value: WidgetFormattingSettingsJSON) {
     const { chart_colors: chartColorJson } = value;
+
     const chartColors: ChartColors = chartColorJson.reduce((acc, { field_name: fieldName, chart_color: chartColor }) => {
       acc[fieldName] = chartColor;
+
       return acc;
     }, {});
+
     return WidgetFormattingSettings.create(chartColors);
   }
 }
@@ -83,6 +88,7 @@ class Builder {
 
   build() {
     const { chartColors } = this.value.toObject();
+
     return new WidgetFormattingSettings(chartColors);
   }
 }

@@ -33,6 +33,7 @@ type Shape = {
 };
 
 export type Shapes = Array<Shape>;
+
 const eventsDisplayName = 'Alerts';
 const defaultColor = '#d3d3d3';
 
@@ -52,6 +53,7 @@ export default {
     const tz = currentUser ? currentUser.timezone : 'UTC';
 
     const groupedEvents: GroupedEvents = groupBy(events, (e) => e.timestamp);
+
     return {
       eventChartData: this.toChartData(groupedEvents, formattingSettings, tz),
       shapes: this.toShapeData(Object.keys(groupedEvents), formattingSettings, tz),
@@ -78,13 +80,16 @@ export default {
     const chartColor = chartColors[eventsDisplayName] || defaultColor;
     const values = this.transformGroupedEvents(events);
     const xValues: Array<string> = values.map((v) => formatTimestamp(v[0], tz));
+
     const textValues: Array<string> = values.map((e) => {
       if (Object.prototype.hasOwnProperty.call(e[1], 'message')) {
         return e[1].message;
       }
+
       return `${e[1]} alerts occurred.`;
     });
     const yValues: Array<number> = values.map(() => 0);
+
     return {
       hovertemplate: '%{text}',
       mode: 'markers',
@@ -104,8 +109,10 @@ export default {
   toShapeData(timestamps: Array<string>, formattingSettings: WidgetFormattingSettings = WidgetFormattingSettings.create({}), tz: string): Shapes {
     const { chartColors } = formattingSettings;
     const shapeColor = chartColors[eventsDisplayName] || defaultColor;
+
     return timestamps.map((timestamp) => {
       const formattedTimestamp = formatTimestamp(timestamp, tz);
+
       return {
         layer: 'below',
         type: 'line',

@@ -40,11 +40,13 @@ const _column = (field: string, value: *, selectedQuery: string, idx: number, ty
 
 const fullValuePathForField = (fieldName, valuePath) => {
   const currentSeries = parseSeries(fieldName);
+
   return currentSeries && currentSeries.field ? [...valuePath, { _exists_: currentSeries.field }] : valuePath;
 };
 
 const columnNameToField = (column, series = []) => {
   const currentSeries = series.find((s) => s.effectiveName === column);
+
   return currentSeries ? currentSeries.function : column;
 };
 
@@ -57,18 +59,22 @@ const DataTableEntry = ({ columnPivots, currentView, fields, series, columnPivot
     item[fieldName],
     fullValuePathForField(fieldName, valuePath).slice(0, i + 1),
   ));
+
   const columnPivotFields = flatten(columnPivotValues.map((columnPivotValueKeys) => {
     const translatedPath = flatten(columnPivotValueKeys.map((value, idx) => [columnPivots[idx], value]));
     const [k, v]: Array<string> = translatedPath;
     const parentValuePath = [...valuePath, { [k]: v }];
+
     return series.map(({ effectiveName, function: fn }) => {
       const fullPath = [].concat(translatedPath, [effectiveName]);
       const value = get(item, fullPath);
+
       return _c(effectiveName, value, fullValuePathForField(fn, parentValuePath));
     });
   }));
 
   const columns = flatten([fieldColumns, columnPivotFields]);
+
   return (
     <tbody className={classes}>
       <tr className="fields-row">

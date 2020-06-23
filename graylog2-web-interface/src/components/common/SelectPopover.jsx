@@ -92,6 +92,7 @@ class SelectPopover extends React.Component {
     if (!lodash.isEqual(selectedItems, nextProps.selectedItems)) {
       this.setState({ selectedItems: nextProps.selectedItems });
     }
+
     if (items !== nextProps.items) {
       this.filterData(filterText, nextProps.items);
     }
@@ -173,6 +174,7 @@ class SelectPopover extends React.Component {
       title,
     } = this.props;
     const { filteredItems, selectedItems } = this.state;
+
     const popover = (
       <Popover id={id}
                title={title}

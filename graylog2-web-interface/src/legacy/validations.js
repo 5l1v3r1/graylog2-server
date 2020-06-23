@@ -12,8 +12,10 @@ export function validate(formContainer) {
     // Do not check disabled form fields.
     if (!$(this).is(':disabled')) {
       const dataValidations = $(this).attr('data-validate');
+
       if (dataValidations !== undefined) {
         const validatorTypes = dataValidations.split(' ');
+
         for (let i = 0; (!errors && i < validatorTypes.length); i++) {
           errors = dispatchRuleValidation($(this), validatorTypes[i]);
         }
@@ -33,56 +35,66 @@ function dispatchRuleValidation($ref, validatorType) {
         validationFailure($ref, 'Must be set');
         errors = true;
       }
+
       break;
     case 'port_number':
       if (!validatePortNumber($ref)) {
         validationFailure($ref, 'Must be a valid port number');
         errors = true;
       }
+
       break;
     case 'number':
       if (!validateNumber($ref)) {
         validationFailure($ref, 'Must be a number');
         errors = true;
       }
+
       break;
     case 'positive_number':
       if (!validatePositiveNumber($ref)) {
         validationFailure($ref, 'Must be a positive number');
         errors = true;
       }
+
       break;
     case 'negative_number':
       if (!validateNegativeNumber($ref)) {
         validationFailure($ref, 'Must be a negative number');
         errors = true;
       }
+
       break;
     case 'not_negative_number':
       if (!validateNotNegativeNumber($ref)) {
         validationFailure($ref, 'Must be a not negative number');
         errors = true;
       }
+
       break;
     case 'alphanum_underscore':
       if (!validateAlphanumericUnderscores($ref)) {
         validationFailure($ref, 'Must only contain alphanumeric characters or underscores');
         errors = true;
       }
+
       break;
     case 'datetime_format':
       if (!validateDatetimeFormat($ref)) {
         validationFailure($ref, 'Is not in a valid format');
         errors = true;
       }
+
       break;
     case 'timerange':
       if (!validateAbsoluteTimerange($ref)) {
         validationFailure($ref, "cannot be earlier than 'From'");
         errors = true;
       }
+
       break;
   }
+
   return errors;
 }
 
@@ -107,6 +119,7 @@ function validateDefined(el) {
 
 function validatePortNumber(el) {
   const i = parseInt(el.val());
+
   return i > 0 && i < 65535;
 }
 
@@ -132,12 +145,15 @@ function validateNumber(el) {
 
 function validateDatetimeFormat(el) {
   const dateString = $(el).val();
+
   try {
     DateTime.parseFromString(dateString);
+
     return true;
   } catch (e) {
     // Do nothing
   }
+
   return false;
 }
 
@@ -145,6 +161,7 @@ function validateAbsoluteTimerange(el) {
   const parent = $(el).parent().parent();
   const fromStr = $("input[name='from']", parent).val();
   const toStr = $("input[name='to']", parent).val();
+
   try {
     const from = DateTime.parseFromString(fromStr).toMoment();
     const to = DateTime.parseFromString(toStr).toMoment();

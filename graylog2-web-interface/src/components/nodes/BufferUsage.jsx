@@ -39,6 +39,7 @@ const BufferUsage = createReactClass({
   componentWillMount() {
     const { nodeId } = this.props;
     const prefix = this._metricPrefix();
+
     const metricNames = [
       `${prefix}.usage`,
       `${prefix}.size`,

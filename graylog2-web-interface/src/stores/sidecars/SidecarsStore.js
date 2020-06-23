@@ -84,9 +84,11 @@ const SidecarsStore = Reflux.createStore({
     const promise = fetchPeriodically('GET', URLUtils.qualifyUrl(`${this.sourceUrl}/${sidecarId}`));
     promise.catch((error) => {
       let errorMessage = `Fetching Sidecar failed with status: ${error}`;
+
       if (error.status === 404) {
         errorMessage = `Unable to find a sidecar with ID <${sidecarId}>, maybe it was inactive for too long.`;
       }
+
       UserNotification.error(errorMessage, 'Could not retrieve Sidecar');
     });
     SidecarsActions.getSidecar.promise(promise);
@@ -146,6 +148,7 @@ const SidecarsStore = Reflux.createStore({
       .then(
         (response) => {
           UserNotification.success('', `Configuration change for ${sidecars.length} collectors requested`);
+
           return response;
         },
         (error) => {

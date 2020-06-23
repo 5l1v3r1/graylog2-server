@@ -18,6 +18,7 @@ const WrappedSelect = (props) => (
 describe('Select', () => {
   it('ignores case per default', async () => {
     const options = [option('ALL UPPER'), option('all lower')];
+
     const { getByLabelText, getByText } = render((
       <WrappedSelect formName="ourselect" options={options} />
     ));
@@ -34,6 +35,7 @@ describe('Select', () => {
 
   it('considers case if `ignoreCase` is `false`', async () => {
     const options = [option('ALL UPPER'), option('all lower')];
+
     const { getByLabelText, getByText, queryByText } = render((
       <WrappedSelect formName="ourselect" options={options} ignoreCase={false} />
     ));
@@ -55,6 +57,7 @@ describe('Select', () => {
 
   it('does not ignore accents per default', async () => {
     const options = [option('Los Pollos Hermaños')];
+
     const { getByLabelText, getByText, queryByText } = render((
       <WrappedSelect formName="ourselect" options={options} />
     ));
@@ -74,6 +77,7 @@ describe('Select', () => {
 
   it('ignores accents if `ignoreAccents` is `true`', async () => {
     const options = [option('Los Pollos Hermaños')];
+
     const { getByLabelText, getByText } = render((
       <WrappedSelect formName="ourselect" options={options} ignoreAccents />
     ));

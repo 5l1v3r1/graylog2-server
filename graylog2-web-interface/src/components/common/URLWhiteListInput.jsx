@@ -10,6 +10,7 @@ import FormsUtils from 'util/FormsUtils';
 import URLWhiteListFormModal from 'components/common/URLWhiteListFormModal';
 
 const ToolsStore = StoreProvider.getStore('Tools');
+
 type Props = {
   label: string,
   onChange: (event: SyntheticInputEvent<EventTarget>) => void,
@@ -28,6 +29,7 @@ const URLWhiteListInput = ({ label, onChange, validationMessage, validationState
   const suggestRegexWhitelistUrl = (typedUrl: string, type: string): string | Promise<any> => {
     // eslint-disable-next-line no-template-curly-in-string
     const keyWildcard = '${key}';
+
     return type && type === 'regex' && isValidURL(typedUrl) ? ToolsStore.urlWhiteListGenerateRegex(typedUrl, keyWildcard) : typedUrl;
   };
 
@@ -47,11 +49,11 @@ const URLWhiteListInput = ({ label, onChange, validationMessage, validationState
           setOwnValidationMessage(validationMessage);
           setCurrentValidationState(validationState);
         }
+
         setIsWhitelisted(result.is_whitelisted);
       });
     }
   };
-
 
   const onUpdate = () => {
     FormsUtils.triggerInput(ref.current);
@@ -62,6 +64,7 @@ const URLWhiteListInput = ({ label, onChange, validationMessage, validationState
     const checkSuggestion = () => {
       if (url) {
         const suggestion = suggestRegexWhitelistUrl(url, urlType);
+
         if (typeof suggestion === 'object') {
           suggestion.then((result) => {
             setSuggestedUrl(result.regex);
@@ -71,19 +74,22 @@ const URLWhiteListInput = ({ label, onChange, validationMessage, validationState
         }
       }
     };
+
     const timer = setTimeout(() => checkSuggestion(), 250);
+
     return () => clearTimeout(timer);
   }, [url]);
 
   useEffect(() => {
     const timer = setTimeout(() => checkIsWhitelisted(), 250);
+
     return () => clearTimeout(timer);
   }, [url, validationState]);
-
 
   const addButton = isWhitelistError() && !isWhitelisted ? <URLWhiteListFormModal newUrlEntry={suggestedUrl} onUpdate={onUpdate} urlType={urlType} /> : '';
   const helpMessage = <>{validationState === null ? ownValidationMessage : validationMessage} {addButton}</>;
   const bsStyle = currentValidationState === '' ? null : currentValidationState;
+
   return (
     <Input type="text"
            id="url"

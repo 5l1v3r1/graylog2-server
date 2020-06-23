@@ -21,6 +21,7 @@ const expandRows = (fieldNames, columnFieldNames, rows) => {
     });
     expanded.push(result);
   });
+
   return expanded;
 };
 

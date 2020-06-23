@@ -16,6 +16,7 @@ const MetricsExtractor = {
     Object.keys(metricNames).forEach((metricShortName) => {
       const metricFullName = metricNames[metricShortName];
       const metricObject = nodeMetrics[metricFullName];
+
       if (metricObject) {
         if (metricObject.type === 'gauge') {
           metrics[metricShortName] = metricObject.metric.value;

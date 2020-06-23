@@ -8,6 +8,7 @@ import UrlWhiteListConfig from './UrlWhiteListConfig';
 describe('UrlWhiteListConfig', () => {
   describe('render the UrlWhiteListConfig component', () => {
     const onUpdate = jest.fn();
+
     const config = {
       entries: [
         {
@@ -31,14 +32,18 @@ describe('UrlWhiteListConfig', () => {
       ],
       disabled: false,
     };
+
     it('should create new instance', () => {
       const wrapper = mount(<UrlWhiteListConfig config={config}
                                                 updateConfig={onUpdate} />);
+
       expect(wrapper).toMatchSnapshot();
     });
+
     it('should display Url list table', () => {
       const wrapper = mount(<UrlWhiteListConfig config={config}
                                                 updateConfig={onUpdate} />);
+
       expect(wrapper.find('.table-bordered')).toBeDefined();
       expect(wrapper.find('tbody>tr')).toHaveLength(config.entries.length);
     });

@@ -16,6 +16,7 @@ import Search from 'views/logic/search/Search';
 import StreamSearchPage from './StreamSearchPage';
 
 const mockExtendedSearchPage = jest.fn(() => <div>Extended search page</div>);
+
 const mockView = View.create()
   .toBuilder()
   .type(View.Type.Search)
@@ -38,6 +39,7 @@ jest.mock('views/hooks/SyncWithQueryParameters', () => ({
 }));
 jest.mock('views/logic/views/ViewLoader', () => {
   const originalModule = jest.requireActual('views/logic/views/ViewLoader');
+
   return {
     __esModule: true,
     ...originalModule,
@@ -49,9 +51,11 @@ describe('StreamSearchPage', () => {
   beforeAll(() => {
     jest.useFakeTimers();
   });
+
   const mockRouter = {
     getCurrentLocation: jest.fn(() => ({ pathname: '/search', search: '?q=&rangetype=relative&relative=300' })),
   };
+
   const mockLocation = {
     pathname: '/search',
     query: {
@@ -60,6 +64,7 @@ describe('StreamSearchPage', () => {
       relative: '300',
     },
   };
+
   const SimpleStreamSearchPage = (props) => (
     <StreamSearchPage location={{ query: {} }}
                       params={{ streamId: 'stream-id-1' }}
@@ -79,6 +84,7 @@ describe('StreamSearchPage', () => {
     act(() => jest.advanceTimersByTime(200));
 
     expect(getByText('Loading...')).not.toBeNull();
+
     await waitForElement(() => getByText('Extended search page'));
   });
 

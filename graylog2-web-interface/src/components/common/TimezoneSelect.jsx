@@ -58,8 +58,10 @@ class TimezoneSelect extends React.Component {
 
         // Now add a label per timezone in the area
         const effectiveTimezones = lodash.uniq(timezones[area]).sort();
+
         const timezoneLabels = effectiveTimezones.map((location) => {
           const timezone = (area === this._UNCLASSIFIED_AREA ? location : `${area}/${location}`);
+
           return { value: timezone, label: location.replace('_', ' ') };
         });
         labels.push(...timezoneLabels);
@@ -72,6 +74,7 @@ class TimezoneSelect extends React.Component {
     if (!option.disabled) {
       return <span key={option.value} title={option.value}>&nbsp; {option.label}</span>;
     }
+
     return <span key={option.value} title={option.value}>{option.label}</span>;
   };
 

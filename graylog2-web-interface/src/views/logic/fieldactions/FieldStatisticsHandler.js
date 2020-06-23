@@ -18,14 +18,17 @@ const handler: FieldActionHandler = ({ field, type, contexts: { widget: origWidg
       if (f === 'percentile') {
         return `${f}(${field},95)`;
       }
+
       return `${f}(${field})`;
     })
     .map(Series.forFunction);
+
   const config = AggregationWidgetConfig.builder()
     .series(series)
     .visualization('table')
     .rollup(true)
     .build();
+
   const widgetBuilder = AggregationWidget.builder()
     .newId()
     .config(config);

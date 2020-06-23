@@ -55,6 +55,7 @@ const EventNotificationsStore = Reflux.createStore({
     if (this.all) {
       this.listAll();
     }
+
     if (this.pagination.page) {
       this.listPaginated({
         query: this.query,
@@ -70,6 +71,7 @@ const EventNotificationsStore = Reflux.createStore({
     promise.then((response) => {
       this.all = response.notifications;
       this.propagateChanges();
+
       return response;
     });
 
@@ -96,6 +98,7 @@ const EventNotificationsStore = Reflux.createStore({
         grandTotal: response.grand_total,
       };
       this.propagateChanges();
+
       return response;
     });
 
@@ -119,6 +122,7 @@ const EventNotificationsStore = Reflux.createStore({
       (response) => {
         UserNotification.success('Notification created successfully', `Notification "${notification.title}" was created successfully.`);
         this.refresh();
+
         return response;
       },
       (error) => {
@@ -137,6 +141,7 @@ const EventNotificationsStore = Reflux.createStore({
       (response) => {
         UserNotification.success('Notification updated successfully', `Notification "${notification.title}" was updated successfully.`);
         this.refresh();
+
         return response;
       },
       (error) => {
@@ -182,6 +187,7 @@ const EventNotificationsStore = Reflux.createStore({
     promise.then((response) => {
       this.allLegacyTypes = response.types;
       this.propagateChanges();
+
       return response;
     });
 

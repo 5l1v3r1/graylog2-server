@@ -63,6 +63,7 @@ describe('ConfirmLeaveDialog', () => {
     const wrapper = mount(<ConfirmLeaveDialog route={{ __id__: 42 }} router={router} />);
 
     wrapper.unmount();
+
     expect(unsubscribe).toHaveBeenCalled();
   });
 });

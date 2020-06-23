@@ -85,6 +85,7 @@ class EventDefinitionFormContainer extends React.Component {
       nextEventDefinition[key] = value;
       const { onEventDefinitionChange } = this.props;
       onEventDefinitionChange(nextEventDefinition);
+
       return { eventDefinition: nextEventDefinition, isDirty: true };
     });
   };
@@ -99,11 +100,14 @@ class EventDefinitionFormContainer extends React.Component {
 
   handleSubmitFailureResponse = (errorResponse) => {
     const { body } = errorResponse.additional;
+
     if (errorResponse.status === 400) {
       if (body && body.failed) {
         this.setState({ validation: body });
+
         return;
       }
+
       if (body.type && body.type === 'ApiError') {
         if (body.message.includes('org.graylog.events.conditions.Expression')
           || body.message.includes('org.graylog.events.conditions.Expr')
@@ -113,8 +117,10 @@ class EventDefinitionFormContainer extends React.Component {
               errors: { conditions: ['Aggregation condition is not valid'] },
             },
           });
+
           return;
         }
+
         if (body.message.includes('embryonic')) {
           this.setState({
             validation: {

@@ -44,7 +44,9 @@ export const filtersForQuery = (streams: ?Array<string>): ?FilterType => {
   if (!streams || streams.length === 0) {
     return null;
   }
+
   const streamFilters = _streamFilters(streams);
+
   return Immutable.Map({
     type: 'or',
     filters: streamFilters,
@@ -55,11 +57,15 @@ export const filtersToStreamSet = (filter: ?Immutable.Map<string, any>): Immutab
   if (!filter) {
     return Immutable.Set();
   }
+
   const type = filter.get('type');
+
   if (type === 'stream') {
     return Immutable.Set([filter.get('id')]);
   }
+
   const filters = filter.get('filters', Immutable.List());
+
   return filters.map(filtersToStreamSet).reduce((prev, cur) => prev.merge(cur), Immutable.Set());
 };
 
@@ -115,12 +121,14 @@ export default class Query {
   // eslint-disable-next-line no-use-before-define
   toBuilder(): Builder {
     const { id, query, timerange, filter, searchTypes } = this._value;
+
     // eslint-disable-next-line no-use-before-define
     const builder = Query.builder()
       .id(id)
       .query(query)
       .timerange(timerange)
       .searchTypes(searchTypes);
+
     return filter ? builder.filter(filter) : builder;
   }
 
@@ -128,6 +136,7 @@ export default class Query {
     if (other === undefined) {
       return false;
     }
+
     if (!(other instanceof Query)) {
       return false;
     }
@@ -165,6 +174,7 @@ export default class Query {
   static fromJSON(value: QueryJson): Query {
     // eslint-disable-next-line camelcase
     const { id, query, timerange, filter, search_types } = value;
+
     return new Query(id, query, timerange, Immutable.fromJS(filter), search_types);
   }
 }
@@ -202,6 +212,7 @@ class Builder {
 
   build(): Query {
     const { id, query, timerange, filter, searchTypes } = this.value.toObject();
+
     return new Query(id, query, timerange, filter, searchTypes);
   }
 }

@@ -36,18 +36,24 @@ const _compareArray = (ary1, ary2) => {
     if (ary2 === undefined) {
       return 0;
     }
+
     return -1;
   }
+
   if (ary1.length > ary2.length) {
     return 1;
   }
+
   if (ary1.length < ary2.length) {
     return -1;
   }
+
   const diffIdx = ary1.findIndex((v, idx) => (defaultCompare(v, ary2[idx]) !== 0));
+
   if (diffIdx === -1) {
     return 0;
   }
+
   return defaultCompare(ary1[diffIdx], ary2[diffIdx]);
 };
 
@@ -64,6 +70,7 @@ const _extractColumnPivotValues = (rows): Array<Array<string>> => {
       .map(({ key }) => key.slice(0, -1)),
     isEqual,
   );
+
   return Immutable.List(uniqRows).sort(_compareArray).toArray();
 };
 
@@ -86,6 +93,7 @@ const DataTable = ({ config, currentView, data, fields }: Props) => {
 
   const formattedRows = deduplicateValues(expandedRows, rowFieldNames).map((reducedItem, idx) => {
     const valuePath = rowFieldNames.map((pivotField) => ({ [pivotField]: expandedRows[idx][pivotField] }));
+
     // eslint-disable-next-line react/no-array-index-key
     return (
       // eslint-disable-next-line react/no-array-index-key

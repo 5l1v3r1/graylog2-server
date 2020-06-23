@@ -17,6 +17,7 @@ class NotificationList extends React.Component {
     if (type === undefined) {
       return {};
     }
+
     return PluginStore.exports('eventNotificationTypes').find((n) => n.type === type) || {};
   };
 
@@ -41,6 +42,7 @@ class NotificationList extends React.Component {
         </tr>
       );
     }
+
     const plugin = this.getNotificationPlugin(notification.config.type);
 
     return (
@@ -66,6 +68,7 @@ class NotificationList extends React.Component {
           missing: true,
         };
       });
+
     const addNotificationButton = (
       <Button bsStyle="success" onClick={onAddNotificationClick}>
         Add Notification
@@ -82,6 +85,7 @@ class NotificationList extends React.Component {
         </>
       );
     }
+
     return (
       <>
         <DataTable id="event-definition-notifications"

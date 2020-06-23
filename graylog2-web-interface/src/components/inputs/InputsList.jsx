@@ -79,9 +79,11 @@ const InputsList = createReactClass({
 
   _splitInputs(state) {
     const { inputs } = state;
+
     const globalInputs = inputs
       .filter((input) => input.global === true)
       .sort((inputA, inputB) => naturalSortIgnoreCase(inputA.title, inputB.title));
+
     let localInputs = inputs
       .filter((input) => input.global === false)
       .sort((inputA, inputB) => naturalSortIgnoreCase(inputA.title, inputB.title));
@@ -118,6 +120,7 @@ const InputsList = createReactClass({
       if (resetLoadingState) {
         resetLoadingState();
       }
+
       return;
     }
 
@@ -127,15 +130,18 @@ const InputsList = createReactClass({
         filteredLocalInputs: localInputs,
         filter: undefined,
       });
+
       if (resetLoadingState) {
         resetLoadingState();
       }
+
       return;
     }
 
     const filterMethod = (input) => {
       return regExp.test(input.title);
     };
+
     const filteredGlobalInputs = this.state.globalInputs.filter(filterMethod);
     const filteredLocalInputs = this.state.localInputs.filter(filterMethod);
     this.setState({
@@ -143,6 +149,7 @@ const InputsList = createReactClass({
       filteredLocalInputs: filteredLocalInputs,
       filter: filter,
     });
+
     if (resetLoadingState) {
       resetLoadingState();
     }

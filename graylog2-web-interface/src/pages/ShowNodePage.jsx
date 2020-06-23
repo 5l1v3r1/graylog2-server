@@ -52,6 +52,7 @@ const ShowNodePage = createReactClass({
         const filteredInputStates = [];
         inputIds.forEach((inputId) => {
           const inputObject = inputStates[inputId][this.props.params.nodeId];
+
           if (inputObject) {
             filteredInputStates.push(inputObject);
           }
@@ -70,9 +71,11 @@ const ShowNodePage = createReactClass({
     if (this.state.errors) {
       return <PageErrorOverview errors={[this.state.errors]} />;
     }
+
     if (this._isLoading()) {
       return <Spinner />;
     }
+
     const { node } = this.state;
     const title = <span>Node {node.short_node_id} / {node.hostname}</span>;
 

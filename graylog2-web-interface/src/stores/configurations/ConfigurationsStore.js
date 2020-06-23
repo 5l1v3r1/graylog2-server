@@ -20,6 +20,7 @@ export type WhiteListConfig = {
   entries: Array<Url>,
   disabled: boolean,
 };
+
 const ConfigurationsStore = Reflux.createStore({
   listenables: [ConfigurationActions],
 
@@ -51,6 +52,7 @@ const ConfigurationsStore = Reflux.createStore({
     promise.then((response) => {
       this.configuration = { ...this.configuration, [configType]: response };
       this.propagateChanges();
+
       return response;
     });
 
@@ -61,6 +63,7 @@ const ConfigurationsStore = Reflux.createStore({
     const promise = fetch('GET', this._url('/org.graylog2.indexer.searches.SearchesClusterConfig')).then((response) => {
       this.searchesClusterConfig = response;
       this.propagateChanges();
+
       return response;
     });
 
@@ -71,6 +74,7 @@ const ConfigurationsStore = Reflux.createStore({
     const promise = fetch('GET', qualifyUrl('/system/messageprocessors/config')).then((response) => {
       this.configuration = { ...this.configuration, [configType]: response };
       this.propagateChanges();
+
       return response;
     });
 
@@ -81,6 +85,7 @@ const ConfigurationsStore = Reflux.createStore({
     const promise = fetch('GET', qualifyUrl('/system/urlwhitelist')).then((response) => {
       this.configuration = { ...this.configuration, [configType]: response };
       this.propagateChanges();
+
       return response;
     });
 
@@ -91,6 +96,7 @@ const ConfigurationsStore = Reflux.createStore({
     const promise = fetch('GET', this._url('/org.graylog.events.configuration.EventsConfiguration')).then((response) => {
       this.eventsClusterConfig = response;
       this.propagateChanges();
+
       return response;
     });
 
@@ -105,6 +111,7 @@ const ConfigurationsStore = Reflux.createStore({
         this.configuration = { ...this.configuration, [configType]: response };
         this.propagateChanges();
         UserNotification.success('Configuration updated successfully');
+
         return response;
       },
       (error) => {
@@ -123,6 +130,7 @@ const ConfigurationsStore = Reflux.createStore({
         this.configuration = { ...this.configuration, [configType]: config };
         this.propagateChanges();
         UserNotification.success('Url Whitelist Configuration updated successfully');
+
         return config;
       },
       (error) => {
@@ -141,6 +149,7 @@ const ConfigurationsStore = Reflux.createStore({
         this.configuration = { ...this.configuration, [configType]: response };
         this.propagateChanges();
         UserNotification.success('Configuration updated successfully');
+
         return response;
       },
       (error) => {

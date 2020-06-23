@@ -24,6 +24,7 @@ describe('QueryTitle', () => {
 
     wrapper.update();
     const { onSelect } = wrapper.find(`MenuItem[children="${name}"]`).props();
+
     return () => new Promise((resolve) => {
       onSelect(undefined, { preventDefault: jest.fn(), stopPropagation: jest.fn() });
       setImmediate(() => {
@@ -70,6 +71,7 @@ describe('QueryTitle', () => {
   describe('edit title action', () => {
     it('opens edit modal', () => {
       const openEditModalFn = jest.fn();
+
       const wrapper = mount(
         <QueryTitle active
                     id="deadbeef"

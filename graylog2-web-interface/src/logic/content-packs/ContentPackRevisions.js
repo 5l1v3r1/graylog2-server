@@ -8,6 +8,7 @@ export default class ContentPackRevisions {
       const contentPack = contentPackRevision[rev];
       /* eslint-disable-next-line no-return-assign */
       acc[parseInt(rev, 10)] = ContentPack.fromJSON(contentPack);
+
       return acc;
     }, {});
   }

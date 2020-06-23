@@ -16,6 +16,7 @@ import EmptyValue from '../EmptyValue';
 jest.mock('views/components/common/UserTimezoneTimestamp', () => mockComponent('UserTimezoneTimestamp'));
 
 const fields = OrderedSet(['nf_dst_address', 'count()', 'max(timestamp)', 'card(timestamp)']);
+
 const item = {
   nf_dst_address: '192.168.1.24',
   nf_proto_name: {
@@ -87,6 +88,7 @@ describe('DataTableEntry', () => {
     ));
 
     const fieldTypeFor = (fieldName) => wrapper.find(`Value[field="${fieldName}"]`).first().props().type;
+
     expect(fieldTypeFor('nf_dst_address')).toEqual(FieldTypes.STRING());
     expect(fieldTypeFor('count()')).toEqual(FieldTypes.LONG());
     expect(fieldTypeFor('max(timestamp)')).toEqual(FieldTypes.DATE());
@@ -106,6 +108,7 @@ describe('DataTableEntry', () => {
                         valuePath={valuePath} />
       </table>
     ));
+
     expect(wrapper.find('Provider')
       .map((p) => p.props().value))
       .toMatchSnapshot();
@@ -113,9 +116,11 @@ describe('DataTableEntry', () => {
 
   it('does not render `Empty Value` for deduplicated values', () => {
     const fieldsWithDeduplicatedValues = OrderedSet(['nf_dst_address', 'nf_dst_port']);
+
     const itemWithDeduplicatedValues = {
       nf_dst_port: 443,
     };
+
     const wrapper = mount((
       <table>
         <DataTableEntry columnPivots={columnPivots}
@@ -128,11 +133,13 @@ describe('DataTableEntry', () => {
                         valuePath={valuePath} />
       </table>
     ));
+
     expect(wrapper).not.toContainReact(<EmptyValue />);
   });
 
   describe('resolves field types', () => {
     const timestampTypeMapping = FieldTypeMapping.create('timestamp', FieldTypes.DATE());
+
     it('for non-renamed functions', () => {
       const wrapper = mount((
         <table>
@@ -149,8 +156,10 @@ describe('DataTableEntry', () => {
       const valueFields = wrapper.find('Value[field="max(timestamp)"]');
       valueFields.forEach((field) => expect(field).toHaveProp('type', timestampTypeMapping.type));
     });
+
     it('for simple row with renamed function', () => {
       const renamedSeries = [seriesWithName('max(timestamp)', 'Last Timestamp')];
+
       const itemWithRenamedSeries = {
         'Last Timestamp': 1554106041841,
       };
@@ -169,15 +178,19 @@ describe('DataTableEntry', () => {
         </table>
       ));
       const valueFields = wrapper.find('Value[field="Last Timestamp"]');
+
       expect(valueFields).toHaveLength(1);
+
       valueFields.forEach((field) => expect(field).toHaveProp('type', timestampTypeMapping.type));
     });
+
     it('for renamed functions', () => {
       const renamedSeries = [
         Series.forFunction('count()'),
         seriesWithName('max(timestamp)', 'Last Timestamp'),
         Series.forFunction('card(timestamp)'),
       ];
+
       const itemWithRenamedSeries = {
         nf_dst_address: '192.168.1.24',
         nf_proto_name: {
@@ -203,7 +216,9 @@ describe('DataTableEntry', () => {
         </table>
       ));
       const valueFields = wrapper.find('Value[field="Last Timestamp"]');
+
       expect(valueFields).toHaveLength(3);
+
       valueFields.forEach((field) => expect(field).toHaveProp('type', timestampTypeMapping.type));
     });
   });

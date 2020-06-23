@@ -43,6 +43,7 @@ describe('AreaVisualization', () => {
                                               width={800} />));
 
     const genericPlot = wrapper.find('GenericPlot');
+
     expect(genericPlot).toHaveProp('layout', {
       yaxis: { fixedrange: true, rangemode: 'tozero' },
       xaxis: { range: ['2019-11-28T09:21:00-06:00', '2019-11-28T09:25:57-06:00'], type: 'date' },

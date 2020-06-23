@@ -13,10 +13,12 @@ const ContentPacksStore = Reflux.createStore({
 
   get(contentPackId) {
     const url = URLUtils.qualifyUrl(ApiRoutes.ContentPacksController.get(contentPackId).url);
+
     const promise = fetch('GET', url)
       .then((response) => {
         const contentPackRevision = new ContentPackRevisions(response.content_pack_revisions);
         const constraints = response.constraints_result;
+
         const result = {
           contentPackRevisions: contentPackRevision,
           selectedVersion: contentPackRevision.latestRevision,
@@ -32,9 +34,11 @@ const ContentPacksStore = Reflux.createStore({
 
   getRev(contentPackId, contentPackRev) {
     const url = URLUtils.qualifyUrl(ApiRoutes.ContentPacksController.getRev(contentPackId, contentPackRev).url);
+
     const promise = fetch('GET', url)
       .then((result) => {
         this.trigger({ contentPack: result.content_pack });
+
         return result;
       });
 
@@ -43,6 +47,7 @@ const ContentPacksStore = Reflux.createStore({
 
   list() {
     const url = URLUtils.qualifyUrl(ApiRoutes.ContentPacksController.list().url);
+
     const promise = fetch('GET', url)
       .then((result) => {
         this.trigger({ contentPacks: result.content_packs, contentPackMetadata: result.content_packs_metadata });
@@ -76,6 +81,7 @@ const ContentPacksStore = Reflux.createStore({
   },
   installList(contentPackId) {
     const url = URLUtils.qualifyUrl(ApiRoutes.ContentPacksController.installList(contentPackId).url);
+
     const promise = fetch('GET', url)
       .then((result) => {
         this.trigger({ installations: result.installations });
@@ -91,6 +97,7 @@ const ContentPacksStore = Reflux.createStore({
   },
   uninstallDetails(contentPackId, installId) {
     const url = URLUtils.qualifyUrl(ApiRoutes.ContentPacksController.uninstallDetails(contentPackId, installId).url);
+
     const promise = fetch('GET', url)
       .then((result) => {
         this.trigger({ uninstallEntities: result.entities });

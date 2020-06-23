@@ -21,6 +21,7 @@ describe('WidgetErrorBoundary', () => {
     asMock(console.error).mockImplementation(jest.fn());
 
     const Component = () => { throw new Error('The dungeon collapses, you die!'); };
+
     const { getByText } = render((
       <WidgetErrorBoundary>
         <Component />
@@ -35,11 +36,13 @@ describe('WidgetErrorBoundary', () => {
 
   it('passes own props to its children', () => {
     const Component = (props) => <div data-testid="child-component-test-id" {...props} />;
+
     const { getByTestId } = render((
       <WidgetErrorBoundary extraProp="The extra prop">
         <Component />
       </WidgetErrorBoundary>
     ));
+
     expect(getByTestId('child-component-test-id')).toHaveAttribute('extraProp', 'The extra prop');
   });
 });

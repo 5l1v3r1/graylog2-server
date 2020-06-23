@@ -37,6 +37,7 @@ const CollectorsAdministrationFilters = createReactClass({
     const collectorFormatter = (collectorId) => {
       const [id] = collectorId.split(';');
       const collector = lodash.find(collectors, { id: id });
+
       return <CollectorIndicator collector={collector.name} operatingSystem={collector.node_operating_system} />;
     };
 
@@ -46,6 +47,7 @@ const CollectorsAdministrationFilters = createReactClass({
     };
 
     let collectorFilter;
+
     if (filters.collector) {
       const collector = collectors.find((c) => c.id === filters.collector);
       collectorFilter = collector ? collectorMapper(collector) : undefined;
@@ -67,6 +69,7 @@ const CollectorsAdministrationFilters = createReactClass({
     const { configurations, filters } = this.props;
 
     const configurationMapper = (configuration) => `${configuration.id};${configuration.name}`;
+
     const configurationItems = configurations
       .sort((c1, c2) => naturalSortIgnoreCase(c1.name, c2.name))
       // TODO: Hack to be able to filter in SelectPopover. We should change that to avoid this hack.
@@ -75,6 +78,7 @@ const CollectorsAdministrationFilters = createReactClass({
     const configurationFormatter = (configurationId) => {
       const [id] = configurationId.split(';');
       const configuration = lodash.find(configurations, { id: id });
+
       return <span><ColorLabel color={configuration.color} size="xsmall" /> {configuration.name}</span>;
     };
 
@@ -84,6 +88,7 @@ const CollectorsAdministrationFilters = createReactClass({
     };
 
     let configurationFilter;
+
     if (filters.configuration) {
       const configuration = configurations.find((c) => c.id === filters.configuration);
       configurationFilter = configuration ? configurationMapper(configuration) : undefined;

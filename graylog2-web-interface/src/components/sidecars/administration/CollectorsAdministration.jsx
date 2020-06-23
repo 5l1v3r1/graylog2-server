@@ -36,6 +36,7 @@ const CollectorsAdministration = createReactClass({
 
   getInitialState() {
     const { sidecarCollectorPairs } = this.props;
+
     return {
       enabledCollectors: this.getEnabledCollectors(sidecarCollectorPairs),
       selected: [],
@@ -62,9 +63,11 @@ const CollectorsAdministration = createReactClass({
 
   setSelectAllCheckboxState(selectAllInput, collectors, selected) {
     const selectAllCheckbox = selectAllInput ? selectAllInput.getInputDOMNode() : undefined;
+
     if (!selectAllCheckbox) {
       return;
     }
+
     // Set the select all checkbox as indeterminate if some but not all items are selected.
     selectAllCheckbox.indeterminate = selected.length > 0 && !this.isAllSelected(collectors, selected);
   },
@@ -75,6 +78,7 @@ const CollectorsAdministration = createReactClass({
 
   filterSelectedCollectors(collectors) {
     const filteredSidecarCollectorIds = collectors.map(({ collector, sidecar }) => this.sidecarCollectorId(sidecar, collector));
+
     return this.state.selected.filter((sidecarCollectorId) => filteredSidecarCollectorIds.includes(sidecarCollectorId));
   },
 
@@ -109,6 +113,7 @@ const CollectorsAdministration = createReactClass({
     });
 
     let headerMenu;
+
     if (selectedItems === 0) {
       headerMenu = (
         <CollectorsAdministrationFilters collectors={collectors} configurations={configurations} filters={this.props.filters} filter={this.props.onFilter} />
@@ -188,8 +193,10 @@ const CollectorsAdministration = createReactClass({
     const configAssignment = sidecar.assignments.find((assignment) => assignment.collector_id === collector.id) || {};
     const configuration = configurations.find((config) => config.id === configAssignment.configuration_id);
     let collectorStatus = { status: null, message: null, id: null };
+
     try {
       const result = sidecar.node_details.status.collectors.find((c) => c.collector_id === collector.id);
+
       if (result) {
         collectorStatus = {
           status: result.status,
@@ -267,6 +274,7 @@ const CollectorsAdministration = createReactClass({
     const { configurations, collectors, onPageChange, pagination, query, sidecarCollectorPairs, filters } = this.props;
 
     let formattedCollectors;
+
     if (sidecarCollectorPairs.length === 0) {
       formattedCollectors = (
         <ControlledTableList.Item>
@@ -280,6 +288,7 @@ const CollectorsAdministration = createReactClass({
           .filter(({ sidecar }) => sidecar.node_id === sidecarToMap.node_id)
           .map(({ collector }) => collector)
           .filter((collector) => !lodash.isEmpty(collector));
+
         return this.formatSidecar(sidecarToMap, sidecarCollectors, configurations);
       });
     }

@@ -40,11 +40,13 @@ class RegexExtractorConfiguration extends React.Component {
     promise.then((result) => {
       if (!result.matched) {
         UserNotification.warning('Regular expression did not match.');
+
         return;
       }
 
       if (!result.match) {
         UserNotification.warning('Regular expression does not contain any matcher group to extract.');
+
         return;
       }
 

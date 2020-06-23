@@ -79,6 +79,7 @@ const EventsStore = Reflux.createStore({
       this.totalEvents = response.total_events;
       this.context = response.context;
       this.propagateChanges();
+
       return response;
     });
 

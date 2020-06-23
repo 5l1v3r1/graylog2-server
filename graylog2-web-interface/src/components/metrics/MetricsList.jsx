@@ -59,6 +59,7 @@ class MetricsList extends React.Component {
 
   render() {
     const { names } = this.props;
+
     const metrics = names
       .sort((m1, m2) => m1.full_name.localeCompare(m2.full_name))
       .map((metric) => this._formatMetric(metric));

@@ -22,6 +22,7 @@ class LUTCachesPage extends React.Component {
   componentDidUpdate(prevProps) {
     const { location: { pathname } } = this.props;
     const { location: { pathname: prevPathname } } = prevProps;
+
     if (pathname !== prevPathname) {
       this._loadData(this.props);
     }
@@ -29,6 +30,7 @@ class LUTCachesPage extends React.Component {
 
   _loadData = (props) => {
     const { pagination } = props;
+
     if (props.params && props.params.cacheName) {
       LookupTableCachesActions.get(props.params.cacheName);
     } else if (this._isCreating(props)) {
@@ -130,6 +132,7 @@ class LUTCachesPage extends React.Component {
     );
   }
 }
+
 LUTCachesPage.propTypes = {
   cache: PropTypes.object,
   validationErrors: PropTypes.object,

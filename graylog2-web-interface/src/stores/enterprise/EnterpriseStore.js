@@ -41,6 +41,7 @@ const EnterpriseStore = Reflux.createStore({
       (response) => {
         this.licenseStatus = response.free_license_info.license_status;
         this.propagateChanges();
+
         return response;
       },
       (error) => {
@@ -64,6 +65,7 @@ const EnterpriseStore = Reflux.createStore({
       (response) => {
         UserNotification.success('Your free Graylog Enterprise license should be on the way.', 'Success!');
         this.refresh();
+
         return response;
       },
       (error) => {

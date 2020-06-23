@@ -11,6 +11,7 @@ import SavedSearchList from './SavedSearchList';
 
 const createViewsResponse = (count = 1) => {
   const views = [];
+
   if (count > 0) {
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < count; i++) {
@@ -39,21 +40,26 @@ describe('SavedSearchList', () => {
     afterEach(() => {
       cleanup();
     });
+
     it('should render empty', () => {
       const views = createViewsResponse(0);
+
       const { baseElement } = render(<SavedSearchList toggleModal={() => {}}
                                                       showModal
                                                       deleteSavedSearch={() => {}}
                                                       views={views} />);
+
       expect(baseElement).toMatchSnapshot();
     });
 
     it('should render with views', () => {
       const views = createViewsResponse(1);
+
       const { baseElement } = render(<SavedSearchList toggleModal={() => {}}
                                                       showModal
                                                       deleteSavedSearch={() => {}}
                                                       views={views} />);
+
       expect(baseElement).toMatchSnapshot();
     });
 
@@ -68,6 +74,7 @@ describe('SavedSearchList', () => {
 
       const cancel = getByText('Cancel');
       fireEvent.click(cancel);
+
       expect(onToggleModal).toBeCalledTimes(1);
     });
 
@@ -77,12 +84,14 @@ describe('SavedSearchList', () => {
         return new Promise(() => {});
       });
       const views = createViewsResponse(1);
+
       const { getByTestId } = render(<SavedSearchList toggleModal={() => {}}
                                                       showModal
                                                       deleteSavedSearch={onDelete}
                                                       views={views} />);
       const deleteBtn = getByTestId('delete-foo-bar-0');
       fireEvent.click(deleteBtn);
+
       expect(window.confirm).toBeCalledTimes(1);
       expect(onDelete).toBeCalledTimes(1);
     });
@@ -101,13 +110,16 @@ describe('SavedSearchList', () => {
       );
       const listItem = getByText('test-0');
       fireEvent.click(listItem);
+
       expect(onLoad).toBeCalledTimes(1);
     });
   });
+
   describe('load new saved search', () => {
     afterEach(() => {
       cleanup();
     });
+
     it('should change url after load', async () => {
       const onLoad = jest.fn(() => Promise.resolve());
       Routes.pluginRoute = jest.fn((route) => (id) => `${route}:${id}`);

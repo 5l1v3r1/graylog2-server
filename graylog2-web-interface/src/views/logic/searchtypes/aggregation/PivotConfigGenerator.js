@@ -51,6 +51,7 @@ const formatPivot = (pivot: Pivot): FormattedPivot => {
         const { unit, value } = (interval: { interval: TimeConfig });
         newConfig.interval = { type: 'timeunit', timeunit: `${value}${mapTimeunit(unit)}` };
       }
+
       break;
     default:
   }
@@ -137,6 +138,7 @@ class ConfigBuilder {
 
   add(val: Config) {
     this.value = this.value.add(val);
+
     return this;
   }
 

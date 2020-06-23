@@ -7,7 +7,6 @@ import ViewTypeContext from 'views/components/contexts/ViewTypeContext';
 import View from 'views/logic/views/View';
 import QueryResult from 'views/logic/QueryResult';
 
-
 import SideBar from './SideBar';
 
 const mockCurrentUser = { timezone: 'UTC' };
@@ -31,6 +30,7 @@ describe('<Sidebar />', () => {
   const effectiveTimerange = { type: 'absolute', from: '2018-08-28T14:34:26.192Z', to: '2018-08-28T14:39:26.192Z' };
   const duration = 64;
   const timestamp = '2018-08-28T14:39:26.127Z';
+
   const query = {
     filter: { type: 'or', filters: [] },
     id: '34efae1e-e78e-48ab-ab3f-e83c8611a683',
@@ -75,6 +75,7 @@ describe('<Sidebar />', () => {
     );
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
+
     expect(wrapper.find('h4').text()).toBe(viewMetaData.title);
   });
 
@@ -95,6 +96,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Description"]').simulate('click');
+
     expect(wrapper.find('SearchResultOverview').text()).toBe('Query executed in 64ms at 2018-08-28 09:39:26.');
   });
 
@@ -116,6 +118,7 @@ describe('<Sidebar />', () => {
     );
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
+
     expect(wrapper.find('h4').text()).toBe('Untitled Search');
   });
 
@@ -137,6 +140,7 @@ describe('<Sidebar />', () => {
     );
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
+
     expect(wrapper.find('h4').text()).toBe('Untitled Dashboard');
   });
 
@@ -154,6 +158,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Description"]').simulate('click');
+
     expect(wrapper.find('ViewDescription').text()).toContain(viewMetaData.summary);
     expect(wrapper.find('ViewDescription').text()).toContain(viewMetaData.description);
   });
@@ -172,6 +177,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Description"]').simulate('click');
+
     expect(wrapper.find('ViewDescription').text()).toContain('No dashboard description');
     expect(wrapper.find('ViewDescription').text()).toContain('No dashboard summary');
   });
@@ -190,6 +196,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Description"]').simulate('click');
+
     expect(wrapper.find('ViewDescription').text()).toContain('No search description');
     expect(wrapper.find('ViewDescription').text()).toContain('No search summary');
   });
@@ -208,6 +215,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Description"]').simulate('click');
+
     expect(wrapper.find('ViewDescription').text()).toContain(viewMetaData.summary);
     expect(wrapper.find('ViewDescription').text()).toContain(viewMetaData.description);
   });
@@ -224,6 +232,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Description"]').simulate('click');
+
     expect(wrapper.find('ViewDescription').text()).not.toContain(viewMetaData.summary);
     expect(wrapper.find('ViewDescription').text()).not.toContain(viewMetaData.description);
     expect(wrapper.find('ViewDescription').text()).toContain('Save the search or export it to a dashboard to add a custom description.');
@@ -241,6 +250,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Create"]').simulate('click');
+
     expect(wrapper.find('AddWidgetButton').text()).toContain('Predefined Aggregation');
   });
 
@@ -256,6 +266,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Fields"]').simulate('click');
+
     expect(wrapper.find('div#martian').text()).toBe('Marc Watney');
   });
 
@@ -271,8 +282,11 @@ describe('<Sidebar />', () => {
 
     wrapper.find('Sidebarstyles__SidebarHeader').simulate('click');
     wrapper.find('div[children="Description"]').simulate('click');
+
     expect(wrapper.find('SearchResultOverview')).toExist();
+
     wrapper.find('div[children="Description"]').simulate('click');
+
     expect(wrapper.find('SearchResultOverview')).not.toExist();
   });
 });

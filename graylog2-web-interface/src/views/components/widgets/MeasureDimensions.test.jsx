@@ -25,6 +25,7 @@ describe('<MeasureDimensions />', () => {
         return (<div />);
       }
     }
+
     let childRef = null;
     mount(<MeasureDimensions><ChildComp ref={(node) => { childRef = node; }} /></MeasureDimensions>);
 

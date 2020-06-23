@@ -23,6 +23,7 @@ const CustomHighlighting = ({ children, field: fieldName, value: fieldValue }: P
   const rules = highlightingRulesMap[fieldName] ?? [];
   rules.forEach((rule) => {
     const ranges = [];
+
     if (String(fieldValue) === String(rule.value)) {
       ranges.push({
         start: String(fieldValue).indexOf(rule.value),
@@ -39,9 +40,11 @@ const CustomHighlighting = ({ children, field: fieldName, value: fieldValue }: P
       ));
     }
   });
+
   if (decorators.length === 0) {
     decorators.push(Highlight);
   }
+
   return (
     <DecoratorContext.Provider value={decorators}>
       {children}

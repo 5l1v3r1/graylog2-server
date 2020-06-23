@@ -82,6 +82,7 @@ export const ViewStore: ViewStoreType = singletonStore(
           this.view = view;
           const queries: QuerySet = get(view, 'search.queries', Immutable.Set());
           this.activeQuery = queries.first().id;
+
           return view;
         }).then((view) => {
           const promise = ViewActions.search(view.search)
@@ -92,6 +93,7 @@ export const ViewStore: ViewStoreType = singletonStore(
             .then(() => this._trigger());
 
           ViewActions.create.promise(promise.then(() => this._state()));
+
           return promise;
         });
     },
@@ -124,6 +126,7 @@ export const ViewStore: ViewStoreType = singletonStore(
       this._trigger();
       const promise = Promise.resolve(this._state());
       ViewActions.update.promise(promise);
+
       return promise;
     },
     load(view: View, isNew: ?boolean = false): Promise<ViewStoreState> {
@@ -140,6 +143,7 @@ export const ViewStore: ViewStoreType = singletonStore(
 
       const promise = Promise.resolve(this._state());
       ViewActions.load.promise(promise);
+
       return promise;
     },
     properties(newProperties: Properties) {
@@ -152,9 +156,11 @@ export const ViewStore: ViewStoreType = singletonStore(
         this.dirty = true;
         this.view = this.view.toBuilder().search(search).build();
         this._trigger();
+
         return this.view;
       });
       ViewActions.search.promise(promise);
+
       return promise;
     },
     selectQuery(queryId) {
@@ -162,6 +168,7 @@ export const ViewStore: ViewStoreType = singletonStore(
       this._trigger();
       const promise = Promise.resolve(this.view);
       ViewActions.selectQuery.promise(promise);
+
       return promise;
     },
     state(newState: ViewState) {
@@ -170,16 +177,20 @@ export const ViewStore: ViewStoreType = singletonStore(
       this.view = view;
       const promise = (isModified ? ViewActions.search(view.search) : Promise.resolve(view)).then(() => this._trigger());
       ViewActions.state.promise(promise);
+
       return promise;
     },
     _updateSearch(view: View): [View, boolean] {
       if (!view.search) {
         return [view, false];
       }
+
       const oldWidgets = get(this.view, 'state') && this.view.state.map((s) => s.widgets);
       const newWidgets = get(view, 'state') && view.state.map((s) => s.widgets);
+
       if (!isEqualForSearch(oldWidgets, newWidgets)) {
         const newView = UpdateSearchForWidgets(view);
+
         return [newView, true];
       }
 

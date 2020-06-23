@@ -14,6 +14,7 @@ const SimulatorStore = Reflux.createStore({
 
   simulate(stream, messageFields, inputId) {
     const url = URLUtils.qualifyUrl(ApiRoutes.SimulatorController.simulate().url);
+
     const simulation = {
       stream_id: stream.id,
       message: messageFields,

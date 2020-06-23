@@ -87,8 +87,10 @@ const SubstringExtractorConfiguration = createReactClass({
       promise.then((result) => {
         if (!result.successful) {
           UserNotification.warning('We were not able to run the substring extraction. Please check index boundaries.');
+
           return;
         }
+
         this.props.onExtractorPreviewLoad(<samp>{result.cut}</samp>);
       });
 
@@ -98,6 +100,7 @@ const SubstringExtractorConfiguration = createReactClass({
 
   _isTryButtonDisabled() {
     const { configuration } = this.state;
+
     return this.state.trying || configuration.begin_index === undefined || configuration.begin_index < 0 || configuration.end_index === undefined || configuration.end_index < 0 || !this.props.exampleMessage;
   },
 
@@ -108,6 +111,7 @@ const SubstringExtractorConfiguration = createReactClass({
         <strong>Example:</strong> <em>1,5</em> cuts <em>love</em> from the string <em>ilovelogs</em>.
       </span>
     );
+
     return (
       <div>
         <Input type="number"

@@ -38,6 +38,7 @@ class IndexSetConfigurationForm extends React.Component {
     this.setState((state) => {
       const config = lodash.cloneDeep(state.indexSet);
       config[fieldName] = value;
+
       return { indexSet: config };
     });
   };
@@ -53,6 +54,7 @@ class IndexSetConfigurationForm extends React.Component {
       }
     } else {
       const nextValidationErrors = { ...this.state.validationErrors };
+
       if (value.length === 0) {
         nextValidationErrors[event.target.name] = 'Invalid index prefix: cannot be empty';
       } else if (value.indexOf('_') === 0 || value.indexOf('-') === 0 || value.indexOf('+') === 0) {
@@ -62,6 +64,7 @@ class IndexSetConfigurationForm extends React.Component {
       } else {
         nextValidationErrors[event.target.name] = 'Invalid index prefix: must only contain letters, numbers, \'_\', \'-\' and \'+\'';
       }
+
       this.setState({ validationErrors: nextValidationErrors });
     }
 
@@ -80,8 +83,10 @@ class IndexSetConfigurationForm extends React.Component {
     event.preventDefault();
 
     const invalidFields = Object.keys(this.state.validationErrors);
+
     if (invalidFields.length !== 0) {
       document.getElementsByName(invalidFields[0])[0].focus();
+
       return;
     }
 
@@ -108,6 +113,7 @@ class IndexSetConfigurationForm extends React.Component {
     const { validationErrors } = this.state;
 
     let rotationConfig;
+
     if (this.props.rotationStrategies) {
       // The component expects a different structure - legacy
       const activeConfig = {
@@ -128,6 +134,7 @@ class IndexSetConfigurationForm extends React.Component {
     }
 
     let retentionConfig;
+
     if (this.props.retentionStrategies) {
       // The component expects a different structure - legacy
       const activeConfig = {
@@ -148,6 +155,7 @@ class IndexSetConfigurationForm extends React.Component {
     }
 
     let readOnlyconfig;
+
     if (this.props.create) {
       const indexPrefixHelp = (
         <span>

@@ -44,6 +44,7 @@ class CreateUsersPage extends React.Component {
     if (!roles) {
       return <Spinner />;
     }
+
     return (
       <DocumentTitle title="Create new user">
         <span>

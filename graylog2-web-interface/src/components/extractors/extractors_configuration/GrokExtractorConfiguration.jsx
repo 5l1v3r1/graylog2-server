@@ -54,6 +54,7 @@ class GrokExtractorConfiguration extends React.Component {
 
   _onChange = (key) => {
     const { onChange, onExtractorPreviewLoad, configuration } = this.props;
+
     return (event) => {
       onExtractorPreviewLoad(undefined);
       const newConfig = configuration;
@@ -78,11 +79,13 @@ class GrokExtractorConfiguration extends React.Component {
     promise.then((result) => {
       if (result.error_message != null) {
         UserNotification.error(`We were not able to run the grok extraction because of the following error: ${result.error_message}`);
+
         return;
       }
 
       if (!result.matched) {
         UserNotification.warning('We were not able to run the grok extraction. Please check your parameters.');
+
         return;
       }
 

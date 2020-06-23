@@ -82,6 +82,7 @@ class EventNotificationFormContainer extends React.Component {
     const { notification } = this.state;
 
     let promise;
+
     if (action === 'create') {
       promise = EventNotificationsActions.create(notification);
       promise.then(
@@ -94,6 +95,7 @@ class EventNotificationFormContainer extends React.Component {
         },
         (errorResponse) => {
           const { body } = errorResponse.additional;
+
           if (errorResponse.status === 400 && body && body.failed) {
             this.setState({ validation: body });
           }
@@ -111,6 +113,7 @@ class EventNotificationFormContainer extends React.Component {
         },
         (errorResponse) => {
           const { body } = errorResponse.additional;
+
           if (errorResponse.status === 400 && body && body.failed) {
             this.setState({ validation: body });
           }
@@ -132,11 +135,13 @@ class EventNotificationFormContainer extends React.Component {
         (response) => {
           testResult.error = false;
           testResult.message = 'Notification was executed successfully.';
+
           return response;
         },
         (errorResponse) => {
           testResult.error = true;
           const { body } = errorResponse.additional;
+
           if (errorResponse.status === 400 && body && body.failed) {
             testResult.message = 'Validation failed, please correct any errors in the form before continuing.';
             this.setState({ validation: body });

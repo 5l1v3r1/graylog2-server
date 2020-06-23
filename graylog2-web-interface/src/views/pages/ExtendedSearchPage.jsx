@@ -89,16 +89,20 @@ const _searchRefreshConditionChain = (searchRefreshHooks, state: SearchRefreshCo
   if (!searchRefreshHooks || searchRefreshHooks.length === 0) {
     return true;
   }
+
   return searchRefreshHooks.every((condition: SearchRefreshCondition) => condition(state));
 };
 
 const _refreshIfNotUndeclared = (searchRefreshHooks, executionState) => {
   const { view } = ViewStore.getInitialState();
+
   return SearchMetadataActions.parseSearch(view.search).then((searchMetadata) => {
     if (_searchRefreshConditionChain(searchRefreshHooks, { view, searchMetadata, executionState })) {
       FieldTypesActions.all();
+
       return SearchActions.execute(executionState);
     }
+
     return Promise.reject(searchMetadata);
   });
 };
@@ -133,6 +137,7 @@ const ExtendedSearchPage = ({ route, location = { query: {} }, router, searchRef
       storeListenersUnsubscribes = storeListenersUnsubscribes
         .push(SearchActions.refresh.listen(refreshIfNotUndeclared))
         .push(ViewActions.search.completed.listen(refreshIfNotUndeclared));
+
       return null;
     });
 

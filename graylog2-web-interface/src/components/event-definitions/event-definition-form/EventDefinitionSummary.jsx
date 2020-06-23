@@ -35,6 +35,7 @@ class EventDefinitionSummary extends React.Component {
 
   showValidation = () => {
     const { showValidation } = this.state;
+
     if (!showValidation) {
       this.setState({ showValidation: true });
     }
@@ -60,12 +61,14 @@ class EventDefinitionSummary extends React.Component {
     if (type === undefined) {
       return {};
     }
+
     return PluginStore.exports(name).find((edt) => edt.type === type) || {};
   };
 
   renderCondition = (config) => {
     const { currentUser } = this.props;
     const conditionPlugin = this.getPlugin('eventDefinitionTypes', config.type);
+
     const component = (conditionPlugin.summaryComponent
       ? React.createElement(conditionPlugin.summaryComponent, {
         config: config,
@@ -84,11 +87,14 @@ class EventDefinitionSummary extends React.Component {
 
   renderField = (fieldName, config, keys) => {
     const { currentUser } = this.props;
+
     if (!config.providers || config.providers.length === 0) {
       return <span key={fieldName}>No field value provider configured.</span>;
     }
+
     const provider = config.providers[0] || {};
     const fieldProviderPlugin = this.getPlugin('fieldValueProviders', provider.type);
+
     return (fieldProviderPlugin.summaryComponent
       ? React.createElement(fieldProviderPlugin.summaryComponent, {
         fieldName: fieldName,
@@ -115,6 +121,7 @@ class EventDefinitionSummary extends React.Component {
 
   renderFields = (fields, keys) => {
     const fieldNames = Object.keys(fields);
+
     return (
       <>
         <h3 className={commonStyles.title}>Fields</h3>

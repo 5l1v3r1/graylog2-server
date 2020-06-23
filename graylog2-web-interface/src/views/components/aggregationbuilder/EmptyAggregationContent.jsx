@@ -19,6 +19,7 @@ const EmptyAggregationContent = ({ toggleEdit, editing = false }: Props) => {
     }
   }, [onRenderComplete]);
   const interactive = useContext(InteractiveContext);
+
   const text = editing
     ? (
       <p>You are now editing the widget.<br />
@@ -27,6 +28,7 @@ const EmptyAggregationContent = ({ toggleEdit, editing = false }: Props) => {
       </p>
     )
     : (<p>Please {interactive ? <Button bsStyle="info" onClick={toggleEdit}>Edit</Button> : 'edit'} the widget to see results here.</p>);
+
   return (
     <Jumbotron>
       <h2>Empty Aggregation</h2>

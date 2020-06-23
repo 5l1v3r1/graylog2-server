@@ -18,6 +18,7 @@ jest.mock('views/logic/searchtypes/aggregation/PivotGenerator', () => jest.fn())
 
 describe('PivotSelect', () => {
   const initialFieldTypes = { all: simpleFields(), queryFields: simpleQueryFields('queryId') };
+
   type SimplePivotProps = {
     fieldTypes?: ?FieldTypes,
   };
@@ -32,14 +33,18 @@ describe('PivotSelect', () => {
 
   it('renders properly with minimal parameters', () => {
     const wrapper = mount(<SimplePivotSelect />);
+
     expect(wrapper).not.toBeEmptyRender();
   });
+
   it('renders properly with `undefined` fields', () => {
     suppressConsole(() => {
       const wrapper = mount(<PivotSelect onChange={() => {}} value={[]} />);
+
       expect(wrapper).not.toBeEmptyRender();
     });
   });
+
   describe('upon pivot list change, field types are passed for new pivot generation', () => {
     it('using Unknown if field is not found', () => {
       const wrapper = mount(<SimplePivotSelect fieldTypes={{ ...initialFieldTypes, all: Immutable.List() }} />);
@@ -49,9 +54,11 @@ describe('PivotSelect', () => {
 
       expect(PivotGenerator).toHaveBeenCalledWith('foo', FieldType.Unknown);
     });
+
     it('using field type found in fields list', () => {
       const fieldType = new FieldType('keyword', [], []);
       const fieldTypeMapping = new FieldTypeMapping('foo', fieldType);
+
       const fields = Immutable.List([
         fieldTypeMapping,
       ]);

@@ -79,10 +79,12 @@ const ConfigurationForm = createReactClass({
   _validateFormData(nextFormData, checkForRequiredFields) {
     CollectorConfigurationsActions.validate(nextFormData).then((validation) => {
       const nextValidation = lodash.clone(validation);
+
       if (checkForRequiredFields && !this._isTemplateSet(nextFormData.template)) {
         nextValidation.errors.template = ['Please fill out the configuration field.'];
         nextValidation.failed = true;
       }
+
       this.setState({ validation_errors: nextValidation.errors, error: nextValidation.failed });
     });
   },
@@ -94,6 +96,7 @@ const ConfigurationForm = createReactClass({
     if (this._hasErrors()) {
       // Ensure we display an error on the template field, as this is not validated by the browser
       this._validateFormData(formData, true);
+
       return;
     }
 
@@ -122,6 +125,7 @@ const ConfigurationForm = createReactClass({
     if (oldname === '' || oldname === newname) {
       return;
     }
+
     // replaceAll without having to use a Regex
     const updatedTemplate = formData.template.split(`\${user.${oldname}}`).join(`\${user.${newname}}`);
     this._onTemplateChange(updatedTemplate);
@@ -134,12 +138,14 @@ const ConfigurationForm = createReactClass({
 
   _getCollectorDefaultTemplate(collectorId) {
     const storedTemplate = this.defaultTemplates[collectorId];
+
     if (storedTemplate !== undefined) {
       return new Promise((resolve) => resolve(storedTemplate));
     }
 
     return CollectorsActions.getCollector(collectorId).then((collector) => {
       this.defaultTemplates[collectorId] = collector.default_template;
+
       return collector.default_template;
     });
   },
@@ -152,6 +158,7 @@ const ConfigurationForm = createReactClass({
 
     const nextFormData = lodash.cloneDeep(formData);
     nextFormData.collector_id = nextId;
+
     // eslint-disable-next-line no-alert
     if (!nextFormData.template || window.confirm('Do you want to use the default template for the selected Configuration?')) {
       // Wait for the promise to resolve and then update the whole formData state
@@ -168,6 +175,7 @@ const ConfigurationForm = createReactClass({
     const { formData } = this.state;
 
     const nextFormData = lodash.cloneDeep(formData);
+
     // eslint-disable-next-line no-alert
     if (!nextFormData.template || window.confirm('Do you want to overwrite your current work with this Configuration?')) {
       this._onTemplateChange(nextTemplate);
@@ -221,6 +229,7 @@ const ConfigurationForm = createReactClass({
     if (validationErrors[fieldName]) {
       return <span>{validationErrors[fieldName][0]}</span>;
     }
+
     return <span>{defaultText}</span>;
   },
 
@@ -230,6 +239,7 @@ const ConfigurationForm = createReactClass({
     if (validationErrors[fieldName]) {
       return 'error';
     }
+
     return null;
   },
 
@@ -238,6 +248,7 @@ const ConfigurationForm = createReactClass({
 
     if (isConfigurationInUse) {
       const collector = collectors ? collectors.find((c) => c.id === collectorId) : undefined;
+
       return (
         <span>
           <FormControl.Static>{this._formatCollector(collector)}</FormControl.Static>

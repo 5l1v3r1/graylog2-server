@@ -12,6 +12,7 @@ const mockActions = () => {
     load: jest.fn(() => Promise.resolve({ view: mockBaseView })).mockName('load'),
     update: jest.fn(() => Promise.resolve({ view: mockBaseView })).mockName('update'),
   };
+
   const ViewManagementActions = {
     update: jest.fn(() => Promise.resolve(mockBaseView)).mockName('update'),
   };
@@ -25,6 +26,7 @@ describe('OnSaveViewAction', () => {
   afterEach(() => {
     jest.resetModules();
   });
+
   it('saves a given view', () => {
     const { ViewManagementActions, ViewActions } = mockActions();
     const onSaveView = loadSUT();

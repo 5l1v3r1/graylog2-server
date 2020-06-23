@@ -36,11 +36,13 @@ describe('UpdateSearchForWidgets', () => {
   it('should generate a new search for the view', () => {
     const viewFixture = View.fromJSON(readFixture('./UpdateSearchForWidgets.View.fixture.json'));
     const searchFixture = Search.fromJSON(readFixture('./UpdateSearchForWidgets.Search.fixture.json'));
+
     const searchView = viewFixture.toBuilder()
       .search(searchFixture)
       .build();
 
     const newView = UpdateSearchForWidgets(searchView);
+
     expect(newView).toMatchSnapshot();
   });
 });

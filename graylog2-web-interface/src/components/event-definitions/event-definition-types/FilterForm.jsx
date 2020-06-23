@@ -27,6 +27,7 @@ export const TIME_UNITS = ['HOURS', 'MINUTES', 'SECONDS'];
 const LOOKUP_PERMISSIONS = [
   'lookuptables:read',
 ];
+
 const PREVIEW_PERMISSIONS = [
   'streams:read',
   'extendedsearch:create',
@@ -42,6 +43,7 @@ class FilterForm extends React.Component {
         .map((streamId) => streams.find((s) => s.id === streamId) || streamId)
         .map((streamOrId) => {
           const stream = (typeof streamOrId === 'object' ? streamOrId : { title: streamOrId, id: streamOrId });
+
           return {
             label: stream.title,
             value: stream.id,
@@ -54,6 +56,7 @@ class FilterForm extends React.Component {
 
   _parseQuery = lodash.debounce((queryString) => {
     const { currentUser } = this.props;
+
     if (!PermissionsMixin.isPermitted(currentUser.permissions, PREVIEW_PERMISSIONS)) {
       return;
     }
@@ -111,6 +114,7 @@ class FilterForm extends React.Component {
 
   componentDidMount() {
     const { currentUser } = this.props;
+
     if (!PermissionsMixin.isPermitted(currentUser.permissions, LOOKUP_PERMISSIONS)) {
       return;
     }
@@ -198,6 +202,7 @@ class FilterForm extends React.Component {
   renderQueryParameters = () => {
     const { eventDefinition, onChange, lookupTables, validation } = this.props;
     const { query_parameters: queryParameters } = eventDefinition.config;
+
     const parameterButtons = queryParameters.map((queryParam) => {
       return (
         <EditQueryParameterModal key={queryParam.name}
@@ -212,7 +217,9 @@ class FilterForm extends React.Component {
     if (lodash.isEmpty(parameterButtons)) {
       return null;
     }
+
     const hasEmbryonicParameters = !lodash.isEmpty(queryParameters.filter((param) => (param.embryonic)));
+
     return (
       <FormGroup validationState={validation.errors.query_parameters ? 'error' : null}>
         <ControlLabel>Query Parameters</ControlLabel>

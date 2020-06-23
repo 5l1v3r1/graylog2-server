@@ -44,9 +44,11 @@ class ConfigurationsPage extends React.Component {
     ConfigurationsActions.listMessageProcessorsConfig(MESSAGE_PROCESSORS_CONFIG);
     ConfigurationsActions.list(SIDECAR_CONFIG);
     ConfigurationsActions.list(EVENTS_CONFIG);
+
     if (isPermitted(permissions, ['urlwhitelist:read'])) {
       ConfigurationsActions.listWhiteListConfig(URL_WHITELIST_CONFIG);
     }
+
     PluginStore.exports('systemConfigurations').forEach((systemConfig) => {
       ConfigurationsActions.list(systemConfig.configType);
     });
@@ -59,9 +61,11 @@ class ConfigurationsPage extends React.Component {
 
   _getConfig = (configType) => {
     const { configuration } = this.props;
+
     if (configuration && configuration[configType]) {
       return configuration[configType];
     }
+
     return null;
   };
 
@@ -117,6 +121,7 @@ class ConfigurationsPage extends React.Component {
     this.checkLoadedTimer = setTimeout(() => {
       if (Object.keys(configuration).length > 0) {
         this.setState({ loaded: true }, this._clearTimeout);
+
         return;
       }
 
@@ -133,6 +138,7 @@ class ConfigurationsPage extends React.Component {
   render() {
     const { loaded } = this.state;
     const { currentUser: { permissions } } = this.props;
+
     let Output = (
       <Col md={12}>
         <Spinner text="Loading Configuration Panel..." />

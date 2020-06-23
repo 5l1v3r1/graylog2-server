@@ -6,7 +6,6 @@ import { PluginStore } from 'graylog-web-plugin/plugin';
 import type { PluginMetadata } from 'views/logic/views/View';
 import View from 'views/logic/views/View';
 
-
 import RequirementsProvided from './RequirementsProvided';
 
 import Search from '../logic/search/Search';
@@ -27,6 +26,7 @@ describe('RequirementsProvided', () => {
     name: 'Pandora\'s Box',
     url: 'https://www.graylog.org',
   };
+
   it('returns resolved promise for empty requirements', () => {
     PluginStore.exports.mockReturnValue([]);
 
@@ -34,6 +34,7 @@ describe('RequirementsProvided', () => {
 
     return RequirementsProvided({ view, query: {}, retry });
   });
+
   it('returns resolved promise if all requirements are provided', () => {
     PluginStore.exports.mockReturnValue(['parameters', 'timetravel', 'hyperspeed']);
 
@@ -48,6 +49,7 @@ describe('RequirementsProvided', () => {
 
     return RequirementsProvided({ view, query: {}, retry });
   });
+
   it('throws Component if not all requirements are provided', (done) => {
     PluginStore.exports.mockReturnValue(['parameters']);
 
@@ -70,7 +72,9 @@ describe('RequirementsProvided', () => {
     RequirementsProvided({ view, query: {}, retry })
       .catch((Component) => {
         const wrapper = mount(<Component />);
+
         expect(wrapper).toMatchSnapshot();
+
         done();
       });
   });

@@ -33,6 +33,7 @@ const CreateInputControl = createReactClass({
     let options = [];
 
     const { inputTypes } = this.state;
+
     if (inputTypes) {
       const inputTypesIds = Object.keys(inputTypes);
       options = inputTypesIds.map((id) => {

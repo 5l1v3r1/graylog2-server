@@ -20,6 +20,7 @@ const MessagesStore = Reflux.createStore({
 
   loadMessage(index, messageId) {
     const { url } = ApiRoutes.MessagesController.single(index.trim(), messageId.trim());
+
     const promise = fetch('GET', URLUtils.qualifyUrl(url))
       .then(
         (response) => MessageFormatter.formatResultMessage(response),
@@ -34,6 +35,7 @@ const MessagesStore = Reflux.createStore({
 
   fieldTerms(index, string) {
     const { url } = ApiRoutes.MessagesController.analyze(index, encodeURIComponent(StringUtils.stringify(string)));
+
     const promise = fetch('GET', URLUtils.qualifyUrl(url))
       .then(
         (response) => response.tokens,
@@ -48,6 +50,7 @@ const MessagesStore = Reflux.createStore({
 
   loadRawMessage(message, remoteAddress, codec, codecConfiguration) {
     const { url } = ApiRoutes.MessagesController.parse();
+
     const payload = {
       message: message,
       remote_address: remoteAddress,
@@ -62,8 +65,10 @@ const MessagesStore = Reflux.createStore({
           if (error.additional && error.additional.status === 400) {
             UserNotification.error('Please ensure the selected codec and its configuration are right. '
               + 'Check your server logs for more information.', 'Could not load raw message');
+
             return;
           }
+
           UserNotification.error(`Loading raw message failed with status: ${error}`,
             'Could not load raw message');
         },

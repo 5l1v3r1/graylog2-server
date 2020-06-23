@@ -90,6 +90,7 @@ class LegacyNotificationForm extends React.Component {
     const typeData = legacyTypes[callbackType];
 
     let content;
+
     if (typeData) {
       content = this.renderNotificationForm(config, typeData);
     } else if (callbackType) {

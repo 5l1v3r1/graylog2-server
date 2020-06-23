@@ -42,21 +42,28 @@ describe('AggregationBuilder', () => {
 
     expect(wrapper.find(EmptyResultWidget)).toHaveLength(0);
     expect(wrapper.find(EmptyAggregationContent)).toHaveLength(0);
+
     const dummyVisualization = wrapper.find(mockDummyVisualization);
+
     expect(dummyVisualization).toHaveLength(1);
     expect(dummyVisualization).toHaveProp('data', { chart: [{ value: 3.1415926 }] });
   });
+
   it('passes through onVisualizationConfigChange to visualization', () => {
     const onVisualizationConfigChange = jest.fn();
+
     const wrapper = mount(<AggregationBuilder config={AggregationWidgetConfig.builder().rowPivots([rowPivot]).visualization('dummy').build()}
                                               fields={{}}
                                               onVisualizationConfigChange={onVisualizationConfigChange}
                                               data={{ total: 42, rows: [{ value: 3.1415926 }] }} />);
 
     expect(wrapper.find(EmptyAggregationContent)).toHaveLength(0);
+
     const dummyVisualization = wrapper.find(mockDummyVisualization);
+
     expect(dummyVisualization).toHaveProp('onChange', onVisualizationConfigChange);
   });
+
   it('renders EmptyAggregationContent if the AggregationWidgetConfig is empty', () => {
     const wrapper = mount(<AggregationBuilder config={AggregationWidgetConfig.builder().visualization('dummy').build()}
                                               fields={{}}
@@ -65,6 +72,7 @@ describe('AggregationBuilder', () => {
     expect(wrapper.find(EmptyAggregationContent)).toHaveLength(1);
     expect(wrapper.find(EmptyAggregationContent)).toHaveProp('editing', false);
   });
+
   it('falls back to retrieving effective timerange from first result if no `chart` result present', () => {
     const data = {
       '524d182c-8e32-4372-b30d-a40d99efe55d': {
@@ -73,10 +81,12 @@ describe('AggregationBuilder', () => {
         effective_timerange: 42,
       },
     };
+
     const wrapper = mount(<AggregationBuilder config={AggregationWidgetConfig.builder().rowPivots([rowPivot]).visualization('dummy').build()}
                                               fields={{}}
                                               data={data} />);
     const dummyVisualization = wrapper.find(mockDummyVisualization);
+
     expect(dummyVisualization).toHaveProp('effectiveTimerange', 42);
   });
 });

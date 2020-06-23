@@ -9,9 +9,11 @@ import ErrorPage from 'components/errors/ErrorPage';
 
 const createErrorMessageString = (errorDetails: ?string, pageDetails: string, errorMessage: string) => {
   const defaultText = `${pageDetails}\n${errorMessage}`;
+
   if (errorDetails) {
     return `${errorDetails}\n${defaultText}`;
   }
+
   return defaultText;
 };
 
@@ -28,6 +30,7 @@ type Props = {
 const UnauthorizedErrorPage = ({ error, errorDetails, title, description, location: { pathname } }: Props) => {
   const errorMessage = error?.message || JSON.stringify(error);
   const pageDetails = `The permissions check for the following request failed,\nwhile trying to access ${pathname}.`;
+
   const defaultDescription = (
     <>
       <p>You do not have the required permissions to view this resource.</p>
@@ -35,6 +38,7 @@ const UnauthorizedErrorPage = ({ error, errorDetails, title, description, locati
     </>
   );
   const errorMessageString = createErrorMessageString(errorDetails, pageDetails, errorMessage);
+
   return (
     <ErrorPage title={title} description={description ?? defaultDescription}>
       <dl>

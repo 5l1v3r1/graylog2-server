@@ -21,11 +21,13 @@ class EditRole extends React.Component {
     if (prevState.role) {
       return {};
     }
+
     const role = {
       name: null,
       description: null,
       permissions: [],
     };
+
     return { role: role };
   }
 
@@ -72,6 +74,7 @@ class EditRole extends React.Component {
     const { streams, dashboards, cancelEdit } = this.props;
 
     let titleText;
+
     if (initialName === null) {
       titleText = 'Create a new role';
     } else {
@@ -80,6 +83,7 @@ class EditRole extends React.Component {
 
     const saveDisabled = this._saveDisabled();
     let saveDisabledAlert = null;
+
     if (saveDisabled) {
       saveDisabledAlert = (
         <Alert bsStyle="warning" style={{ marginBottom: 10 }}>

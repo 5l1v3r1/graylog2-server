@@ -31,6 +31,7 @@ class SimulatorPage extends React.Component {
 
   _isLoading = () => {
     const { streams } = this.state;
+
     return !streams;
   };
 

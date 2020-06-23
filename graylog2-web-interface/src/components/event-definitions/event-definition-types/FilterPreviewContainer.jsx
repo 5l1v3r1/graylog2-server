@@ -28,6 +28,7 @@ class FilterPreviewContainer extends React.Component {
 
   fetchSearch = lodash.debounce((config) => {
     const { currentUser } = this.props;
+
     if (!PermissionsMixin.isPermitted(currentUser.permissions, PREVIEW_PERMISSIONS)) {
       return;
     }

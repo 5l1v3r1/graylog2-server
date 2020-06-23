@@ -54,6 +54,7 @@ class EditExtractorConverters extends React.Component {
 
     if (converter) {
       const newDisabledConverters = disabledConverters;
+
       if ('converterType' in newDisabledConverters) {
         delete newDisabledConverters[converterType];
         this.setState({ disabledConverters: newDisabledConverters });
@@ -87,14 +88,17 @@ class EditExtractorConverters extends React.Component {
   _getConverterByType = (converterType) => {
     const { converters } = this.props;
     const currentConverter = converters.filter((converter) => converter.type === converterType)[0];
+
     return (currentConverter ? currentConverter.config : {});
   };
 
   _getConvertersConfiguration = () => {
     const { displayedConverters, disabledConverters } = this.state;
+
     const controls = displayedConverters.map((converterType) => {
       // Get converter configuration from disabledConverters if it was disabled
       let converterConfig = this._getConverterByType(converterType);
+
       if (Object.keys(converterConfig).length === 0 && ('converterType' in disabledConverters)) {
         converterConfig = disabledConverters[converterType];
       }
@@ -194,6 +198,7 @@ class EditExtractorConverters extends React.Component {
         default:
           // eslint-disable-next-line no-console
           console.warn(`Converter type ${converterType} is not supported.`);
+
           return <></>;
       }
     });
@@ -204,6 +209,7 @@ class EditExtractorConverters extends React.Component {
   render() {
     const { extractorType } = this.props;
     const { selectedConverter } = this.state;
+
     if (extractorType === ExtractorUtils.ExtractorTypes.GROK
       || extractorType === ExtractorUtils.ExtractorTypes.JSON) {
       return (

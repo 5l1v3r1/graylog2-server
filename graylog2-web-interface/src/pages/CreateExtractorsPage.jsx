@@ -53,6 +53,7 @@ const CreateExtractorsPage = createReactClass({
 
   _isLoading() {
     const { exampleMessage, input } = this.state;
+
     return !(input && exampleMessage);
   },
 
@@ -60,6 +61,7 @@ const CreateExtractorsPage = createReactClass({
     let url;
     const { params } = this.props;
     const { input } = this.state;
+
     if (input.global) {
       url = Routes.global_input_extractors(params.inputId);
     } else {

@@ -24,6 +24,7 @@ const NotificationsStore = Reflux.createStore({
   },
   list() {
     const url = URLUtils.qualifyUrl(ApiRoutes.NotificationsApiController.list().url);
+
     const promise = this.promises.list || fetchPeriodically('GET', url)
       .finally(() => delete this.promises.list);
 

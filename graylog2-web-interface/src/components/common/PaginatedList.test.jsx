@@ -11,6 +11,7 @@ describe('PaginatedList', () => {
 
   it('should display Pagination', () => {
     const { getByText } = render(<PaginatedList totalItems={100} onChange={() => {}}>The list</PaginatedList>);
+
     expect(getByText('The list')).not.toBeNull();
     expect(getByText('1')).not.toBeNull();
   });
@@ -21,6 +22,7 @@ describe('PaginatedList', () => {
         <PaginatedList totalItems={100} onChange={() => {}}>The list</PaginatedList>,
       </InteractiveContext.Provider>,
     );
+
     expect(queryByText('The list')).toBeNull();
     expect(queryByText('1')).toBeNull();
   });

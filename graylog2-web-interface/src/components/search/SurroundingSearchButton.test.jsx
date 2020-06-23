@@ -17,6 +17,7 @@ const getOption = (optionText, getByText) => {
 
 describe('SurroundingSearchButton', () => {
   afterEach(cleanup);
+
   const searchConfig: SearchesConfig = {
     analysis_disabled_fields: [],
     query_time_range_limit: 'PT0S',
@@ -30,6 +31,7 @@ describe('SurroundingSearchButton', () => {
       PT1M: 'Only a minute',
     },
   };
+
   const TestComponent = (props) => (
     <SurroundingSearchButton searchConfig={searchConfig}
                              timestamp="2020-02-28T09:45:31.123Z"
@@ -39,8 +41,10 @@ describe('SurroundingSearchButton', () => {
   );
 
   const renderButton = (props = {}) => render(<TestComponent {...props} />);
+
   it('renders a button with a "Show surrounding messages" caption', () => {
     const { getByText } = renderButton();
+
     expect(getByText('Show surrounding messages')).toBeTruthy();
   });
 
@@ -103,8 +107,10 @@ describe('SurroundingSearchButton', () => {
 
     expect(option.href).toContain('highlightMessage=foo-bar');
   });
+
   it('includes current set of streams in generated urls', () => {
     const streams = ['000000000000000000000001', '5c2e07eeba33a9681ad6070a', '5d2d9649e117dc4df84cf83c'];
+
     const { getByText } = render((
       <DrilldownContext.Consumer>
         {(drilldown) => (

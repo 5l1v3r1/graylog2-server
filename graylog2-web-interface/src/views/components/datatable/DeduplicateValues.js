@@ -1,5 +1,6 @@
 export default (rows, rowFieldNames) => {
   const duplicateKeys = {};
+
   return rows.map((item) => {
     const reducedItem = { ...item };
     const entries = Object.entries(reducedItem);
@@ -7,6 +8,7 @@ export default (rows, rowFieldNames) => {
       if (!rowFieldNames.includes(key)) {
         return;
       }
+
       if (duplicateKeys[key] === value) {
         delete reducedItem[key];
       } else {
@@ -15,6 +17,7 @@ export default (rows, rowFieldNames) => {
         duplicateKeys[key] = value;
       }
     });
+
     return reducedItem;
   });
 };

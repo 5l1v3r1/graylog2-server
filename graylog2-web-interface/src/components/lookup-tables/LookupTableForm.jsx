@@ -51,6 +51,7 @@ class LookupTableForm extends React.Component {
       // props haven't change, don't update our state from them
       return;
     }
+
     this.setState(this._initialState(nextProps.table));
   }
 
@@ -71,8 +72,10 @@ class LookupTableForm extends React.Component {
     if (!table.cache_id || !table.data_adapter_id) {
       return;
     }
+
     // first cancel outstanding validation timer, we have new data
     this._clearTimer();
+
     if (this.props.validate) {
       this.validationCheckTimer = setTimeout(() => this.props.validate(table), 500);
     }
@@ -119,6 +122,7 @@ class LookupTableForm extends React.Component {
     }
 
     let promise;
+
     if (this.props.create) {
       promise = LookupTablesActions.create(this.state.table);
     } else {
@@ -184,6 +188,7 @@ class LookupTableForm extends React.Component {
     if (this.props.validationErrors[fieldName]) {
       return 'error';
     }
+
     return null;
   };
 
@@ -197,6 +202,7 @@ class LookupTableForm extends React.Component {
         </div>
       );
     }
+
     return <span>{defaultText}</span>;
   };
 

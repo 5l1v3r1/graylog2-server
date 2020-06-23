@@ -28,9 +28,11 @@ const LoggersStore = Reflux.createStore({
   },
   loggers() {
     const url = URLUtils.qualifyUrl(ApiRoutes.ClusterLoggersResource.loggers().url);
+
     const promise = fetch('GET', url).then((response) => {
       this.state.loggers = response;
       this.trigger(this.state);
+
       return response;
     });
 
@@ -38,9 +40,11 @@ const LoggersStore = Reflux.createStore({
   },
   subsystems() {
     const url = URLUtils.qualifyUrl(ApiRoutes.ClusterLoggersResource.subsystems().url);
+
     const promise = fetch('GET', url).then((response) => {
       this.state.subsystems = response;
       this.trigger(this.state);
+
       return response;
     });
 

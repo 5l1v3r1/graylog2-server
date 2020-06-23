@@ -80,8 +80,10 @@ class QueryTabs extends React.Component<Props> {
       titles,
     } = this.props;
     const queryTitles = titles;
+
     const queryTabs = queries.map((id, index) => {
       const title = queryTitles.get(id, `Page#${index + 1}`);
+
       const tabTitle = (
         <QueryTitle active={id === selectedQueryId}
                     id={id}
@@ -89,6 +91,7 @@ class QueryTabs extends React.Component<Props> {
                     openEditModal={this.openTitleEditModal}
                     title={title} />
       );
+
       return (
         <Tab eventKey={id}
              key={id}

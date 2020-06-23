@@ -73,6 +73,7 @@ const AlertsStore = Reflux.createStore({
     promise.then(
       (response) => {
         this.trigger({ alert: response });
+
         return response;
       },
       (error) => {

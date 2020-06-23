@@ -28,6 +28,7 @@ describe('<ContentPackVersions />', () => {
 
   it('should render with content pack versions', () => {
     const wrapper = mount(<ContentPackVersions contentPackRevisions={contentPackRevision} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -37,6 +38,7 @@ describe('<ContentPackVersions />', () => {
     });
     const wrapper = mount(<ContentPackVersions onChange={changeFn} contentPackRevisions={contentPackRevision} />);
     wrapper.find('input[value=1]').simulate('change', { target: { checked: true, value: '1' } });
+
     expect(changeFn.mock.calls.length).toBe(1);
   });
 
@@ -47,6 +49,7 @@ describe('<ContentPackVersions />', () => {
     });
     const wrapper = mount(<ContentPackVersions onDeletePack={deleteFn} contentPackRevisions={contentPackRevision} />);
     wrapper.find('a[children="Delete"]').at(0).simulate('click');
+
     expect(deleteFn.mock.calls.length).toBe(1);
   });
 });

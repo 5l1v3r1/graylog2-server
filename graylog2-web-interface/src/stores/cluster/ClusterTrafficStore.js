@@ -14,6 +14,7 @@ const ClusterTrafficStore = Reflux.createStore({
     promise.then((response) => {
       this.trigger(response);
     });
+
     return promise;
   },
 

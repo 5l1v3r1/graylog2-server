@@ -31,6 +31,7 @@ export default class SearchBarAutoCompletions implements AutoCompleter {
           // eslint-disable-next-line no-console
           console.warn('Exception thrown in completer: ', e);
         }
+
         return [];
       })
       .reduce((acc, cur) => [...acc, ...cur], []);

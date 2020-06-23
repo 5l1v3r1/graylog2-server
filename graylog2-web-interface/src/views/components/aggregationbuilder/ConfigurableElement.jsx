@@ -5,7 +5,6 @@ import { Position } from 'react-overlays';
 
 import { Popover } from 'components/graylog';
 
-
 import styles from './ConfigurableElement.css';
 
 import CustomPropTypes from '../CustomPropTypes';
@@ -41,6 +40,7 @@ export default class ConfigurableElement extends React.Component {
   render() {
     const ConfigurationElement = this.props.configuration;
     const { title } = this.props;
+
     const popover = this.state.isOpen && (
       <Portal>
         <Position container={document.body}
@@ -52,6 +52,7 @@ export default class ConfigurableElement extends React.Component {
         </Position>
       </Portal>
     );
+
     return (
       <span onMouseDown={this._stopEvent} onKeyDown={this._stopEvent}>
         <span ref={(elem) => { this.target = elem; }} onClick={this._onClick} className={styles.labelAsLink}>

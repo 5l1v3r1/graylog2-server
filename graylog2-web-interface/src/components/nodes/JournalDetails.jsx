@@ -116,6 +116,7 @@ const JournalDetails = createReactClass({
 
     const oldestSegment = moment(metrics.oldestSegment);
     let overcommittedWarning;
+
     if (metrics.utilizationRatio >= 1) {
       overcommittedWarning = (
         <span>

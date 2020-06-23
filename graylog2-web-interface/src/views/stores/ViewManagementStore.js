@@ -83,23 +83,27 @@ const ViewManagementStore = singletonStore(
     get(viewId: string): Promise<ViewJson> {
       const promise = fetch('GET', `${viewsUrl}/${viewId}`);
       ViewManagementActions.get.promise(promise);
+
       return promise;
     },
 
     create(view: View): Promise<View> {
       const promise = fetch('POST', viewsUrl, JSON.stringify(view));
       ViewManagementActions.create.promise(promise);
+
       return promise;
     },
 
     createCompleted(): Promise<void> {
       const CurrentUserStore = StoreProvider.getStore('CurrentUser');
+
       return CurrentUserStore.reload();
     },
 
     update(view: View): Promise<View> {
       const promise = fetch('PUT', viewsIdUrl(view.id), JSON.stringify(view));
       ViewManagementActions.update.promise(promise);
+
       return promise;
     },
 

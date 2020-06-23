@@ -40,6 +40,7 @@ const ConfigurationListContainer = createReactClass({
     CollectorConfigurationsActions.copyConfiguration(configuration, name)
       .then((response) => {
         callback();
+
         return response;
       });
   },

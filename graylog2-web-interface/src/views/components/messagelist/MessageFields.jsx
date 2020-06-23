@@ -32,10 +32,12 @@ const MessageDetailsDL: StyledComponent<{}, ThemeInterface, HTMLDListElement> = 
 
 const MessageFields = ({ message, fields }: Props) => {
   const formattedFields = message.formatted_fields;
+
   const renderedFields = Object.keys(formattedFields)
     .sort()
     .map((key) => {
       const { type } = fields.find((t) => t.name === key, undefined, FieldTypeMapping.create(key, FieldType.Unknown));
+
       return (
         <CustomHighlighting key={key}
                             field={key}

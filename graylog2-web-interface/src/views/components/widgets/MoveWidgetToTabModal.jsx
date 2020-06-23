@@ -22,6 +22,7 @@ type TabEntry = { id: string, name: string };
 const _tabList = (view: View, queryIds): Array<TabEntry> => {
   return queryIds.map((queryId) => {
     const tabTitle = QueryTitle(view, queryId) || 'Unknown Page title';
+
     return ({ id: queryId, name: tabTitle });
   });
 };
@@ -43,6 +44,7 @@ const MoveWidgetToTabModal = ({ view, onCancel, onSubmit, widgetId }: Props) => 
       {name}
     </ListGroupItem>
   ));
+
   const renderResult = list && list.length > 0
     ? <ListGroup>{tabList}</ListGroup>
     : <span>No pages found</span>;

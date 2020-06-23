@@ -68,6 +68,7 @@ const GraylogClusterOverview = createReactClass({
     const { nodes } = this.state;
 
     let content = <Spinner />;
+
     if (nodes) {
       content = (
         <dl className="system-dl" style={{ marginBottom: 0 }}>
@@ -87,6 +88,7 @@ const GraylogClusterOverview = createReactClass({
 
     let sumOutput = null;
     let trafficGraph = <Spinner />;
+
     if (traffic) {
       const bytesOut = _.reduce(traffic.output, (result, value) => result + value);
       sumOutput = <small>Last 30 days: {NumberUtils.formatBytes(bytesOut)}</small>;

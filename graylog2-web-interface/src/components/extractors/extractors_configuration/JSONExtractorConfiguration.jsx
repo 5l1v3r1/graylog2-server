@@ -62,12 +62,14 @@ const JSONExtractorConfiguration = createReactClass({
     this.setState({ trying: true });
 
     const { configuration } = this.state;
+
     const promise = ToolsStore.testJSON(configuration.flatten, configuration.list_separator,
       configuration.key_separator, configuration.kv_separator, configuration.replace_key_whitespace,
       configuration.key_whitespace_replacement, configuration.key_prefix, this.props.exampleMessage);
 
     promise.then((result) => {
       const matches = [];
+
       for (const match in result.matches) {
         if (result.matches.hasOwnProperty(match)) {
           matches.push(<dt key={`${match}-name`}>{match}</dt>);

@@ -38,7 +38,9 @@ class LUTTableEntry extends React.Component {
     if (total < 1) {
       return 'n/a';
     }
+
     const hitRate = (totalHits * 100.0) / total;
+
     return `${NumberUtils.formatNumber(hitRate)}%`;
   };
 
@@ -62,6 +64,7 @@ class LUTTableEntry extends React.Component {
       hits: `org.graylog2.lookup.caches.${cache.id}.hits`,
       misses: `org.graylog2.lookup.caches.${cache.id}.misses`,
     };
+
     const entriesMap = {
       count: `org.graylog2.lookup.caches.${cache.id}.entries`,
     };

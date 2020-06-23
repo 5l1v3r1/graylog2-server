@@ -87,6 +87,7 @@ class Wizard extends React.Component {
     if (activeStep === undefined || activeStep === null) {
       return;
     }
+
     if (!this._isValidActiveStep(activeStep, steps)) {
       // eslint-disable-next-line no-console
       console.warn(`activeStep ${activeStep} is not a key in any element of the 'steps' prop!`);
@@ -97,18 +98,21 @@ class Wizard extends React.Component {
     if (activeStep === undefined || activeStep === null) {
       return false;
     }
+
     return lodash.find(steps, { key: activeStep });
   };
 
   _getSelectedStep = () => {
     const { activeStep, steps } = this.props;
     const { selectedStep } = this.state;
+
     return (this._isValidActiveStep(activeStep, steps) ? activeStep : selectedStep);
   };
 
   _wizardChanged = (eventKey) => {
     const { activeStep, onStepChange } = this.props;
     onStepChange(eventKey);
+
     // If activeStep is given, component should behave in a controlled way and let consumer decide which step to render.
     if (!activeStep) {
       this.setState({ selectedStep: eventKey });
@@ -123,6 +127,7 @@ class Wizard extends React.Component {
     const currentPosition = steps.findIndex((step) => step.key === this._getSelectedStep());
     const otherPosition = direction === 'next' ? (currentPosition + 1) : (currentPosition - 1);
     const otherStep = (steps[otherPosition] || {});
+
     return steps[disabledPosition].key === selectedStep || otherStep.disabled;
   };
 
@@ -139,12 +144,14 @@ class Wizard extends React.Component {
   _getSelectedIndex = () => {
     const { steps } = this.props;
     const selectedStep = this._getSelectedStep();
+
     return steps.map((step) => step.key).indexOf(selectedStep);
   };
 
   _renderVerticalStepNav = () => {
     const { justified, NavigationComponent, steps, hidePreviousNextButtons } = this.props;
     const selectedStep = this._getSelectedStep();
+
     return (
       <SubnavigationCol md={2}>
         <NavigationComponent stacked
@@ -186,6 +193,7 @@ class Wizard extends React.Component {
   _renderHorizontalStepNav = () => {
     const selectedStep = this._getSelectedStep();
     const { justified, NavigationComponent, steps, hidePreviousNextButtons } = this.props;
+
     return (
       <HorizontalCol sm={12}>
         {!hidePreviousNextButtons && (
@@ -230,6 +238,7 @@ class Wizard extends React.Component {
     }
 
     const rightComponentCols = horizontal ? 5 : 3; // If horizontal, use more space for this component
+
     return (
       <Row className={containerClassName}>
         {horizontal ? this._renderHorizontalStepNav() : this._renderVerticalStepNav()}

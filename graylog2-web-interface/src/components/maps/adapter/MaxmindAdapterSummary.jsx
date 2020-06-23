@@ -10,11 +10,13 @@ class MaxmindAdapterSummary extends React.Component {
 
   render() {
     const { config } = this.props.dataAdapter;
+
     const databaseTypes = {
       MAXMIND_ASN: 'ASN database',
       MAXMIND_CITY: 'City database',
       MAXMIND_COUNTRY: 'Country database',
     };
+
     return (
       <dl>
         <dt>Database file path</dt>

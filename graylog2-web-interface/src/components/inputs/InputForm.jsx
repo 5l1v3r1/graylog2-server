@@ -37,8 +37,10 @@ class InputForm extends React.Component {
   render() {
     const values = this.props.values ? this.props.values
       : (this.configurationForm ? this.configurationForm.getValue().configuration : {});
+
     const titleValue = this.props.titleValue ? this.props.titleValue
       : (this.configurationForm ? this.configurationForm.getValue().titleValue : '');
+
     return (
       <ConfigurationForm {...this.props}
                          ref={(configurationForm) => { this.configurationForm = configurationForm; }}

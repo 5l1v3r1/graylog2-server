@@ -14,6 +14,7 @@ describe('MessageTableEntry', () => {
         message: 'Something happened!',
       },
     };
+
     const wrapper = mount((
       <table>
         <MessageTableEntry expandAllRenderAsync
@@ -24,6 +25,7 @@ describe('MessageTableEntry', () => {
                            expanded={false} />
       </table>
     ));
+
     expect(wrapper).toIncludeText('Something happened!');
   });
 });

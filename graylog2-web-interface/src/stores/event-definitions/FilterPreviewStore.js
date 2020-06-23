@@ -56,6 +56,7 @@ const FilterPreviewStore = Reflux.createStore({
       this.searchJob = Search.fromJSON(response);
       this.result = undefined;
       this.propagateChanges();
+
       return response;
     });
 
@@ -67,6 +68,7 @@ const FilterPreviewStore = Reflux.createStore({
       if (job && job.execution.done) {
         return resolve(new SearchResult(job));
       }
+
       return resolve(Bluebird.delay(250)
         .then(() => this.jobStatus(job.id))
         .then((jobStatus) => this.trackJobStatus(jobStatus, search)));
@@ -93,6 +95,7 @@ const FilterPreviewStore = Reflux.createStore({
     if (this.executePromise) {
       this.executePromise.cancel();
     }
+
     if (this.searchJob) {
       this.executePromise = this.trackJob(this.searchJob, executionState)
         .then(
@@ -100,14 +103,17 @@ const FilterPreviewStore = Reflux.createStore({
             this.result = result;
             this.executePromise = undefined;
             this.propagateChanges();
+
             return result;
           },
           () => UserNotification.error('Could not execute search, wat'),
         );
 
       FilterPreviewActions.execute.promise(this.executePromise);
+
       return this.executePromise;
     }
+
     throw new Error('Unable to execute search if no search was created before!');
   },
 

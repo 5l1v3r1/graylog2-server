@@ -100,6 +100,7 @@ class TableList extends React.Component {
 
   _recalculateSelection = (selected, nextFilteredItems) => {
     const nextFilteredIds = Immutable.Set(nextFilteredItems.map((item) => item[this.props.idKey]));
+
     return selected.intersect(nextFilteredIds);
   };
 
@@ -110,9 +111,11 @@ class TableList extends React.Component {
 
   _setSelectAllCheckboxState = (selectAllInput, filteredItems, selected) => {
     const selectAllCheckbox = selectAllInput ? selectAllInput.getInputDOMNode() : undefined;
+
     if (!selectAllCheckbox) {
       return;
     }
+
     // Set the select all checkbox as indeterminate if some but not items are selected.
     selectAllCheckbox.indeterminate = selected.count() > 0 && !this._isAllSelected(filteredItems, selected);
   };
@@ -197,6 +200,7 @@ class TableList extends React.Component {
 
   render() {
     let filter;
+
     if (this.props.enableFilter) {
       filter = (
         <Row>

@@ -45,8 +45,10 @@ class ContentPackEdit extends React.Component {
   _disableParameters() {
     const content = this.props.contentPack;
     const { selectedEntities } = this.props;
+
     const selection = Object.keys(selectedEntities)
       .reduce((acc, key) => { return acc + selectedEntities[key].length; }, 0) > 0;
+
     return !(content.name && content.summary && content.vendor && selection);
   }
 
@@ -63,13 +65,16 @@ class ContentPackEdit extends React.Component {
 
       Object.keys(configPaths).forEach((path) => {
         const index = parameters.findIndex((paramMap) => { return paramMap.configKey === path; });
+
         if (index >= 0) {
           configPaths[path].setParameter(parameters[index].paramName);
         }
       });
       newEntityBuilder.data(entityData.getData()).parameters(this.props.contentPack.parameters);
+
       return newEntityBuilder.build();
     });
+
     const newContentPack = this.props.contentPack.toBuilder()
       .entities(newEntities)
       .build();
@@ -84,19 +89,24 @@ class ContentPackEdit extends React.Component {
           .entities(this.props.fetchedEntities || [])
           .build();
         this.props.onStateChange({ contentPack: newContentPack });
+
         if (Object.keys(this.props.selectedEntities).length > 0) {
           this.props.onGetEntities(this.props.selectedEntities);
         }
+
         break;
       }
+
       case 'preview': {
         this._prepareForPreview();
         break;
       }
+
       default: {
         break;
       }
     }
+
     this.setState({ selectedStep: selectedStep });
   };
 
@@ -112,15 +122,18 @@ class ContentPackEdit extends React.Component {
                             onStateChange={this.props.onStateChange}
                             entities={this.props.entityIndex} />
     );
+
     const parameterComponent = (
       <ContentPackParameters contentPack={this.props.contentPack}
                              onStateChange={this.props.onStateChange}
                              appliedParameter={this.props.appliedParameter} />
     );
+
     const previewComponent = (
       <ContentPackPreview contentPack={this.props.contentPack}
                           onSave={this.props.onSave} />
     );
+
     const steps = [
       { key: 'selection', title: 'Content Selection', component: selectionComponent },
       { key: 'parameters', title: 'Parameters', component: parameterComponent, disabled: this._disableParameters() },

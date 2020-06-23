@@ -12,10 +12,12 @@ const DecoratorsUpdater = (newDecorators: Array<Decorator>, oldDecorators: Array
 
   const oldDecoratorsById = oldDecorators
     .reduce((prev, cur) => (cur.id ? { ...prev, [cur.id]: cur } : prev), {});
+
   const newDecoratorsById = newDecorators
     .reduce((prev, cur) => (cur.id ? { ...prev, [cur.id]: cur } : prev), {});
 
   const createdDecorators = difference(newDecoratorIds, oldDecoratorIds).map((newDecoratorId) => newDecoratorsById[newDecoratorId]);
+
   const updatedDecorators = newDecorators.filter(({ id }) => id)
     .filter((decorator) => decorator.id && oldDecoratorsById[decorator.id] && !isEqual(decorator, oldDecoratorsById[decorator.id]));
   const deletedDecoratorIds = difference(oldDecoratorIds, newDecoratorIds);

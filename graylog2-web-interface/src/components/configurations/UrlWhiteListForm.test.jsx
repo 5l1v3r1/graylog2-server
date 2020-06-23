@@ -11,6 +11,7 @@ describe('UrlWhitelistForm', () => {
   const useStateSpy = jest.spyOn(React, 'useState');
   useStateSpy.mockImplementation((init) => [init, setState]);
   const onUpdate = jest.fn();
+
   const config = {
     entries: [
       {
@@ -35,7 +36,6 @@ describe('UrlWhitelistForm', () => {
     disabled: false,
   };
 
-
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -45,6 +45,7 @@ describe('UrlWhitelistForm', () => {
       wrapper = mount(<UrlWhiteListForm urls={config.entries}
                                         disabled={config.disabled}
                                         onUpdate={() => {}} />);
+
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -52,8 +53,11 @@ describe('UrlWhitelistForm', () => {
       wrapper = mount(<UrlWhiteListForm urls={config.entries}
                                         disabled={config.disabled}
                                         onUpdate={onUpdate} />);
+
       expect(wrapper.find('.form-group')).toBeDefined();
+
       const title = wrapper.find('input#title-input0').at(0);
+
       expect(title.instance()?.value).toBe(config.entries[0].title);
     });
 
@@ -63,10 +67,13 @@ describe('UrlWhitelistForm', () => {
                                         onUpdate={onUpdate} />);
       const title = wrapper.find('input#title-input0').at(0);
       const instance = title.instance();
+
       if (instance) {
         instance.value = 'world';
       }
+
       title.simulate('change');
+
       expect(onUpdate).toHaveBeenCalled();
     });
 
@@ -77,6 +84,7 @@ describe('UrlWhitelistForm', () => {
       const button = wrapper.find('button').at(0);
       button.simulate('click');
       const listItems = wrapper.find('tbody>tr');
+
       expect(listItems.length).toBe(config.entries.length + 1);
     });
 
@@ -87,6 +95,7 @@ describe('UrlWhitelistForm', () => {
       const deleteButton = wrapper.find('svg.fa-trash-alt').at(0);
       deleteButton.simulate('click');
       const listItems = wrapper.find('tbody>tr');
+
       expect(listItems.length).toBe(config.entries.length - 1);
     });
   });

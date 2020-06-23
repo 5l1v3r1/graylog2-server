@@ -83,11 +83,13 @@ class ShareViewModal extends React.Component<Props, State> {
     const { viewSharing } = this.state;
     const viewTypeLabel = ViewTypeLabel({ type: view.type });
     let promise;
+
     if (viewSharing) {
       promise = ViewSharingActions.create(view.id, viewSharing);
     } else {
       promise = ViewSharingActions.remove(view.id);
     }
+
     const { onClose } = this.props;
     promise.then(() => {
       onClose(viewSharing);
@@ -109,9 +111,11 @@ class ShareViewModal extends React.Component<Props, State> {
 
   _onRolesChange = (newRoles: Array<{value: string, label: string}>) => {
     const { viewSharing } = this.state;
+
     if (viewSharing === null || viewSharing.type !== SpecificRoles.Type) {
       return;
     }
+
     // $FlowFixMe: At this point we have a SpecificRoles instance.
     const specificRoles: SpecificRoles = viewSharing;
     const roles = newRoles.map(extractValue);
@@ -120,9 +124,11 @@ class ShareViewModal extends React.Component<Props, State> {
 
   _onUsersChange = (newUsers: Array<{value: string, label: string}>) => {
     const { viewSharing } = this.state;
+
     if (viewSharing === null || viewSharing.type !== SpecificUsers.Type) {
       return;
     }
+
     // $FlowFixMe: At this point we have a SpecificUsers instance.
     const specificUsers: SpecificUsers = viewSharing;
     const users = newUsers.map(extractValue);
@@ -135,6 +141,7 @@ class ShareViewModal extends React.Component<Props, State> {
     const { show, view } = this.props;
     const { loaded, viewSharing, roles, users } = this.state;
     const type = get(viewSharing, 'type', 'none');
+
     const userOptions = users ? users
       // eslint-disable-next-line camelcase
       .map(({ username, fullname }) => ({ value: username, label: fullname })) : null;
@@ -142,6 +149,7 @@ class ShareViewModal extends React.Component<Props, State> {
     const rolesOptions = roles ? roles.map((rolename) => ({ value: rolename, label: rolename })) : null;
     const rolesValue = get(viewSharing, 'roles', []).map((role) => ({ label: role, value: role }));
     const viewTypeLabel = <ViewTypeLabel type={view.type} />;
+
     const content = !loaded ? <Spinner /> : (
       <FormGroup style={formStyle}>
         <Radio name={AllUsersOfInstance.Type} checked={type === AllUsersOfInstance.Type} onChange={this._onChange}>
@@ -187,6 +195,7 @@ class ShareViewModal extends React.Component<Props, State> {
         </Additional>
       </FormGroup>
     );
+
     return (
       <BootstrapModalConfirm onCancel={() => this._onClose()}
                              onConfirm={() => this._onSave()}

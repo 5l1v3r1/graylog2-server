@@ -17,6 +17,7 @@ export type ResultType = {
 
 export default (widgets: (Array<Widget> | Immutable.List<Widget>)): ResultType => {
   let widgetMapping = Immutable.Map();
+
   const searchTypes = widgets
     .map((widget) => widgetDefinition(widget.type)
       .searchTypes(widget)
@@ -34,12 +35,15 @@ export default (widgets: (Array<Widget> | Immutable.List<Widget>)): ResultType =
     .map((searchType) => {
       widgetMapping = widgetMapping.update(searchType.widgetId, new Immutable.Set(), (widgetSearchTypes) => widgetSearchTypes.add(searchType.id));
       const typeDefinition = searchTypeDefinition(searchType.type);
+
       if (!typeDefinition || !typeDefinition.defaults) {
         // eslint-disable-next-line no-console
         console.warn(`Unable to find type definition or defaults for search type ${searchType.type} - skipping!`);
       }
+
       const { defaults = {} } = typeDefinition || {};
       const { config, widgetId, ...rest } = searchType;
+
       return Immutable.Map(defaults)
         .merge(rest)
         .merge(config)

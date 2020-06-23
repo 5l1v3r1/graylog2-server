@@ -51,6 +51,7 @@ const Routes = {
         if (from) {
           return `/system/index_sets/${indexSetId}/configuration?from=${from}`;
         }
+
         return `/system/index_sets/${indexSetId}/configuration`;
       },
       SHOW: (indexSetId) => `/system/index_sets/${indexSetId}`,
@@ -127,17 +128,22 @@ const Routes = {
   EXTENDEDSEARCH: extendedSearchPath,
   search_with_query: (query, rangeType, timeRange) => {
     const route = new URI(Routes.SEARCH);
+
     const queryParams = {
       q: query,
     };
+
     if (rangeType && timeRange) {
       queryParams[rangeType] = timeRange;
     }
+
     route.query(queryParams);
+
     return route.resource();
   },
   _common_search_url: (resource, query, timeRange, resolution) => {
     const route = new URI(resource);
+
     const queryParams = {
       q: query,
       interval: resolution,
@@ -150,6 +156,7 @@ const Routes = {
     }
 
     route.query(queryParams);
+
     return route.resource();
   },
   search: (query, timeRange, resolution) => {
@@ -181,6 +188,7 @@ const Routes = {
   import_extractors: (nodeId, inputId) => `${Routes.local_input_extractors(nodeId, inputId)}/import`,
   new_extractor: (nodeId, inputId, extractorType, fieldName, index, messageId) => {
     const route = new URI(`/system/inputs/${nodeId}/${inputId}/extractors/new`);
+
     const queryParams = {
       extractor_type: extractorType,
       field: fieldName,
@@ -198,7 +206,6 @@ const Routes = {
   filtered_metrics: (nodeId, filter) => `${Routes.SYSTEM.METRICS(nodeId)}?filter=${filter}`,
 };
 
-
 const qualifyUrls = (routes, appPrefix) => {
   const qualifiedRoutes = {};
 
@@ -210,8 +217,10 @@ const qualifyUrls = (routes, appPrefix) => {
       case 'function':
         qualifiedRoutes[routeName] = (...params) => {
           const result = routes[routeName](...params);
+
           return new URI(`${appPrefix}/${result}`).normalizePath().resource();
         };
+
         break;
       case 'object':
         qualifiedRoutes[routeName] = qualifyUrls(routes[routeName], appPrefix);
@@ -267,6 +276,7 @@ defaultExport.pluginRoute = (routeKey) => {
     pluginRoutes[key] = pluginRoute.path;
   });
   const route = (AppConfig.gl2AppPathPrefix() ? qualifyUrls(pluginRoutes, AppConfig.gl2AppPathPrefix()) : pluginRoutes)[routeKey];
+
   if (!route) {
     throw new Error(`Could not find plugin route '${routeKey}'.`);
   }

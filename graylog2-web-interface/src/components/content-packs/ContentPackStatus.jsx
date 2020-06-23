@@ -8,6 +8,7 @@ import Routes from 'routing/Routes';
 
 const StatusBadge = styled(StyledBadge)(({ status, theme }) => {
   const { success, info, warning, danger } = theme.colors.variant.dark;
+
   const statuses = {
     installed: success,
     updatable: info,

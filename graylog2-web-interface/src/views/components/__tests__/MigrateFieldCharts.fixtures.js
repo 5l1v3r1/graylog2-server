@@ -33,15 +33,18 @@ const viewState = () => {
     .id('widget1')
     .config(AggregationWidgetConfig.builder().build())
     .build();
+
   const widget2 = AggregationWidget.builder()
     .id('widget2')
     .config(AggregationWidgetConfig.builder().build())
     .build();
   const widgets = Immutable.List([widget1, widget2]);
+
   const positions = {
     widget1: new WidgetPosition(1, 1, 2, Infinity),
     widget2: new WidgetPosition(1, 3, 6, Infinity),
   };
+
   return ViewState.create()
     .toBuilder()
     .widgets(widgets)

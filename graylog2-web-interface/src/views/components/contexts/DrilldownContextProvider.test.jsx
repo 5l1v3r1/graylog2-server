@@ -21,13 +21,17 @@ jest.mock('views/stores/CurrentQueryStore', () => ({
 jest.mock('views/stores/GlobalOverrideStore', () => ({
   GlobalOverrideStore: mockStore(['listen', () => () => {}], ['getInitialState', jest.fn()]),
 }));
+
 describe('DrilldownContextProvider', () => {
   // eslint-disable-next-line no-unused-vars
   const Consumer = ({ streams, timerange, query }) => null;
+
   const TestComponent = () => {
     const { streams, timerange, query } = useContext(DrilldownContext);
+
     return <Consumer streams={streams} timerange={timerange} query={query} />;
   };
+
   const widget = MessagesWidget.builder()
     .streams(['stream1', 'stream2'])
     .timerange({ type: 'relative', range: 1800 })
@@ -37,10 +41,12 @@ describe('DrilldownContextProvider', () => {
   const expectDrilldown = (expectedStreams, expectedTimerange, expectedQuery, wrapper) => {
     const consumer = wrapper.find('Consumer');
     const { streams, timerange, query } = consumer.props();
+
     expect(streams).toEqual(expectedStreams);
     expect(timerange).toEqual(expectedTimerange);
     expect(query).toEqual(expectedQuery);
   };
+
   const renderSUT = (viewType) => mount(
     <ViewTypeContext.Provider value={viewType}>
       <DrilldownContextProvider widget={widget}>
@@ -48,6 +54,7 @@ describe('DrilldownContextProvider', () => {
       </DrilldownContextProvider>
     </ViewTypeContext.Provider>,
   );
+
   describe('if current view is a dashboard', () => {
     it('passes current query, streams & timerange of widget if global override is not set', () => {
       const wrapper = renderSUT(View.Type.Dashboard);
@@ -56,6 +63,7 @@ describe('DrilldownContextProvider', () => {
         { type: 'elasticsearch', query_string: 'foo:42' },
         wrapper);
     });
+
     it('passes query & timerange of global override, streams of widget', () => {
       asMock(GlobalOverrideStore.getInitialState)
         .mockReturnValue(GlobalOverride.create(
@@ -69,6 +77,7 @@ describe('DrilldownContextProvider', () => {
         wrapper);
     });
   });
+
   describe('if current view is a search', () => {
     it('passes default values if no current query is present', () => {
       const wrapper = renderSUT(View.Type.Search);
@@ -77,6 +86,7 @@ describe('DrilldownContextProvider', () => {
         { type: 'elasticsearch', query_string: '' },
         wrapper);
     });
+
     it('passes values from current query if present', () => {
       const query = Query.builder()
         .query(createElasticsearchQueryString('foo:"bar"'))

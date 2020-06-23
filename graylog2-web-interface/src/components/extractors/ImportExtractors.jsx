@@ -15,6 +15,7 @@ class ImportExtractors extends React.Component {
 
   _onSubmit = (event) => {
     event.preventDefault();
+
     try {
       const parsedExtractors = JSON.parse(this.extractorsInput.getValue());
       const { extractors } = parsedExtractors;

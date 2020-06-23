@@ -16,6 +16,7 @@ describe('CurrentViewStateStore', () => {
   const viewStateMap = {};
   viewStateMap[viewId] = viewState;
   const statesMap = Immutable.Map(viewStateMap);
+
   PluginStore.exports = () => {
     return [{ type: 'MESSAGES', defaultHeight: 5, defaultWidth: 6 }];
   };
@@ -27,12 +28,14 @@ describe('CurrentViewStateStore', () => {
     CurrentViewStateStore.onViewStoreChange({ activeQuery: viewId, view: viewState });
     CurrentViewStateStore.onViewStatesStoreChange(statesMap);
     await CurrentViewStateStore.widgets(Immutable.List());
+
     expect(updateFn).toHaveBeenCalledTimes(1);
     expect(updateFn).toHaveBeenCalledWith(viewId, viewState);
   });
 
   it('should set new widgets', async () => {
     const oldWidgetId = 'dead';
+
     const expectedViewState = viewState.toBuilder()
       .widgetPositions({ [oldWidgetId]: new WidgetPosition(1, 1, 5, 6) })
       .widgets([MessagesWidget.builder().id(oldWidgetId).build()])
@@ -43,12 +46,14 @@ describe('CurrentViewStateStore', () => {
     CurrentViewStateStore.onViewStoreChange({ activeQuery: viewId, view: viewState });
     CurrentViewStateStore.onViewStatesStoreChange(statesMap);
     await CurrentViewStateStore.widgets(expectedViewState.widgets);
+
     expect(updateFn).toHaveBeenCalledTimes(1);
     expect(updateFn).toHaveBeenCalledWith(viewId, expectedViewState);
   });
 
   it('should add new widgets', async () => {
     const oldWidgetId = 'dead';
+
     const oldViewState = viewState.toBuilder()
       .widgetPositions({ [oldWidgetId]: new WidgetPosition(1, 1, 5, 6) })
       .widgets([MessagesWidget.builder().id(oldWidgetId).build()])
@@ -63,6 +68,7 @@ describe('CurrentViewStateStore', () => {
       .height(5)
       .width(6)
       .build();
+
     const newWidgetPositionFeed = WidgetPosition.builder()
       .col(1)
       .row(1)
@@ -71,6 +77,7 @@ describe('CurrentViewStateStore', () => {
       .build();
     const expectedWidgets = [oldViewState.widgets.get(0), MessagesWidget.builder().id('feed').build()];
     const expectedWidgetPosition = { [oldWidgetId]: newWidgetPositionDead, feed: newWidgetPositionFeed };
+
     const expectedViewState = viewState.toBuilder()
       .widgetPositions(expectedWidgetPosition)
       .widgets(expectedWidgets)
@@ -82,6 +89,7 @@ describe('CurrentViewStateStore', () => {
     CurrentViewStateStore.onViewStoreChange({ activeQuery: viewId, view: oldViewState });
     CurrentViewStateStore.onViewStatesStoreChange(sMap);
     await CurrentViewStateStore.widgets(expectedWidgets);
+
     expect(updateFn).toHaveBeenCalledTimes(1);
     expect(updateFn).toHaveBeenCalledWith(viewId, expectedViewState);
   });
@@ -89,6 +97,7 @@ describe('CurrentViewStateStore', () => {
   it('should remove widget positions for deleted widgets', async () => {
     const widgetOne = MessagesWidget.builder().id('widget-one').build();
     const widgetOnePos = new WidgetPosition(1, 1, 5, 6);
+
     const existingViewState = viewState.toBuilder()
       .widgetPositions({
         'widget-one': widgetOnePos,
@@ -104,6 +113,7 @@ describe('CurrentViewStateStore', () => {
     const sMap = Immutable.Map(viewStateMap);
 
     const expectedWidgets = [widgetOne];
+
     const expectedViewState = viewState.toBuilder()
       .widgetPositions({ 'widget-one': widgetOnePos })
       .widgets(expectedWidgets)
@@ -114,6 +124,7 @@ describe('CurrentViewStateStore', () => {
     CurrentViewStateStore.onViewStoreChange({ activeQuery: viewId, view: existingViewState });
     CurrentViewStateStore.onViewStatesStoreChange(sMap);
     await CurrentViewStateStore.widgets(expectedWidgets);
+
     expect(updateFn).toHaveBeenCalledTimes(1);
     expect(updateFn).toHaveBeenCalledWith(viewId, expectedViewState);
   });

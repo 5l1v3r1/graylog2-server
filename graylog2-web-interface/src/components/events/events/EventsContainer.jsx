@@ -34,9 +34,11 @@ class EventsContainer extends React.Component {
     const lastSearch = Store.get(LOCAL_STORAGE_ITEM) || {};
 
     const params = {};
+
     if (streamId) {
       params.query = `source_streams:${streamId}`;
     }
+
     if (lastSearch && isObject(lastSearch)) {
       params.filter = lastSearch.filter;
       params.timerange = lastSearch.timerange;
@@ -48,6 +50,7 @@ class EventsContainer extends React.Component {
 
   fetchEvents = ({ page, pageSize, query, filter, timerange }) => {
     Store.set(LOCAL_STORAGE_ITEM, { filter: filter, timerange: timerange });
+
     return EventsActions.search({
       query: query,
       page: page,
@@ -74,6 +77,7 @@ class EventsContainer extends React.Component {
 
   handleQueryChange = (nextQuery, callback = () => {}) => {
     const { events } = this.props;
+
     const promise = this.fetchEvents({
       query: nextQuery,
       pageSize: events.parameters.pageSize,

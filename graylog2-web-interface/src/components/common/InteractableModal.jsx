@@ -11,6 +11,7 @@ const DEFAULT_SIZE = { width: 450, height: 400 };
 const halfWidth = Math.ceil((window.innerWidth / 2) - (DEFAULT_SIZE.width / 2));
 const halfHeight = Math.ceil((window.innerHeight / 2) - (DEFAULT_SIZE.height / 2));
 const stayOnScreenHeight = halfHeight < 0 ? 55 : halfHeight;
+
 const DEFAULT_POSITION = {
   x: halfWidth,
   y: stayOnScreenHeight,

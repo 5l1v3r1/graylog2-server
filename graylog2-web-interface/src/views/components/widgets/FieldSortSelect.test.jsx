@@ -20,8 +20,10 @@ describe('FieldSortSelect', () => {
   const sort = [new SortConfig('pivot', 'http_method', Direction.Ascending)];
 
   afterEach(cleanup);
+
   it('should display current sort as selected option', () => {
     const { getByText } = render(<FieldSortSelect fields={fields} onChange={() => {}} sort={sort} />);
+
     expect(getByText('http_method')).not.toBeNull();
   });
 

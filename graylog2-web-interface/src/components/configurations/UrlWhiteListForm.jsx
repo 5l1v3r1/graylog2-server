@@ -53,22 +53,26 @@ const UrlWhiteListForm = ({ urls, onUpdate, disabled }: Props) => {
 
   const validURL = (str: string) => {
     let isValid = true;
+
     try {
       // eslint-disable-next-line no-unused-vars
       const test = new URL(str);
     } catch (e) {
       isValid = false;
     }
+
     return isValid;
   };
 
   const _isFormValid = (): boolean => {
     let isValid = true;
+
     if (validationState.errors.length > 0
       && validationState.errors.find(((el) => (el && el.title && el.title.valid) === false
       || (el && el.value && el.value.valid === false)))) {
       isValid = false;
     }
+
     return isValid;
   };
 
@@ -92,6 +96,7 @@ const UrlWhiteListForm = ({ urls, onUpdate, disabled }: Props) => {
         const result = value.trim().length <= 0 ? { valid: false } : { valid: true };
         _updateValidationError(idx, type, name, result, value);
       }
+
         break;
       case 'value':
         if (type === literal) {
@@ -107,6 +112,7 @@ const UrlWhiteListForm = ({ urls, onUpdate, disabled }: Props) => {
           const res = { valid: false };
           _updateValidationError(idx, type, name, res, value);
         }
+
         break;
       default:
         break;
@@ -180,7 +186,6 @@ const UrlWhiteListForm = ({ urls, onUpdate, disabled }: Props) => {
       );
     }));
   };
-
 
   useEffect(() => {
     const valid = _isFormValid();

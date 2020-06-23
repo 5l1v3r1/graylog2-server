@@ -54,11 +54,11 @@ const LookupTablesStore = Reflux.createStore({
     this.trigger(this.getState());
   },
 
-
   reloadPage() {
     const promise = this.searchPaginated(this.pagination.page, this.pagination.per_page,
       this.pagination.query);
     LookupTablesActions.reloadPage.promise(promise);
+
     return promise;
   },
 
@@ -81,6 +81,7 @@ const LookupTablesStore = Reflux.createStore({
     }, this._errorHandler('Fetching lookup tables failed', 'Could not retrieve the lookup tables'));
 
     LookupTablesActions.searchPaginated.promise(promise);
+
     return promise;
   },
 
@@ -99,6 +100,7 @@ const LookupTablesStore = Reflux.createStore({
       'Could not retrieve lookup table'));
 
     LookupTablesActions.get.promise(promise);
+
     return promise;
   },
 
@@ -109,6 +111,7 @@ const LookupTablesStore = Reflux.createStore({
     promise.catch(this._errorHandler('Creating lookup table failed', `Could not create lookup table "${table.name}"`));
 
     LookupTablesActions.create.promise(promise);
+
     return promise;
   },
 
@@ -119,6 +122,7 @@ const LookupTablesStore = Reflux.createStore({
     promise.catch(this._errorHandler('Updating lookup table failed', `Could not update lookup table "${table.name}"`));
 
     LookupTablesActions.update.promise(promise);
+
     return promise;
   },
 
@@ -129,17 +133,21 @@ const LookupTablesStore = Reflux.createStore({
     promise.catch(this._errorHandler('Deleting lookup table failed', `Could not delete lookup table "${idOrName}"`));
 
     LookupTablesActions.delete.promise(promise);
+
     return promise;
   },
 
   getErrors(tableNames, cacheNames, dataAdapterNames) {
     const request = {};
+
     if (tableNames) {
       request.tables = tableNames;
     }
+
     if (cacheNames) {
       request.caches = cacheNames;
     }
+
     if (dataAdapterNames) {
       request.data_adapters = dataAdapterNames;
     }
@@ -156,6 +164,7 @@ const LookupTablesStore = Reflux.createStore({
     }, this._errorHandler('Fetching lookup table error state failed.', 'Could not error states'));
 
     LookupTablesActions.getErrors.promise(promise);
+
     return promise;
   },
 
@@ -168,6 +177,7 @@ const LookupTablesStore = Reflux.createStore({
     }, this._errorHandler('Lookup failed', `Could not lookup value for key "${key}" in lookup table "${tableName}"`));
 
     LookupTablesActions.lookup.promise(promise);
+
     return promise;
   },
 
@@ -179,6 +189,7 @@ const LookupTablesStore = Reflux.createStore({
     }, this._errorHandler(`Could not purge cache for key "${key}" in lookup table "${table.name}"`, 'Failed!'));
 
     LookupTablesActions.purgeKey.promise(promise);
+
     return promise;
   },
 
@@ -190,6 +201,7 @@ const LookupTablesStore = Reflux.createStore({
     }, this._errorHandler(`Could not purge cache for lookup table "${table.name}"`, 'Failed!'));
 
     LookupTablesActions.purgeAll.promise(promise);
+
     return promise;
   },
 
@@ -202,6 +214,7 @@ const LookupTablesStore = Reflux.createStore({
       this.propagateChanges();
     }, this._errorHandler('Lookup table validation failed', `Could not validate lookup table "${table.name}"`));
     LookupTablesActions.validate.promise(promise);
+
     return promise;
   },
 
@@ -216,13 +229,17 @@ const LookupTablesStore = Reflux.createStore({
       } catch (e) {
         // ignored
       }
+
       let errorMessage;
+
       try {
         errorMessage = error.additional.body.message;
       } catch (e) {
         errorMessage = error.message;
       }
+
       UserNotification.error(`${message}: ${errorMessage}`, title);
+
       if (cb) {
         cb(error);
       }

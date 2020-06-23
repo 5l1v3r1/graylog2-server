@@ -16,8 +16,10 @@ describe('Field', () => {
         </Field>
       </InteractiveContext.Provider>
     );
+
     it('does not show value actions if interactive context is `false`', () => {
       const NoninteractiveComponent = component(false);
+
       const wrapper = mount((
         <NoninteractiveComponent name="foo"
                                  queryId="someQueryId"
@@ -26,11 +28,14 @@ describe('Field', () => {
         </NoninteractiveComponent>
       ));
       const fieldActions = wrapper.find('FieldActions');
+
       expect(fieldActions).not.toExist();
       expect(wrapper).toHaveText('Foo');
     });
+
     it('shows value actions if interactive context is `true`', () => {
       const InteractiveComponent = component(true);
+
       const wrapper = mount((
         <InteractiveComponent name="foo"
                               queryId="someQueryId"
@@ -39,6 +44,7 @@ describe('Field', () => {
         </InteractiveComponent>
       ));
       const fieldActions = wrapper.find('FieldActions');
+
       expect(fieldActions).toExist();
       expect(wrapper).toHaveText('Foo');
     });

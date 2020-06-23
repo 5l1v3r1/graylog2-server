@@ -29,19 +29,23 @@ describe('ViewManagementPage', () => {
       perPage: 1,
     },
   };
+
   beforeEach(() => {
     mockViewManagementStore.getInitialState.mockImplementationOnce(() => viewsResult);
   });
+
   it('passes retrieved views to list component', () => {
     // eslint-disable-next-line global-require
     const ViewManagementPage = require('./ViewManagementPage');
     const wrapper = shallow(<ViewManagementPage />);
 
     const viewList = wrapper.find('view-list');
+
     expect(viewList).toHaveLength(1);
     expect(viewList.at(0)).toHaveProp('views', viewsResult.list);
     expect(viewList.at(0)).toHaveProp('pagination', viewsResult.pagination);
   });
+
   it('asks for confirmation when deleting view', () => {
     // eslint-disable-next-line global-require
     const ViewManagementPage = require('./ViewManagementPage');

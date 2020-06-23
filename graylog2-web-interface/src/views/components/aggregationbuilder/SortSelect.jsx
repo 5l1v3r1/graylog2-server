@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import * as Immutable from 'immutable';
 
 import Select from 'views/components/Select';
-
 import Pivot from 'views/logic/aggregationbuilder/Pivot';
 import Series from 'views/logic/aggregationbuilder/Series';
 import { defaultCompare } from 'views/logic/DefaultCompare';
@@ -30,9 +29,11 @@ type Props = {
 
 const currentValue = (sort, fields) => {
   const currentIdx = sort && findIdxInFields(fields, sort[0]);
+
   if (currentIdx === undefined) {
     return undefined;
   }
+
   return fields[currentIdx];
 };
 
@@ -41,14 +42,18 @@ const SortSelect = ({ pivots, series, onChange, sort }: Props) => {
   const seriesOptions = series.map((s) => ({ label: s.effectiveName, value: SortConfig.fromSeries(s) }));
   const fields = [].concat(pivotOptions, seriesOptions);
   const options = mapFields(fields);
+
   const _onChange = (newValue, reason) => {
     if (reason.action === 'clear') {
       return onChange([]);
     }
+
     const { value } = newValue;
     const mappedValue = mapNewValue(fields, value);
+
     return onChange(mappedValue);
   };
+
   return (
     <Select placeholder="None: click to add fields"
             onChange={_onChange}

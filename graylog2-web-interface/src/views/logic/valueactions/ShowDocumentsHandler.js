@@ -40,12 +40,14 @@ const ShowDocumentsHandler: ValueActionHandler = ({ contexts: { valuePath, widge
     ...elem,
   }), {});
   const widgetQuery = widget && widget.query ? widget.query.query_string : '';
+
   const valuePathQuery = Object.entries(mergedObject)
     .map(([k, v]) => `${k}:${escape(String(v))}`)
     .reduce((prev: string, next: string) => addToQuery(prev, next), '');
   const query = addToQuery(widgetQuery, valuePathQuery);
   const valuePathFields = extractFieldsFromValuePath(valuePath);
   const messageListFields = new Set([...DEFAULT_MESSAGE_FIELDS, ...valuePathFields]);
+
   const newWidget = duplicateCommonWidgetSettings(MessagesWidget.builder(), widget)
     .query(createElasticsearchQueryString(query))
     .newId()
@@ -55,6 +57,7 @@ const ShowDocumentsHandler: ValueActionHandler = ({ contexts: { valuePath, widge
     .build();
 
   const title = `Messages for ${valuePathQuery}`;
+
   return WidgetActions.create(newWidget).then(() => TitlesActions.set(TitleTypes.Widget, newWidget.id, title));
 };
 

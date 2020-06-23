@@ -45,6 +45,7 @@ const LdapStore = Reflux.createStore({
 
   _ldapTest(payload) {
     const url = URLUtils.qualifyUrl(`${this.sourceUrl}/test`);
+
     return fetch('POST', url, payload);
   },
 

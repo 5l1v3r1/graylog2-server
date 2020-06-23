@@ -12,6 +12,7 @@ describe('<ContentPackParameterList />', () => {
   it('should render with empty parameters with readOnly', () => {
     const contentPack = ContentPack.builder().build();
     const wrapper = mount(<ContentPackParameterList contentPack={contentPack} readOnly />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -23,16 +24,19 @@ describe('<ContentPackParameterList />', () => {
       type: 'string',
       default_value: 'test',
     }];
+
     const contentPack = ContentPack.builder()
       .parameters(parameters)
       .build();
     const wrapper = mount(<ContentPackParameterList contentPack={contentPack} readOnly />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with empty parameters without readOnly', () => {
     const contentPack = ContentPack.builder().build();
     const wrapper = mount(<ContentPackParameterList contentPack={contentPack} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -44,10 +48,12 @@ describe('<ContentPackParameterList />', () => {
       type: 'string',
       default_value: 'test',
     }];
+
     const contentPack = ContentPack.builder()
       .parameters(parameters)
       .build();
     const wrapper = mount(<ContentPackParameterList contentPack={contentPack} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -55,6 +61,7 @@ describe('<ContentPackParameterList />', () => {
     const deleteFn = jest.fn((parameter) => {
       expect(parameter.name).toEqual('PARAM');
     });
+
     const parameters = [{
       name: 'PARAM',
       title: 'A parameter title',
@@ -62,6 +69,7 @@ describe('<ContentPackParameterList />', () => {
       type: 'string',
       default_value: 'test',
     }];
+
     const contentPack = ContentPack.builder()
       .parameters(parameters)
       .build();
@@ -69,6 +77,7 @@ describe('<ContentPackParameterList />', () => {
     const wrapper = mount(<ContentPackParameterList contentPack={contentPack}
                                                     onDeleteParameter={deleteFn} />);
     wrapper.find('button[children="Delete"]').simulate('click');
+
     expect(deleteFn.mock.calls.length).toBe(1);
   });
 
@@ -79,9 +88,11 @@ describe('<ContentPackParameterList />', () => {
       .id('dead-beef')
       .data({ title: { '@type': 'parameter', '@value': 'PARAM' } })
       .build();
+
     const deleteFn = jest.fn((parameter) => {
       expect(parameter.name).toEqual('PARAM');
     });
+
     const parameters = [{
       name: 'PARAM',
       title: 'A parameter title',
@@ -89,9 +100,11 @@ describe('<ContentPackParameterList />', () => {
       type: 'string',
       default_value: 'test',
     }];
+
     const appliedParameter = {
       'dead-beef': [{ paramName: 'PARAM', configKey: 'title' }],
     };
+
     const contentPack = ContentPack.builder()
       .parameters(parameters)
       .entities([entity])
@@ -101,6 +114,7 @@ describe('<ContentPackParameterList />', () => {
                                                     onDeleteParameter={deleteFn}
                                                     appliedParameter={appliedParameter} />);
     wrapper.find('button[children="Delete"]').simulate('click');
+
     expect(deleteFn.mock.calls.length).toBe(0);
   });
 
@@ -118,15 +132,21 @@ describe('<ContentPackParameterList />', () => {
       type: 'string',
       default_value: 'test',
     }];
+
     const contentPack = ContentPack.builder()
       .parameters(parameters)
       .build();
     const wrapper = mount(<ContentPackParameterList contentPack={contentPack} />);
+
     expect(wrapper.find("td[children='PARAM']").exists()).toBe(true);
+
     wrapper.find('input').simulate('change', { target: { value: 'Bad' } });
     wrapper.find('form').simulate('submit');
+
     expect(wrapper.find("td[children='PARAM']").exists()).toBe(false);
+
     wrapper.find("button[children='Reset']").simulate('click');
+
     expect(wrapper.find("td[children='PARAM']").exists()).toBe(true);
   });
 });

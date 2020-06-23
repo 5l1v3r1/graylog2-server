@@ -77,6 +77,7 @@ class RolesComponent extends React.Component {
   render() {
     let content = null;
     const { rolesLoaded, showEditRole, editRole, streams, roles } = this.state;
+
     if (!rolesLoaded) {
       content = <span>Loading roles...</span>;
     } else if (showEditRole) {
@@ -97,9 +98,11 @@ class RolesComponent extends React.Component {
     }
 
     let actionButton;
+
     if (!showEditRole) {
       actionButton = <Button bsStyle="success" onClick={this._showCreateRole}>Add new role</Button>;
     }
+
     return (
       <Row>
         <Col md={12}>

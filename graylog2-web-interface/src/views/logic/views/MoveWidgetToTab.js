@@ -16,10 +16,13 @@ import Widget from '../widgets/Widget';
 
 const _removeWidgetTitle = (titlesMap: TitlesMap, widgetId: WidgetId): TitlesMap => {
   const widgetTitles = titlesMap.get('widget');
+
   if (!widgetTitles) {
     return titlesMap;
   }
+
   const newWidgetTitles = widgetTitles.remove(widgetId);
+
   return titlesMap.set('widget', newWidgetTitles);
 };
 
@@ -31,12 +34,14 @@ const _removeWidgetFromTab = (widgetId: WidgetId, queryId: QueryId, dashboard: V
   delete widgetPositions[widgetId];
   const { widgetMapping } = viewState;
   const newWidgetMapping = widgetMapping.remove(widgetId);
+
   const newViewState = viewState.toBuilder()
     .widgets(viewState.widgets.delete(widgetIndex))
     .widgetMapping(newWidgetMapping)
     .titles(newTitles)
     .widgetPositions(widgetPositions)
     .build();
+
   return dashboard.toBuilder()
     .state(dashboard.state.set(queryId, newViewState))
     .build();
@@ -46,8 +51,10 @@ const _setWidgetTitle = (titlesMap: TitlesMap, widgetID: WidgetId, newTitle: ?st
   if (!newTitle) {
     return titlesMap;
   }
+
   const widgetTitlesMap = titlesMap.get('widget', Immutable.Map());
   const newWidgetTitleMap = widgetTitlesMap.set(widgetID, newTitle);
+
   return titlesMap.set('widget', newWidgetTitleMap);
 };
 
@@ -59,11 +66,13 @@ const _addWidgetToTab = (widget: Widget, targetQueryId: QueryId, dashboard: View
   const { widgetPositions } = viewState;
   const newWidgetPositions = AddNewWidgetsToPositions(Immutable.Map(widgetPositions), newWidgets.toArray(), overridePositions);
   const newTitleMap = _setWidgetTitle(viewState.titles, newWidget.id, widgetTitle);
+
   const newViewState = viewState.toBuilder()
     .widgets(newWidgets)
     .titles(newTitleMap)
     .widgetPositions(newWidgetPositions)
     .build();
+
   return dashboard.toBuilder()
     .state(dashboard.state.set(targetQueryId, newViewState))
     .build();
@@ -87,13 +96,16 @@ const MoveWidgetToTab = (widgetId: WidgetId, targetQueryId: QueryId, dashboard: 
   if (match) {
     const [widget, queryId] = match;
     const widgetTitle = _getWidgetTitle(widgetId, queryId, dashboard);
+
     const newWidgetPosition = _getWidgetPosition(widgetId, queryId, dashboard).toBuilder()
       .col(1)
       .row(1)
       .build();
     const tempDashboard = copy ? dashboard : _removeWidgetFromTab(widgetId, queryId, dashboard);
+
     return UpdateSearchForWidgets(_addWidgetToTab(widget, targetQueryId, tempDashboard, newWidgetPosition, widgetTitle));
   }
+
   return undefined;
 };
 

@@ -15,12 +15,15 @@ jest.mock('views/components/aggregationbuilder/SeriesParameterOptions', () => ({
 
 describe('SeriesSelect', () => {
   let suggester;
+
   beforeEach(() => {
     suggester = () => [];
     suggester.defaults = [];
   });
+
   it('renders with minimal props', () => {
     const wrapper = mount(<SeriesSelect series={[]} onChange={() => true} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -29,7 +32,9 @@ describe('SeriesSelect', () => {
     const wrapper = mount(<SeriesSelect series={series} onChange={() => true} />);
 
     expect(wrapper.find('ConfigurableElement')).toHaveLength(2);
+
     const values = wrapper.find('ConfigurableElement');
+
     expect(values.at(0)).toIncludeText('count()');
     expect(values.at(1)).toIncludeText('avg(took_ms)');
   });
@@ -37,6 +42,7 @@ describe('SeriesSelect', () => {
   it('opens menu when focussed, returning no results without suggester', () => {
     const wrapper = mount(<SeriesSelect series={[]} onChange={() => true} />);
     const input = wrapper.find('input');
+
     expect(wrapper).not.toIncludeText('0 results available.');
 
     input.simulate('focus');
@@ -47,6 +53,7 @@ describe('SeriesSelect', () => {
   it('opens menu when focussed, returning no results for empty suggester defaults', () => {
     const wrapper = mount(<SeriesSelect series={[]} suggester={suggester} onChange={() => true} />);
     const input = wrapper.find('input');
+
     expect(wrapper).not.toIncludeText('0 results available.');
 
     input.simulate('focus');
@@ -58,6 +65,7 @@ describe('SeriesSelect', () => {
     suggester.defaults = [{ label: 'Something', value: 'Something' }, { label: 'Anything', value: 'Anything' }];
     const wrapper = mount(<SeriesSelect series={[]} suggester={suggester} onChange={() => true} />);
     const input = wrapper.find('input');
+
     expect(wrapper).not.toIncludeText('Something');
     expect(wrapper).not.toIncludeText('Anything');
 
@@ -109,7 +117,6 @@ describe('SeriesSelect', () => {
     const select = wrapper.find('Select').at(0);
     select.prop('onChange')([{ label: 'func1', value: 'func1', incomplete: true, parameterNeeded: true }]);
 
-
     // eslint-disable-next-line import/no-named-as-default-member
     expect(SeriesParameterOptions.parameterOptionsForType).toHaveBeenCalledTimes(1);
 
@@ -130,6 +137,7 @@ describe('SeriesSelect', () => {
     expect(onChange).toHaveBeenCalled();
     expect(onChange).toHaveBeenCalledWith(['func1(foo)']);
   });
+
   it('allows removing the last element', () => {
     const onChange = jest.fn(() => true);
     const wrapper = mount(<SeriesSelect series={[Series.forFunction('count()')]} suggester={suggester} onChange={onChange} />);

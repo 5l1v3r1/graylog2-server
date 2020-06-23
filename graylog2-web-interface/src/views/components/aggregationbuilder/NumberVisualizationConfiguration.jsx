@@ -19,6 +19,7 @@ const trendPreferenceOptions = ['LOWER', 'NEUTRAL', 'HIGHER'].map(_makeOption);
 const NumberVisualizationConfiguration = ({ config = NumberVisualizationConfig.empty(), onChange }: Props) => {
   const changeTrend = useCallback(({ target: { checked } }) => onChange(config.toBuilder().trend(checked).build()), [config, onChange]);
   const changeTrendPreference = useCallback(({ value }) => onChange(config.toBuilder().trendPreference(value).build()), [config, onChange]);
+
   const trendingHelp = (
     <HoverForHelp title="Trending">
       <p>
@@ -33,6 +34,7 @@ const NumberVisualizationConfiguration = ({ config = NumberVisualizationConfig.e
       </p>
     </HoverForHelp>
   );
+
   return (
     <>
       <Input key="trend"

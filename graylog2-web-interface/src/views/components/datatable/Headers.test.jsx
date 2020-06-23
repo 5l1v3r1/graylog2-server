@@ -60,20 +60,26 @@ describe('Headers', () => {
       Series.forFunction('count()'),
       Series.forFunction('avg(foo)'),
     ]} />);
+
     expect(wrapper).not.toBeEmptyRender();
+
     const fields = wrapper.find('Field');
+
     expect(fields).toHaveLength(2);
   });
 
   describe('infers types properly', () => {
     const expectCorrectTypes = (wrapper) => {
       const countField = wrapper.find('Field[name="count()"]');
+
       expect(countField).toHaveProp('type', FieldTypes.LONG());
 
       const avgField = wrapper.find('Field[name="avg(foo)"]');
+
       expect(avgField).toHaveProp('type', FieldTypes.DATE());
 
       const minField = wrapper.find('Field[name="min(foo)"]');
+
       expect(minField).toHaveProp('type', FieldTypes.DATE());
     };
 
@@ -83,13 +89,13 @@ describe('Headers', () => {
         Series.forFunction('avg(foo)'),
         Series.forFunction('min(foo)'),
       ];
+
       const wrapper = mount((
         <RenderHeaders series={series}
                        fields={[FieldTypeMapping.create('foo', FieldTypes.DATE())]} />
       ));
       expectCorrectTypes(wrapper);
     });
-
 
     it('for renamed series', () => {
       const series = [
@@ -97,12 +103,14 @@ describe('Headers', () => {
         seriesWithName('avg(foo)', 'Average Foness'),
         seriesWithName('min(foo)', 'Minimal Fooness'),
       ];
+
       const wrapper = mount((
         <RenderHeaders series={series}
                        fields={[FieldTypeMapping.create('foo', FieldTypes.DATE())]} />
       ));
       expectCorrectTypes(wrapper);
     });
+
     it('renders with `null` fields', () => {
       const series = [
         seriesWithName('foo', 'Total Count'),

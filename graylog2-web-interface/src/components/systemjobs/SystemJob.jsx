@@ -34,6 +34,7 @@ class SystemJob extends React.Component {
   _onCancel = (job) => {
     return (e) => {
       e.preventDefault();
+
       // eslint-disable-next-line no-alert
       if (window.confirm(`Are you sure you want to cancel system job "${job.info}"?`)) {
         SystemJobsActions.cancelJob(job.id);
@@ -43,9 +44,11 @@ class SystemJob extends React.Component {
 
   render() {
     const { job } = this.props;
+
     const progress = job.percent_complete < 100
       ? <StyledProgressBar bars={[{ value: job.percent_complete, bsStyle: 'info', animated: true }]} />
       : <span className="label label-success finished">Finished!</span>;
+
     const cancel = job.is_cancelable
       ? (<button type="button" className="btn btn-primary btn-xs pull-right" onClick={this._onCancel(job)}>Cancel Job</button>) : null;
 

@@ -27,6 +27,7 @@ const parseSeries = (series: Array<Option>) => (series ? series.map((s) => s.val
 
 const newSeriesConfigChange = (values, series, newSeries, onChange) => {
   const newValues = values.map((s) => (s === series ? newSeries : s));
+
   return onChange(newValues);
 };
 
@@ -64,6 +65,7 @@ class SeriesSelect extends React.Component<Props, State> {
         .map((value) => ({ label: value.toString(), value: last.value, parameterNeeded: false, incomplete: true, parameter: value }));
 
       this.setState({ options });
+
       return false;
     }
 
@@ -73,6 +75,7 @@ class SeriesSelect extends React.Component<Props, State> {
         suggester.for(last.value, last.parameter),
       );
       this.setState({ options });
+
       return false;
     }
 
@@ -84,6 +87,7 @@ class SeriesSelect extends React.Component<Props, State> {
 
     // $FlowFixMe: Only `Option` present now.
     onChange(parseSeries(newSeries));
+
     return true;
   };
 
@@ -99,13 +103,16 @@ class SeriesSelect extends React.Component<Props, State> {
   render() {
     const { onChange, series } = this.props;
     const { options } = this.state;
+
     const valueComponent = ({ children, innerProps, ...rest }) => {
       const element = rest.data.value;
       const { className } = innerProps;
+
       const usedNames = series.filter((s) => s !== element)
         .map((s) => (s && s.config && s.config.name ? s.config.name : null))
         .map((name) => trim(name))
         .filter((name) => name !== null && name !== undefined && name !== '');
+
       return (
         <span className={className}>
           <ConfigurableElement {...rest}
@@ -117,9 +124,11 @@ class SeriesSelect extends React.Component<Props, State> {
         </span>
       );
     };
+
     const _components = {
       MultiValueLabel: valueComponent,
     };
+
     return (
       <Select placeholder="None: click to add series"
               onChange={this._onChange}

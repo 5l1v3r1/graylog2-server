@@ -23,6 +23,7 @@ class FieldsList extends React.Component {
     if (type === undefined) {
       return {};
     }
+
     return PluginStore.exports('fieldValueProviders').find((p) => p.type === type) || {};
   };
 
@@ -47,6 +48,7 @@ class FieldsList extends React.Component {
 
   providerFormatter = (config) => {
     const configKeys = Object.keys(config).filter((key) => key !== 'type');
+
     return (
       <p>
         {configKeys.map((key) => {
@@ -90,6 +92,7 @@ class FieldsList extends React.Component {
     const { fields } = this.props;
 
     const fieldNames = Object.keys(fields).sort(naturalSort);
+
     const addCustomFieldButton = (
       <Button bsStyle="success" onClick={this.handleAddFieldClick}>
         Add Custom Field
@@ -106,6 +109,7 @@ class FieldsList extends React.Component {
         </>
       );
     }
+
     return (
       <>
         <DataTable id="event-definition-fields"

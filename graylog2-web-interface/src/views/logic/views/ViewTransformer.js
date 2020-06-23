@@ -11,6 +11,7 @@ import ViewState from './ViewState';
 
 const ViewTransformer = (searchView: View): View => {
   const queryMap: Map<QueryId, Query> = Map(searchView.search.queries.map((q) => [q.id, q]));
+
   const newViewStateMap: ViewStateMap = (searchView.state || Map()).map((viewState: ViewState, queryId: string) => {
     const { timerange, query, filter = Map() } = queryMap.get(queryId);
 
@@ -27,10 +28,12 @@ const ViewTransformer = (searchView: View): View => {
         .streams(streams)
         .build();
     });
+
     return viewState.toBuilder()
       .widgets(widgets)
       .build();
   });
+
   // Remove query string attached to the existing search query
   const newQueries = searchView.search.queries.map(
     (query) => query.toBuilder().query({ ...query.query, query_string: '' }).build(),

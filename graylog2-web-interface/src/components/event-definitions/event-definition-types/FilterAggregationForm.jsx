@@ -45,6 +45,7 @@ class FilterAggregationForm extends React.Component {
     // eslint-disable-next-line camelcase
     const { group_by, series, conditions } = props.eventDefinition.config;
     const expression = lodash.get(conditions, 'expression', {});
+
     const defaultConditionType = (lodash.isEmpty(group_by) && lodash.isEmpty(series) && lodash.isEmpty(expression)
       ? conditionTypes.FILTER : conditionTypes.AGGREGATION);
 
@@ -78,6 +79,7 @@ class FilterAggregationForm extends React.Component {
     } else {
       // Reset aggregation data from state if it exists
       const { existingAggregationConfig } = this.state;
+
       if (existingAggregationConfig) {
         const { eventDefinition } = this.props;
         const nextConfig = { ...eventDefinition.config, ...existingAggregationConfig };

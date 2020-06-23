@@ -90,9 +90,11 @@ class SavedSearchList extends React.Component<Props, State> {
 
   onLoad = (selectedSavedSearch, loadFunc) => {
     const { toggleModal } = this.props;
+
     if (!selectedSavedSearch || !loadFunc) {
       return;
     }
+
     loadFunc(selectedSavedSearch).then(() => {
       browserHistory.push(Routes.pluginRoute('SEARCH_VIEWID')(selectedSavedSearch));
     });
@@ -107,6 +109,7 @@ class SavedSearchList extends React.Component<Props, State> {
 
     if (list) {
       const viewIndex = list.findIndex((v) => v.id === selectedSavedSearch);
+
       if (viewIndex < 0) {
         return;
       }
@@ -124,6 +127,7 @@ class SavedSearchList extends React.Component<Props, State> {
     const { views, toggleModal } = this.props;
     const { total, page, perPage = 5 } = views.pagination;
     const { selectedSavedSearch } = this.state;
+
     const savedSearchList = (views.list || []).map((savedSearch) => {
       return (
         <ViewLoaderContext.Consumer key={savedSearch.id}>

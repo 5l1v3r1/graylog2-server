@@ -65,11 +65,14 @@ class MapVisualization extends React.Component {
   _formatMarker = (coordinates, value, min, max, radiusSize, increment, color, name, keys) => {
     // eslint-disable-next-line no-restricted-globals
     const formattedCoordinates = coordinates.split(',').map((component) => Number(component)).filter((n) => !isNaN(n));
+
     if (formattedCoordinates.length !== 2) {
       return null;
     }
+
     const radius = this._getBucket(value, radiusSize, min, max, increment);
     const markerKeys = flatten(Object.entries(keys).map(([k, v]) => [<dt key={`dt-${k}-${v}`}>{k}</dt>, <dd key={`dd-${k}-${v}`}>{v}</dd>]));
+
     return (
       <CircleMarker key={`${name}-${coordinates}`}
                     center={formattedCoordinates}
@@ -163,6 +166,5 @@ class MapVisualization extends React.Component {
     );
   }
 }
-
 
 export default MapVisualization;

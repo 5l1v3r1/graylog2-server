@@ -57,6 +57,7 @@ const EditExtractorsPage = createReactClass({
     let url;
     const { input } = this.state;
     const { params } = this.props;
+
     if (input.global) {
       url = Routes.global_input_extractors(params.inputId);
     } else {
@@ -75,6 +76,7 @@ const EditExtractorsPage = createReactClass({
     }
 
     const { extractor, exampleMessage, input } = this.state;
+
     return (
       <DocumentTitle title={`Edit extractor ${extractor.title}`}>
         <div>

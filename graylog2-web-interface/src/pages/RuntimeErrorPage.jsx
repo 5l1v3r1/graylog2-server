@@ -38,6 +38,7 @@ class RuntimeErrorPage extends React.Component {
     const { error, componentStack } = this.props;
     const { showDetails } = this.state;
     const errorDetails = `\n\nStack Trace:\n\n${error.stack}\n\nComponent Stack:\n${componentStack}`;
+
     const description = (
       <>
         <p>It seems like the page you navigated to contained an error.</p>

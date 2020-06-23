@@ -53,6 +53,7 @@ class DnsAdapterFieldSet extends React.Component {
       validationMessage,
       validationState,
     } = this.props;
+
     const lookupTypes = [
       { label: 'Resolve hostname to IPv4 address (A)', value: 'A' },
       { label: 'Resolve hostname to IPv6 address (AAAA)', value: 'AAAA' },

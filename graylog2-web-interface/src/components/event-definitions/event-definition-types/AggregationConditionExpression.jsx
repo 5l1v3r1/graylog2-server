@@ -19,7 +19,6 @@ import GroupExpression from './AggregationConditionExpressions/GroupExpression';
 
 import styles from './AggregationConditionExpression.css';
 
-
 class AggregationConditionExpression extends React.Component {
   static propTypes = {
     eventDefinition: PropTypes.object.isRequired,
@@ -46,11 +45,13 @@ class AggregationConditionExpression extends React.Component {
 
   getEffectiveGlobalGroupOperator = () => {
     const { globalGroupOperator } = this.state;
+
     if (globalGroupOperator) {
       return globalGroupOperator;
     }
 
     const { expression } = this.props;
+
     return (expression.expr === '&&' || expression.expr === '||' ? expression.expr : '&&');
   };
 
@@ -58,7 +59,9 @@ class AggregationConditionExpression extends React.Component {
     if (!expression) {
       return defaultOperator;
     }
+
     const key = expression.expr === 'group' ? 'operator' : 'expr';
+
     return lodash.get(expression, key, defaultOperator) === '&&' ? '&&' : '||';
   };
 
@@ -91,11 +94,13 @@ class AggregationConditionExpression extends React.Component {
 
       if (!Object.keys(changes).includes('conditions')) {
         onChange(changes);
+
         return;
       }
 
       const update = changes.conditions;
       let nextUpdate;
+
       // A null update indicates that one of the branches got removed
       if (update === null) {
         if (branch === 'child') {

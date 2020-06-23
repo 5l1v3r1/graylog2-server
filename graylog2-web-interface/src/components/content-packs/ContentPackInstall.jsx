@@ -26,8 +26,10 @@ class ContentPackInstall extends React.Component {
       if (parameter.default_value) {
         const newResult = result;
         newResult[parameter.name] = ContentPackUtils.convertToString(parameter);
+
         return newResult;
       }
+
       return result;
     }, {});
 
@@ -54,6 +56,7 @@ class ContentPackInstall extends React.Component {
       const paramType = this.props.contentPack.parameters.find((parameter) => parameter.name === paramName).type;
       const value = ContentPackUtils.convertValue(paramType, this.state.parameterInput[paramName]);
       newResult[paramName] = ValueRefHelper.createValueRef(paramType, value);
+
       return newResult;
     }, {});
   };
@@ -70,20 +73,25 @@ class ContentPackInstall extends React.Component {
 
   _validateInput = () => {
     const { parameterInput } = this.state;
+
     const errors = this.props.contentPack.parameters.reduce((result, parameter) => {
       if (parameterInput[parameter.name] && parameterInput[parameter.name].length > 0) {
         return result;
       }
+
       const newResult = result;
       newResult[parameter.name] = 'Needs to be filled.';
+
       return newResult;
     }, {});
     this.setState({ errorMessages: errors });
+
     return Object.keys(errors).length <= 0;
   };
 
   renderParameter(parameter) {
     const error = this.state.errorMessages[parameter.name];
+
     return (
       <Input name={parameter.name}
              id={parameter.name}

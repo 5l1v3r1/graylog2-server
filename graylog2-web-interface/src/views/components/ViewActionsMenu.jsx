@@ -40,6 +40,7 @@ const ViewActionsMenu = ({ view, isNewView, metadata, router }) => {
   const [csvExportOpen, setCsvExportOpen] = useState(false);
   const hasUndeclaredParameters = _hasUndeclaredParameters(metadata);
   const allowedToEdit = _isAllowedToEdit(view, currentUser);
+
   const debugOverlay = AppConfig.gl2DevMode() && (
     <>
       <MenuItem divider />
@@ -48,6 +49,7 @@ const ViewActionsMenu = ({ view, isNewView, metadata, router }) => {
       </MenuItem>
     </>
   );
+
   return (
     <ButtonGroup>
       <Button onClick={() => onSaveView(view)}

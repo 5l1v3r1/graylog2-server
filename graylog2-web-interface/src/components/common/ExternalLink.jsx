@@ -30,6 +30,7 @@ class ExternalLink extends React.Component {
 
   render() {
     const { children, className, href, iconClass, target } = this.props;
+
     const content = (
       <span>
         {children}

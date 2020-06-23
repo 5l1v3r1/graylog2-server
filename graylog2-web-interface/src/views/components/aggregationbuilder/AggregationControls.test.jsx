@@ -38,6 +38,7 @@ describe('AggregationControls', () => {
         {children}
       </AggregationControls>
     ));
+
     expect(getByTestId('dummy-component')).toHaveTextContent('The spice must flow.');
   });
 
@@ -51,6 +52,7 @@ describe('AggregationControls', () => {
           {children}
         </AggregationControls>
       ));
+
       expect(getByTestId('dummy-component')).toHaveTextContent('The spice must flow.');
     });
   });
@@ -65,6 +67,7 @@ describe('AggregationControls', () => {
         {children}
       </AggregationControls>
     ));
+
     expect(wrapper.find('div.description').at(0).text()).toContain('Visualization Type');
     expect(wrapper.find('div.description').at(1).text()).toContain('Rows');
     expect(wrapper.find('div.description').at(2).text()).toContain('Columns');
@@ -83,8 +86,11 @@ describe('AggregationControls', () => {
         {children}
       </AggregationControls>
     ));
+
     expect(wrapper.find('h3.popover-title')).toHaveLength(0);
+
     wrapper.find('div.description svg.fa-wrench').simulate('click');
+
     expect(wrapper.find('h3.popover-title')).toHaveLength(1);
     expect(wrapper.find('h3.popover-title').text()).toContain('Config options');
   });
@@ -99,6 +105,7 @@ describe('AggregationControls', () => {
         {children}
       </AggregationControls>
     ));
+
     expect(wrapper.find('DummyComponent')).toHaveProp('onVisualizationConfigChange');
   });
 
@@ -119,6 +126,7 @@ describe('AggregationControls', () => {
       .visualization('customConfig')
       .visualizationConfig(new DummyVisualizationConfig())
       .build();
+
     const wrapper = mount((
       <AggregationControls config={configWithVisualizationConfig}
                            fields={Immutable.List([])}
@@ -130,7 +138,9 @@ describe('AggregationControls', () => {
     expect(wrapper).toIncludeText('This is a custom visualization config');
     expect(wrapper).not.toIncludeText('This text should not be rendered');
     expect(wrapper.find(OtherCustomVisualizationConfigComponent)).not.toExist();
+
     const configComponent = wrapper.find(CustomVisualizationConfigComponent);
+
     expect(configComponent).toExist();
     expect(configComponent).toHaveProp('config', configWithVisualizationConfig.visualizationConfig);
     expect(configComponent).toHaveProp('onChange');

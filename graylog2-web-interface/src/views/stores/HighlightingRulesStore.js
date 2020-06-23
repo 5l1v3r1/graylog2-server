@@ -49,6 +49,7 @@ const HighlightingRulesStore = singletonStore(
       const formatting: FormattingSettings = get(state, 'formatting', FormattingSettings.empty());
       this.formatting = formatting;
       const { highlighting } = formatting;
+
       const rules = highlighting.reduce(
         (prev: StateType, rule: HighlightingRule) => prev.set(makeKey({
           field: rule.field,
@@ -56,6 +57,7 @@ const HighlightingRulesStore = singletonStore(
         }), rule.color),
         Immutable.OrderedMap<KeyType, string>(),
       );
+
       if (!isEqual(rules, this.state)) {
         this.state = rules;
         this._trigger();
@@ -82,17 +84,21 @@ const HighlightingRulesStore = singletonStore(
     add(rule: HighlightingRule): Promise<Array<HighlightingRule>> {
       const { field, value, color } = rule;
       const key = makeKey({ field, value });
+
       const promise = (this.state.has(key) ? Promise.resolve() : this._propagateAndTrigger(this.state.set(key, color)))
         .then(() => this._state());
       HighlightingRulesActions.add.promise(promise);
+
       return promise;
     },
     remove(rule: HighlightingRule): Promise<Array<HighlightingRule>> {
       const { field, value } = rule;
       const key = makeKey({ field, value });
+
       const promise = (this.state.has(key) ? this._propagateAndTrigger(this.state.delete(key)) : Promise.resolve())
         .then(() => this._state());
       HighlightingRulesActions.remove.promise(promise);
+
       return promise;
     },
     update(rule: HighlightingRule): Promise<Array<HighlightingRule>> {
@@ -100,14 +106,17 @@ const HighlightingRulesStore = singletonStore(
       const key = makeKey({ field, value });
       const promise = this._propagateAndTrigger(this.state.set(key, color));
       HighlightingRulesActions.update.promise(promise);
+
       return promise;
     },
     _propagateAndTrigger(newState: Immutable.OrderedMap<Immutable.Map<string, any>, string>) {
       const newHighlighting = newState.entrySeq().map(([key, color]) => {
         const { field, value } = key.toJS();
+
         return HighlightingRule.create(field, value, undefined, color);
       }).toJS();
       const newFormatting = this.formatting.toBuilder().highlighting(newHighlighting).build();
+
       return CurrentViewStateActions.formatting(newFormatting);
     },
   }),

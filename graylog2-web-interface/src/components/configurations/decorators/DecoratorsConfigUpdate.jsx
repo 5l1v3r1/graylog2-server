@@ -27,6 +27,7 @@ const _updateOrder = (orderedDecorators, decorators, onChange) => {
   const newDecorators = cloneDeep(decorators);
   orderedDecorators.forEach((item, idx) => {
     const decorator = newDecorators.find((i) => i.id === item.id);
+
     if (decorator) {
       decorator.order = idx;
     }
@@ -35,14 +36,15 @@ const _updateOrder = (orderedDecorators, decorators, onChange) => {
   onChange(newDecorators);
 };
 
-
 const DecoratorsConfigUpdate = ({ streams, decorators, types, show = false, onCancel, onSave }: Props, modalRef) => {
   const [currentStream, setCurrentStream] = useState(DEFAULT_STREAM_ID);
   const [modifiedDecorators, setModifiedDecorators] = useState(decorators);
+
   const onCreate = useCallback(
     ({ stream, ...rest }) => setModifiedDecorators([...modifiedDecorators, { ...rest, stream: stream === DEFAULT_SEARCH_ID ? null : stream }]),
     [modifiedDecorators, setModifiedDecorators],
   );
+
   const onReorder = useCallback(
     (orderedDecorators) => _updateOrder(orderedDecorators, modifiedDecorators, setModifiedDecorators),
     [modifiedDecorators, setModifiedDecorators],
@@ -50,6 +52,7 @@ const DecoratorsConfigUpdate = ({ streams, decorators, types, show = false, onCa
   const onSubmit = useCallback(() => onSave(modifiedDecorators), [onSave, modifiedDecorators]);
 
   const currentDecorators = modifiedDecorators.filter((decorator) => (decorator.stream || DEFAULT_SEARCH_ID) === currentStream);
+
   const decoratorItems = currentDecorators
     .sort((d1, d2) => d1.order - d2.order)
     .map((decorator) => formatDecorator(decorator, modifiedDecorators, types, setModifiedDecorators));

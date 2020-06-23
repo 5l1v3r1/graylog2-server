@@ -40,6 +40,7 @@ class FieldsForm extends React.Component {
 
   addCustomField = (prevFieldName, fieldName, config, isKey, keyPosition) => {
     const { eventDefinition, onChange } = this.props;
+
     const nextFieldSpec = (prevFieldName === fieldName
       ? lodash.cloneDeep(eventDefinition.field_spec)
       : lodash.omit(eventDefinition.field_spec, prevFieldName));
@@ -49,10 +50,12 @@ class FieldsForm extends React.Component {
     // Filter out all non-existing field names from key_spec and the current field name
     const fieldNames = Object.keys(nextFieldSpec);
     let nextKeySpec = eventDefinition.key_spec.filter((key) => fieldNames.includes(key) && key !== fieldName);
+
     if (isKey) {
       // Add key to its new position
       nextKeySpec = [...nextKeySpec.slice(0, keyPosition), fieldName, ...nextKeySpec.slice(keyPosition)];
     }
+
     onChange('key_spec', nextKeySpec);
 
     this.toggleFieldForm();

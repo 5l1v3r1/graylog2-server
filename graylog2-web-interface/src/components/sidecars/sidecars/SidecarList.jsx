@@ -46,6 +46,7 @@ class SidecarList extends React.Component {
 
   _getTableHeaderSortIcon = (field) => {
     const { sort } = this.props;
+
     const iconSort = {
       asc: 'sort-amount-down',
       desc: 'sort-amount-up',
@@ -56,6 +57,7 @@ class SidecarList extends React.Component {
 
   formatSidecarList = (sidecars) => {
     const { onSortChange, sort } = this.props;
+
     const sidecarCollection = {
       node_name: 'Name',
       'node_details.status.status': 'Status',

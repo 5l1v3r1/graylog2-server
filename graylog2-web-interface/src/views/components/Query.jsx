@@ -55,11 +55,13 @@ const _renderWidgetGrid = (widgetDefs, widgetMapping, results, positions, queryI
 
     if (!widgetData || widgetData.length === 0) {
       const queryErrors = results.errors.filter((e) => e.type === 'query');
+
       if (queryErrors.length > 0) {
         errors[widget.id] = errors[widget.id] ? [].concat(errors[widget.id], queryErrors) : queryErrors;
       }
     }
   });
+
   return (
     <InteractiveContext.Consumer>
       {(interactive) => (
@@ -107,7 +109,6 @@ const EmptyDashboardInfo = () => (
   </StyledJumbotron>
 );
 
-
 const Query = ({ allFields, fields, results, positions, widgetMapping, widgets, queryId }) => {
   if (!widgets || widgets.isEmpty()) {
     return <EmptyDashboardInfo />;
@@ -115,6 +116,7 @@ const Query = ({ allFields, fields, results, positions, widgetMapping, widgets, 
 
   if (results) {
     const content = _renderWidgetGrid(widgets, widgetMapping.toJS(), results, positions, queryId, fields, allFields);
+
     return (<span>{content}</span>);
   }
 

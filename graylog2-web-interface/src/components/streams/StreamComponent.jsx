@@ -33,7 +33,6 @@ class StreamComponent extends React.Component {
     };
   }
 
-
   componentDidMount() {
     this.loadData();
     StreamRulesStore.types().then((types) => {
@@ -67,11 +66,13 @@ class StreamComponent extends React.Component {
 
   _isLoading = () => {
     const { state } = this;
+
     return !(state.streams && state.streamRuleTypes);
   };
 
   _onPageChange = (newPage, newPerPage) => {
     const { pagination } = this.state;
+
     const newPagination = Object.assign(pagination, {
       page: newPage,
       perPage: newPerPage,

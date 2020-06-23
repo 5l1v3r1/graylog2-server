@@ -16,6 +16,7 @@ jest.mock('injection/CombinedProvider', () => new MockCombinedProvider({ Current
 
 describe('CurrentUserPreferencesProvider', () => {
   afterEach(cleanup);
+
   const SimpleCurrentUserPreferencesProvider = ({ children }: {children: JestMockFn<*, *>}) => (
     <CurrentUserPreferencesProvider>
       <UserPreferencesContext.Consumer>
@@ -33,6 +34,7 @@ describe('CurrentUserPreferencesProvider', () => {
         </SimpleCurrentUserPreferencesProvider>
       </CurrentUserProvider>,
     );
+
     return consume;
   };
 
@@ -42,6 +44,7 @@ describe('CurrentUserPreferencesProvider', () => {
 
     expect(consume).toHaveBeenCalledWith(defaultUserPreferences);
   });
+
   it('provides default user preferences with empty store', () => {
     const consume = renderSUT();
 

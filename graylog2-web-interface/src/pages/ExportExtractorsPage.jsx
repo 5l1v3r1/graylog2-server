@@ -36,6 +36,7 @@ const ExportExtractorsPage = createReactClass({
     }
 
     const { input } = this.state;
+
     return (
       <DocumentTitle title={`Export extractors of ${input.title}`}>
         <div>

@@ -34,9 +34,11 @@ const mockQueries = (queryId: string, queryString: string) => Immutable.Map({ [q
 
 describe('ExcludeFromQueryHandler', () => {
   const view = View.create().toBuilder().type(View.Type.Search).build();
+
   afterEach(() => {
     jest.resetAllMocks();
   });
+
   beforeEach(() => {
     ViewStore.listen = jest.fn(() => () => {});
     ViewStore.getInitialState = jest.fn(() => ({
@@ -84,6 +86,7 @@ describe('ExcludeFromQueryHandler', () => {
 
     expect(QueriesActions.query).toHaveBeenCalledWith('queryId', 'NOT something:"foo && || : \\\\ / + - ! ( ) { } [ ] ^ \\" ~ * ? bar"');
   });
+
   describe('for dashboards', () => {
     beforeEach(() => {
       asMock(ViewStore.getInitialState).mockReturnValue({
@@ -99,8 +102,10 @@ describe('ExcludeFromQueryHandler', () => {
       GlobalOverrideActions.query = mockAction(jest.fn(() => Promise.resolve(undefined)));
       SearchActions.refresh = mockAction(jest.fn(() => Promise.resolve()));
     });
+
     it('retrieves query string from global override', () => {
       const handler = new ExcludeFromQueryHandler();
+
       return handler.handle({ queryId: 'queryId', field: 'do', value: 'panic', type: FieldType.Unknown, contexts: {} })
         .then(() => {
           expect(GlobalOverrideActions.query).toHaveBeenCalledWith('something AND NOT do:panic');

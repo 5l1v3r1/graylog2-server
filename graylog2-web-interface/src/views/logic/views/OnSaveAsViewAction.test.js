@@ -5,6 +5,7 @@ const loadSUT = () => require('./OnSaveAsViewAction');
 
 const mockActions = () => {
   const ViewActions = { load: jest.fn(() => Promise.resolve({ view: { id: 'deadbeef' } })).mockName('load') };
+
   const ViewManagementActions = {
     create: jest.fn((v) => Promise.resolve(v)).mockName('create'),
   };
@@ -18,6 +19,7 @@ describe('OnSaveAsViewAction', () => {
   afterEach(() => {
     jest.resetModules();
   });
+
   it('saves a given new view', () => {
     const { ViewManagementActions } = mockActions();
     const onSaveAsView = loadSUT();

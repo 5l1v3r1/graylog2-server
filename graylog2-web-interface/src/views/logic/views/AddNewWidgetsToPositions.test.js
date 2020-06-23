@@ -11,6 +11,7 @@ describe('AddNewWidgetsToPositions', () => {
   PluginStore.exports = () => {
     return [{ type: 'MESSAGES', defaultHeight: 5, defaultWidth: 6 }];
   };
+
   it('should add a new widget to the first row and column', () => {
     const newMessageList = Widget.builder().id('foo-1').type('MESSAGES').build();
     const widgets = [newMessageList];
@@ -23,6 +24,7 @@ describe('AddNewWidgetsToPositions', () => {
   it('should add a new widget to the first row and column to other widgets', () => {
     const newMessageList = Widget.builder().id('foo-1').type('MESSAGES').build();
     const oldMessageList = Widget.builder().id('foo').type('MESSAGES').build();
+
     const oldWidgetPosition = WidgetPosition.builder()
       .col(1)
       .row(1)

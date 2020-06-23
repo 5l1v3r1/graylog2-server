@@ -62,13 +62,17 @@ const _extractValueAndField = (rows: Rows) => {
   if (!rows || !rows[0]) {
     return { value: undefined, field: undefined };
   }
+
   const results = rows[0];
+
   if (results.source === 'leaf') {
     const leaf = results.values.find((f) => f.source === 'row-leaf');
+
     if (leaf && leaf.source === 'row-leaf') {
       return { value: leaf.value, field: leaf.key[0] };
     }
   }
+
   return { value: undefined, field: undefined };
 };
 
@@ -88,6 +92,7 @@ const NumberVisualization = ({ config: { visualizationConfig = NumberVisualizati
   const trendRows = data.trend;
   const { value, field } = _extractValueAndField(chartRows);
   const { value: previousValue } = _extractValueAndField(trendRows || []);
+
   if (!field || (value !== 0 && !value)) {
     return 'N/A';
   }

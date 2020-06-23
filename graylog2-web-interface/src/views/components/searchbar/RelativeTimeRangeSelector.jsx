@@ -34,8 +34,10 @@ export default function RelativeTimeRangeSelector({ config, disabled }: Props) {
       // The "search in all messages" option should be the last one.
       if (key === 'PT0S') {
         all = option;
+
         return null;
       }
+
       return option;
     });
 
@@ -53,6 +55,7 @@ export default function RelativeTimeRangeSelector({ config, disabled }: Props) {
           const { target: { value: newValue } } = e;
           onChange({ target: { name, value: Number.parseInt(newValue, 10) } });
         }, [onChange]);
+
         return (
           <TimerangeSelector className="relative" style={{ marginLeft: 50 }}>
             <Input id="relative-timerange-selector"

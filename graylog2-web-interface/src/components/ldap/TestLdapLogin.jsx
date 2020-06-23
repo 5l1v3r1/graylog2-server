@@ -30,7 +30,6 @@ const StatusIcon = styled(Icon)(({ status, theme }) => `
   color: ${theme.colors.variant[status]};
 `);
 
-
 class TestLdapLogin extends React.Component {
   static propTypes = {
     ldapSettings: PropTypes.object.isRequired,
@@ -54,6 +53,7 @@ class TestLdapLogin extends React.Component {
   // eslint-disable-next-line camelcase
   UNSAFE_componentWillReceiveProps(nextProps) {
     const { ldapSettings } = this.props;
+
     // Reset login status if ldapSettings changed
     if (JSON.stringify(ldapSettings) !== JSON.stringify(nextProps.ldapSettings)) {
       this.setState({ loginStatus: {} });
@@ -113,6 +113,7 @@ class TestLdapLogin extends React.Component {
     const style = loginStatus.error ? 'danger' : 'success';
 
     let userFound;
+
     if (ObjectUtils.isEmpty(loginStatus.result.entry)) {
       userFound = <StatusIcon status="danger" name="times" />;
     } else {
@@ -120,6 +121,7 @@ class TestLdapLogin extends React.Component {
     }
 
     let loginCheck;
+
     if (loginStatus.result.login_authenticated) {
       loginCheck = <StatusIcon status="success" name="check" />;
     } else if (loginPassword === '') {
@@ -129,6 +131,7 @@ class TestLdapLogin extends React.Component {
     }
 
     let serverResponse;
+
     if (loginStatus.result.exception) {
       serverResponse = <pre>{loginStatus.result.exception}</pre>;
     }
@@ -139,10 +142,12 @@ class TestLdapLogin extends React.Component {
         <dd key={`${key}-dd`}>{loginStatus.result.entry[key]}</dd>,
       ];
     });
+
     const formattedEntry = (attributes.length > 0 ? <dl>{attributes}</dl>
       : <p>LDAP server did not return any attributes for the user.</p>);
 
     const groups = (loginStatus.result.groups ? loginStatus.result.groups.map((group) => <li key={group}>{group}</li>) : []);
+
     const formattedGroups = (groups.length > 0 ? <ul style={{ padding: 0 }}>{groups}</ul>
       : <p>LDAP server did not return any groups for the user.</p>);
 
@@ -221,6 +226,5 @@ class TestLdapLogin extends React.Component {
     );
   }
 }
-
 
 export default TestLdapLogin;

@@ -99,10 +99,12 @@ const UserForm = createReactClass({
     if (this.inputs.old_password) {
       request.old_password = this.inputs.old_password.getValue();
     }
+
     request.password = this.inputs.password.getValue();
 
     UsersStore.changePassword(this.props.user.username, request).then(() => {
       UserNotification.success('Password updated successfully.', 'Success');
+
       if (this.isPermitted(this.state.currentUser.permissions, ['users:list'])) {
         history.replace(Routes.SYSTEM.AUTHENTICATION.USERS.LIST);
       }
@@ -116,9 +118,11 @@ const UserForm = createReactClass({
 
     UsersStore.update(this.props.user.username, this.state.user).then(() => {
       UserNotification.success('User updated successfully.', 'Success');
+
       if (this.isPermitted(this.state.currentUser.permissions, ['users:list'])) {
         history.replace(Routes.SYSTEM.AUTHENTICATION.USERS.LIST);
       }
+
       if (this.props.user.username === this.state.currentUser.username) {
         CurrentUserStore.reload();
       }
@@ -197,6 +201,7 @@ const UserForm = createReactClass({
     const dashboards = this.state.dashboards.list.sort((d1, d2) => d1.title.localeCompare(d2.title));
 
     let requiresOldPassword = true;
+
     if (this.isPermitted(permissions, 'users:passwordchange:*')) {
       // Ask for old password if user is editing their own account
       requiresOldPassword = this.props.user.username === this.state.currentUser.username;

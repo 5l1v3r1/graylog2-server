@@ -25,7 +25,9 @@ const SidecarStatus = createReactClass({
     if (!details) {
       return <p>Node details are currently unavailable. Please wait a moment and ensure the sidecar is correctly connected to the server.</p>;
     }
+
     const metrics = details.metrics || {};
+
     return (
       <dl className={`${commonStyles.deflist} ${commonStyles.topMargin}`}>
         <dt>IP Address</dt>
@@ -54,6 +56,7 @@ const SidecarStatus = createReactClass({
     }
 
     const collectorStatuses = details.status.collectors;
+
     if (collectorStatuses.length === 0) {
       return <p>There are no collectors configured in this sidecar.</p>;
     }
@@ -66,6 +69,7 @@ const SidecarStatus = createReactClass({
       let statusBadge;
       let statusClass;
       let verboseButton;
+
       switch (status.status) {
         case SidecarStatusEnum.RUNNING:
           statusMessage = 'Collector is running.';
@@ -86,6 +90,7 @@ const SidecarStatus = createReactClass({
               </Button>
             );
           }
+
           break;
         case SidecarStatusEnum.STOPPED:
           statusMessage = status.message;

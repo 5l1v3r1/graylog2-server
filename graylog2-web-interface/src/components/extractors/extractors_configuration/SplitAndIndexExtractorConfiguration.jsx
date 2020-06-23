@@ -61,6 +61,7 @@ const SplitAndIndexExtractorConfiguration = createReactClass({
     promise.then((result) => {
       if (!result.successful) {
         UserNotification.warning('We were not able to run the split and index extraction. Please check your parameters.');
+
         return;
       }
 
@@ -73,6 +74,7 @@ const SplitAndIndexExtractorConfiguration = createReactClass({
 
   _isTryButtonDisabled() {
     const { configuration } = this.state;
+
     return this.state.trying || configuration.split_by === '' || configuration.index === undefined || configuration.index < 1 || !this.props.exampleMessage;
   },
 

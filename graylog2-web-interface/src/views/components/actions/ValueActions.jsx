@@ -64,14 +64,17 @@ class ValueActions extends React.Component<Props, State> {
     // $FlowFixMe: Object.values signature is in the way for this one
     const overflowingComponents: Array<React.Node> = Object.values(components);
     const handlerArgs = { queryId, field, type, value, contexts: this.context };
+
     const valueActions: Array<ActionDefinition> = PluginStore.exports('valueActions')
       .filter((action: ActionDefinition) => {
         const { isHidden = (() => false: ActionHandlerCondition) } = action;
+
         return !isHidden(handlerArgs);
       })
       .map((action: ActionDefinition) => {
         const setActionComponents = (fn) => this.setState(({ overflowingComponents: actionComponents }) => ({ overflowingComponents: fn(actionComponents) }));
         const handler = createHandlerFor(action, setActionComponents);
+
         const onSelect = () => {
           this._onMenuToggle();
           handler(handlerArgs);
@@ -79,6 +82,7 @@ class ValueActions extends React.Component<Props, State> {
 
         const { isEnabled = (() => true: ActionHandlerCondition) } = action;
         const actionDisabled = !isEnabled(handlerArgs);
+
         return (
           <MenuItem key={`value-action-${field}-${action.type}`}
                     disabled={actionDisabled}

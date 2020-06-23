@@ -21,6 +21,7 @@ jest.mock('injection/CombinedProvider', () => {
       permissions: ['*'],
     },
   })]);
+
   return new MockCombinedProvider({
     CurrentUser: { CurrentUserStore: mockCurrentUserStoretore },
     Notifications: { NotificationsActions: { list: jest.fn() }, NotificationsStore: MockStore() },
@@ -37,6 +38,7 @@ describe('AppRouter', () => {
         <AppRouter />
       </CurrentUserProvider>,
     );
+
     expect(wrapper.find('StartPage')).toExist();
   });
 });

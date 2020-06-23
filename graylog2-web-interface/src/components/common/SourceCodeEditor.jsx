@@ -133,9 +133,9 @@ class SourceCodeEditor extends React.Component {
     }
   }
 
-
   componentDidUpdate(prevProps) {
     const { height, width } = this.props;
+
     if (height !== prevProps.height || width !== prevProps.width) {
       this.reloadEditor();
     }
@@ -148,6 +148,7 @@ class SourceCodeEditor extends React.Component {
 
   reloadEditor = () => {
     const { resizable } = this.props;
+
     if (resizable) {
       this.reactAce.editor.resize();
     }
@@ -177,6 +178,7 @@ class SourceCodeEditor extends React.Component {
 
   handleSelectionChange = (selection) => {
     const { toolbar, readOnly } = this.props;
+
     if (!this.reactAce || !toolbar || readOnly) {
       return;
     }
@@ -191,6 +193,7 @@ class SourceCodeEditor extends React.Component {
 
   render() {
     const { height, width, selectedText } = this.state;
+
     const {
       theme,
       resizable,
@@ -207,6 +210,7 @@ class SourceCodeEditor extends React.Component {
     } = this.props;
     const validCssWidth = lodash.isFinite(width) ? width : '100%';
     const overlay = <Tooltip id="paste-button-tooltip">Press Ctrl+V (&#8984;V in macOS) or select Edit&thinsp;&rarr;&thinsp;Paste to paste from clipboard.</Tooltip>;
+
     return (
       <div>
         {toolbar

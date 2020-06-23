@@ -20,6 +20,7 @@ const OverlayInner = ({ children, style }: {children: Node, style?: { left: numb
 const getRefContainerWidth = (selectRef, allowOptionCreation) => {
   const currentRef = selectRef?.current;
   const containerRef = allowOptionCreation ? currentRef?.select?.select : currentRef?.select;
+
   return containerRef?.controlRef?.offsetWidth || 0;
 };
 
@@ -27,6 +28,7 @@ const menu = (selectRef, allowOptionCreation: boolean) => (base) => {
   const defaultMinWidth = 200;
   const containerWidth = getRefContainerWidth(selectRef, allowOptionCreation);
   const width = containerWidth > defaultMinWidth ? containerWidth : defaultMinWidth;
+
   return {
     ...base,
     position: 'relative',
@@ -79,6 +81,7 @@ type Props = {
 
 const ValueWithTitle = (props: { data: { label: string } }) => {
   const { data: { label } } = props;
+
   return <Components.MultiValue {...props} innerProps={{ title: label }} />;
 };
 
@@ -87,6 +90,7 @@ const MenuOverlay = (selectRef) => (props) => {
     zIndex: 1050,
     position: 'absolute',
   };
+
   return (
     <Overlay placement="bottom"
              shouldUpdatePosition
@@ -106,12 +110,14 @@ const Select = ({ components, styles, ignoreCase = true, ignoreAccents = false, 
   const Component = allowOptionCreation ? CreatableSelect : ReactSelect;
   const Menu = useMemo(() => MenuOverlay(selectRef), [selectRef]);
   const menuStyle = useMemo(() => menu(selectRef, allowOptionCreation), [selectRef, allowOptionCreation]);
+
   const _components = {
     ...components,
     Menu,
     MultiValueRemove,
     MultiValue: components.MultiValue || ValueWithTitle,
   };
+
   const _styles = {
     ...styles,
     menu: menuStyle,

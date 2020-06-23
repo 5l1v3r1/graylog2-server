@@ -47,6 +47,7 @@ const CollectorListContainer = createReactClass({
 
   render() {
     const { collectors } = this.state;
+
     if (!collectors || !collectors.paginatedCollectors) {
       return <Spinner />;
     }

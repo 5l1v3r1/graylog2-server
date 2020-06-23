@@ -23,6 +23,7 @@ const ToolsStore = Reflux.createStore({
   },
   testGrok(pattern: string, namedCapturesOnly: boolean, string: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.grokTest();
+
     const promise = fetch('POST', qualifyUrl(url), {
       pattern: pattern,
       string: string,
@@ -38,6 +39,7 @@ const ToolsStore = Reflux.createStore({
   },
   testJSON(flatten: boolean, listSeparator: string, keySeparator: string, kvSeparator: string, replaceKeyWhitespace: boolean, keyWhitespaceReplacement: string, keyPrefix: string, string: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.jsonTest();
+
     const payload = {
       flatten: flatten,
       list_separator: listSeparator,
@@ -72,6 +74,7 @@ const ToolsStore = Reflux.createStore({
   },
   urlWhiteListCheck(urlToCheck: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.urlWhitelistCheck();
+
     const promise = fetch('POST', qualifyUrl(url), {
       url: urlToCheck,
     });
@@ -85,6 +88,7 @@ const ToolsStore = Reflux.createStore({
   },
   urlWhiteListGenerateRegex(urlTemplate: string, placeholder: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.urlWhitelistGenerateRegex();
+
     const promise = fetch('POST', qualifyUrl(url), {
       url_template: urlTemplate,
       placeholder,
@@ -99,6 +103,7 @@ const ToolsStore = Reflux.createStore({
   },
   testRegex(regex: string, string: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.regexTest();
+
     const promise = fetch('POST', qualifyUrl(url), {
       regex: regex,
       string: string,
@@ -113,6 +118,7 @@ const ToolsStore = Reflux.createStore({
   },
   testRegexReplace(regex: string, replacement: string, replaceAll: boolean, string: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.regexReplaceTest();
+
     const payload = {
       regex: regex,
       replacement: replacement,
@@ -130,6 +136,7 @@ const ToolsStore = Reflux.createStore({
   },
   testSplitAndIndex(splitBy: string, index: number, string: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.splitAndIndexTest();
+
     const payload = {
       split_by: splitBy,
       index: index,
@@ -147,6 +154,7 @@ const ToolsStore = Reflux.createStore({
   },
   testSubstring(beginIndex: number, endIndex: number, string: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.substringTest();
+
     const payload = {
       start: beginIndex,
       end: endIndex,
@@ -164,6 +172,7 @@ const ToolsStore = Reflux.createStore({
   },
   testContainsString(searchString: string, string: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.containsStringTest();
+
     const promise = fetch('POST', qualifyUrl(url), {
       search_string: searchString,
       string: string,
@@ -179,6 +188,7 @@ const ToolsStore = Reflux.createStore({
 
   testLookupTable(lookupTableName: string, string: string): Promise<Object> {
     const { url } = ApiRoutes.ToolsApiController.lookupTableTest();
+
     const promise = fetch('POST', qualifyUrl(url), {
       lookup_table_name: lookupTableName,
       string: string,

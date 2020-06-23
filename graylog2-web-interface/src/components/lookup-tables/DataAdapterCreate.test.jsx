@@ -32,17 +32,20 @@ describe('<DataAdapterCreate />', () => {
     const callback = () => {};
     const types = {};
     const wrapper = mount(<DataAdapterCreate saved={callback} types={types} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render for types with defined frontend components', () => {
     const callback = () => {};
+
     const types = {
       someType: {
         type: 'someType',
       },
     };
     const wrapper = mount(<DataAdapterCreate saved={callback} types={types} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -59,12 +62,14 @@ describe('<DataAdapterCreate />', () => {
 
     it('should render for types without defined frontend components', () => {
       const callback = () => {};
+
       const types = {
         unknownType: {
           type: 'unknownType',
         },
       };
       const wrapper = mount(<DataAdapterCreate saved={callback} types={types} />);
+
       expect(wrapper).toMatchSnapshot();
       expect(console.error.mock.calls.length).toBe(1);
     });

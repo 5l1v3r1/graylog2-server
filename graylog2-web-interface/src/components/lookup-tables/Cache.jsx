@@ -16,6 +16,7 @@ const Cache = ({ cache }) => {
   });
 
   const plugin = plugins[cache.config.type];
+
   if (!plugin) {
     return <p>Unknown cache type {cache.config.type}. Is the plugin missing?</p>;
   }

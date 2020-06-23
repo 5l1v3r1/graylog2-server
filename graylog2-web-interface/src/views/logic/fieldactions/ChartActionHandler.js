@@ -20,6 +20,7 @@ const TIMESTAMP_FIELD = 'timestamp';
 
 const fieldTypeFor = (fieldName: string, queryId: string): FieldType => {
   const _fieldTypes = FieldTypesStore.getInitialState();
+
   if (!_fieldTypes) {
     return FieldType.Unknown;
   }
@@ -34,22 +35,26 @@ const fieldTypeFor = (fieldName: string, queryId: string): FieldType => {
 
   const mapping: FieldTypeMapping = (fieldTypes: FieldTypeMappingsList)
     .find((m: FieldTypeMapping) => m.name === fieldName, null, new FieldTypeMapping(fieldName, FieldType.Unknown));
+
   return mapping.type;
 };
 
 const ChartActionHandler: FieldActionHandler = ({ queryId, field, contexts: { widget: origWidget = Widget.empty() } }) => {
   const series = isFunction(field) ? Series.forFunction(field) : Series.forFunction(`avg(${field})`);
+
   const config = AggregationWidgetConfig.builder()
     .rowPivots([pivotForField(TIMESTAMP_FIELD, fieldTypeFor(TIMESTAMP_FIELD, queryId))])
     .series([series])
     .visualization('line')
     .rollup(true)
     .build();
+
   const widgetBuilder = AggregationWidget.builder()
     .newId()
     .config(config);
 
   const widget = duplicateCommonWidgetSettings(widgetBuilder, origWidget).build();
+
   return WidgetActions.create(widget);
 };
 

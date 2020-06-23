@@ -27,9 +27,11 @@ export default class TermsPivotConfiguration extends React.Component {
 
   _propagateChange = (limit) => this.setState((state) => {
     const newState = { limit };
+
     if (state.limit && !isNaN(state.limit)) {
       newState.oldLimit = state.limit;
     }
+
     return newState;
   }, () => this.props.onChange({ limit }));
 

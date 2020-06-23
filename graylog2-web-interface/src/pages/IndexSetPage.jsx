@@ -131,6 +131,7 @@ const IndexSetPage = createReactClass({
 
     let indicesInfo;
     let indicesOverview;
+
     if (this.state.indexerOverview && this.state.indexDetails.closedIndices) {
       const deflectorInfo = this.state.indexerOverview.deflector;
 

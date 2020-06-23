@@ -59,6 +59,7 @@ class FieldForm extends React.Component {
     if (type === undefined) {
       return {};
     }
+
     return PluginStore.exports('fieldValueProviders').find((edt) => edt.type === type) || {};
   };
 
@@ -72,6 +73,7 @@ class FieldForm extends React.Component {
 
     const providerType = this.getConfigProviderType(config);
     let pluginRequiredFields = [];
+
     if (providerType) {
       const providerPlugin = this.getProviderPlugin(providerType);
       pluginRequiredFields = providerPlugin.requiredFields;
@@ -94,6 +96,7 @@ class FieldForm extends React.Component {
     });
 
     const errorNumber = Object.keys(errors).length;
+
     if (errorNumber > 0) {
       this.setState({ validation: { errors: errors } });
     }
@@ -122,6 +125,7 @@ class FieldForm extends React.Component {
     const { config } = this.state;
     const providerPlugin = this.getProviderPlugin(nextProvider);
     const defaultProviderConfig = providerPlugin.defaultConfig || {};
+
     const nextConfig = {
       ...config,
       providers: [{
@@ -147,11 +151,13 @@ class FieldForm extends React.Component {
     const { currentUser } = this.props;
 
     const providerType = this.getConfigProviderType(config);
+
     if (!providerType) {
       return null;
     }
 
     const providerPlugin = this.getProviderPlugin(providerType);
+
     return (providerPlugin.formComponent
       ? React.createElement(providerPlugin.formComponent, {
         fieldName: fieldName,

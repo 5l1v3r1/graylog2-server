@@ -43,6 +43,7 @@ export default class PivotConfiguration extends React.Component {
     const { type } = this.props;
     const { config } = this.state;
     const typeSpecificConfiguration = _configurationComponentByType(type, config, this._onChange);
+
     return (
       <form onSubmit={this._onSubmit}>
         {typeSpecificConfiguration}

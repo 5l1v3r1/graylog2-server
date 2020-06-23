@@ -36,6 +36,7 @@ const ConfigurationVariableStore = Reflux.createStore({
     let url = URLUtils.qualifyUrl(`${this.sourceUrl}`);
     let method;
     let action;
+
     if (configurationVariable.id === '') {
       method = 'POST';
       action = 'created';

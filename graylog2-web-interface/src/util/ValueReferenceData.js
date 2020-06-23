@@ -133,6 +133,7 @@ export default class ValueReferenceData {
    */
   addPath(path) {
     const stringPath = path.join('.');
+
     const leaf = new Path(
       stringPath,
       ValueRefHelper.dataIsValueRef(this.data.getIn(path)),
@@ -154,6 +155,7 @@ export default class ValueReferenceData {
       if (ValueRefHelper.dataIsValueRef(this.data.getIn(path))) {
         return this.data.getIn(path.concat(ValueRefHelper.VALUE_REF_VALUE_FIELD));
       }
+
       return this.data.getIn(path);
     };
   }
@@ -201,6 +203,7 @@ export default class ValueReferenceData {
       if (ValueRefHelper.dataIsValueRef(data)) {
         return this.data.getIn(path.concat(ValueRefHelper.VALUE_REF_TYPE_FIELD));
       }
+
       return (typeof data);
     };
   }

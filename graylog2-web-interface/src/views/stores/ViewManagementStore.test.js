@@ -12,10 +12,12 @@ describe('ViewManagementStore', () => {
   it('refreshes user after creating a view', () => {
     const search = Search.create();
     const view = View.builder().newId().search(search).build();
+
     const CurrentUserStore = {
       reload: jest.fn(),
     };
     StoreProvider.getStore.mockReturnValue(CurrentUserStore);
+
     return ViewManagementActions.create(view).then(() => {
       expect(CurrentUserStore.reload).toHaveBeenCalled();
     });

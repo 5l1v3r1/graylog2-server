@@ -35,6 +35,7 @@ describe('KeywordTimeRangeSelector', () => {
 
   const findValidationState = (container) => {
     const formGroup = container.querySelector('.form-group');
+
     return formGroup && formGroup.className.includes('has-error')
       ? 'error'
       : null;
@@ -48,14 +49,17 @@ describe('KeywordTimeRangeSelector', () => {
   const asyncRender = async (element) => {
     let wrapper;
     await act(async () => { wrapper = render(element); });
+
     if (!wrapper) {
       throw new Error('Render returned `null`.');
     }
+
     return wrapper;
   };
 
   it('renders value passed to it', async () => {
     const { getByDisplayValue } = await asyncRender(<KeywordTimeRangeSelector value="Last hour" />);
+
     expect(getByDisplayValue('Last hour')).not.toBeNull();
   });
 

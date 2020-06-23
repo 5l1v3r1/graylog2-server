@@ -41,6 +41,7 @@ class ContentPackParameters extends React.Component {
   _addNewParameter = (newParameter, oldParameter) => {
     let newContentPackBuilder = this.props.contentPack.toBuilder();
     const newAppliedParameter = ObjectUtils.clone(this.props.appliedParameter);
+
     if (oldParameter) {
       /* If the name of the parameter changed we need to update the reference in appliedParameter */
       Object.keys(newAppliedParameter).forEach((id) => {
@@ -48,12 +49,14 @@ class ContentPackParameters extends React.Component {
           if (paramMap.paramName === oldParameter.name) {
             return { configKey: paramMap.configKey, paramName: newParameter.name };
           }
+
           return paramMap;
         });
       });
       /* If we update a parameter we remove the old one first */
       newContentPackBuilder = newContentPackBuilder.removeParameter(oldParameter);
     }
+
     newContentPackBuilder.addParameter(newParameter);
     this.props.onStateChange({ contentPack: newContentPackBuilder.build(), appliedParameter: newAppliedParameter });
   };
@@ -78,6 +81,7 @@ class ContentPackParameters extends React.Component {
     /* If we delete a parameter we need to remove the reference from appliedParameter */
     Object.keys(newAppliedParameter).forEach((id) => {
       lodash.remove(newAppliedParameter[id], (paramMap) => { return paramMap.paramName === parameter.name; });
+
       if (newAppliedParameter[id].length <= 0) {
         delete newAppliedParameter[id];
       }

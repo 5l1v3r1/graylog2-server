@@ -24,11 +24,13 @@ const TrafficGraph = ({ width, traffic }: Props) => {
   const dailySums = dailyTraffic.group().reduceSum((d) => d.bytes);
   const t = _.mapKeys(dailySums.all(), (entry) => moment.utc(entry.key, 'YYYY-MM-DD').unix() * 1000);
   const unixTraffic = _.mapValues(t, (val) => val.value);
+
   const chartData = [{
     type: 'bar',
     x: Object.keys(unixTraffic),
     y: Object.values(unixTraffic),
   }];
+
   const layout = {
     showlegend: false,
     margin: {

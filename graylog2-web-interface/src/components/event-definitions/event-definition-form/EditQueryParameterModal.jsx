@@ -42,9 +42,11 @@ class EditQueryParameterModal extends React.Component {
 
   _saved = () => {
     const { queryParameter } = this.state;
+
     if (!this._validate(queryParameter)) {
       return;
     }
+
     this.propagateChanges();
     this.modal.close();
   };
@@ -60,9 +62,11 @@ class EditQueryParameterModal extends React.Component {
     const config = lodash.cloneDeep(eventDefinition.config);
     const { query_parameters: queryParameters } = config;
     const index = queryParameters.findIndex((p) => p.name === prevQueryParameter.name);
+
     if (index < 0) {
       throw new Error(`Query parameter "${queryParameter.name}" not found`);
     }
+
     queryParameters[index] = lodash.omit(queryParameter, 'embryonic');
     onChange('config', config);
   };
@@ -87,13 +91,17 @@ class EditQueryParameterModal extends React.Component {
 
   _validate = (queryParameter) => {
     const newValidation = {};
+
     if (!queryParameter.lookup_table) {
       newValidation.lookup_table = 'Cannot be empty';
     }
+
     if (!queryParameter.key) {
       newValidation.key = 'Cannot be empty';
     }
+
     this.setState({ validation: newValidation });
+
     return lodash.isEmpty(newValidation);
   };
 
@@ -101,6 +109,7 @@ class EditQueryParameterModal extends React.Component {
     if (!lookupTables) {
       return [];
     }
+
     return lookupTables
       .sort((lt1, lt2) => naturalSortIgnoreCase(lt1.title, lt2.title))
       .map((table) => ({ label: table.title, value: table.name }));
@@ -110,6 +119,7 @@ class EditQueryParameterModal extends React.Component {
     const { lookupTables } = this.props;
     const { queryParameter, validation } = this.state;
     const parameterSyntax = `$${queryParameter.name}$`;
+
     return (
       <>
         <Button bsSize="small"

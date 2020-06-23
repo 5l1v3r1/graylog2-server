@@ -89,6 +89,7 @@ class RuleList extends React.Component {
     if (metricsConfig && metricsConfig.metrics_enabled) {
       return <Button bsStyle="warning" onClick={this.toggleMetricsConfig}>Debug Metrics: ON</Button>;
     }
+
     return <Button onClick={this.toggleMetricsConfig}>Debug Metrics</Button>;
   };
 

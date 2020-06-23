@@ -69,12 +69,14 @@ const CollectorsAdministrationContainer = createReactClass({
   handleFilter(property, value) {
     const { filters, pagination, query } = this.state.sidecars;
     let newFilters;
+
     if (property) {
       newFilters = lodash.cloneDeep(filters);
       newFilters[property] = value;
     } else {
       newFilters = {};
     }
+
     SidecarsAdministrationActions.list({ query: query, filters: newFilters, pageSize: pagination.pageSize });
   },
 
@@ -88,6 +90,7 @@ const CollectorsAdministrationContainer = createReactClass({
       doneCallback();
       const { query, filters, pagination } = this.state.sidecars;
       SidecarsAdministrationActions.list({ query: query, filters: filters, pageSize: pagination.pageSize, page: pagination.page });
+
       return response;
     });
   },
@@ -95,12 +98,14 @@ const CollectorsAdministrationContainer = createReactClass({
   handleProcessAction(action, selectedCollectors, doneCallback) {
     SidecarsAdministrationActions.setAction(action, selectedCollectors).then((response) => {
       doneCallback();
+
       return response;
     });
   },
 
   render() {
     const { collectors, configurations, sidecars } = this.state;
+
     if (!collectors || !collectors.collectors || !sidecars || !sidecars.sidecars || !configurations || !configurations.configurations) {
       return <Spinner text="Loading collector list..." />;
     }
@@ -110,8 +115,10 @@ const CollectorsAdministrationContainer = createReactClass({
       .sort((s1, s2) => naturalSortIgnoreCase(s1.node_name, s2.node_name))
       .forEach((sidecar) => {
         const compatibleCollectorIds = sidecar.collectors;
+
         if (lodash.isEmpty(compatibleCollectorIds)) {
           sidecarCollectors.push({ collector: {}, sidecar: sidecar });
+
           return;
         }
 

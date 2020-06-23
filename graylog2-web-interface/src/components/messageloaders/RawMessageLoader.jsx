@@ -47,6 +47,7 @@ const RawMessageLoader = createReactClass({
 
   componentDidMount() {
     CodecTypesActions.list();
+
     if (this.props.inputIdSelector) {
       InputsActions.list();
     }
@@ -88,6 +89,7 @@ const RawMessageLoader = createReactClass({
     }
 
     const codecTypesIds = Object.keys(this.state.codecTypes);
+
     if (codecTypesIds.length === 0) {
       return [{ value: 'none', label: 'No codecs available' }];
     }
@@ -96,6 +98,7 @@ const RawMessageLoader = createReactClass({
       .filter((id) => id !== 'random-http-msg') // Skip Random HTTP codec, as nobody wants to enter a raw random message.
       .map((id) => {
         const { name } = this.state.codecTypes[id];
+
         // Add id as label on codecs not having a descriptor name
         return { value: id, label: name === '' ? id : name };
       })
@@ -108,6 +111,7 @@ const RawMessageLoader = createReactClass({
     }
 
     const inputIds = Object.keys(this.state.inputs);
+
     if (inputIds.length === 0) {
       return [{ value: 'none', label: 'No inputs available' }];
     }
@@ -116,6 +120,7 @@ const RawMessageLoader = createReactClass({
       .map((id) => {
         const inputId = this.state.inputs[id].id;
         const label = `${inputId} / ${this.state.inputs[id].title} / ${this.state.inputs[id].name}`;
+
         return { value: inputId, label: label };
       })
       .sort((inputA, inputB) => inputA.label.toLowerCase().localeCompare(inputB.label.toLowerCase()));
@@ -189,6 +194,7 @@ const RawMessageLoader = createReactClass({
 
   render() {
     let codecConfigurationOptions;
+
     if (this.state.codecTypes && this.state.codec) {
       const codecConfiguration = this.state.codecTypes[this.state.codec].requested_configuration;
       codecConfigurationOptions = Object.keys(codecConfiguration)
@@ -197,6 +203,7 @@ const RawMessageLoader = createReactClass({
     }
 
     let inputIdSelector;
+
     if (this.props.inputIdSelector) {
       inputIdSelector = (
         <Input id="input"

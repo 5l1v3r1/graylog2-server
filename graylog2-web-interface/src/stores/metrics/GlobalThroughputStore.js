@@ -35,9 +35,11 @@ const GlobalThroughputStore = Reflux.createStore({
     if (!update.metrics) {
       return;
     }
+
     const input = Object.keys(update.metrics)
       .map((nodeId) => update.metrics[nodeId][this.metrics.input]?.metric?.value ?? 0)
       .reduce((prev, cur) => prev + cur, 0);
+
     const output = Object.keys(update.metrics)
       .map((nodeId) => update.metrics[nodeId][this.metrics.output]?.metric?.value ?? 0)
       .reduce((prev, cur) => prev + cur, 0);

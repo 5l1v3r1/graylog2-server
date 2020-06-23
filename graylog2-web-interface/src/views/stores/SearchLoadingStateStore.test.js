@@ -13,17 +13,21 @@ jest.mock('views/logic/singleton', () => ({
   singletonActions: (key, target) => target(),
   singletonStore: (key, target) => target(),
 }));
+
 describe('SearchLoadingStateStore', () => {
   beforeEach(() => {
     jest.doMock('./SearchStore', () => ({ SearchActions }));
   });
+
   afterEach(() => {
     jest.resetAllMocks();
     jest.resetModules();
   });
+
   it('registers to SearchStore for search executions', () => {
     // eslint-disable-next-line no-unused-vars
     const { SearchLoadingStateStore } = loadSUT();
+
     expect(SearchActions.execute.listen).toHaveBeenCalledTimes(1);
     expect(SearchActions.execute.completed.listen).toHaveBeenCalledTimes(1);
   });
@@ -38,6 +42,7 @@ describe('SearchLoadingStateStore', () => {
     const { SearchLoadingStateStore } = loadSUT();
     SearchLoadingStateStore.listen(({ isLoading }) => {
       expect(isLoading).toBeTruthy();
+
       done();
     });
 
@@ -53,6 +58,7 @@ describe('SearchLoadingStateStore', () => {
 
     SearchLoadingStateStore.listen(({ isLoading }) => {
       expect(isLoading).toBeFalsy();
+
       done();
     });
 

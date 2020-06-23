@@ -54,6 +54,7 @@ class QueryTitleEditModal extends React.Component<Props, State> {
 
   render() {
     const { titleDraft } = this.state;
+
     return (
       <BootstrapModalForm ref={(modal) => { this.modal = modal; }}
                           title="Editing dashboard page title"

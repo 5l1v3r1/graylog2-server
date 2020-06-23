@@ -25,6 +25,7 @@ const InputStateBadge = createReactClass({
   _labelClassForState(sortedStates) {
     const { input } = this.props;
     const { nodes } = this.state;
+
     const nodesWithKnownState = sortedStates.reduce((numberOfNodes, state) => {
       return numberOfNodes + state.count;
     }, 0);
@@ -80,6 +81,7 @@ const InputStateBadge = createReactClass({
         if (!sortedInputStates[state]) {
           sortedInputStates[state] = [];
         }
+
         sortedInputStates[state].push(node);
       });
     }
@@ -94,6 +96,7 @@ const InputStateBadge = createReactClass({
           return <small><LinkToNode nodeId={node} />: {state.state}<br /></small>;
         });
       });
+
       const popover = (
         <Popover id="inputstate-badge-details" title={`Input States for ${input.title}`}>
           {popOverText}
@@ -110,6 +113,7 @@ const InputStateBadge = createReactClass({
         </OverlayTrigger>
       );
     }
+
     const text = input.global || input.node === undefined ? '0 RUNNING' : 'NOT RUNNING';
 
     return (

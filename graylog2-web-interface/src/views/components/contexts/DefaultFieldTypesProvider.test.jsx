@@ -31,12 +31,14 @@ describe('DefaultFieldTypesProvider', () => {
         </FieldTypesContext.Consumer>
       </DefaultFieldTypesProvider>,
     );
+
     return consume;
   };
 
   it('provides no field types with empty store', () => {
     asMock(FieldTypesStore.getInitialState).mockReturnValue(undefined);
     const consume = renderSUT();
+
     expect(consume).toHaveBeenCalledWith(undefined);
   });
 

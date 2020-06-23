@@ -37,6 +37,7 @@ const LogLevelMetrics = createReactClass({
     const { loglevel, nodeId } = this.props;
     const { metrics } = this.state;
     let metricsDetails;
+
     if (!metrics || !metrics[nodeId] || !metrics[nodeId][this._metricName()]) {
       metricsDetails = <Spinner />;
     } else {
@@ -52,6 +53,7 @@ const LogLevelMetrics = createReactClass({
         </dl>
       );
     }
+
     return (
       <div className="loglevel-metrics-row">
         <Col md={4}>

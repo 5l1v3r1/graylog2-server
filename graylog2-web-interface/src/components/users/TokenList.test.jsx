@@ -14,11 +14,13 @@ describe('<TokenList />', () => {
 
   it('should render with empty tokens', () => {
     const wrapper = mount(<TokenList tokens={[]} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with tokens', () => {
     const wrapper = mount(<TokenList tokens={tokens} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -26,24 +28,31 @@ describe('<TokenList />', () => {
     const createFn = jest.fn((tokenName) => {
       expect(tokenName).toEqual('hans');
     });
+
     const deleteFn = jest.fn((tokenId) => {
       expect(tokenId).toEqual('abc1');
     });
+
     const wrapper = mount(<TokenList tokens={tokens}
                                      onCreate={createFn}
                                      onDelete={deleteFn} />);
     wrapper.find('input#create-token-input').simulate('change', { target: { value: 'hans' } });
     wrapper.find('form').at(0).simulate('submit');
+
     expect(createFn.mock.calls.length).toBe(1);
 
     wrapper.find('button[children="Delete"]').at(0).simulate('click');
+
     expect(createFn.mock.calls.length).toBe(1);
   });
 
   it('should display tokens if "Hide tokens" was unchecked', () => {
     const wrapper = mount(<TokenList tokens={tokens} />);
+
     expect(wrapper.find('span[children="beef2001"]').length).toEqual(0);
+
     wrapper.find('input#hide-tokens').simulate('change', { target: { checked: false } });
+
     expect(wrapper.find('span[children="beef2001"]').length).toEqual(1);
   });
 });

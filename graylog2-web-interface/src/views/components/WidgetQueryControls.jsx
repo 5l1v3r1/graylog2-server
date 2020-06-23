@@ -72,6 +72,7 @@ const ResetOverrideHint = () => (
 
 const onSubmit = (values, widget: Widget) => {
   const { timerange, streams, queryString } = values;
+
   const newWidget = widget.toBuilder()
     .timerange(timerange)
     .query(createElasticsearchQueryString(queryString))
@@ -92,6 +93,7 @@ const WidgetQueryControls = ({ availableStreams, config, globalOverride = {}, wi
   const Wrapper = isGloballyOverridden ? BlurredWrapper : React.Fragment;
 
   const _onSubmit = useCallback((values) => onSubmit(values, widget), [widget]);
+
   return (
     <>
       {isGloballyOverridden && <ResetOverrideHint />}
@@ -134,7 +136,11 @@ const WidgetQueryControls = ({ availableStreams, config, globalOverride = {}, wi
                       <QueryInput value={value}
                                   disabled={isGloballyOverridden}
                                   placeholder={'Type your search query here and press enter. E.g.: ("not found" AND http) OR http_response_code:[400 TO 404]'}
-                                  onChange={(newQuery) => { onChange({ target: { value: newQuery, name } }); return Promise.resolve(); }}
+                                  onChange={(newQuery) => {
+                                    onChange({ target: { value: newQuery, name } });
+
+                                    return Promise.resolve();
+                                  }}
                                   onExecute={handleSubmit} />
                     )}
                   </Field>

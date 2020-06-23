@@ -16,6 +16,7 @@ jest.mock('util/History', () => ({}));
 jest.mock('routing/Routes', () => ({ pluginRoute: jest.fn() }));
 
 const search = Search.create();
+
 const view = View.create()
   .toBuilder()
   .id('deadbeef')
@@ -29,14 +30,17 @@ const createViewWithQueries = () => {
     Query.builder().id('query-id-2').build(),
     Query.builder().id('other-query-id').build(),
   ];
+
   const states: ViewStateMap = Immutable.Map({
     'query-id-1': ViewState.create(),
     'query-id-2': ViewState.builder().titles(Immutable.fromJS({ tab: { title: 'My awesome Query tab' } })).build(),
     'other-query-id': ViewState.create(),
   });
+
   const searchWithQueries = search.toBuilder()
     .queries(queries)
     .build();
+
   return view.toBuilder()
     .state(states)
     .search(searchWithQueries)
@@ -48,6 +52,7 @@ describe('BigDisplayModeConfiguration', () => {
 
   it('generates markup that matches snapshot', () => {
     const { container } = render(<BigDisplayModeConfiguration view={view} />);
+
     expect(container).toMatchSnapshot();
   });
 
@@ -88,6 +93,7 @@ describe('BigDisplayModeConfiguration', () => {
     const refreshInterval = asElement(getByLabelText('Refresh Interval'), HTMLInputElement);
 
     fireEvent.change(refreshInterval, { target: { value: 'a string' } });
+
     expect(refreshInterval.value).toBe('');
   });
 
@@ -97,6 +103,7 @@ describe('BigDisplayModeConfiguration', () => {
     const cycleInterval = asElement(getByLabelText('Tab cycle interval'), HTMLInputElement);
 
     fireEvent.change(cycleInterval, { target: { value: 'a string' } });
+
     expect(cycleInterval.value).toBe('');
   });
 
@@ -109,6 +116,7 @@ describe('BigDisplayModeConfiguration', () => {
     it('on form submit', () => {
       const { getByTestId } = render(<BigDisplayModeConfiguration view={view} show />);
       const form = getByTestId('modal-form');
+
       expect(form).not.toBeNull();
 
       fireEvent.submit(form);

@@ -38,6 +38,7 @@ class IndicesConfiguration extends React.Component {
       strategy: this.props.indexSet.rotation_strategy_class,
       config: this.props.indexSet.rotation_strategy,
     };
+
     const retentionConfig = {
       strategy: this.props.indexSet.retention_strategy_class,
       config: this.props.indexSet.retention_strategy,

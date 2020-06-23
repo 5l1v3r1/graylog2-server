@@ -17,12 +17,14 @@ const transformKey = (key: Key, indices: Array<number>, tz: string) => {
   if (indices.length === 0) {
     return key;
   }
+
   const newKey: Key = key.slice();
   indices.forEach((idx) => {
     if (newKey[idx]) {
       newKey[idx] = formatTimestamp(newKey[idx], tz);
     }
   });
+
   return newKey;
 };
 
@@ -39,12 +41,15 @@ export default (rowPivots: Array<Pivot>, columnPivots: Array<Pivot>): ((Rows) =>
     if (rowIndices.length === 0 && columnIndices.length === 0) {
       return result;
     }
+
     const currentUser = CurrentUserStore.get();
     const timezone = currentUser?.timezone ?? AppConfig.rootTimeZone();
+
     return result.map((row) => {
       if (row.source !== 'leaf') {
         return row;
       }
+
       const newRow: Leaf = { ...row };
       newRow.key = transformKey(row.key, rowIndices, timezone);
 
@@ -53,8 +58,10 @@ export default (rowPivots: Array<Pivot>, columnPivots: Array<Pivot>): ((Rows) =>
           if (values.source !== 'col-leaf') {
             return values;
           }
+
           const newValues: ColLeaf = { ...values };
           newValues.key = transformKey(values.key, columnIndices, timezone);
+
           return newValues;
         });
       }

@@ -46,6 +46,7 @@ type Props = {
 const SurroundingSearchButton = ({ searchConfig, timestamp, id, messageFields }: Props) => {
   const { streams } = useContext(DrilldownContext);
   const timeRangeOptions = buildTimeRangeOptions(searchConfig);
+
   const menuItems = Object.keys(timeRangeOptions)
     .sort((a, b) => naturalSort(a, b))
     .map((range) => (

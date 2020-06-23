@@ -40,6 +40,7 @@ const ConfigurationModal = ({ onSave, view, show, onClose }: ConfigurationModalP
   const [queryCycleInterval, setQueryCycleInterval] = useState(30);
   const addQueryTab = useCallback((idx) => setQueryTabs([...queryTabs, idx]), [queryTabs, setQueryTabs]);
   const removeQueryTab = useCallback((idx) => setQueryTabs(queryTabs.filter((tab) => tab !== idx)), [queryTabs, setQueryTabs]);
+
   const _onSave = useCallback(() => onSave({
     refreshInterval,
     queryTabs,
@@ -112,6 +113,7 @@ const createQueryFromConfiguration = (
     refresh: Number(refreshInterval).toString(),
   };
   const allQueryIndices = view.search.queries.toIndexedSeq().map((_, v) => v).toJS();
+
   return !queryTabs || allQueryIndices.join(',') === queryTabs.join(',')
     ? basicConfiguration
     : { ...basicConfiguration, tabs: queryTabs.join(',') };

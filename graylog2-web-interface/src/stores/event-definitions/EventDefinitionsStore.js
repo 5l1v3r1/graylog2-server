@@ -55,6 +55,7 @@ const EventDefinitionsStore = Reflux.createStore({
     if (this.all) {
       this.listAll();
     }
+
     if (this.pagination.page) {
       this.listPaginated({
         query: this.query,
@@ -71,6 +72,7 @@ const EventDefinitionsStore = Reflux.createStore({
       this.all = response.event_definitions;
       this.context = response.context;
       this.propagateChanges();
+
       return response;
     });
 
@@ -98,6 +100,7 @@ const EventDefinitionsStore = Reflux.createStore({
         grandTotal: response.grand_total,
       };
       this.propagateChanges();
+
       return response;
     });
 
@@ -117,6 +120,7 @@ const EventDefinitionsStore = Reflux.createStore({
 
   setAlertFlag(eventDefinition) {
     const isAlert = eventDefinition.notifications.length > 0;
+
     return { ...eventDefinition, alert: isAlert };
   },
 
@@ -139,6 +143,7 @@ const EventDefinitionsStore = Reflux.createStore({
         UserNotification.success('Event Definition created successfully',
           `Event Definition "${eventDefinition.title}" was created successfully.`);
         this.refresh();
+
         return response;
       },
       (error) => {
@@ -153,6 +158,7 @@ const EventDefinitionsStore = Reflux.createStore({
 
   update(eventDefinitionId, updatedEventDefinition) {
     const { eventDefinition, isScheduled } = this.extractSchedulerInfo(updatedEventDefinition);
+
     const promise = fetch('PUT', this.eventDefinitionsUrl({ segments: [eventDefinitionId], query: { schedule: isScheduled } }),
       this.setAlertFlag(eventDefinition));
     promise.then(
@@ -160,6 +166,7 @@ const EventDefinitionsStore = Reflux.createStore({
         UserNotification.success('Event Definition updated successfully',
           `Event Definition "${eventDefinition.title}" was updated successfully.`);
         this.refresh();
+
         return response;
       },
       (error) => {
@@ -197,6 +204,7 @@ const EventDefinitionsStore = Reflux.createStore({
         UserNotification.success('Event Definition successfully enabled',
           `Event Definition "${eventDefinition.title}" was successfully enabled.`);
         this.refresh();
+
         return response;
       },
       (error) => {
@@ -216,6 +224,7 @@ const EventDefinitionsStore = Reflux.createStore({
         UserNotification.success('Event Definition successfully disabled',
           `Event Definition "${eventDefinition.title}" was successfully disabled.`);
         this.refresh();
+
         return response;
       },
       (error) => {

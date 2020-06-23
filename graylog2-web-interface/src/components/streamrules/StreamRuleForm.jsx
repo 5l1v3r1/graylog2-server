@@ -35,9 +35,11 @@ class StreamRuleForm extends React.Component {
     if (type === this.ALWAYS_MATCH_RULE_TYPE) {
       this.setState({ field: '' });
     }
+
     if (type === this.FIELD_PRESENCE_RULE_TYPE || type === this.ALWAYS_MATCH_RULE_TYPE) {
       this.setState({ value: '' });
     }
+
     onSubmit(streamRule.id, this.state);
     this.modal.close();
   };
@@ -71,10 +73,13 @@ class StreamRuleForm extends React.Component {
     const { streamRuleTypes: ruleTypes, title } = this.props;
 
     const streamRuleTypes = ruleTypes.map(this._formatStreamRuleType);
+
     const fieldBox = (String(type) !== String(this.ALWAYS_MATCH_RULE_TYPE)
       ? <TypeAheadFieldInput id="field-input" type="text" required label="Field" name="field" defaultValue={field} onChange={this.handleChange} autoFocus /> : '');
+
     const valueBox = (String(type) !== String(this.FIELD_PRESENCE_RULE_TYPE) && String(type) !== String(this.ALWAYS_MATCH_RULE_TYPE)
       ? <Input id="Value" type="text" required label="Value" name="value" value={value} onChange={this.handleChange} /> : '');
+
     return (
       <BootstrapModalForm ref={(c) => { this.modal = c; }}
                           title={title}

@@ -44,6 +44,7 @@ const StreamRulesStore = Reflux.createStore({
     };
 
     const url = URLUtils.qualifyUrl(ApiRoutes.StreamRulesApiController.update(streamId, streamRuleId).url);
+
     const request = {
       field: data.field,
       type: data.type,

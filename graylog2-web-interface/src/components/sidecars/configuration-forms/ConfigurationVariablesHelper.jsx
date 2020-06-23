@@ -96,6 +96,7 @@ class ConfigurationVariablesHelper extends React.Component {
         </tr>,
       );
     });
+
     return variableRows;
   };
 
@@ -119,6 +120,7 @@ class ConfigurationVariablesHelper extends React.Component {
     if (typeof callback === 'function') {
       callback();
     }
+
     this._reloadVariables();
   };
 

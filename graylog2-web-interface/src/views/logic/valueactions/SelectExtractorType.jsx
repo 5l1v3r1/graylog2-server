@@ -43,6 +43,7 @@ class SelectExtractorType extends React.Component<ActionComponentProps, State> {
     onClose();
 
     const { selectedExtractor } = this.state;
+
     if (selectedExtractor) {
       const uri = this.extractorRoutes[selectedExtractor];
       const newWindow = window.open(uri, '_blank');
@@ -62,6 +63,7 @@ class SelectExtractorType extends React.Component<ActionComponentProps, State> {
 
   render() {
     const { selectedExtractor } = this.state;
+
     return (
       <BootstrapModalForm title="Select extractor type"
                           submitButtonDisabled={!selectedExtractor}

@@ -88,6 +88,7 @@ export default class AggregationControls extends React.Component<Props, State> {
 
   _onSeriesChange = (series: $PropertyType<$PropertyType<Props, 'config'>, 'series'>) => {
     this._setAndPropagate((state) => ({ config: state.config.toBuilder().series(series).build() }));
+
     return true;
   };
 
@@ -147,6 +148,7 @@ export default class AggregationControls extends React.Component<Props, State> {
     const showEventConfiguration = config.isTimeline && ['bar', 'line', 'scatter', 'area'].findIndex((x) => x === visualization) >= 0;
     const childrenWithCallback = React.Children.map(children, (child) => React.cloneElement(child, { onVisualizationConfigChange: this._onVisualizationConfigChange }));
     const VisualizationConfigType = _visualizationConfigFor(visualization);
+
     return (
       <Container>
         <TopRow>

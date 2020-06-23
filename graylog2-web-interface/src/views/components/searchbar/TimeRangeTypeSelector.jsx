@@ -18,12 +18,14 @@ type Props = {
 export default function TimeRangeTypeSelector({ disabled }: Props) {
   const [{ value, onChange, name }] = useField('timerange');
   const { type: currentType } = value;
+
   const onSelect = useCallback((newType) => onChange({
     target: {
       value: migrateTimeRangeToNewType(value, newType),
       name,
     },
   }), [onChange, value]);
+
   return (
     <ButtonToolbar className="pull-left">
       <TimeRangeDropdownButton disabled={disabled} onSelect={onSelect}>

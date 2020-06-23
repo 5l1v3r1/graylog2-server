@@ -33,6 +33,7 @@ const LogLevelDropdown = createReactClass({
 
   render() {
     const { subsystem, nodeId } = this.props;
+
     const loglevels = this.state.availableLoglevels
       .map((loglevel) => {
         return (
@@ -43,6 +44,7 @@ const LogLevelDropdown = createReactClass({
           </MenuItem>
         );
       });
+
     return (
       <DropdownButton id="loglevel" bsSize="xsmall" title={lodash.capitalize(subsystem.level)}>
         {loglevels}

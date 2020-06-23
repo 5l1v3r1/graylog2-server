@@ -51,6 +51,7 @@ const ColorPickerPopover = createReactClass({
 
   render() {
     const { id, placement, title, triggerNode, triggerAction, ...colorPickerProps } = this.props;
+
     const popover = (
       <Popover id={id} title={title} className={style.customPopover}>
         <ColorPicker {...colorPickerProps} onChange={this.handleChange} />

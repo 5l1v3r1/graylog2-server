@@ -37,20 +37,25 @@ class LookupTablesOverview extends React.Component {
 
   _lookupName = (id, map) => {
     const empty = { title: 'None' };
+
     if (!map) {
       return empty;
     }
+
     return map[id] || empty;
   };
 
   _lookupAdapterError = (table) => {
     if (this.props.errorStates.dataAdapters && this.props.dataAdapters) {
       const adapter = this.props.dataAdapters[table.data_adapter_id];
+
       if (!adapter) {
         return null;
       }
+
       return this.props.errorStates.dataAdapters[adapter.name];
     }
+
     return null;
   };
 
@@ -103,6 +108,7 @@ class LookupTablesOverview extends React.Component {
     const lookupTables = this.props.tables.map((table) => {
       const cache = this._lookupName(table.cache_id, this.props.caches);
       const dataAdapter = this._lookupName(table.data_adapter_id, this.props.dataAdapters);
+
       const errors = {
         table: this.props.errorStates.tables[table.name],
         cache: null,

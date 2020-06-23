@@ -46,6 +46,7 @@ export default class SeriesConfiguration extends React.Component {
     const { usedNames = [] } = this.props;
     const isValid = !usedNames.includes(trim(name));
     const validationHint = isValid ? null : <> <strong>Name must be unique.</strong></>;
+
     return (
       <span>
         <FormGroup validationState={isValid ? null : 'error'}>

@@ -47,6 +47,7 @@ describe('ViewTransformer', () => {
         .build();
 
       const dashboardView = viewTransformer(searchView);
+
       expect(dashboardView.type).toBe(View.Type.Dashboard);
     });
 
@@ -69,6 +70,7 @@ describe('ViewTransformer', () => {
         .build();
 
       const dashboardView = viewTransformer(searchView);
+
       expect(dashboardView.id).not.toStrictEqual(searchView.id);
     });
 
@@ -86,12 +88,14 @@ describe('ViewTransformer', () => {
       const viewState: ViewState = await ViewStateGenerator(View.Type.Search);
 
       const viewStateMap: ViewStateMap = Map({ 'query-id': viewState });
+
       const searchView = View.builder()
         .type(View.Type.Search)
         .state(viewStateMap)
         .search(search)
         .build();
       const dashboardView = viewTransformer(searchView);
+
       expect(dashboardView.state.get('query-id').widgets.first().timerange).toBe(query.timerange);
       expect(dashboardView.state.get('query-id').widgets.first().query).toBeUndefined();
       expect(dashboardView.state.get('query-id').widgets.first().streams).toStrictEqual([]);
@@ -111,12 +115,14 @@ describe('ViewTransformer', () => {
       const viewState: ViewState = await ViewStateGenerator(View.Type.Search);
 
       const viewStateMap: ViewStateMap = Map({ 'query-id': viewState });
+
       const searchView = View.builder()
         .type(View.Type.Search)
         .state(viewStateMap)
         .search(search)
         .build();
       const dashboardView = viewTransformer(searchView);
+
       expect(dashboardView.state.get('query-id').widgets.first().timerange).toBeUndefined();
       expect(dashboardView.state.get('query-id').widgets.first().query).toBe(query.query);
       expect(dashboardView.state.get('query-id').widgets.first().streams).toStrictEqual([]);
@@ -136,12 +142,14 @@ describe('ViewTransformer', () => {
       const viewState: ViewState = await ViewStateGenerator(View.Type.Search);
 
       const viewStateMap: ViewStateMap = Map({ 'query-id': viewState });
+
       const searchView = View.builder()
         .type(View.Type.Search)
         .state(viewStateMap)
         .search(search)
         .build();
       const dashboardView = viewTransformer(searchView);
+
       expect(dashboardView.state.get('query-id').widgets.first().timerange).toBeUndefined();
       expect(dashboardView.state.get('query-id').widgets.first().query).toBeUndefined();
       expect(dashboardView.state.get('query-id').widgets.first().streams).toStrictEqual(['1234-abcd']);
@@ -173,10 +181,12 @@ describe('ViewTransformer', () => {
     it('should transform a view with search from a json fixture', () => {
       const viewFixture = View.fromJSON(readFixture('./ViewTransformer.view.fixture.json'));
       const searchFixture = Search.fromJSON(readFixture('./ViewTransformer.search.fixture.json'));
+
       const searchView = viewFixture.toBuilder()
         .search(searchFixture)
         .build();
       const dashboardView = viewTransformer(searchView);
+
       expect(dashboardView).toMatchSnapshot({
         _value: {
           id: expect.any(String),

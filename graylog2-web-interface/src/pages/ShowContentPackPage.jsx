@@ -39,7 +39,6 @@ const ShowContentPackPage = createReactClass({
     };
   },
 
-
   componentDidMount() {
     ContentPacksActions.get(this.props.params.contentPackId).catch((error) => {
       if (error.status === 404) {
@@ -49,6 +48,7 @@ const ShowContentPackPage = createReactClass({
       } else {
         UserNotification.error('An internal server error occurred. Please check your logfiles for more information');
       }
+
       history.push(Routes.SYSTEM.CONTENTPACKS.LIST);
     });
     ContentPacksActions.installList(this.props.params.contentPackId);
@@ -67,13 +67,16 @@ const ShowContentPackPage = createReactClass({
           if (error.status !== 404) {
             UserNotification.error('An internal server error occurred. Please check your logfiles for more information');
           }
+
           history.push(Routes.SYSTEM.CONTENTPACKS.LIST);
         });
       }, (error) => {
         let errMessage = error.message;
+
         if (error.responseMessage) {
           errMessage = error.responseMessage;
         }
+
         UserNotification.error(`Deleting content pack failed: ${errMessage}`, 'Error');
       });
     }
@@ -126,6 +129,7 @@ const ShowContentPackPage = createReactClass({
     }
 
     const { contentPackRevisions, selectedVersion, constraints } = this.state;
+
     return (
       <DocumentTitle title="Content packs">
         <span>

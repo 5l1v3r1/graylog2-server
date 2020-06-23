@@ -17,6 +17,7 @@ const InputStaticFieldsStore = Reflux.createStore({
         (response) => {
           this.trigger({});
           UserNotification.success(`Static field '${name}' added to '${input.title}' successfully`);
+
           return response;
         },
         (error) => {
@@ -36,6 +37,7 @@ const InputStaticFieldsStore = Reflux.createStore({
         (response) => {
           this.trigger({});
           UserNotification.success(`Static field '${name}' removed from '${input.title}' successfully`);
+
           return response;
         },
         (error) => {

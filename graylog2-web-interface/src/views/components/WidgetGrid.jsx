@@ -36,11 +36,13 @@ const defaultTitleGenerator = (w) => `Untitled ${w.type.replace('_', ' ').split(
 class WidgetGrid extends React.Component {
   static _defaultDimensions(type) {
     const widgetDef = widgetDefinition(type);
+
     return new WidgetPosition(1, 1, widgetDef.defaultHeight, widgetDef.defaultWidth);
   }
 
   static _defaultTitle(widget) {
     const widgetDef = widgetDefinition(widget.type);
+
     return (widgetDef.titleGenerator || defaultTitleGenerator)(widget);
   }
 
@@ -84,6 +86,7 @@ class WidgetGrid extends React.Component {
     const onPositionsChange = (newPosition) => {
       const newPositions = Object.keys(positions).map((id) => {
         const { col, row, height, width } = positions[id]._value;
+
         return { id: id, col: col, row: row, height: height, width: width };
       });
       newPositions.push(newPosition);
@@ -138,6 +141,7 @@ class WidgetGrid extends React.Component {
     const { staticWidgets, data, errors, locked, onPositionsChange } = this.props;
     // eslint-disable-next-line react/destructuring-assignment
     const { widgets, positions } = this._renderWidgets(this.props.widgets, this.props.positions, data, errors);
+
     const grid = widgets && widgets.length > 0 ? (
       <ReactGridContainer animate
                           locked={locked}

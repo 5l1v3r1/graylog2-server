@@ -61,14 +61,17 @@ class FieldActions extends React.Component<Props, State> {
 
     const wrappedElement = <FieldElement active={open} disabled={disabled}>{element}</FieldElement>;
     const handlerArgs = { queryId, field: name, type, contexts: this.context };
+
     const fieldActions: Array<ActionDefinition> = PluginStore.exports('fieldActions')
       .filter((action: ActionDefinition) => {
         const { isHidden = (() => false: ActionHandlerCondition) } = action;
+
         return !isHidden(handlerArgs);
       })
       .map((action: ActionDefinition) => {
         const setActionComponents = (fn) => this.setState(({ overflowingComponents: actionComponents }) => ({ overflowingComponents: fn(actionComponents) }));
         const handler = createHandlerFor(action, setActionComponents);
+
         const onSelect = () => {
           this._onMenuToggle();
           handler(handlerArgs);
@@ -76,6 +79,7 @@ class FieldActions extends React.Component<Props, State> {
 
         const { isEnabled = (() => true: ActionHandlerCondition) } = action;
         const actionDisabled = !isEnabled(handlerArgs);
+
         return (
           <MenuItem key={`${name}-action-${action.type}`}
                     disabled={actionDisabled}
@@ -84,6 +88,7 @@ class FieldActions extends React.Component<Props, State> {
           </MenuItem>
         );
       });
+
     return (
       <OverlayDropdown show={open}
                        toggle={wrappedElement}

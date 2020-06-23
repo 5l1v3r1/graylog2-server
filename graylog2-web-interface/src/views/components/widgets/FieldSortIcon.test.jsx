@@ -22,6 +22,7 @@ describe('FieldSortIcon', () => {
     fireEvent.click(sortIcon);
 
     const expectedSort = [new SortConfig(SortConfig.PIVOT_TYPE, 'source', Direction.Descending)];
+
     expect(onSortChangeStub).toHaveBeenCalledTimes(1);
     expect(onSortChangeStub).toHaveBeenCalledWith(expectedSort);
   });
@@ -34,6 +35,7 @@ describe('FieldSortIcon', () => {
     fireEvent.click(sortIcon);
 
     const expectedSort = [new SortConfig(SortConfig.PIVOT_TYPE, 'timestamp', Direction.Ascending)];
+
     expect(onSortChangeStub).toHaveBeenCalledTimes(1);
     expect(onSortChangeStub).toHaveBeenCalledWith(expectedSort);
   });
@@ -49,6 +51,7 @@ describe('FieldSortIcon', () => {
     fireEvent.click(sortIcon);
 
     const expectedSort = [new SortConfig(SortConfig.PIVOT_TYPE, 'source', Direction.Descending)];
+
     expect(onSortChangeStub).toHaveBeenCalledTimes(1);
     expect(onSortChangeStub).toHaveBeenCalledWith(expectedSort);
   });
@@ -63,7 +66,9 @@ describe('FieldSortIcon', () => {
 
     expect(setLoadingStateStub).toHaveBeenCalledTimes(1);
     expect(setLoadingStateStub).toHaveBeenCalledWith(true);
+
     await wait(() => expect(setLoadingStateStub).toHaveBeenCalledWith(false));
+
     expect(setLoadingStateStub).toHaveBeenCalledTimes(2);
   });
 });

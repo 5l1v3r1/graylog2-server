@@ -16,6 +16,7 @@ const HTTPJSONPathAdapterDocumentation = () => {
   }
 }`;
   const noMultiResult = '{"value": "Jane Doe"}';
+
   const mapResult = `{
   "login": "jane",
   "full_name": "Jane Doe",
@@ -25,13 +26,16 @@ const HTTPJSONPathAdapterDocumentation = () => {
     "cellphone": "+49123456789"
   }
 }`;
+
   const smallMapResult = `{
   "email": "jane@example.com",
   "cellphone": "+49123456789"
 }`;
+
   const listResult = `{
   "value": ["admin", "developer"]
 }`;
+
   const pipelineRule = `rule "lookup user"
 when has_field("user_login")
 then

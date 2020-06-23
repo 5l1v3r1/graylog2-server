@@ -27,12 +27,14 @@ class AlarmCallbackHistory extends React.Component {
         <small>({type ? type.name : configuration.type})</small>
       </span>
     );
+
     const description = (hadError
       ? <span>Error sending notification at <Timestamp dateTime={history.created_at} format={DateTime.Formats.DATETIME} />: {history.result.error}</span>
       : <span>Notification was sent successfully at <Timestamp dateTime={history.created_at} format={DateTime.Formats.DATETIME} />.</span>);
 
     let configurationWell;
     let configurationInfo;
+
     if (type) {
       configurationWell = <ConfigurationWell configuration={configuration.configuration} typeDefinition={type} />;
     } else {

@@ -32,6 +32,7 @@ const ShowMetricsPage = createReactClass({
     }
 
     let { nodeId } = this.props.params;
+
     // "master" node ID is a placeholder for master node, get first master node ID
     if (nodeId === 'master') {
       const nodeIDs = Object.keys(this.state.nodes);
@@ -44,6 +45,7 @@ const ShowMetricsPage = createReactClass({
     const { namespace } = MetricsStore;
     const names = this.state.metricsNames[nodeId];
     const { filter } = this.props.location.query;
+
     return (
       <DocumentTitle title={`Metrics of node ${node.short_node_id} / ${node.hostname}`}>
         <span>

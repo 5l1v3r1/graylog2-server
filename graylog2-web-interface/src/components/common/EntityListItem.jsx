@@ -39,6 +39,7 @@ const StyledListItem = styled.li(({ theme }) => `
  */
 const EntityListItem = ({ actions, contentRow, createdFromContentPack, description, title, titleSuffix }) => {
   const wrappedTitleSuffix = titleSuffix ? <small>{titleSuffix}</small> : null;
+
   const actionsContainer = (
     <div className="item-actions text-right">
       {actions}
@@ -76,7 +77,6 @@ const EntityListItem = ({ actions, contentRow, createdFromContentPack, descripti
     </StyledListItem>
   );
 };
-
 
 EntityListItem.propTypes = {
   /** Entity's title. */

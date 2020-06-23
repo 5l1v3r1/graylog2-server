@@ -45,6 +45,7 @@ describe('SearchTypesGenerator', () => {
     expect(searchTypeWithFilter.filter).toEqual({ query: 'source: foo', type: 'query_string' });
     expect(searchTypeWithoutFilter.filter).toBeUndefined();
   });
+
   it('allows search type to override timerange', () => {
     const widgetWithTimerange = dummyWidget.toBuilder()
       .timerange({ type: 'relative', range: 300 })
@@ -54,18 +55,22 @@ describe('SearchTypesGenerator', () => {
     const { searchTypes, widgetMapping } = SearchTypesGenerator([widgetWithTimerange]);
 
     const searchType = searchTypes.first();
+
     expect(searchType.get('timerange')).toEqual(Immutable.Map({ type: 'keyword', keyword: 'yesterday' }));
     expect(widgetMapping.get('dummyWidget')).toEqual(Immutable.Set([searchType.get('id')]));
   });
+
   it('allows search type to override id', () => {
     mockSearchType(() => ([{ id: 'bar' }]));
 
     const { searchTypes, widgetMapping } = SearchTypesGenerator([dummyWidget]);
 
     const searchType = searchTypes.first();
+
     expect(searchType.get('id')).toEqual('bar');
     expect(widgetMapping.get('dummyWidget')).toEqual(Immutable.Set([searchType.get('id')]));
   });
+
   it('allows search type to override query', () => {
     const widgetWithTimerange = dummyWidget.toBuilder()
       .query({ type: 'elasticsearch', query_string: '_exists_:src_ip' })
@@ -75,6 +80,7 @@ describe('SearchTypesGenerator', () => {
     const { searchTypes, widgetMapping } = SearchTypesGenerator([widgetWithTimerange]);
 
     const searchType = searchTypes.first();
+
     expect(searchType.get('query')).toEqual(Immutable.Map({ type: 'elasticsearch', query_string: '_exists_:src_ip AND source:foo' }));
     expect(widgetMapping.get('dummyWidget')).toEqual(Immutable.Set([searchType.get('id')]));
   });

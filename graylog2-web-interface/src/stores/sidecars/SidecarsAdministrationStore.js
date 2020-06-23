@@ -70,10 +70,12 @@ const SidecarsAdministrationStore = Reflux.createStore({
 
   setAction(action, collectors) {
     const sidecarIds = Object.keys(collectors);
+
     const formattedCollectors = sidecarIds.map((sidecarId) => ({
       sidecar_id: sidecarId,
       collector_ids: collectors[sidecarId],
     }));
+
     const body = {
       action: action,
       collectors: formattedCollectors,
@@ -84,6 +86,7 @@ const SidecarsAdministrationStore = Reflux.createStore({
     promise.then(
       (response) => {
         UserNotification.success('', `${lodash.upperFirst(action)} for ${formattedCollectors.length} collectors requested`);
+
         return response;
       },
       (error) => {

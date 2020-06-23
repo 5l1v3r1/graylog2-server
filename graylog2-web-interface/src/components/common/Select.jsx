@@ -26,6 +26,7 @@ const DropdownIndicator = (props) => {
     innerProps: { ref, ...restInnerProps },
     /* eslint-enable react/prop-types */
   } = props;
+
   return (
     <div style={getStyles('dropdownIndicator', props)}
          ref={ref}
@@ -42,6 +43,7 @@ type CustomOptionProps = {
 const CustomOption = (optionRenderer: (Option) => React.Node) => (
   (props: CustomOptionProps): React.Element<Components.Option> => {
     const { data, ...rest } = props;
+
     return (
       <Components.Option {...rest}>
         {optionRenderer(data)}
@@ -298,9 +300,11 @@ class Select extends React.Component<Props, State> {
   // eslint-disable-next-line camelcase
   UNSAFE_componentWillReceiveProps = (nextProps: Props) => {
     const { inputProps, optionRenderer, value, valueRenderer } = this.props;
+
     if (value !== nextProps.value) {
       this.setState({ value: nextProps.value });
     }
+
     if (inputProps !== nextProps.inputProps
       || optionRenderer !== nextProps.optionRenderer
       || valueRenderer !== nextProps.valueRenderer) {
@@ -311,20 +315,25 @@ class Select extends React.Component<Props, State> {
   getCustomComponents = (inputProps?: { [string]: any }, optionRenderer?: (Option) => React.Node,
     valueRenderer?: (Option) => React.Node): any => {
     const customComponents = {};
+
     if (inputProps) {
       customComponents.Input = CustomInput(inputProps);
     }
+
     if (optionRenderer) {
       customComponents.Option = CustomOption(optionRenderer);
     }
+
     if (valueRenderer) {
       customComponents.SingleValue = CustomSingleValue(valueRenderer);
     }
+
     return customComponents;
   };
 
   getValue = () => {
     const { value } = this.state;
+
     return value;
   };
 
@@ -338,6 +347,7 @@ class Select extends React.Component<Props, State> {
     if (option) {
       return multi ? option.map((i) => i[valueKey]).join(delimiter) : option[valueKey || ''];
     }
+
     return '';
   };
 
@@ -355,6 +365,7 @@ class Select extends React.Component<Props, State> {
   // This method takes care of formatting a string value into options react-select supports.
   _formatInputValue = (value: string): Array<Option> => {
     const { options, displayKey = '', valueKey = '', delimiter } = this.props;
+
     return value.split(delimiter).map((v: string) => {
       const predicate: Option = {
         [valueKey]: v,
@@ -387,6 +398,7 @@ class Select extends React.Component<Props, State> {
     const SelectComponent = allowCreate ? Creatable : ReactSelect;
 
     let formattedValue = value;
+
     if (value && allowCreate) {
       formattedValue = this._formatInputValue(value);
     } else {
@@ -412,6 +424,7 @@ class Select extends React.Component<Props, State> {
       ...components,
       ...customComponents,
     };
+
     return (
       <SelectComponent {...rest}
                        onChange={onReactSelectChange || this._onChange}

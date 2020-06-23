@@ -20,6 +20,7 @@ const IndexRangesStore = Reflux.createStore({
   },
   list() {
     const url = URLUtils.qualifyUrl(ApiRoutes.IndexRangesApiController.list().url);
+
     const promise = fetch('GET', url).then((response) => {
       this.indexRanges = response.ranges;
 

@@ -40,6 +40,7 @@ describe('<WidgetGrid />', () => {
                   widgets={{}}
                   fields={Immutable.List()} />
     ));
+
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -47,9 +48,11 @@ describe('<WidgetGrid />', () => {
     const widgets = {
       widget1: _Widget.builder().type('dummy').id('widget1').build(),
     };
+
     const positions = {
       widget1: new WidgetPosition(1, 1, 1, 1),
     };
+
     const data = {
       widget1: [],
     };
@@ -57,6 +60,7 @@ describe('<WidgetGrid />', () => {
     const titles = Immutable.Map({
       widget1: 'A dummy widget',
     });
+
     const wrapper = mount((
       <WidgetGrid widgets={widgets}
                   errors={{}}
@@ -67,6 +71,7 @@ describe('<WidgetGrid />', () => {
                   fields={Immutable.List()}
                   onPositionsChange={() => {}} />
     ));
+
     expect(wrapper.find(Widget)).toHaveLength(1);
   });
 
@@ -74,15 +79,18 @@ describe('<WidgetGrid />', () => {
     const widgets = {
       widget1: _Widget.builder().type('dummy').id('widget1').build(),
     };
+
     const positions = {
       widget1: new WidgetPosition(1, 1, 1, 1),
     };
+
     const data = {
     };
 
     const titles = Immutable.Map({
       widget1: 'A dummy widget',
     });
+
     const wrapper = mount((
       <WidgetGrid widgets={widgets}
                   errors={{}}
@@ -93,6 +101,7 @@ describe('<WidgetGrid />', () => {
                   fields={Immutable.List()}
                   onPositionsChange={() => {}} />
     ));
+
     expect(wrapper.find(Widget)).toHaveLength(1);
   });
 });

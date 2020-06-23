@@ -76,6 +76,7 @@ const RolesStore = Reflux.createStore({
           'Could not delete role');
       }
     });
+
     return promise;
   },
   getMembers(rolename: string): Promise<RoleMembership[]> {
@@ -87,6 +88,7 @@ const RolesStore = Reflux.createStore({
           'Could not load role members');
       }
     });
+
     return promise;
   },
 });

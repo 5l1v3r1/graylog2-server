@@ -51,6 +51,7 @@ const StreamsStore = Reflux.createStore({
 
   searchPaginated(page, perPage, query) {
     const url = PaginationURL(ApiRoutes.StreamsApiController.paginated().url, page, perPage, query);
+
     return fetch('GET', qualifyUrl(url))
       .then((response: PaginatedResponse) => {
         const pagination = {
@@ -60,6 +61,7 @@ const StreamsStore = Reflux.createStore({
           perPage: response.pagination.per_page,
           query: response.pagination.query,
         };
+
         return {
           streams: response.streams,
           pagination,
@@ -72,6 +74,7 @@ const StreamsStore = Reflux.createStore({
   },
   listStreams() {
     const url = '/streams';
+
     return fetch('GET', qualifyUrl(url))
       .then((result: StreamSummaryResponse) => result.streams)
       .catch((errorThrown) => {
@@ -114,10 +117,12 @@ const StreamsStore = Reflux.createStore({
     };
 
     const url = qualifyUrl(ApiRoutes.StreamsApiController.pause(streamId).url);
+
     return fetch('POST', url)
       .then(callback, failCallback)
       .then((response) => {
         this._emitChange();
+
         return response;
       });
   },
@@ -128,10 +133,12 @@ const StreamsStore = Reflux.createStore({
     };
 
     const url = qualifyUrl(ApiRoutes.StreamsApiController.resume(streamId).url);
+
     return fetch('POST', url)
       .then(callback, failCallback)
       .then((response) => {
         this._emitChange();
+
         return response;
       });
   },

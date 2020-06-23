@@ -49,6 +49,7 @@ describe('AddWidgetButton', () => {
   beforeEach(() => {
     PluginStore.register(plugin);
   });
+
   afterEach(() => {
     PluginStore.unregister(plugin);
   });
@@ -60,49 +61,64 @@ describe('AddWidgetButton', () => {
     ['Aggregation', 'Message Count', 'Message Table', 'Parameter']
       .forEach((title) => expect(wrapper.find(`button[children="${title}"]`)).toExist());
   });
+
   it('clicking on option to add aggregation calls AggregateActionHandler', () => {
     const wrapper = mount(<AddWidgetButton onClick={onClick} toggleAutoClose={onClick} />);
 
     const addAggregation = wrapper.find('button[children="Aggregation"]');
+
     expect(addAggregation).toExist(0);
+
     addAggregation.simulate('click');
 
     expect(mockAggregateActionHandler).toHaveBeenCalled();
   });
+
   it('clicking on option to add message count calls AddMessageCountActionHandler', () => {
     const wrapper = mount(<AddWidgetButton onClick={onClick} toggleAutoClose={onClick} />);
 
     const addMessageCount = wrapper.find('button[children="Message Count"]');
+
     expect(addMessageCount).toExist(0);
+
     addMessageCount.simulate('click');
 
     expect(mockAddMessageCountActionHandler).toHaveBeenCalled();
   });
+
   it('clicking on option to add message table calls AddMessageTableActionHandler', () => {
     const wrapper = mount(<AddWidgetButton onClick={onClick} toggleAutoClose={onClick} />);
 
     const addMessageTable = wrapper.find('button[children="Message Table"]');
+
     expect(addMessageTable).toExist(0);
+
     addMessageTable.simulate('click');
 
     expect(mockAddMessageTableActionHandler).toHaveBeenCalled();
   });
+
   it('clicking on option to add a parameter renders MockCreateParameterDialog', () => {
     const wrapper = mount(<AddWidgetButton onClick={onClick} toggleAutoClose={onClick} />);
 
     const addMessageTable = wrapper.find('button[children="Parameter"]');
+
     expect(addMessageTable).toExist(0);
+
     addMessageTable.simulate('click');
 
     wrapper.update();
 
     expect(wrapper.find('MockCreateParameterDialog')).toExist();
   });
+
   it('calling onClose from creator component removes it', () => {
     const wrapper = mount(<AddWidgetButton onClick={onClick} toggleAutoClose={onClick} />);
 
     const addMessageTable = wrapper.find('button[children="Parameter"]');
+
     expect(addMessageTable).toExist(0);
+
     addMessageTable.simulate('click');
 
     wrapper.update();
@@ -115,6 +131,7 @@ describe('AddWidgetButton', () => {
     onClose();
 
     wrapper.update();
+
     expect(wrapper.find('MockCreateParameterDialog')).not.toExist();
   });
 });

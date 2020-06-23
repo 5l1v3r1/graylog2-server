@@ -13,14 +13,21 @@ describe('ActionDropdown', () => {
         <MenuItem>Foo</MenuItem>
       </ActionDropdown>
     ));
+
     expect(wrapper).not.toContainMatchingElement('ul.dropdown-menu');
+
     const trigger = wrapper.find('ActionToggle');
+
     expect(trigger).toContainMatchingElement('div.my-trigger-element');
+
     trigger.simulate('click');
+
     expect(wrapper).toContainMatchingElement('ul.dropdown-menu');
   });
+
   it('stops event when trigger element is clicked', () => {
     const onClick = jest.fn();
+
     const wrapper = mount((
       <button type="button" onClick={onClick}>
         <ActionDropdown element={<div className="my-trigger-element">Trigger!</div>}>
@@ -33,8 +40,10 @@ describe('ActionDropdown', () => {
 
     expect(onClick).not.toHaveBeenCalled();
   });
+
   it('closes menu when MenuItem is clicked', () => {
     const onSelect = jest.fn();
+
     const wrapper = mount((
       <ActionDropdown element={<div>Trigger!</div>}>
         <MenuItem onSelect={onSelect}>Foo</MenuItem>
@@ -49,9 +58,11 @@ describe('ActionDropdown', () => {
     expect(onSelect).toHaveBeenCalled();
     expect(wrapper).not.toContainMatchingElement('ul.dropdown-menu');
   });
+
   it('stops click event when MenuItem is clicked', () => {
     const onClick = jest.fn();
     const onSelect = jest.fn();
+
     const wrapper = mount((
       <button type="button" onClick={onClick}>
         <ActionDropdown element={<div>Trigger!</div>}>

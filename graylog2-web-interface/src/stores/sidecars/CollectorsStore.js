@@ -42,9 +42,11 @@ const CollectorsStore = Reflux.createStore({
     const promise = fetch('GET', URLUtils.qualifyUrl(`${this.sourceUrl}/collectors/${collectorId}`));
     promise.catch((error) => {
       let errorMessage = `Fetching Collector failed with status: ${error}`;
+
       if (error.status === 404) {
         errorMessage = `Unable to find a collector with ID <${collectorId}>, please ensure it was not deleted.`;
       }
+
       UserNotification.error(errorMessage, 'Could not retrieve Collector');
     });
     CollectorsActions.getCollector.promise(promise);
@@ -69,6 +71,7 @@ const CollectorsStore = Reflux.createStore({
         (response) => {
           this.collectors = response.collectors;
           this.propagateChanges();
+
           return response.collectors;
         },
         (error) => {
@@ -95,6 +98,7 @@ const CollectorsStore = Reflux.createStore({
           this.paginatedCollectors = response.collectors;
 
           this.propagateChanges();
+
           return response.collectors;
         },
         (error) => {
@@ -155,6 +159,7 @@ const CollectorsStore = Reflux.createStore({
       .then((response) => {
         UserNotification.success('', `Collector "${collector.name}" successfully deleted`);
         this.refreshList();
+
         return response;
       }, (error) => {
         UserNotification.error(`Deleting Collector failed: ${error.status === 400 ? error.responseMessage : error.message}`,
@@ -173,6 +178,7 @@ const CollectorsStore = Reflux.createStore({
       .then((response) => {
         UserNotification.success('', `Collector "${name}" successfully copied`);
         this.refreshList();
+
         return response;
       }, (error) => {
         UserNotification.error(`Saving collector "${name}" failed with status: ${error.message}`,

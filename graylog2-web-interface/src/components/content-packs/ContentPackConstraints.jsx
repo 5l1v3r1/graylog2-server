@@ -47,9 +47,11 @@ class ContentPackConstraints extends React.Component {
   render() {
     const { constraints: unfilteredConstraints } = this.props;
     const headers = ['Name', 'Type', 'Version', 'Fulfilled'];
+
     let constraints = unfilteredConstraints.map((constraint) => {
       const newConstraint = constraint.constraint || constraint;
       newConstraint.fulfilled = constraint.fulfilled;
+
       return newConstraint;
     });
 

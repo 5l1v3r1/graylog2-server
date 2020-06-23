@@ -22,6 +22,7 @@ class TargetMock {
 describe('AutoFontSizer', () => {
   it('uses default size if element does not provide dimensions', () => {
     const target = {};
+
     const wrapper = mount((
       <AutoFontSizer width={300}
                      height={300}
@@ -29,13 +30,16 @@ describe('AutoFontSizer', () => {
         <span>Foo</span>
       </AutoFontSizer>
     ));
+
     expect(wrapper.children().props().fontSize).toBe(20);
   });
+
   it('changes font size if initial guess was too small', () => {
     const target = new TargetMock(
       jest.fn().mockReturnValueOnce(90).mockReturnValueOnce(300),
       jest.fn().mockReturnValueOnce(90).mockReturnValueOnce(300),
     );
+
     const wrapper = mount((
       <AutoFontSizer width={300}
                      height={300}
@@ -43,13 +47,16 @@ describe('AutoFontSizer', () => {
         <span>Foo</span>
       </AutoFontSizer>
     ));
+
     expect(wrapper.children().props().fontSize).toBe(42);
   });
+
   it('changes font size upon resize', () => {
     const target = new TargetMock(
       jest.fn().mockReturnValueOnce(90).mockReturnValueOnce(300),
       jest.fn().mockReturnValueOnce(90).mockReturnValueOnce(300),
     );
+
     const wrapper = mount((
       <AutoFontSizer width={300}
                      height={300}
@@ -57,8 +64,8 @@ describe('AutoFontSizer', () => {
         <span>Foo</span>
       </AutoFontSizer>
     ));
-    expect(wrapper.children().props().fontSize).toBe(42);
 
+    expect(wrapper.children().props().fontSize).toBe(42);
 
     const postTarget = new TargetMock(
       jest.fn().mockReturnValueOnce(300).mockReturnValueOnce(125),

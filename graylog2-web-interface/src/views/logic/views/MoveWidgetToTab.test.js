@@ -35,6 +35,7 @@ describe('MoveWidgetToTab', () => {
   it('should move a Widget to a dashboard', () => {
     const dashboardFixture = View.fromJSON(readFixture('./MoveWidgetToTab.Dashboard.fixture.json'));
     const searchFixture = Search.fromJSON(readFixture('./MoveWidgetToTab.Search.fixture.json'));
+
     const dashboaad = dashboardFixture.toBuilder()
       .search(searchFixture)
       .build();
@@ -52,6 +53,7 @@ describe('MoveWidgetToTab', () => {
   it('should copy a Widget to a dashboard', () => {
     const dashboardFixture = View.fromJSON(readFixture('./MoveWidgetToTab.Dashboard.fixture.json'));
     const searchFixture = Search.fromJSON(readFixture('./MoveWidgetToTab.Search.fixture.json'));
+
     const dashboaad = dashboardFixture.toBuilder()
       .search(searchFixture)
       .build();

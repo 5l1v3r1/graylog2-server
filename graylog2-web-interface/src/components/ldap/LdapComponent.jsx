@@ -13,7 +13,6 @@ import TestLdapConnection from './TestLdapConnection';
 import TestLdapLogin from './TestLdapLogin';
 import LdapComponentStyle from './LdapComponent.css';
 
-
 const { RolesStore } = CombinedProvider.get('Roles');
 const { LdapActions } = CombinedProvider.get('Ldap');
 
@@ -22,6 +21,7 @@ const GroupMappingLink = ({ text, onClick }) => {
     <Button bsStyle="link" bsSize="xs" className="btn-text" onClick={onClick}>{text}</Button>
   );
 };
+
 GroupMappingLink.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
@@ -172,6 +172,7 @@ class LdapComponent extends React.Component {
 
   _isLoading = () => {
     const { ldapSettings, roles } = this.state;
+
     return !ldapSettings || !roles;
   };
 
@@ -191,6 +192,7 @@ class LdapComponent extends React.Component {
     const newState = {};
 
     let formattedValue = value;
+
     // Convert URI object into string to store it in the state
     if (attribute === 'ldap_uri' && typeof value === 'object') {
       newState.ldapUri = value;
@@ -215,6 +217,7 @@ class LdapComponent extends React.Component {
 
   _uriScheme = () => {
     const { ldapUri } = this.state;
+
     return `${ldapUri.scheme()}://`;
   };
 
@@ -227,6 +230,7 @@ class LdapComponent extends React.Component {
 
   _uriHost = () => {
     const { ldapUri } = this.state;
+
     return ldapUri.hostname();
   };
 
@@ -239,6 +243,7 @@ class LdapComponent extends React.Component {
 
   _uriPort = () => {
     const { ldapUri } = this.state;
+
     return ldapUri.port();
   };
 
@@ -301,6 +306,7 @@ class LdapComponent extends React.Component {
       );
 
     const additionalDefaultGroups = ldapSettings.additional_default_groups;
+
     const additionalDefaultGroupsString = Array.isArray(additionalDefaultGroups)
       ? additionalDefaultGroups.join(',')
       : additionalDefaultGroups;

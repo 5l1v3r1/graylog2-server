@@ -48,9 +48,9 @@ class ContentPackVersions extends React.Component {
     if (header === 'Action') {
       return (<th className="text-right">{header}</th>);
     }
+
     return (<th>{header}</th>);
   };
-
 
   rowFormatter(pack) {
     const { onDeletePack } = this.props;
@@ -58,11 +58,13 @@ class ContentPackVersions extends React.Component {
 
     const { openFunc, installModal } = this._installModal(pack);
     let downloadRef;
+
     const downloadModal = (
       <ContentPackDownloadControl ref={(node) => { downloadRef = node; }}
                                   contentPackId={pack.id}
                                   revision={pack.rev} />
     );
+
     return (
       <tr key={pack.id + pack.rev}>
         <td>
@@ -137,6 +139,7 @@ class ContentPackVersions extends React.Component {
   render() {
     const { contentPackRevisions: { contentPacks } } = this.props;
     const headers = ['Select', 'Revision', 'Action'];
+
     return (
       <DataTable id="content-packs-versions"
                  headers={headers}

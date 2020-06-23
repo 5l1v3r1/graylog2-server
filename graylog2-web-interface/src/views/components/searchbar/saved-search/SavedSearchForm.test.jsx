@@ -20,6 +20,7 @@ describe('SavedSearchForm', () => {
                                              isCreateNew
                                              target={() => {}}
                                              saveSearch={() => {}} />);
+
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -32,6 +33,7 @@ describe('SavedSearchForm', () => {
                                              isCreateNew={false}
                                              target={() => {}}
                                              saveSearch={() => {}} />);
+
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -44,6 +46,7 @@ describe('SavedSearchForm', () => {
                                              isCreateNew={false}
                                              target={() => {}}
                                              saveSearch={() => {}} />);
+
       expect(wrapper).toMatchSnapshot();
     });
   });
@@ -51,6 +54,7 @@ describe('SavedSearchForm', () => {
   describe('callbacks', () => {
     it('should handle toggleModal', () => {
       const onToggleModal = jest.fn();
+
       const wrapper = mount(<SavedSearchForm value="new Title"
                                              onChangeTitle={() => {}}
                                              saveAsSearch={() => {}}
@@ -60,11 +64,13 @@ describe('SavedSearchForm', () => {
                                              target={() => {}}
                                              saveSearch={() => {}} />);
       wrapper.find('button[children="Cancel"]').simulate('click');
+
       expect(onToggleModal).toHaveBeenCalledTimes(1);
     });
 
     it('should handle saveSearch', () => {
       const onSave = jest.fn();
+
       const wrapper = mount(<SavedSearchForm value="new Title"
                                              onChangeTitle={() => {}}
                                              saveAsSearch={() => {}}
@@ -74,12 +80,14 @@ describe('SavedSearchForm', () => {
                                              target={() => {}}
                                              saveSearch={onSave} />);
       wrapper.find('button[children="Save"]').simulate('click');
+
       expect(onSave).toHaveBeenCalledTimes(1);
     });
   });
 
   it('should handle saveAsSearch', () => {
     const onSaveAs = jest.fn();
+
     const wrapper = mount(<SavedSearchForm value="new Title"
                                            onChangeTitle={() => {}}
                                            saveAsSearch={onSaveAs}
@@ -89,11 +97,13 @@ describe('SavedSearchForm', () => {
                                            target={() => {}}
                                            saveSearch={() => {}} />);
     wrapper.find('button[children="Save as"]').simulate('click');
+
     expect(onSaveAs).toHaveBeenCalledTimes(1);
   });
 
   it('should not handle saveAsSearch if disabled', () => {
     const onSaveAs = jest.fn();
+
     const wrapper = mount(<SavedSearchForm value="new Title"
                                            onChangeTitle={() => {}}
                                            saveAsSearch={onSaveAs}
@@ -103,11 +113,13 @@ describe('SavedSearchForm', () => {
                                            target={() => {}}
                                            saveSearch={() => {}} />);
     wrapper.find('button[children="Save as"]').simulate('click');
+
     expect(onSaveAs).toHaveBeenCalledTimes(0);
   });
 
   it('should handle create new', () => {
     const onSaveAs = jest.fn();
+
     const wrapper = mount(<SavedSearchForm value="new Title"
                                            onChangeTitle={() => {}}
                                            saveAsSearch={onSaveAs}
@@ -117,6 +129,7 @@ describe('SavedSearchForm', () => {
                                            target={() => {}}
                                            saveSearch={() => {}} />);
     wrapper.find('button[children="Create new"]').simulate('click');
+
     expect(onSaveAs).toHaveBeenCalledTimes(1);
   });
 });

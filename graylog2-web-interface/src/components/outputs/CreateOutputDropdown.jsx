@@ -15,6 +15,7 @@ class CreateOutputDropdown extends React.Component {
 
   render() {
     const outputTypes = $.map(this.props.types, this._formatOutputType);
+
     return (
       <div>
         <div className="form-inline">

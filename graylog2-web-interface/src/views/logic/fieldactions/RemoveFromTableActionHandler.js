@@ -6,17 +6,21 @@ import type { FieldActionHandlerCondition, FieldActionHandler } from './FieldAct
 
 const RemoveFromTableActionHandler: FieldActionHandler = ({ field, contexts: { widget } }) => {
   const newFields = widget.config.fields.filter((f) => (f !== field));
+
   const newConfig = widget.config.toBuilder()
     .fields(newFields)
     .build();
+
   return WidgetActions.updateConfig(widget.id, newConfig);
 };
 
 const isEnabled: FieldActionHandlerCondition = ({ contexts: { widget }, field }) => {
   if (MessagesWidget.isMessagesWidget(widget) && widget.config) {
     const fields = widget.config.fields || [];
+
     return fields.includes(field);
   }
+
   return false;
 };
 

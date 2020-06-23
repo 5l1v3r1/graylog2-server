@@ -37,9 +37,11 @@ class MessageLoader extends React.Component {
   loadMessage = (event) => {
     const messageId = this.messageId.value;
     const index = this.index.value;
+
     if (messageId === '' || index === '') {
       return;
     }
+
     this.setState({ loading: true });
     const promise = MessagesActions.loadMessage.triggerPromise(index, messageId);
     promise.then((data) => this.props.onMessageLoaded(data));
@@ -56,6 +58,7 @@ class MessageLoader extends React.Component {
 
   render() {
     let explanatoryText;
+
     if (!this.props.hideText) {
       explanatoryText = (
         <p>
@@ -64,6 +67,7 @@ class MessageLoader extends React.Component {
         </p>
       );
     }
+
     const loadMessageForm = (
       <div>
         <form className="form-inline message-loader-form" onSubmit={this.loadMessage}>
@@ -75,6 +79,7 @@ class MessageLoader extends React.Component {
         </form>
       </div>
     );
+
     return (
       <div className="message-loader">
         {explanatoryText}

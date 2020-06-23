@@ -34,6 +34,7 @@ class AssignOutputDropdown extends React.Component {
   render() {
     const { outputs } = this.props;
     const { selectedOutput } = this.state;
+
     const outputList = (outputs.length > 0
       ? outputs.map(this._formatOutput)
       : <option disabled>No outputs available</option>);

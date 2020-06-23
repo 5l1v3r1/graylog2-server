@@ -14,11 +14,13 @@ describe('RemoveFromAllTablesActionHandler', () => {
       .fields(['timestamp', 'source', 'author'])
       .showMessageRow(true)
       .build();
+
     const messageWidget = Widget.builder()
       .newId()
       .type('MESSAGES')
       .config(messageWidgetConfig)
       .build();
+
     const pivotWidget = Widget.builder()
       .newId()
       .type('PIVOT')
@@ -29,6 +31,7 @@ describe('RemoveFromAllTablesActionHandler', () => {
       .fields(['timestamp', 'source'])
       .showMessageRow(true)
       .build();
+
     const expectedMessageWidget = Widget.builder()
       .id(messageWidget.id)
       .type('MESSAGES')
@@ -40,9 +43,11 @@ describe('RemoveFromAllTablesActionHandler', () => {
     WidgetStore.getInitialState = jest.fn(() => widgets);
     WidgetActions.updateWidgets = mockAction(jest.fn((newWidgets) => {
       expect(newWidgets).toEqual(expectedWidgets);
+
       return Promise.resolve();
     }));
     RemoveFromAllTablesActionHandler({ queryId: 'foo', field: 'author', type: FieldTypes.STRING(), contexts: {} });
+
     expect(WidgetActions.updateWidgets).toBeCalled();
   });
 });

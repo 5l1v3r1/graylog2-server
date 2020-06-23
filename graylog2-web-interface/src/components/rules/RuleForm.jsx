@@ -64,6 +64,7 @@ class RuleForm extends React.Component {
     if (this.parseTimer !== undefined) {
       clearTimeout(this.parseTimer);
     }
+
     const { rule } = this.state;
     const { validateRule } = this.props;
 
@@ -145,6 +146,7 @@ class RuleForm extends React.Component {
     const { create } = this.props;
 
     let pipelinesUsingRule;
+
     if (!create) {
       pipelinesUsingRule = (
         <Input id="used-in-pipelines" label="Used in pipelines" help="Pipelines that use this rule in one or more of their stages.">

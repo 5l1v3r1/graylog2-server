@@ -43,7 +43,6 @@ class EditPatternModal extends React.Component {
     };
   }
 
-
   openModal = () => {
     this.modal.open();
   };
@@ -81,6 +80,7 @@ class EditPatternModal extends React.Component {
     const { create } = this.props;
 
     this._closeModal();
+
     if (create) {
       this.setState({ name: '', pattern: '', sampleData: '', test_result: '' });
     }
@@ -101,6 +101,7 @@ class EditPatternModal extends React.Component {
 
     if (name === '' || pattern === '') {
       this.setState({ error: true, error_message: 'To test the pattern a name and a pattern must be given!' });
+
       return;
     }
 
@@ -115,6 +116,7 @@ class EditPatternModal extends React.Component {
 
   render() {
     const { create, patterns } = this.props;
+
     const {
       name,
       error,
@@ -126,11 +128,13 @@ class EditPatternModal extends React.Component {
     } = this.state;
 
     let triggerButtonContent;
+
     if (create) {
       triggerButtonContent = 'Create pattern';
     } else {
       triggerButtonContent = <span>Edit</span>;
     }
+
     return (
       <span>
         <Button onClick={this.openModal}

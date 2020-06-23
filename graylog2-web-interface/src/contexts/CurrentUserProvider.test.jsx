@@ -26,6 +26,7 @@ describe('CurrentUserProvider', () => {
         </CurrentUserContext.Consumer>
       </CurrentUserProvider>,
     );
+
     return consume;
   };
 

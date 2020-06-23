@@ -12,7 +12,6 @@ import { hasAcceptedProtocol } from 'util/URLUtils';
 
 import style from './ContentPackSelection.css';
 
-
 class ContentPackSelection extends React.Component {
   static propTypes = {
     contentPack: PropTypes.object.isRequired,
@@ -31,6 +30,7 @@ class ContentPackSelection extends React.Component {
 
   static _toDisplayTitle(title) {
     const newTitle = title.split('_').join(' ');
+
     return newTitle[0].toUpperCase() + newTitle.substr(1);
   }
 
@@ -50,6 +50,7 @@ class ContentPackSelection extends React.Component {
   componentWillReceiveProps(nextProps) {
     this.setState({ filteredEntities: nextProps.entities, contentPack: nextProps.contentPack });
     const { filter, isFiltered } = this.state;
+
     if (isFiltered) {
       this._filterEntities(filter);
     }
@@ -71,9 +72,11 @@ class ContentPackSelection extends React.Component {
 
     const errors = mandatoryFields.reduce((acc, field) => {
       const newErrors = acc;
+
       if (!contentPack[field] || contentPack[field].length <= 0) {
         newErrors[field] = 'Must be filled out.';
       }
+
       return newErrors;
     }, {});
 
@@ -107,11 +110,13 @@ class ContentPackSelection extends React.Component {
     const newSelection = cloneDeep(selectedEntities);
     newSelection[typeName] = (newSelection[typeName] || []);
     const index = newSelection[typeName].findIndex((e) => { return e.id === entity.id; });
+
     if (index < 0) {
       newSelection[typeName].push(entity);
     } else {
       newSelection[typeName].splice(index, 1);
     }
+
     this._validate(newSelection);
     onStateChange({ selectedEntities: newSelection });
   };
@@ -119,6 +124,7 @@ class ContentPackSelection extends React.Component {
   _updateSelectionGroup = (type) => {
     const { selectedEntities, entities, onStateChange } = this.props;
     const newSelection = cloneDeep(selectedEntities);
+
     if (this._isGroupSelected(type)) {
       newSelection[type] = [];
     } else {
@@ -131,6 +137,7 @@ class ContentPackSelection extends React.Component {
 
   _isUndetermined = (type) => {
     const { selectedEntities, entities } = this.props;
+
     if (!selectedEntities[type]) {
       return false;
     }
@@ -142,6 +149,7 @@ class ContentPackSelection extends React.Component {
   _isSelected = (entity) => {
     const { selectedEntities } = this.props;
     const typeName = entity.type.name;
+
     if (!selectedEntities[typeName]) {
       return false;
     }
@@ -155,6 +163,7 @@ class ContentPackSelection extends React.Component {
     if (!selectedEntities[type]) {
       return false;
     }
+
     return selectedEntities[type].length === entities[type].length;
   }
 
@@ -169,16 +178,21 @@ class ContentPackSelection extends React.Component {
   _filterEntities = (filterArg) => {
     const { entities } = this.props;
     const filter = filterArg;
+
     if (filter.length <= 0) {
       this.setState({ filteredEntities: cloneDeep(entities), isFiltered: false, filter: filter });
+
       return;
     }
+
     const filtered = Object.keys(entities).reduce((result, type) => {
       const filteredEntities = cloneDeep(result);
       filteredEntities[type] = entities[type].filter((entity) => {
         const regexp = RegExp(filter, 'i');
+
         return regexp.test(entity.title);
       });
+
       return filteredEntities;
     }, {});
     this.setState({ filteredEntities: filtered, isFiltered: true, filter: filter });
@@ -188,6 +202,7 @@ class ContentPackSelection extends React.Component {
     if (entity instanceof Entity) {
       return <span><Icon name="archive" className={style.contentPackEntity} />{' '}<span>{entity.title}</span></span>;
     }
+
     return <span><Icon name="server" />{' '}<span>{entity.title}</span></span>;
   };
 
@@ -199,9 +214,11 @@ class ContentPackSelection extends React.Component {
       .sort((a, b) => naturalSort(a, b))
       .map((entityType) => {
         const group = filteredEntities[entityType];
+
         const entities = group.sort((a, b) => naturalSort(a.title, b.title)).map((entity) => {
           const checked = this._isSelected(entity);
           const header = this._entityItemHeader(entity);
+
           return (
             <ExpandableListItem onChange={() => this._updateSelectionEntity(entity)}
                                 key={entity.id}
@@ -211,9 +228,11 @@ class ContentPackSelection extends React.Component {
                                 header={header} />
           );
         });
+
         if (group.length <= 0) {
           return null;
         }
+
         return (
           <ExpandableListItem key={entityType}
                               onChange={() => this._updateSelectionGroup(entityType)}

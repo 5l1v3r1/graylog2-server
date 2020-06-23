@@ -12,26 +12,32 @@ jest.mock('stores/connect', () => (x) => x);
 describe('HighlightingRules', () => {
   it('renders search term legend even when HighlightingRulesContext is not provided', () => {
     const wrapper = mount(<HighlightingRules />);
+
     expect(wrapper.text()).toMatch(/Search terms/);
   });
+
   it('renders search term legend even when rules are empty', () => {
     const wrapper = mount(
       <HighlightingRuleContext.Provider value={[]}>
         <HighlightingRules />
       </HighlightingRuleContext.Provider>,
     );
+
     expect(wrapper.text()).toMatch(/Search terms/);
   });
+
   it('renders element for each HighlightingRule', () => {
     const rules = [
       HighlightingRule.create('foo', 'bar', undefined, '#f4f141'),
       HighlightingRule.create('response_time', '250', undefined, '#f44242'),
     ];
+
     const wrapper = mount(
       <HighlightingRuleContext.Provider value={rules}>
         <HighlightingRules />
       </HighlightingRuleContext.Provider>,
     );
+
     expect(wrapper.text()).toMatch(/for foo = "bar"/);
     expect(wrapper.text()).toMatch(/for response_time = "250"/);
   });

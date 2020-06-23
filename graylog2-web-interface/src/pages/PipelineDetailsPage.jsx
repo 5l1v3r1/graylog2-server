@@ -32,6 +32,7 @@ function filterConnections(state) {
   if (!state.connections) {
     return undefined;
   }
+
   return state.connections.filter((c) => c.pipeline_ids && c.pipeline_ids.includes(this.props.params.pipelineId));
 }
 
@@ -46,9 +47,11 @@ const PipelineDetailsPage = createReactClass({
 
   componentDidMount() {
     const { params } = this.props;
+
     if (!this._isNewPipeline(params.pipelineId)) {
       PipelinesActions.get(params.pipelineId);
     }
+
     RulesStore.list();
     PipelineConnectionsActions.list();
 
@@ -76,6 +79,7 @@ const PipelineDetailsPage = createReactClass({
     const pipelineSource = SourceGenerator.generatePipeline(newPipeline);
     newPipeline.source = pipelineSource;
     PipelinesActions.update(newPipeline);
+
     if (typeof callback === 'function') {
       callback();
     }
@@ -85,6 +89,7 @@ const PipelineDetailsPage = createReactClass({
     const requestPipeline = ObjectUtils.clone(pipeline);
     requestPipeline.source = SourceGenerator.generatePipeline(pipeline);
     let promise;
+
     if (requestPipeline.id) {
       promise = PipelinesActions.update(requestPipeline);
     } else {
@@ -101,6 +106,7 @@ const PipelineDetailsPage = createReactClass({
   _isLoading() {
     const { params } = this.props;
     const { connections, streams, pipeline } = this.state;
+
     return !this._isNewPipeline(params.pipelineId) && (!pipeline || !connections || !streams);
   },
 
@@ -108,10 +114,12 @@ const PipelineDetailsPage = createReactClass({
     if (this._isLoading()) {
       return <Spinner />;
     }
+
     const { params } = this.props;
     const { connections, streams, pipeline, rules } = this.state;
 
     let title;
+
     if (this._isNewPipeline(params.pipelineId)) {
       title = 'New pipeline';
     } else {
@@ -119,6 +127,7 @@ const PipelineDetailsPage = createReactClass({
     }
 
     let content;
+
     if (this._isNewPipeline(params.pipelineId)) {
       content = <NewPipeline onChange={this._savePipeline} />;
     } else {

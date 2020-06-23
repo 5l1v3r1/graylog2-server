@@ -64,6 +64,7 @@ jest.mock('views/logic/Widgets', () => ({
 const getNewWidget = (actionMock) => {
   const viewState = asMock(actionMock).mock.calls[0][1];
   const widgetsTotal = viewState.widgets.size;
+
   return viewState.widgets.get(widgetsTotal - 1);
 };
 
@@ -75,6 +76,7 @@ const renderAndMigrate = () => {
   const { queryByText, getByText } = render(<MigrateFieldCharts />);
   const migrateButton = getByText('Migrate');
   fireEvent.click(migrateButton);
+
   return { queryByText };
 };
 
@@ -94,6 +96,7 @@ describe('MigrateFieldCharts', () => {
   it('should not be visible if migration already got executed', () => {
     Store.get.mockImplementation(mockStoreGet(undefined, true));
     const { queryByText } = render(<MigrateFieldCharts />);
+
     expect(queryByText('Migrate existing search page charts')).toBeNull();
   });
 
@@ -108,19 +111,23 @@ describe('MigrateFieldCharts', () => {
       Store.get.mockImplementation(mockStoreGet());
       const { queryByText } = renderAndMigrate();
       await wait(() => expect(queryByText('Migrate existing search page charts')).toBeNull());
+
       expect(Store.set).toHaveBeenCalledWith('pinned-field-charts-migrated', 'finished');
     });
 
     it('append new field chart widgets to existing widgets', async () => {
       const getNewWidgetPos = (actionMock) => {
         const widget = getNewWidget(actionMock);
+
         return actionMock.mock.calls[0][1].widgetPositions[widget.id];
       };
+
       const expWidgetPos = new WidgetPosition(1, 1, 4, Infinity);
       Store.get.mockImplementation(mockStoreGet());
       renderAndMigrate();
       const actionMock = asMock(ViewStatesActions.update);
       await wait(() => expect(actionMock.mock.calls[0][1].widgets.size).toEqual(3));
+
       expect(getNewWidgetPos(actionMock)).toEqual(expWidgetPos);
     });
 
@@ -136,6 +143,7 @@ describe('MigrateFieldCharts', () => {
       Store.get.mockImplementation(mockStoreGet({ interval: 'month' }));
       renderAndMigrate();
       await wait(() => expect(getNewWidgetConfig(ViewStatesActions.update).rowPivots[0].config).toEqual(expPivotConfig));
+
       expect(getNewWidgetConfig(ViewStatesActions.update).rowPivots[0].config).toEqual(expPivotConfig);
     });
 
@@ -183,6 +191,7 @@ describe('MigrateFieldCharts', () => {
       Store.get.mockImplementation(mockStoreGet({ renderer: 'bar' }));
       renderAndMigrate();
       await wait(() => expect(getNewWidgetConfig(ViewStatesActions.update).visualizationConfig).toEqual(undefined));
+
       expect(getNewWidgetConfig(ViewStatesActions.update).visualization).toEqual('bar');
     });
 

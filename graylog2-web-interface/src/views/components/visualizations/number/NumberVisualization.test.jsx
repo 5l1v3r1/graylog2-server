@@ -68,6 +68,7 @@ describe('NumberVisualization', () => {
 
   it('should render a number visualization', () => {
     const wrapper = mount(<SimplifiedNumberVisualization />);
+
     expect(wrapper.find(NumberVisualization)).toMatchSnapshot();
   });
 
@@ -96,8 +97,10 @@ describe('NumberVisualization', () => {
       }],
     };
     const wrapper = mount(<SimplifiedNumberVisualization data={dataWithZeroValue} />);
+
     expect(wrapper).toHaveText('0');
   });
+
   it('renders N/A if value is null', () => {
     const dataWithZeroValue = {
       chart: [{
@@ -114,6 +117,7 @@ describe('NumberVisualization', () => {
       }],
     };
     const wrapper = mount(<SimplifiedNumberVisualization data={dataWithZeroValue} />);
+
     expect(wrapper).toHaveText('N/A');
   });
 });

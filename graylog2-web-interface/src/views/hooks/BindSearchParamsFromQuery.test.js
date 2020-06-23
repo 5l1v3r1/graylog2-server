@@ -18,15 +18,18 @@ jest.mock('views/stores/QueriesStore', () => ({
 
 describe('BindSearchParamsFromQuery should', () => {
   const query = Query.builder().id(MOCK_VIEW_QUERY_ID).build();
+
   const search = Search.create()
     .toBuilder()
     .queries([query])
     .build();
+
   const view = View.create()
     .toBuilder()
     .type(View.Type.Search)
     .search(search)
     .build();
+
   const defaultInput = {
     query: {},
     view,
@@ -43,6 +46,7 @@ describe('BindSearchParamsFromQuery should', () => {
       view: view.toBuilder().type(View.Type.Dashboard).build(),
     };
     await bindSearchParamsFromQuery(input);
+
     expect(QueriesActions.update).not.toHaveBeenCalled();
   });
 
@@ -52,6 +56,7 @@ describe('BindSearchParamsFromQuery should', () => {
       query: { q: 'gl2_source_input:source-input-id' },
     };
     await bindSearchParamsFromQuery(input);
+
     expect(QueriesActions.update)
       .toHaveBeenCalledWith(
         MOCK_VIEW_QUERY_ID,
@@ -61,6 +66,7 @@ describe('BindSearchParamsFromQuery should', () => {
 
   it('not update query string when no query param is provided', async () => {
     await bindSearchParamsFromQuery(defaultInput);
+
     expect(QueriesActions.update).not.toHaveBeenCalled();
   });
 
@@ -69,11 +75,13 @@ describe('BindSearchParamsFromQuery should', () => {
       ...defaultInput,
       query: { relative: '0' },
     };
+
     const expectedTimerange = {
       type: 'relative',
       range: 0,
     };
     await bindSearchParamsFromQuery(input);
+
     expect(QueriesActions.update)
       .toHaveBeenCalledWith(
         MOCK_VIEW_QUERY_ID,
@@ -86,12 +94,14 @@ describe('BindSearchParamsFromQuery should', () => {
       ...defaultInput,
       query: { rangetype: 'absolute', from: '2010-01-00 00:00:00', to: '2010-10-00 00:00:00' },
     };
+
     const expectedTimerange = {
       type: input.query.rangetype,
       from: input.query.from,
       to: input.query.to,
     };
     await bindSearchParamsFromQuery(input);
+
     expect(QueriesActions.update)
       .toHaveBeenCalledWith(
         MOCK_VIEW_QUERY_ID,
@@ -104,10 +114,12 @@ describe('BindSearchParamsFromQuery should', () => {
       ...defaultInput,
       query: { rangetype: 'keyword', keyword: 'Last five days' },
     };
+
     const expectedTimerange = {
       type: input.query.rangetype, keyword: input.query.keyword,
     };
     await bindSearchParamsFromQuery(input);
+
     expect(QueriesActions.update)
       .toHaveBeenCalledWith(
         MOCK_VIEW_QUERY_ID,
@@ -131,6 +143,7 @@ describe('BindSearchParamsFromQuery should', () => {
         Immutable.Map({ type: 'stream', id: 'stream3' }),
       ],
     });
+
     expect(QueriesActions.update)
       .toHaveBeenCalledWith(
         MOCK_VIEW_QUERY_ID,

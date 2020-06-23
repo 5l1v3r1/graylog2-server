@@ -41,6 +41,7 @@ const CurrentUserStore = Reflux.createStore({
     if (this.currentUser !== undefined) {
       return this.update(this.currentUser.username);
     }
+
     return Promise.resolve();
   },
 
