@@ -1,20 +1,16 @@
 /* eslint-disable camelcase */
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import CombinedProvider from 'injection/CombinedProvider';
 import { breakpoints, fonts, utils } from 'theme';
 import buttonStyles from 'components/graylog/styles/buttonStyles';
+import CombinedProvider from 'injection/CombinedProvider';
 import CustomizationContext from 'contexts/CustomizationContext';
 
 import { CUSTOMIZATION_THEME_MODE, THEME_MODE_LIGHT } from './constants';
 
 const { CustomizationsActions } = CombinedProvider.get('Customizations');
-
-/* NOTE: mode will eventually need to come from User Preferences */
-const updateThemeMode = (theme_mode) => CustomizationsActions.update(CUSTOMIZATION_THEME_MODE, { theme_mode });
-
 
 const loadTheme = (mode) => (/* eslint-disable */
   import(`theme/variants/${mode}.js`)
@@ -26,22 +22,24 @@ const loadTheme = (mode) => (/* eslint-disable */
     })
 /* eslint-enable */);
 
-
 const GraylogThemeProvider = ({ children }) => {
+  useEffect(() => {
+    CustomizationsActions.get(CUSTOMIZATION_THEME_MODE);
+  }, []);
+
   const themeMode = useContext(CustomizationContext)[CUSTOMIZATION_THEME_MODE];
   const [colors, setColors] = useState(null);
   const mode = themeMode?.theme_mode || THEME_MODE_LIGHT;
 
-  loadTheme(mode).then((modeColor) =>{
+  loadTheme(mode).then((modeColor) => {
     setColors(modeColor);
   });
 
-  if (!colors) { return null };
+  if (!colors) { return null; }
 
   return (
     <ThemeProvider theme={{
       mode,
-      updateThemeMode,
       breakpoints,
       colors,
       fonts,
