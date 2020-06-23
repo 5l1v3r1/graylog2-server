@@ -49,6 +49,9 @@ module.exports = {
     'react/prefer-es6-class': 'off',
     'react/prefer-stateless-function': 'warn',
     'react/static-property-placement': 'off',
+    indent: ['error', 2, {
+      ignoredNodes: ['TemplateLiteral'],
+    }],
 
     // eslint-plugin-flowtype configs, `recommended` is too weak in a couple of places:
     'flowtype/delimiter-dangle': [1, 'always-multiline'],

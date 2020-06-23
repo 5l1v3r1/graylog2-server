@@ -34,8 +34,9 @@
     "README.md"
   ],
   "dependencies": {
-    "@babel/preset-env": "7.10.2",
-    "babel-eslint": "9.0.0",
+    "@babel/parser": "^7.8.7",
+    "@babel/preset-env": "7.10.3",
+    "babel-eslint": "10.1.0",
     "eslint-config-graylog": "file:../eslint-config-graylog",
     "html-webpack-plugin": "^4.2.0",
     "javascript-natural-sort": "0.7.1",

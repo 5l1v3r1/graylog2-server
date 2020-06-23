@@ -7,7 +7,7 @@ import styled, { withTheme, type StyledComponent } from 'styled-components';
 import CombinedProvider from 'injection/CombinedProvider';
 import CustomizationContext from 'contexts/CustomizationContext';
 import { Icon } from 'components/common';
-import type { ThemeInterface } from 'theme';
+import { themePropTypes, type ThemeInterface } from 'theme';
 
 const CUSTOMIZATION_THEME_MODE = 'org.graylog.plugins.customization.ThemeMode';
 const { CustomizationsActions } = CombinedProvider.get('Customizations');
@@ -17,7 +17,7 @@ const ThemeModeToggleWrap: StyledComponent<{}, void, HTMLDivElement> = styled.di
   align-items: center;
 `;
 
-const ModeIcon: StyledComponent<{currentMode: boolean}, ThemeInterface, HTMLOrSVGElement> = styled(({ currentMode, theme, ...props }) => <Icon {...props} />)`
+const ModeIcon: StyledComponent<{currentMode: boolean}, ThemeInterface, *> = styled(({ currentMode, theme, ...props }) => <Icon {...props} />)`
   opacity: ${({ currentMode }) => (currentMode ? '1' : '0.5')};
   color: ${({ currentMode, theme }) => (currentMode ? theme.colors.brand.primary : theme.colors.variant.default)};
 `;
@@ -85,7 +85,6 @@ const Toggle: StyledComponent<{}, ThemeInterface, HTMLLabelElement> = styled.lab
   }
 `);
 
-
 const ThemeModeToggle = ({ theme }) => {
   const themeMode = useContext(CustomizationContext)[CUSTOMIZATION_THEME_MODE];
   const [currentMode, setCurrentMode] = useState(themeMode?.theme_mode || 'teinte');
@@ -114,8 +113,8 @@ const ThemeModeToggle = ({ theme }) => {
   );
 };
 
-// ThemeModeToggle.propTypes = {
-
-// };
+ThemeModeToggle.propTypes = {
+  theme: themePropTypes.isRequired,
+};
 
 export default withTheme(ThemeModeToggle);
