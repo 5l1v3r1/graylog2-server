@@ -8,7 +8,6 @@ import chroma from 'chroma-js';
 import FormControl from './FormControl';
 import { StyledAddon } from './InputGroup';
 
-
 const StyledFormGroup = styled(BootstrapFormGroup)(({ theme, validationState }) => {
   const variant = validationState === 'error' ? 'danger' : validationState;
 

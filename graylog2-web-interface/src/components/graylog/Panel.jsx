@@ -6,7 +6,6 @@ import { Panel as BootstrapPanel } from 'react-bootstrap';
 
 import deprecationNotice from 'util/deprecationNotice';
 
-
 const PanelHeading = styled(BootstrapPanel.Heading)``;
 
 const PanelFooter = styled(BootstrapPanel.Footer)(({ theme }) => css`
@@ -54,7 +53,7 @@ const StyledPanel = styled(BootstrapPanel)(({ theme }) => css`
   > ${PanelHeading} {
     .panel-title,
     .panel-title h3 {
-      font-size: 16px;
+      font-size: ${theme.fonts.size.large};
     }
   }
 
@@ -95,7 +94,7 @@ const deprecatedVariantStyles = css(({ bsStyle, theme }) => {
 
       > .panel-title,
       > .panel-title > * {
-        font-size: 16px;
+        font-size: ${theme.fonts.size.large};
       }
 
       + .panel-collapse > .panel-body {

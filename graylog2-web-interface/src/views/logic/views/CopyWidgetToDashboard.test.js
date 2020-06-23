@@ -1,13 +1,19 @@
 import { readFileSync } from 'fs';
+
 import { dirname } from 'path';
 
 import Search from 'views/logic/search/Search';
 import View from 'views/logic/views/View';
+
 import copyWidgetToDashboard from './CopyWidgetToDashboard';
+
 import ValueParameter from '../parameters/ValueParameter';
 import Parameter from '../parameters/Parameter';
 
 jest.mock('uuid/v4', () => jest.fn(() => 'dead-beef'));
+jest.mock('bson-objectid', () => jest.fn(() => ({
+  toString: jest.fn(() => 'new-search-id'),
+})));
 
 jest.mock('../Widgets', () => ({
   widgetDefinition: () => ({ searchTypes: () => [{ type: 'pivot' }] }),

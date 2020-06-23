@@ -1,5 +1,6 @@
 // @flow strict
 import { get } from 'lodash';
+
 import View from 'views/logic/views/View';
 import SearchTypesGenerator from 'views/logic/searchtypes/SearchTypesGenerator';
 
@@ -10,7 +11,7 @@ const UpdateSearchForWidgets = (view: View): View => {
   const search = get(view, 'search');
   const newQueries = search.queries
     .map((q) => q.toBuilder().searchTypes(searchTypes.get(q.id, {}).searchTypes).build());
-  const newSearch = search.toBuilder().queries(newQueries).build();
+  const newSearch = search.toBuilder().newId().queries(newQueries).build();
   let newView = view.toBuilder().search(newSearch).build();
 
   searchTypes.map(({ widgetMapping }) => widgetMapping)

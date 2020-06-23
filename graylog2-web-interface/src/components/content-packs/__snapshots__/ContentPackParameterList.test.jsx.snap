@@ -436,7 +436,7 @@ exports[`<ContentPackParameterList /> should render with empty parameters withou
               "componentStyle": ComponentStyle {
                 "componentId": "Modal-nuree8-0",
                 "isStatic": false,
-                "lastClassName": "UjHmV",
+                "lastClassName": "eNmkew",
                 "rules": Array [
                   [Function],
                 ],
@@ -461,7 +461,7 @@ exports[`<ContentPackParameterList /> should render with empty parameters withou
             backdrop="static"
             bsClass="modal"
             bsSize="large"
-            className="Modal-nuree8-0 UjHmV"
+            className="Modal-nuree8-0 eNmkew"
             dialogComponentClass={[Function]}
             enforceFocus={true}
             keyboard={true}
@@ -1239,6 +1239,7 @@ exports[`<ContentPackParameterList /> should render with parameters with readOnl
                                 >
                                   <Icon
                                     name="times"
+                                    type="solid"
                                   >
                                     <FontAwesomeIcon
                                       icon={
@@ -1420,7 +1421,7 @@ exports[`<ContentPackParameterList /> should render with parameters without read
               "componentStyle": ComponentStyle {
                 "componentId": "Modal-nuree8-0",
                 "isStatic": false,
-                "lastClassName": "UjHmV",
+                "lastClassName": "eNmkew",
                 "rules": Array [
                   [Function],
                 ],
@@ -1445,7 +1446,7 @@ exports[`<ContentPackParameterList /> should render with parameters without read
             backdrop="static"
             bsClass="modal"
             bsSize="large"
-            className="Modal-nuree8-0 UjHmV"
+            className="Modal-nuree8-0 eNmkew"
             dialogComponentClass={[Function]}
             enforceFocus={true}
             keyboard={true}
@@ -1929,6 +1930,7 @@ exports[`<ContentPackParameterList /> should render with parameters without read
                                 >
                                   <Icon
                                     name="times"
+                                    type="solid"
                                   >
                                     <FontAwesomeIcon
                                       icon={
@@ -2153,7 +2155,7 @@ exports[`<ContentPackParameterList /> should render with parameters without read
                                       "componentStyle": ComponentStyle {
                                         "componentId": "Modal-nuree8-0",
                                         "isStatic": false,
-                                        "lastClassName": "UjHmV",
+                                        "lastClassName": "eNmkew",
                                         "rules": Array [
                                           [Function],
                                         ],
@@ -2178,7 +2180,7 @@ exports[`<ContentPackParameterList /> should render with parameters without read
                                     backdrop="static"
                                     bsClass="modal"
                                     bsSize="large"
-                                    className="Modal-nuree8-0 UjHmV"
+                                    className="Modal-nuree8-0 eNmkew"
                                     dialogComponentClass={[Function]}
                                     enforceFocus={true}
                                     keyboard={true}
